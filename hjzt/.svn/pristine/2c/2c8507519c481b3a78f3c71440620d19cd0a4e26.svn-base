@@ -1,0 +1,32 @@
+.tuli-content{
+	width: 70%;
+	margin-bottom: 10px;
+	margin: 0 auto;
+	text-align: center;
+}
+.tuli-content span{
+	color: #666;
+	font-size: 14px;
+	position: relative;
+	line-height: 22px;
+	padding-left: 26px;
+	margin-right: 20px;
+}
+.tuli-content span:before{
+	display: block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top: 1px;
+	left: 0px;
+}
+.tuli-content span.zygys:before{
+	background-color: #9675da;
+}
+.tuli-content span.zygs:before{
+	background-color: #feb535;
+}
+.tuli-content span.zykh:before{
+	background-color: #64a4f2;
+}

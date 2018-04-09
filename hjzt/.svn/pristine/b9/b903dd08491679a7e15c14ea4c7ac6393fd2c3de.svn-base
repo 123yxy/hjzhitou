@@ -1,0 +1,158 @@
+/*body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,   
+fieldset,input,textarea,p,blockquote,th,td {   
+margin:0;   
+padding:0; 
+
+ 
+} */
+*{
+	margin:0;padding: 0;
+	/*font-weight: normal;*/
+}
+/*垂直居中*/
+.verticalAlign{ 
+	vertical-align:middle; display:inline-block; height:100%; margin-left:-1px;
+}
+
+.editConfirm .bc_layer{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 999;
+}
+.editConfirm .popBox{
+	position: fixed; left: 50%; top: 20%; background-color: #ffffff; z-index: 999; width: 1000px; height: 580px; 
+	margin-left: -500px; border-radius: 5px; font-weight: bold; color: #535e66;/*padding:0 33px;*/
+}
+.editConfirm .popBox .ttBox{
+	height: 55px; line-height: 55px;border-bottom: solid 1px #eef0f1;margin:0 2%;margin-bottom: 5px;
+}
+.editConfirm .popBox .ttBox .tt{
+	font-size: 16px; display: block; float: left; height: 55px; position: relative;color:#333333;font-weight: bold;
+}
+.editConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-10%;top:-20%;
+}
+.editConfirm .popBox .txtBox{
+	height: 440px; overflow: hidden;margin:0 2%;margin-top:15px;border:1px solid #cccccc;
+}
+/*编辑内容*/
+.editConfirm .popBox .txtBox .editor{
+ 	/*margin-top:14px;margin-bottom: 18px;*/
+	width:958px;height:38px;border-bottom:1px solid #cccccc;
+}
+
+.editConfirm .popBox .txtBox .editor .family{
+	/*width:114px;*/width:auto;padding:0 4%;height:38px;background: #fff;display: block;float: left;border:none;text-align: center;color:#444444;
+}
+.editConfirm .popBox .txtBox .editor .family option{
+	text-align:center;
+}
+.editConfirm .popBox .txtBox .editor .size{
+	/*width:74px;*/width:auto;padding:0 4%;height:38px;background: #fff;display: block;float: left;border:none;text-align: center;color:#444444;
+}
+.editConfirm .popBox .txtBox .editor .color{
+	border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;margin-top:10px;height:18px;padding-left:20px;padding-right:20px;display: block;float: left;
+}
+.editConfirm .popBox .txtBox .editor .color .color_img{
+	border-bottom: 2px solid #777777;padding-bottom: 2px;
+}
+.editConfirm .popBox .txtBox .editor .weight{
+	margin-top:9px;
+}
+.editConfirm .popBox .txtBox .editor .underline{
+	margin-top:9px;
+}
+/*斜体样式*/
+.editConfirm .popBox .txtBox .editor .italic{
+	margin-top:9px;
+}
+
+
+/*表格内容*/
+.editConfirm .popBox .txtBox .form{
+	height:401px;background:#f9f9f9;
+}
+.editConfirm .popBox .txtBox .form .form_tit{
+	height:38px;color:#0783e5;font-size:14px;font-weight: bold;line-height:38px;margin-left:19px;
+}
+.editConfirm .popBox .txtBox .form .form_list{
+	width:958px;height:362px;border-top:1px solid #cccccc;
+}
+.editConfirm .popBox .txtBox .form .form_list .list{
+	width:478px;height:30px;border-bottom: 1px solid #cccccc;float: left;border-right:1px solid #cccccc;position: relative;
+}
+.editConfirm .popBox .txtBox .form .form_list .list .list_img{
+	position:absolute;top:6px;left:10px;
+}
+.editConfirm .popBox .txtBox .form .form_list .list:nth-of-type(even){
+	border-right:none;
+}
+.editConfirm .popBox .txtBox .form .form_list .list p{
+	float: left;width:168px;height:30px;line-height: 30px;font-size: 14px;color:#777777;text-align: center;border-right:1px solid #cccccc;
+}
+.editConfirm .popBox .txtBox .form .form_list .list input{
+	float: left;border:none;width:290px;height:30px;background: #f9f9f9;color:#333333;padding-left:19px;
+}
+.editConfirm .popBox .txtBox .form .form_list .list:last-child{
+	width:958px;border-bottom: none;border-right: none;height:114px;
+}
+.editConfirm .popBox .txtBox .form .form_list .list:last-child p{
+	height:114px;line-height: 114px;
+}
+.editConfirm .popBox .txtBox .form .form_list .list:last-child input{
+	height:114px;line-height: 114px;width:770px;
+}
+/*.bcConfirm .popBox .txtBox .form .form_list .list_lf{
+	float: left;width:478px;height:247px;border-right:1px solid #cccccc;border-bottom: 1px solid #cccccc;
+}
+.bcConfirm .popBox .txtBox .form .form_list .list_rt{
+	float: left;width:478px;height:247px;border-bottom: 1px solid #cccccc;
+}
+*/
+
+
+
+.editConfirm .popBox .txtBox .editor .input{
+	width:342px;padding-left:16px;color:#777777;font-size:14px;height:30px;border:none;border-top:1px solid #cccccc;display: block;font-weight: normal;background: #f9f9f9;
+}
+.editConfirm .popBox .txtBox .start{
+	height:16px;/*background:red;*/
+}
+.editConfirm .popBox .txtBox .start .pitch{
+	float: left;
+}
+.editConfirm .popBox .txtBox .start p.star_text{
+	float: left;/*line-height:16px;*/font-size:14px;margin-left: 10px;color:#555555;
+}
+.editConfirm .popBox .txtBox .start p.star_tit{
+	float: left;font-size:12px;/*line-height:16px;*/margin-left: 5px;margin-top:2px;color:#a0a0a0;
+}
+
+
+
+
+
+
+
+.editConfirm .popBox .btnArea{
+	height:32px;margin-top:20px;padding:0 410px;
+}
+
+.editConfirm .popBox .sgBtn{
+	display: block; cursor: pointer; float: left; width: 80px; height: 32px; font-size:14px;line-height: 32px; text-align: center; color: #FFFFFF;
+	 border-radius: 5px;margin-top:0;margin-left:0px;
+}
+.editConfirm .popBox .sgBtn.ok{
+	background-color: #1985e2; color: #FFFFFF;
+}
+.editConfirm .popBox .sgBtn.cancel{
+	background-color: #fff; color: #1985e2;border:1px solid #1985e2;height:30px;line-height: 30px;width:78px;margin-right:20px;
+}
+
+
+@media screen and (min-width:1200px) and (max-width:1680px){
+	.editConfirm .popBox{
+		top:20%;
+	}
+	.editConfirm .popBox .clsBtn{
+		display: block; cursor: pointer;position: absolute;z-index:9999;right:-7%;top:-15%;width:37px;height:37px;z-index:9999;
+	}
+}

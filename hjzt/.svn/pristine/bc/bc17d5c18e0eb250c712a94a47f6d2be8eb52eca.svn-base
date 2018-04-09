@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">  
+        <title></title>  
+        <style type="text/css">  
+            #mybtn{  
+                width: 100px;  
+                height: 30px;  
+                font-size: 18px;  
+                background-color: lightcoral;  
+                text-align: center;  
+            }  
+        </style>  
+    </head>  
+    <body>  
+       <table>
+         <tr><td style="background-color: #F2F2F2;">讲稿1：</td><td><input type="file" name="up_file1" id="up_file1" onchange="fileChange1(this);" ></td><td><input type="button" id="submit_upload1" value="上传" disabled="disabled"></td></tr>
+</table>
+    </body>  
+    <script type="text/javascript">  
+       
+      
+function fileChange1(target){  
+    //检测上传文件的类型 
+    var fileName = document.getElementById("up_file1").value;
+        if (fileName == ''){  
+         document.getElementById("submit_upload1").disabled=true;
+            alert("请选择需要上传的文件!");  
+            return; 
+        } else {   
+            idx = fileName.lastIndexOf(".");   
+            if (idx != -1){   
+                ext = fileName.substr(idx+1).toUpperCase();   
+                ext = ext.toLowerCase( ); 
+               // alert("ext="+ext);
+                if (ext != 'doc' && ext != 'excel' && ext != 'ppt' && ext != 'txt'){
+                 document.getElementById("submit_upload1").disabled=true; 
+                    alert("只能上传.doc  .excel  .ppt  .txt类型的文件!"); 
+                    return;  
+                }   
+            } else {  
+              document.all.submit_upload1.disabled=true; 
+               alert("只能上传.doc  .excel  .ppt  .txt类型的文件!"); 
+                return;
+            }   
+        }
+        
+        //检测上传文件的大小        
+       
+        var fileSize = 0;  
+        if ( !target.files){       
+            var filePath = target.value;
+            var fileSystem = new ActiveXObject("Scripting.FileSystemObject");  
+                   
+            var file = fileSystem.GetFile (filePath);       
+            fileSize = file.Size;      
+        } else {      
+            fileSize = target.files[0].size;       
+        }     
+    
+    
+        var size = fileSize / 1024*1024;   
+        if(size>(1024*1024*10)){    
+         document.getElementById("submit_upload1").disabled=true;
+            alert("文件大小不能超过10M");   
+        }else{
+         document.getElementById("submit_upload1").disabled=false;
+        }    
+    }
+
+ 
+    </script>  
+</html>  

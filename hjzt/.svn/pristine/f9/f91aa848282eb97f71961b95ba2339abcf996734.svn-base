@@ -1,0 +1,85 @@
+.master_glfbj{background-color: rgba(0,0,0,.6);}
+.gl_tc_dbox{width: 1224px; height: 700px;display: none; position: absolute; z-index: 1002; top: 50%; margin-top: -350px; left: 50%; margin-left: -612px;}
+    .gl_tc_l,.gl_tc_r{width: 382px;}
+    .gl_tc_center{width: 455px; margin-left: 4px; height: 700px; background: url(../images/icon/gpgltcbj.png) center center no-repeat;}
+    .gl_cjl_list{ width: 100%; margin: 0 auto; margin-bottom:15px; border-radius: 5px;}
+    .gl_title_list{ width: 100%; height: 35px; background: #fff; line-height: 35px; background:#f1f1f1; box-sizing: border-box; border-bottom: 1px solid #e4e4e4; border-radius: 5px 5px 0 0;}
+    .gl_title_list span{ display: block;width: 100%; height: 34px; line-height: 34px; font-size: 16px; color: #666; text-align: center;}
+	.gl_tubiao_box{ width: 100%; height: 186px; background-color:#fff;}
+	.dhzq_box{ width:245px; margin: 0 auto; padding-top: 10px; margin-top:240px; padding-bottom: 14px; position: relative; background: #fff; border-radius:5px ;}
+	.dhzq_box b{ position: absolute; cursor: pointer; width:25px; height: 25px; right: 0; top: 0; background: url(../images/icon/hbcha.png) center center no-repeat; background-position: 7px 7px;}
+	.dhzq_box b:hover{ background-position: 7px -33px;background-color:#f3565d;}
+	.dhzq_box em{ display: block; width: 100%; color: #999; height: 20px; line-height: 20px; font-size: 14px; font-family: arial; text-align: left; box-sizing: border-box; padding: 0px 24px;}
+	.dh_tit{width: 100%; height: 36px; line-height: 36px; box-sizing: border-box; text-align: left; padding-left: 24px;}
+	.dh_tit h2{display: inline-block; font-size:20px; color: #666; font-weight: bold; float: left;line-height: 36px;}
+	.dh_tit i{font-size:16px; color: #999;display: inline-block;float: left;line-height: 36px;}
+	.price_zq{width: 100%; margin: 0 auto; height: 30px; line-height: 30px; box-sizing: border-box; padding: 0 24px;}
+	.price_zq span{display:inline-block; font-size:20px; color: #f3565d; font-family: arial; float: left; max-width: 40%; overflow: hidden;}
+	.price_zq span:nth-child(1){margin-right: 20px;}
+	.lines{width: 100%; border-top: 1px solid #f2f2f2; height: 1px; background: #eaeaea;}
+	.dhzq_btn{ width: 100%; margin: 0 auto; margin-top: 14px;}
+	.dhzq_btn a{ display: block;width:89px; height: 29px; border-radius: 5px; line-height: 29px; text-align: center; box-sizing: border-box; float: left; font-size: 14px; color: #fff;}
+	.dhzq_btn a.jrzx{background:#5bc0de; margin-right:10px; margin-left: 24px;}
+	.dhzq_btn a.jrzx:hover{background-color: #40ACCC;}
+	.dhzq_btn a.jrdb{background:#D9534F;}
+/*	.dhzq_btn a.jrdb:hover{background-color: #349d34;}*/
+	.dhzq_tb_btn{ width: 100%; margin: 0 auto; margin-top: 14px;}
+	.dhzq_tb_btn a{ display:block; height:35px; line-height: 35px; width: 189px; margin: 0 auto; font-size:16px; color: #666; text-align: center; background: #eaeaea; border: 1px solid #d9d9d9; border-radius: 5px;}
+	.gl_tongji_list{ width: 72px; height: 72px; border-radius: 50%; float: left; background: #868686;}
+	.gl_tongji_list:nth-child(1),.gl_tongji_list:nth-child(3){ margin-left:100px; margin-top: 13px;}
+	.gl_tongji_list:nth-child(2),.gl_tongji_list:nth-child(4){ margin-left:50px;margin-top: 13px;}
+	.gl_tongji_list h2{ display: block; width: 80%; color:#fff; margin: 0 auto; height: 25px; overflow:hidden; font-size: 18px; font-family: arial; margin-top: 8px; text-align: center;}
+	.gl_tongji_list span{display: block; width: 80%; color: #fff; margin: 0 auto;font-size: 14px;text-align: center;}
+	.map_tip{
+	width: 140px;
+	height: 100px;
+	background-color: none;
+	padding:10px;
+	box-sizing: border-box;
+	position: relative;
+}
+.map_tip span{
+	display: block;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+.map_tip span:nth-child(1){
+	height: 26px;
+	line-height: 26px;
+	font-size: 16px;
+}
+.map_tip span:nth-child(2),
+.map_tip span:nth-child(3){
+	padding-left: 10px;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.map_tip span.red{
+	background-color: #f3565d;
+}
+.map_tip span.green{
+	background-color: #5cb85c;
+}
+.map_tip .map_tips{
+	width: 0px;
+	height: 0px;
+	border-top:10px solid #8c8c8c;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	position: absolute;
+	bottom:-24px;
+	left:65px;
+} 
+.tips{
+	display: none;color: red; line-height:46px; margin-left:10px;
+}
+#main canvas:hover{ cursor: pointer !important;}
+
+@media only screen and (max-width: 1600px) and (min-width: 100px) {
+	.gl_tc_dbox{
+		margin-top: -179px;
+	}
+}

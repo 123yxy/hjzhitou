@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻</title>
+    <link rel="stylesheet" href="../../saasBeta/css/base.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
+    <link rel="stylesheet" href="../../saasBeta/css/schedule.css">
+    <link rel="stylesheet" href="../../saasBeta/css/companyNotice/companyNotice.css">
+    <link rel="stylesheet" href="../../saasBeta/css/news/news.css">
+    <link rel="stylesheet" href="../../saasBeta/css/select.css">
+    <link rel="stylesheet" href="../../saasBeta/js/keep/css/bcConfirm.css">
+  	<script src="../../saasBeta/js/jquery.min.js"></script>
+    <script src="../../saasBeta/js/keep/js/bcConfirm.js"></script>
+     <script src="../../saasBeta/js/common.js"></script>
+     <script src="../../saasBeta/js/select.js"></script>
+    <script src="../../saasBeta/js/news/news.js"></script>
+    
+    <script src="../../saasBeta/js/schedule.js"></script>
+    <script src="../../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="main">
+    <div class="notice">
+        <div class="title-box">
+            <div class="not-nav news-title clearfix">
+                <div class="fl">新闻资讯</div>
+                <div class="fr">
+                    <b class="search-icon"></b>
+                    <input type="text" placeholder="关键词" class="input" id="search">
+                </div>
+            </div>
+            <div class="select-box clearfix">
+                <span class="fl">筛选：</span>
+                <ul class="fl">
+                    <li class="select news-type">
+                        <div class="s-title">新闻类型<span></span></div>
+                        <div class="s-content s-list">
+                            <!--<div>新闻类型</div>-->
+                            <ul>
+                                <!--<li><a href="#">选项一</a></li>-->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="select">
+                        <div class="start-time"><a id="start-time">起始日期</a><span class="bot"></span></div>
+                        <div id='schedule-box1' class="boxshaw s-content" style="z-index: 10000;display:none"></div>
+                    </li>
+                    <li class="select">
+                        <div class="end-time"><a id="end-time">结束日期</a><span class="bot"></span></div>
+                        <div id='schedule-box2' class="boxshaw s-content" style="z-index: 10000;display:none"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="notice-title">
+                <div class="not-left fl">
+                    <span>约<span class="num totalNum">11838</span>篇</span>
+                </div>
+            </div>
+            <div class="notice-content">
+                <!--<a href="#" class="con-item">-->
+                        <!--<p>微软和Google正在争夺办公汽车客户</p>-->
+                        <!--<span>来源：金融界</span><span>发布时间：2017-07-25</span>-->
+                        <!--<div>微软可能会在其Office套件中引领生产力汽车业务，但并不一定意味着其市场份额是安全的，像Google这样的对手一直在寻求吸引更多的微软客户。媒体公司Nielsen Holdings 最近决定放弃微软</div>-->
+                <!--</a>-->
+
+            </div>
+            <div class="btn">
+                <button class="add-more">加载更多</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+</body>
+</html>

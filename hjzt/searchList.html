@@ -1,0 +1,1949 @@
+<!doctype html>
+<html>
+
+	<head>
+	<script>
+		var totalTime=-1,totalCount=0;
+		var blockDiv={
+			content_all:true,
+			content_gsgk:true,
+			content_gpph:true,
+			content_gxt:true,
+			content_cwsj:true,
+			content_gdcg:true,
+			content_sbgs:true,
+			content_xgyw:true,
+			content_data:true,
+			content_xw:true,
+			content_gg:true,
+			content_yb:true,
+		};
+		
+	</script>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>云端研究院-搜索详情-综合信息</title>
+		<!-- 自动补全样式 -->
+		<link rel="stylesheet" href="saasBeta/css/base.css">
+		<link rel="stylesheet" href="../saasBeta/css/companyNotice/companyNotice.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/companyDetail.css"/>
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/searchList.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/wl_searchlist.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/wj_searchList.css" />
+		<link rel="stylesheet" href="../saasBeta/css/select.css">
+		<link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
+		<link rel="stylesheet" href="../saasBeta/css/schedule.css">
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="../saasBeta/js/keep/css/bcConfirm.css">
+    	<script src="../saasBeta/js/keep/js/bcConfirm.js"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/util/dateUtil.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/echarts-all-3.js"></script>
+		<script src="/saasBeta/newjs/searchList/custom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../saasBeta/js/select.js"></script>
+		<!--<script src="../saasBeta/laydate/laydate.js"></script>-->
+		<script src="../saasBeta/js/schedule.js"></script>
+		<!-- 数据模块 -->
+		<script> 
+			
+			//$.getScript("/saasBeta/newjs/searchList/setpaixu.js?"+Math.random());
+			
+			//概况 js
+			//$.getScript("/saasBeta/newjs/searchList/gjj_search.js?"+Math.random());
+			
+			//行业排行 js
+			//$.getScript("/saasBeta/newjs/searchList/hangyepaihang.js?"+Math.random());
+			
+			//财务数据 js
+			//$.getScript("/saasBeta/newjs/searchList/caiwushuju.js?"+Math.random());
+			
+			//相关业务 js
+			//$.getScript("/saasBeta/newjs/searchList/yewuxiangguan.js?"+Math.random());
+			
+			//相关数据 js
+			//$.getScript("/saasBeta/newjs/searchList/shujuxiangguan.js?"+Math.random());
+			
+			//$.getScript("/saasBeta/newjs/searchList/wlSearchList.js?"+Math.random());
+			
+			//tab切换
+			//$.getScript("/saasBeta/newjs/searchList/wj_tab.js?"+Math.random());
+			
+			//行情模块
+			//$.getScript("/saasBeta/newjs/searchList/quotationModular.js?"+Math.random());
+			
+			//是否登录，关注，对比
+			
+			//数据模块
+			//$.getScript("/saasBeta/newjs/searchList/dataModular.js?"+Math.random());
+			
+			//高管和股东模块
+			//$.getScript("/saasBeta/newjs/searchList/dhModular.js?"+Math.random());
+			
+			//智能搜索新闻，研报，公告
+			//$.getScript("/saasBeta/newjs/searchList/intelligent_search.js?"+Math.random());
+		
+		</script>
+		<!--<script src="/saasBeta/newjs/searchList/d3.min.js" type="text/javascript" charset="utf-8"></script>--> 
+ 		<!--<script src="/saasBeta/newjs/searchList/dc3.js" type="text/javascript" charset="utf-8"></script>-->
+		<style>
+/*#content_dbqy th:first-child,#content_dbqy td:first-child{*/
+	/*text-align:left;*/
+/*}*/
+.newSassHeader{
+	height:58px;
+}
+.header_r, .email_icon, .pifu_icon, .search_icon{
+	padding-top:10px;
+	border-right:0
+}
+.new_top_searcher{
+	background:url(/saasBeta/images/icon-wsearch.png) center center no-repeat!important;
+	width: 17px;
+}
+.search_in_put input[type="text"]:focus + .new_top_searcher{
+	border:none!important;
+}
+.search_in_put input[type="text"]:focus + .new_top_searcher{
+	border:none!important;
+}
+.search_icon input, .search_icon input.on{
+	width: 100%;
+}
+.search_icon input{
+	width: 100%; top:13px;border:5px;
+}
+.new_top_searcher{
+	top: 16px;
+}
+.search_icon input{
+	border-radius: 5px;
+}
+		</style>
+
+	</head>
+	
+	<body style="background: #f3f7fa;">
+		<div class="tips_shanchu" style="display: none;">
+			<b class="tc_shanchu"></b>
+			<h2>取消自选股</h2>
+			<p>你确定取消关注该自选股吗？</p>
+			<p>该自选股相关的公告、新闻将不再推送给你</p>
+			<div class="shanchu_btn">
+				<span class="shanc_btn" onclick="delOptional()">删除</span>
+				<span class="shanc_qux">取消</span>
+			</div>
+		</div>
+		<div class="backbj"></div>
+		<!--header  star-->
+		
+		<!--主体 star-->
+		<div class="search_dbox">
+		<!--每一个div的数据请求完成之后给这个input框赋一个值，直接给你们div的id名即可-->
+		<input type="hidden"  id="changeValue"/>
+			<div class="search_nav">
+				<div class="search_nav_zt">
+					<div class="search_tab fl">
+						<ul>
+							<li id="tab_all" class="on">
+								<a href="javascript:;">全部</a>
+							</li>
+							<li id="tab_xw">
+								<a href="javascript:;">新闻</a>
+							</li>
+							<li id="tab_gg" name="公告">
+								<a href="javascript:;">公告</a>
+							</li>
+							<li id="tab_yb">
+								<a href="javascript:;">研报</a>
+							</li>
+							<!--<li id="tab_data">
+								<a href="javascript:;">财务数据</a>
+							</li>-->
+							<!--<li id="tab_gx">-->
+								<!--<a href="javascript:;">关系</a>-->
+							<!--</li>-->
+							<!--<li id="tab_znyb" name="znyb">-->
+								<!--<a href="javascript:;">智能研报</a>-->
+							<!--</li>-->
+							<div class="clr"></div>
+						</ul>
+					</div>
+					<div class="search_tips fr">
+						<p>用时:<em id="totalTime"></em>秒</p>
+						<p>搜索结果:<em id="totalCount"></em>条</p>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--下拉框-->
+				<div class="select-box hide">
+					<span class="fl" style="line-height: 17px;">筛选：</span>
+
+					<ul class="fl">
+						<li class="select">
+							<div class="s-title">全部公告<span></span></div>
+							<div class="s-content s-list">
+								<div>全部公告</div>
+								<ul class="ggSelect">
+								</ul>
+							</div>
+						</li>
+						<li class="select">
+							<div class="start-time"><a id="start-time">起始日期</a><span class="bot"></span></div>
+							<div id='schedule-box1' class="boxshaw  s-content" style="z-index: 10000;display:none"></div>
+						</li>
+						<li class="select">
+							<div class="end-time"><a id="end-time">结束日期</a><span class="bot"></span></div>
+							<div id='schedule-box2' class="boxshaw  s-content" style="z-index: 10000;display:none"></div>
+						</li>
+					</ul>
+
+					<div class="fr" style="margin-right:0">
+						<span>排序：</span>
+						<span class="time">发布时间</span>
+						<b class="icon active"></b>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="search_list_content">
+			<div class="searche_main">
+				<div class="search_dbox">
+					<div class="search_list">
+						<!--没有任何数据的时候显示的div-->
+						<div class="serach_info_box" id="none_datas" style="display: none;">
+							<div class="wushuju">
+								<div class="search_gxt_title">
+									<span><em id="no_data_titles"><!--中科软(430002)--></em>相关信息</span>
+								</div>
+								<div class="wj_dataNone">未检索到“<span id="data_name"><!--中科软--></span>”相关信息</div>
+							</div>
+						</div>
+						<div class="serach_info_box" id="content_all">
+							<div id="companyData" class="wj_companyData"> 
+								<div class="wj_searchTitle wj_clear"> 
+									<h2 id="quotationModularTitle" >--</h2> 
+									<div class="wj_searchTitleTools"> 
+									<!--下边a标签的id="qybgLj"-->
+										<span class="wj_searchReport"><a src="" id="zhinengclick"><em></em>智能研报</a></span> <span class="wj_searchMsg none"><em></em>提醒</span> <span class="wj_searchAdd"><em></em></span> 
+									</div> 
+								</div> 
+								<div class="wj_companyData_info wj_clear"> 
+									<div class="wj_companyData_info_l wj_companyData_info_up"> 
+										
+									<!-- 为下降状态时wj_companyData_info_l增加wj_companyData_info_down --> 
+									<span class="wj_companyData_info_num" id="newPrice" >--</span> 
+									<span class="wj_companyData_info_s"><em></em><i id="changeAmount" >--</i></span> 
+									<span class="wj_companyData_info_s"><i id="priceChangeRatio" >--</i></span> 
+									</div> <div class="wj_companyData_info_main"> 
+										<ul class="wj_clear"> 
+											<li> <p>今开：<span class="up" id="openPrice" >--</span></p> <p>昨收：<span id="yclosePrice" >--</span></p> </li> <li> <p>总市值：<span id="totalMarketValue" >--</span></p> <p>流通市值：<span id="cmValue" >--</span></p> </li> 
+											<li> <p>市净率：<span id="netRatio" >--</span></p> <p>市盈率(静)：<span id="priceEarningRatio" >--</span></p> </li> 
+										</ul> 
+									</div> 
+								</div> 
+								<div class="wj_searchEcharts"> 
+									<div class="wj_searchTab_t"> <span class="wj_active">日线图</span> <span id="fst">分时图</span> <span>市值</span> </div> 
+									<div class="wj_searchTab_cw"> 
+										<div class="gjj_hyph_time2"><span id="quotationModularUpdateTime" >更新时间:--</span></div>
+										<div class="wj_searchTab_c"> 
+											<div id="wj_dailyData" style="z-index:3"> </div> 
+											<div id="wj_fst"> </div> 
+											<div id="wj_marketValue"> </div> 
+										</div> 
+									</div> 
+								</div> 
+							</div>
+							
+						</div>
+						<div class="serach_info_box" id="content_gsgk">
+							<div class="gjj_gsgk">
+								<div class="gjj_gsgk_title">
+									<a href="javascript:;" id="stockNameShow">--</a>
+									<span>-公司概况</span>
+								</div>
+								<div class="clr"></div>
+								<div class="gjj_gsgk_box">
+									<ul>
+										<li>
+											<span>公司信息</span>
+											<p id="companyMsg"> --<!--铭慧股份有限公司（430002），实际控制人：罗朝炜 ，主办券商:西南证券 ，总股本：3,000.00万股--> </p>
+											<a href="javascript:;" id="tc_gsxq">详情</a>
+											<div class="clr"></div>
+										</li>
+										<li>
+											<span>股本股东</span>
+											<p id="equityShareholders">-- <!--总股本: 6,000万股（限售:45%，流通55%）， 股东人数：61 ，主要股东:罗朝炜(52.4%)、郑岷（11.52%）-->
+											</p>
+											<a href="javascript:;" id="tc_gbgd">详情</a>
+											<div class="clr"></div>
+										</li>
+										<li>
+											<span>高管</span>
+											<p id="director">--
+												<!--刘莉、周银江、罗朝东、郑岷-->
+											</p>
+											<a href="javascript:;" id="tc_gaoguan">详情</a>
+											<div class="clr"></div>
+										</li>
+
+										<li>
+											<span>所属行业</span>
+											<p id="industry">--
+												<!--制造业>专用设备制造业（132家），市盈率行业均值：86.92 ，排名：29-->
+											</p>
+											<a href="javascript:;" class="tiaozhuan" id="gkIndustry">详情</a>
+											<div class="clr"></div>
+										</li>
+
+										<li>
+											<span>发行情况</span>
+											<p id="issuance">--
+												<!--累计增发 2 次，其中成功 2 次，失败 0 次，进行中 0 次，累计实际募资净额为 2.89 亿元。-->
+											</p>
+											<a href="javascript:;" id="tc_fxqk">详情</a>
+											<div class="clr"></div>
+										</li>
+										<li>
+											<span>团队</span>
+											<p id="team">--
+												<!--员工（35人） ，管理人员（20%），财务人员（14%），营销人员（17%），技术人员（17%）-->
+											</p>
+											<a href="javascript:;" id="tc_tuandui">详情</a>
+											<div class="clr"></div>
+										</li>
+										<li>
+											<span>公司大事</span>
+											<p id="event">--
+												<!--重大事项：234件（定增事件：23 ， 对外投资：11 ， 收购：150，公司会议：22）-->
+											</p>
+											<a href="javascript:;" id="tc_gsds">详情</a>
+											<div class="clr"></div>
+										</li>
+										<li>
+											<span>经营情况</span>
+											<p id="operation">--
+												<!--主要产品及收入占比：灌装设备 （66.02%）,圆杯贴管机设备 （13.83%），设备零配件 (13.37%),设备改造 （3.40%），加盖设备 （3.38%） 主营业务：公司主营业务为液态食品包装机械和纸铝复合无菌材料的研发、生产与销售，具体是纸包无菌灌装机和相关辅助设备（包括贴管机、食具粘贴机、压盖机）专业研究、设计和制造，并提供 液体食品无菌包装领域的全套解决方案。相应的公司装饮料的主要产品为液态食品灌装机、加盖机、贴管机，除此之外，公司也销售部分零配件和提供液体食品无菌包装领域的全套解决方案。-->
+											</p>
+											<a href="javascript:;" id="tc_jyqk">详情</a>
+											<div class="clr"></div>
+										</li>
+									</ul>
+								</div>
+								<div class="clr"></div>
+								<div class="gjj_gk_time">
+									<span id="gkUpdateTime" >更新时间:--</span>
+									<div class="clr"></div>
+								</div>
+							</div>
+						</div>
+						<!--智能研报-->
+						<div class="serach_info_box tab-com" id="content_dbqy">
+							<div class="search_gxt_title">
+								<span><em id="Companyself">--</em>-智能研报</span>
+							</div>
+							<table>
+								<thead>
+								<tr>
+									<th>标题</th>
+									<th>操作</th>
+								</tr>
+								</thead>
+								<tbody id="zhnyb">
+								
+								</tbody>
+							</table>
+								<!--<div class="list_more" id="BenchmarkeMore" style="display: none;">
+									<span id="">加载更多</span>
+								</div>-->
+
+							</div>
+						<!--对标企业-->
+						<div class="serach_info_box tab-com" id="content_dbqy">
+							<div class="search_gxt_title">
+								<span><em id="BenchmarkeCompany">--</em>-对标企业</span>
+							</div>
+							<table>
+								<thead>
+								<tr>
+									<th>标题</th>
+									<th>操作</th>
+								</tr>
+								</thead>
+								<tbody id="Benchmarke">
+								
+								</tbody>
+							</table>
+								<!--<div class="list_more" id="BenchmarkeMore" style="display: none;">
+									<span id="">加载更多</span>
+								</div>-->
+
+							</div>
+						<div class="serach_info_box" id="content_gpph">
+							<div class="gjj_hangyePh">
+								<div class="gjj_hyph_title">
+									<div class="gjj_hyph fl">
+										<!-- <a href="javascript:;"><i>中科软（430002）</i>-互联网-行业排名</a> -->
+									</div>
+									<div class="gjj_hyph_select fr">
+										<div class="gjj_select fr">
+											<div class="selectBox2">
+													<p data-indicatorid="422">每股收益</p>
+													<ul style="" id="indicatorName">
+														<!-- <li>每股收益</li>
+														<li>每股净资产</li>
+														<li>每股现金流</li>
+														<li>净利润</li>
+														<li>营业收入</li>
+														<li>总资产</li>
+														<li>净资产收益率</li>
+														<li>股东权益比率</li>
+														<li>销售毛利率</li>
+														<li>总股本</li>
+														<li>涨跌幅</li> -->
+													</ul>
+												</div>
+										</div>
+										<span class="fr">指标:</span>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="gjj_hyph_echars">
+									<div class="gjj_hyph_time"><span><!-- 更新时间:2017-01-02 --></span></div>
+									<div class="gjj_hyph_echars_box" id="stockRanking">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="serach_info_box" id="content_gxt">
+							<div class="search_gxt_gjj">
+								
+							<div class="search_gxt_title">
+								<span><em id="guanxitu_name"><!--中科软(430002)--></em>-关系图</span>
+							</div>
+							<div class="gxt_dbox">
+								<div class="gxt_time"> 
+									<span>更新时间:2017-01-02</span>
+									<div class="clr"></div>
+								</div>
+							
+							<div class="mao-screen-area" id="screenArea">
+							<div id="main" class="mao-main">
+							</div>
+							</div>
+							<div class="mao-toolbar">
+								<ul>
+								<li class="fd" onclick="changeScreen(this)"><i class="fa fa-plus"></i></li>
+								<li class="sx" onclick="maoScale(1)"><i class="fa fa-minus"></i></li>
+								</ul>
+								<ul>
+								<li class="qp" onclick="maoScale(2)"><i class="fa fa-expand"></i></li>
+								<!--<li onclick="maoRefresh()"><i class="fa fa-refresh"></i></li>
+								<li onclick="saveImg()"><i class="fa fa-save"></i></li>-->
+								</ul>
+							</div>
+							<div class="mao_length">
+								<ul>
+									<li><i></i><span>高管</span> <div class="clr"></div></li>
+									<li><i></i><span>股东</span><div class="clr"></div></li>
+									<li><i></i><span>竞品</span> <div class="clr"></div></li>
+									<li><i></i><span>母公司</span> <div class="clr"></div></li>
+									<li><i></i><span>参控股公司</span><div class="clr"></div></li>
+									<li><i></i><span>供应商</span><div class="clr"></div></li>
+									<li><i></i><span>主要客户</span><div class="clr"></div></li>
+									<li><i></i><span>关联债权方</span><div class="clr"></div></li>
+									<li><i></i><span>产品</span><div class="clr"></div></li>
+								</ul>
+							</div>
+							</div>
+							</div>
+						</div>
+						<!--全部信息里的财务数据div-->
+						<div class="serach_info_box caiwushuju_box" id="content_cwsj">
+							<div class="cwsj_titles">
+								<div class="cwsj_company fl" id="caiwushujuTitile">
+									<!-- <a class="gs_cwxx" href="javascript:;">中科软（430002）</a>
+									<span>-财务数据</span> -->
+								</div>
+								<div class="cwsh_mox">
+									<a href="javascript:;">模型分析</a>
+									<span>加入对比</span>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="tubiao_zhanshi">
+								<div class="cwsj_time">
+									<span><!-- 更新时间：<em>2017-10-20</em> --></span>
+								</div>
+								<div class="cwsj_tubiao" id="cWsj">
+
+								</div>
+								<div class="compan_datas">
+									<div class="fl data_tl">
+										<table>
+											<thead>
+												<tr>
+													<th>企业/指标名称</th>
+												</tr>
+
+											</thead>
+											<tbody id="showCaiwuStockTable">
+												<!-- <tr>
+													<td>中科软（430002）</td>
+												</tr> -->
+											</tbody>
+										</table>
+									</div>
+									<div class="fl data_tr">
+										<table>
+											<thead>
+												<tr>
+													<th>营业收入（万元）</th>
+													<th>净利润（万元）</th>
+													<th>总资产（万元）</th>
+													<th>总负债（万元）</th>
+													<th>股东权益（万元）</th>
+													<th>现金净流量（万元）</th>
+												</tr>
+											</thead>
+											<tbody id="showCaiwuTable">
+												<!-- <tr>
+													<td class="shuzi">391440.24</td>
+													<td class="shuzi">391440.24</td>
+													<td class="shuzi">391440.24</td>
+													<td class="shuzi">391440.24</td>
+													<td class="shuzi">391440.24</td>
+													<td class="shuzi">391440.24</td>
+												</tr> -->
+											</tbody>
+										</table>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+						</div>
+						<!--股东持股信息-->
+						<div class="serach_info_box gudong_infor" id="content_gdcg">
+							<div class="cwsj_titles">
+								<div class="cwsj_company">
+									<span><em class="rm_name" name="searchStr" >--</em>相关信息</span>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="geren_jl">
+								<div class="geren_infor fl">
+									<ul>
+										<li>
+											<span>所属公司：<a href="javascript:;" class="gs_cwxx" id="dtShowCompany" >--（--）</a></span>
+										</li>
+										<li>
+											<span>职务：<em id="dtPosition" >--</em></span>
+										</li>
+										<li>
+											<span>任职时间：<em id="dtTenure" >--</em></span>
+										</li>
+										<li>
+											<span>持股：<em id="dtHoldInfo" >--</em></span>
+										</li>
+									</ul>
+								</div>
+								<div class="gr_xiangxi_infor gudong_jinli fr">
+									<span id="isHaveGDJL" >简历</span>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<!--简历的展开div-->
+							<div class="jianli_infor" style="display: none;">
+								<em class="jianli_sj"></em>
+								<div class="jianli_content">
+									<div class="jiben_xinx infor_public">
+										<ul>
+											<b class="infor_yd"></b>
+											<li class="jiben_titles"><span>基本信息</span></li>
+											<li class="zw_list">
+												<span>姓名：<em id="dtDiName" >--</em></span>
+												<span>性别：<em id="dtSex" >--</em></span>
+												<span>年龄：<em id="dtAge" >--</em></span>
+												<span>国籍：<em id="dtNationality" >--</em></span>
+												<span>现居地：<em id="dtLivingPlace" >--</em></span>
+												<div class="clr"></div>
+											</li>
+										</ul>
+									</div>
+									<div class="jiaoyu_jl infor_public">
+										<ul id="gdJYJL" >
+											<!-- <b class="infor_yd"></b>
+											<li class="jiben_titles"><span>教育经历</span></li> -->
+<!-- 											<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+<!-- 											<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+										</ul>
+									</div>
+									<div class="cy_jl infor_public">
+										<ul>
+											<li id="gdCYJL" >
+												<!-- <b class="infor_yd"></b>
+												<li class="jiben_titles"><span>任职经历</span></li> -->
+												<!-- <li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li>
+												<li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li> -->
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="chigu_bianhua">
+								<div class="chigu_num">
+									<div class="fl chigu_change">
+										<p id="gdJQCGBH" >近期持股变化：<!-- <span class="zengchi">增持</span>/<span class="jianchi">减持</span>/<span class="bubian">--</span> --></p>
+									</div>
+									<div class="gr_xiangxi_infor fr on">
+										<span id="isHaveChart" >收起</span>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="chigu_qk">
+									<div class="cg_time">
+										<span>更新时间：<em class="chigu_times" id="dtGDUpdateTime" >--</em></span>
+									</div>
+									<div class="chigu_tubiao" id="chigu_tubiao">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--智能研报-->
+						<!--<div class="serach_info_box tab-com" id="content_znyb">-->
+							<!--<div class="tab-title">-->
+								<!--中科软（430002）<span>-智能研报 </span>-->
+							<!--</div>-->
+							<!--<table>-->
+								<!--<thead>-->
+								<!--<tr>-->
+									<!--<th>标题</th>-->
+									<!--<th>研报类型</th>-->
+									<!--<th>风险级别</th>-->
+									<!--<th>操作</th>-->
+								<!--</tr>-->
+								<!--</thead>-->
+								<!--<tbody>-->
+								<!--<tr>-->
+									<!--<td>中科软（928374）智能研报</td>-->
+									<!--<td>企业分析</td>-->
+									<!--<td>无风险</td>-->
+									<!--<td><a>查看报告</a><a>编辑研报</a></td>-->
+								<!--</tr>-->
+
+
+								<!--</tbody>-->
+							<!--</table>-->
+							<!--<div class="list_more">-->
+								<!--<span>加载更多</span>-->
+							<!--</div>-->
+
+						<!--</div>-->
+						
+
+						<!--三板公司涉及到某个人的信息-->
+						<div class="serach_info_box" id="content_sbgs">
+							<div class="sanb_company_geren">
+								<div class="cwsj_titles">
+									<div class="cwsj_company">
+										<span>三板公司包含<em class="rm_name" name="searchStr" >--</em>相关信息</span>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="information_list" id="dtInformationDiv" >
+<!-- 									<div class="geren_list on"> -->
+<!-- 										<div class="information_geren"> -->
+<!-- 											<ul> -->
+<!-- 												<li class="gs_inform"> -->
+<!-- 													<span>所属公司：<a href="javascript:;" class="suoshu_gs">中科软（430002）</a></span> -->
+<!-- 													<span>股东排名：<em>1/10</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="chigu_number">  -->
+<!-- 													<span>性别：<em>男</em></span> -->
+<!-- 													<span>持股数量：<em>21504.27万股</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="cs_nianfen"> -->
+<!-- 													<span>年龄：<em>1974年</em></span> -->
+<!-- 													<span>持股比例：<em>8.43%</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="zhiwu"> -->
+<!-- 													<span>职务：<em>副总经理</em></span> -->
+<!-- 													<span>持股市值：<em>377，8770万元</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="renzhi_shijian"> -->
+<!-- 													<span>任职时间：<em>2013-05—2017-07</em></span> -->
+<!-- 													<span>更新时间：<em>2017-01-02</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="geren_jianli"> -->
+<!-- 													<span>简历</span> -->
+<!-- 												</li> -->
+<!-- 												<div class="clr"></div> -->
+<!-- 											</ul> -->
+<!-- 										</div> -->
+										
+<!-- 										简历的详细信息 -->
+<!-- 										<div class="jianli_inform"> -->
+<!-- 											<div class="jianli_infor" style="display: none;"> -->
+<!-- 												<em class="jianli_sj"></em> -->
+<!-- 												<div class="jianli_content"> -->
+<!-- 													<div class="jiben_xinx infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<b class="infor_yd"></b> -->
+<!-- 															<li class="jiben_titles"><span>基本信息</span></li> -->
+<!-- 															<li class="zw_list"> -->
+<!-- 																<span>姓名：<em>罗朝炜</em></span> -->
+<!-- 																<span>性别：<em>男</em></span> -->
+<!-- 																<span>出生年月：<em>1970-04</em></span> -->
+<!-- 																<span>国籍：<em>中国</em></span> -->
+<!-- 																<span>现居地：<em>中国香港居留权</em></span> -->
+<!-- 																<div class="clr"></div> -->
+<!-- 															</li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="jiaoyu_jl infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<b class="infor_yd"></b> -->
+<!-- 															<li class="jiben_titles"><span>教育经历</span></li> -->
+<!-- 															<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+<!-- 															<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="cy_jl infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<li> -->
+<!-- 																<b class="infor_yd"></b> -->
+<!-- 																<li class="jiben_titles"><span>任职经历</span></li> -->
+<!-- 																<li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li> -->
+<!-- 																<li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li> -->
+<!-- 															</li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="clr"></div> -->
+<!-- 												</div> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 									<div class="geren_list"> -->
+<!-- 										<div class="information_geren"> -->
+<!-- 											<ul> -->
+<!-- 												<li class="gs_inform"> -->
+<!-- 													<span>所属公司：<a href="javascript:;" class="suoshu_gs">中科软（430002）</a></span> -->
+<!-- 													<span>股东排名：<em>1/10</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="chigu_number">  -->
+<!-- 													<span>性别：<em>男</em></span> -->
+<!-- 													<span>持股数量：<em>21504.27万股</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="cs_nianfen"> -->
+<!-- 													<span>出生年份：<em>1974年</em></span> -->
+<!-- 													<span>持股比例：<em>8.43%</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="zhiwu"> -->
+<!-- 													<span>职务：<em>副总经理</em></span> -->
+<!-- 													<span>持股市值：<em>377，8770万元</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="renzhi_shijian"> -->
+<!-- 													<span>任职时间：<em>2013-05—2017-07</em></span> -->
+<!-- 													<span>更新时间：<em>2017-01-02</em></span> -->
+<!-- 												</li> -->
+<!-- 												<li class="geren_jianli"> -->
+<!-- 													<span>简历</span> -->
+<!-- 												</li> -->
+<!-- 												<div class="clr"></div> -->
+<!-- 											</ul> -->
+<!-- 										</div> -->
+										
+<!-- 										简历的详细信息 -->
+<!-- 										<div class="jianli_inform"> -->
+<!-- 											<div class="jianli_infor" style="display: none;"> -->
+<!-- 												<em class="jianli_sj"></em> -->
+<!-- 												<div class="jianli_content"> -->
+<!-- 													<div class="jiben_xinx infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<b class="infor_yd"></b> -->
+<!-- 															<li class="jiben_titles"><span>基本信息</span></li> -->
+<!-- 															<li class="zw_list"> -->
+<!-- 																<span>姓名：<em>罗朝炜</em></span> -->
+<!-- 																<span>性别：<em>男</em></span> -->
+<!-- 																<span>出生年月：<em>1970-04</em></span> -->
+<!-- 																<span>国籍：<em>中国</em></span> -->
+<!-- 																<span>现居地：<em>中国香港居留权</em></span> -->
+<!-- 																<div class="clr"></div> -->
+<!-- 															</li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="jiaoyu_jl infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<b class="infor_yd"></b> -->
+<!-- 															<li class="jiben_titles"><span>教育经历</span></li> -->
+<!-- 															<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+<!-- 															<li><span class="shuzi">1993-07</span><span>毕业于华南理工大学化工机械系，获得本科学位</span></li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="cy_jl infor_public"> -->
+<!-- 														<ul> -->
+<!-- 															<li> -->
+<!-- 																<b class="infor_yd"></b> -->
+<!-- 																<li class="jiben_titles"><span>创业经历</span></li> -->
+<!-- 																<li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li> -->
+<!-- 																<li><span class="shuzi">1993-07—1997-07</span><span>华南橡胶轮胎有限公司担任工程部工程师职位</span></li> -->
+<!-- 															</li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
+<!-- 													<div class="clr"></div> -->
+<!-- 												</div> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+<!-- 									</div> -->
+								</div>
+								<div class="list_more">
+									<span id="dtSearchMore" >没有更多的数据</span>
+								</div>
+							</div>
+						</div>
+						<div class="serach_info_box" id="content_xgyw">
+							<div class="wj_commonWrap">
+								<div class="wj_searchTitle wj_clear">
+									<h2><em class="rm_name">游戏</em>相关业务公司</h2>
+								</div>
+								<div class="wj_relatedCom">
+									<table class="wj_searchTable">
+										<col width="182"><col width="182"><col width="100"><col width="182"><col>
+										<thead><tr><th>公司</th><th>所属层</th><th class="wj_tRight">总市值（亿）</th><th>市盈率</th><th>主营业务及收入占比</th></tr></thead>
+										<tbody  id="searchBusinessTable">
+											<!-- <tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">网络<i class="relatedText">游戏</i>（100.0%）</td></tr>
+											<tr><td><a href="">金刚游戏（430092)</a></td><td>基础层</td><td class="wj_tRight">4,809.00</td><td>89.95</td><td class="wj_tLeft">游戏授权收入（0.22%）、游戏运营收入（39.42%）、游戏及应用推广收入</td></tr> -->
+										</tbody>
+									</table>
+								</div>
+								<div class="wj_btnMoreWrap"><button class="wj_btnMore">加载更多</button></div>
+							</div>
+						</div>
+						<div class="serach_info_box" id="content_data">
+							<div class="wj_commonWrap xiangguanshuju">
+                                <div class="wj_searchTitle wj_clear">
+                                    <h2><em class="rm_name" id="shujuxiangguanKey">--</em>相关数据</h2>
+                                </div>
+                                <div class="wj_relatedCom" id="wj_dataCom">
+         
+                                    <table class="wj_searchTable">
+                                        <col width="220"><col width="360"><col width="220"><col width="150"><col width="150"><col width="150"><col>
+                                        <thead><tr><th>指标</th><th class="wj_tRight">最新值</th><th>单位</th><th>来源</th><th>更新日期</th><th>操作</th></tr></thead>
+                                        <tbody id="searchIndicatorDataTable">
+                                            <!-- <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr>
+                                            <tr><td>软件产业：总收入</td><td class="wj_tRight">203,067,662.00</td><td>万元</td><td>工信部</td><td>2017-04-23</td><td><a class="wj_showData">查看</a></td></tr> -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="wj_btnMoreWrap"><button class="wj_btnMore" id="wj_datadBtn">加载更多</button></div>
+                            </div>
+						</div>
+						<!--新闻列表start-->
+						<div class="serach_info_box" id="content_xw">
+							<div class="mew_listes">
+								<!--<div class="cwsj_titles">
+									<div class="cwsj_company">
+										<span><em class="rm_name">金融大数据</em>相关新闻</span>
+									</div>
+									<div class="clr"></div>
+								</div>-->
+								<div class="gjj_gg_title">
+									<span><em class="gjj_red" id="intelligentNews">金融大数据</em>相关新闻</span>
+									<span class="gg_totals wj_none" id="newsTotal"><!--约11838篇--></span>
+									<div class="paixu_types wj_none">
+										<!--<span id="xwXGX" class="wj_sort_down">相关性<em></em></span>-->
+										<span id="xwFBSJ" class="wj_sort_up wj_sort_down">发布时间<em></em></span>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="list_content">
+									<ul>
+										<!-- <li>
+											<div class="n_title">
+												<h2>京东<em class="rm_name">金融</em>发布<em class="rm_name">大数据</em>消费指数6月线上消费欣欣向荣</h2>
+											</div>
+											<div class="news_time">
+												<span>来源：金融界</span>
+												<span>发布时间：2017-07-25</span>
+												<p>京东金融发布6月大数据消费指数报告。数据显示，6月互联网线上销售同比增长44%，在重点监测的12个子行业中，除食品饮料外，其余 副本</p>
+											</div>
+										</li>
+										<li>
+											<div class="n_title">
+												<h2>京东<em class="rm_name">金融</em>发布<em class="rm_name">大数据</em>消费指数6月线上消费欣欣向荣</h2>
+											</div>
+											<div class="news_time">
+												<span>来源：金融界</span>
+												<span>发布时间：2017-07-25</span>
+												<p>京东金融发布6月大数据消费指数报告。数据显示，6月互联网线上销售同比增长44%，在重点监测的12个子行业中，除食品饮料外，其余 副本</p>
+											</div>
+										</li>
+										<li>
+											<div class="n_title">
+												<h2>京东<em class="rm_name">金融</em>发布<em class="rm_name">大数据</em>消费指数6月线上消费欣欣向荣</h2>
+											</div>
+											<div class="news_time">
+												<span>来源：金融界</span>
+												<span>发布时间：2017-07-25</span>
+												<p>京东金融发布6月大数据消费指数报告。数据显示，6月互联网线上销售同比增长44%，在重点监测的12个子行业中，除食品饮料外，其余 副本</p>
+											</div>
+										</li>
+										<li>
+											<div class="n_title">
+												<h2>京东<em class="rm_name">金融</em>发布<em class="rm_name">大数据</em>消费指数6月线上消费欣欣向荣</h2>
+											</div>
+											<div class="news_time">
+												<span>来源：金融界</span>
+												<span>发布时间：2017-07-25</span>
+												<p>京东金融发布6月大数据消费指数报告。数据显示，6月互联网线上销售同比增长44%，在重点监测的12个子行业中，除食品饮料外，其余 副本</p>
+											</div>
+										</li>
+										<li>
+											<div class="n_title">
+												<h2>京东<em class="rm_name">金融</em>发布<em class="rm_name">大数据</em>消费指数6月线上消费欣欣向荣</h2>
+											</div>
+											<div class="news_time">
+												<span>来源：金融界</span>
+												<span>发布时间：2017-07-25</span>
+												<p>京东金融发布6月大数据消费指数报告。数据显示，6月互联网线上销售同比增长44%，在重点监测的12个子行业中，除食品饮料外，其余 副本</p>
+											</div>
+										</li> -->
+									</ul>
+									
+								</div>
+								<div class="list_more">
+									<span id="moreNews">加载更多</span>
+								</div>
+							</div>
+						</div>
+
+						<!--新闻列表end-->
+						<!--<div class="serach_info_box">金融大数据相关公告</div>
+						<div class="serach_info_box">金融大数据相关研报</div>-->
+						
+						<!--公告-->
+						<div class="serach_info_box" id="content_gg">
+							<div class="gjj_sear_gonggao">
+
+								<div class="gjj_gg_title">
+									<span><em class="gjj_red" id="intelligentGongGao">金融大数据</em>相关公告</span>
+									<span class="gg_totals wj_none" id="gongGaoTotal"><!--约11838篇--></span>
+									<div class="paixu_types wj_none">
+										<!--<span id="ggXGX" class="wj_sort_down">相关性<em></em></span>-->
+										<!--<span id="ggFBSJ">发布时间<em></em></span>-->
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="gjj_gongg_list">
+									<ul>
+										<!--<li>-->
+											<!--<a href="javascript:;">中科软:2016年年度报告</a>-->
+											<!--<span>发布时间:2017-07-25</span>-->
+											<!--<p>【第三节公司业务概要|（四）“三流合一”打造...】“物流+信息流+现金流”三流合一，打造基于大数据的金融服务平台。公司通过支付及OTT业务积累B端、C端用户资源通过OTT务供...</p>-->
+										<!--</li>-->
+
+									</ul>
+								</div>
+								<div class="list_more">
+									<span id="moreGongGao">加载更多</span>
+								</div>
+								
+							</div>
+						</div>
+
+
+
+						<div class="serach_info_box" id="content_yb">
+							<div class="gjj_bxxiangyanbao">
+								<div class="gjj_gg_title">
+									<span><em class="gjj_red" id="intelligentYanBao">保险</em>相关研报</span>
+									<span class="gg_totals wj_none" id="yanBaoTotal"><!--约11838篇--></span>
+									<div class="paixu_types wj_none">
+										<!-- <span id="ybXGX" class="wj_sort_down">相关性<em></em></span> -->
+										<span id="ybFBSJ" class="wj_sort_down">发布时间<em></em></span>
+										<!-- <span id="ybYS">页数<em></em></span> -->
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="gjj_yb_list" id="ybLIST">
+									<ul>
+										<!-- <li>
+											<h2><i>公司</i><a href="javascript:;">中科软(430002)中国<em class="gjj_red">保险</em>IT龙头企业，估值存在较大修复空间</a></h2>
+											<div class="gjj_timed_xinxi">
+												<span>发布时间:2017-07-25</span>
+												<span>所属行业：互联网</span>
+												<span>来源：金融界</span>
+												<span>本次评级：买入</span>
+												<span>分析师：张三</span>
+												<span>总市值：<b>63.04</b>亿</span>
+												<span>市盈率(静)：<b>33.04</b></span>
+												<div class="clr"></div>
+											</div>
+											<p>公司作为我国软件行业的国家队，由中国科学院软件研究所 于 1996 年 5 月出资设立。经过 20 年的发展，公司已发展成为国 内规模最大的软件企业之一，所覆盖的行业包括保险、银行...</p>
+										</li>
+										<li>
+											<h2><i>公司</i><a href="javascript:;">中科软(430002)中国<em class="gjj_red">保险</em>IT龙头企业，估值存在较大修复空间</a></h2>
+											<div class="gjj_timed_xinxi">
+												<span>发布时间:2017-07-25</span>
+												<span>所属行业：互联网</span>
+												<span>来源：金融界</span>
+												<span>本次评级：买入</span>
+												<span>分析师：张三</span>
+												<span>总市值：<b>63.04</b>亿</span>
+												<span>市盈率(静)：<b>33.04</b></span>
+												<div class="clr"></div>
+											</div>
+											<p>公司作为我国软件行业的国家队，由中国科学院软件研究所 于 1996 年 5 月出资设立。经过 20 年的发展，公司已发展成为国 内规模最大的软件企业之一，所覆盖的行业包括保险、银行...</p>
+											
+										</li>
+										<li>
+											<h2><i>公司</i><a href="javascript:;">中科软(430002)中国<em class="gjj_red">保险</em>IT龙头企业，估值存在较大修复空间</a></h2>
+											<div class="gjj_timed_xinxi">
+												<span>发布时间:2017-07-25</span>
+												<span>所属行业：互联网</span>
+												<span>来源：金融界</span>
+												<span>本次评级：买入</span>
+												<span>分析师：张三</span>
+												<span>总市值：<b>63.04</b>亿</span>
+												<span>市盈率(静)：<b>33.04</b></span>
+												<div class="clr"></div>
+											</div>
+											<p>公司作为我国软件行业的国家队，由中国科学院软件研究所 于 1996 年 5 月出资设立。经过 20 年的发展，公司已发展成为国 内规模最大的软件企业之一，所覆盖的行业包括保险、银行...</p>
+											
+										</li>
+										<li>
+											<h2><i>公司</i><a href="javascript:;">中科软(430002)中国<em class="gjj_red">保险</em>IT龙头企业，估值存在较大修复空间</a></h2>
+											<div class="gjj_timed_xinxi">
+												<span>发布时间:2017-07-25</span>
+												<span>所属行业：互联网</span>
+												<span>来源：金融界</span>
+												<span>本次评级：买入</span>
+												<span>分析师：张三</span>
+												<span>总市值：<b>63.04</b>亿</span>
+												<span>市盈率(静)：<b>33.04</b></span>
+											<div class="clr"></div>
+											</div>
+											<p>公司作为我国软件行业的国家队，由中国科学院软件研究所 于 1996 年 5 月出资设立。经过 20 年的发展，公司已发展成为国 内规模最大的软件企业之一，所覆盖的行业包括保险、银行...</p>
+										</li> -->
+									</ul>
+								</div>
+								<div class="list_more">
+									<span id="moreYanBao">加载更多</span>
+								</div>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<!--主体 end-->
+		<!--公司基本信息弹窗star-->
+			<div class="n_gsjbx" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司信息</b>
+				</div>
+				<div class="n_gsjbx_dbox">
+					<!--<div class="n_gs_title">
+				<span>公司基本信息</span>
+			</div>
+			<div class="clr"></div>-->
+					<div class="n_gs_dbox">
+						<ul>
+							<li>
+								<span>公司名称</span>
+								<p id="companyForShort">--
+									<!-- 铭慧股份 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<span>法人代表</span>
+								<p id="legalPerson">--
+									<!-- 张三 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>注册时间</span>
+								<p id="registrationDate">--
+									<!-- 2009-12-22 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>注册资本(万元)</span>
+								<p id="registeredCapital">--</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>挂牌时间</span>
+								<p id="stockDate">--
+									<!-- 2012-09-10 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>主办券商</span>
+								<p id="sponsoredBroker">--
+									<!-- 招商证券 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>转让方式</span>
+								<p id="dealType">--
+									<!-- 协议转让 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>总股本(万股)</span>
+								<p id="generalCapital">--
+									<!-- 60000.00 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>实际控股人</span>
+								<p id="actualController">--
+									<!-- 罗超威 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>董秘</span>
+								<p id="secretary">--
+									<!-- 苏妲己 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>所属行业</span>
+								<p id="industryName">--
+									<!-- 机械设备--专用设备 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>所属区域</span>
+								<p id="state">--
+									<!-- 广东-广州 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>电话</span>
+								<p id="phone">--
+									<!-- +86-20-84554400 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>传真</span>
+								<p id="fax">--</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>公司网址</span>
+								<p id="companyUrl">--
+									<!-- www.baidu.com -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>联系地址</span>
+								<p id="businessAddress">--
+									<!-- 广东省广州市番禺区大龙街汉基大道22 -->号</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>公司简介</span>
+								<p id="enterpriseIntroduction">--
+									<!-- 广州市铭慧包装机械有限公司（以下简供液体食品无菌包装领域的全套解决方蛋白饮料等等行业。 自成立以来，铭完美的
+液体食品无菌包装解决方案。凭称“铭慧包装”）专业研究、设计制造案。铭慧包装的产品已经成功应用于茶慧包装以其
+优良的品质，先进的技术，借稳定可靠的产品性能，人性化的环保体食品无菌包装设备及辅助设备，并提饮料、果汁、纯
+牛奶、含乳饮料、植物无与伦比的客户服务 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<li class="last">
+								<span>商业模式</span>
+								<p id="businessModel">--
+									<!-- 公司主营业务为纸包装饮料无菌灌的全套解决方案。主要产品包括灌机、装机和相关辅助设备的专业研究、设计贴管机、
+压盖机及配备零部件。根据中和制造，并提供液体食品无菌包装领域国证监会发布的《上市公司行业分类指 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<div class="clr"></div>
+						</ul>
+						<div class="clr"></div>
+					</div>
+					<div class="n_gs_time">
+						<span id="enterpriseUpTime">--<!-- 更新时间:2017-05-03 --></span>
+					</div>
+					<div class="clr"></div>
+				</div>
+
+			</div>
+			<!--公司基本信息弹窗end-->
+			<!--十大股东弹窗star-->
+			<div class="n_ten_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>十大股东</b>
+					<i id="holderUpTime">更新时间:--</i>
+					<div class="clr"></div>
+				</div>
+				<!--<div class="n_ten_title">
+				<span></span>
+			</div>-->
+				<div class="clr"></div>
+				<div class="n_ten_table">
+					<div class="gd_content">
+						<table>
+							<thead>
+								<tr>
+									<th class="gd_paixu">排序</th>
+									<th>股东</th>
+									<th>持股数量<em>(万股)</em></th>
+									<th>有限售持股<em>(万股)</em></th>
+									<th>无限售持股<em>(万股)</em></th>
+									<th>总股本占比</th>
+									<th>持股变化</th>
+								</tr>
+							</thead>
+							<tbody id="tenHolder">
+								<!-- <tr>
+						<td>1</td>
+						<td>罗朝伟</td>
+						<td>3,144.00</td>
+						<td>2358.00</td>
+						<td>786.00</td>
+						<td>52.4</td>
+						<td>10.05</td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<!--<div class="n_gs_time">
+					<span id="holderUpTime">更新时间:--</span>
+				</div>-->
+			</div>
+			<!--十大股东弹窗end-->
+			<!--高管弹窗star-->
+			<div class="n_gsgguan_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司高管</b>
+				</div>
+				<div class="clr"></div>
+				<div class="gjj_gaogaowbox">
+				<div class="n_gsgguan_table">
+					<div class="xq_gaog">
+						<table id="ngsgg_tb">
+							<thead>
+								<tr>
+									<th class="gsgg_xuhao">序号</th>
+									<th class="gsgg_xm">姓名</th>
+									<th class="gsgg_zw">职务</th>
+									<th class="gsgg_sj">任职时间</th>
+									<th class="gsgg_cg">持股（万股）</th>
+									<th class="gsgg_cgbh">持股变化(%)</th>
+									<th class="gsgg_jl">简历</th>
+								</tr>
+							</thead>
+							<tbody id="dignitaryTbody">
+								<!-- 					  <tr> -->
+								<!-- 						<td>1</td> -->
+								<!-- 						<td>罗朝伟</td> -->
+								<!-- 						<td>董事长</td> -->
+								<!-- 						<td>2358.00</td> -->
+								<!-- 						<td>786.00</td> -->
+								<!-- 						<td>52.4</td> -->
+								<!-- 						<td><a href="javascript:;">查看</a></td> -->
+								<!-- 					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gs_time">
+					<span id="dignUpTime">更新时间:--</span>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gg_tc_tc">
+					<div class="gg_gr_xinx">
+						<div class="n_g_t_tc_btn" id="n_g_t_tc_colse">
+							收起
+						</div>
+						<div class="n_gg_dbox">
+							<div class="n_gg_scroll">
+								<div class="n_gg_jbxx">
+									<div class="n_gg_span">
+										<span>基本信息</span>
+									</div>
+									<div class="n_gg_info">
+										<ul>
+											<li><span>姓名:</span>
+												<p id="dignitaryName">--
+													<!-- 罗密欧 -->
+												</p>
+											</li>
+											<li><span>性别:</span>
+												<p id="sex">--</p>
+											</li>
+											<li><span>出生年月:</span>
+												<p id="bornDate">--
+													<!-- 1970-04 -->
+												</p>
+											</li>
+											<li><span>国籍:</span>
+												<p id="nationality">--
+													<!-- 中国 -->
+												</p>
+											</li>
+											<li><span>现居地:</span>
+												<p id="livingPlace">--
+													<!-- 中国香港居留权 -->
+												</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+								<div class="n_gg_jyjl">
+									<div class="n_jy_span">
+										<span>教育经历</span>
+									</div>
+									<div class="n_gg_jyjlul">
+										<ul>
+											<!-- <li>
+											<p>1993-07毕业与华南理工大学化工机械系，获得本科学位。</p>
+											<div class="clr"></div>
+										</li> -->
+										</ul>
+									</div>
+
+								</div>
+								<div class="clr"></div>
+								<div class="n_gg_zyjl">
+									<div class="n_zy_span">
+										<span>任职经历</span>
+									</div>
+									<div class="n_gg_zyjlul">
+										<ul>
+											<!-- 										<li><p>毕业与华南理工大学化工机械系，获得本科学位。</p></li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--高管弹窗end-->
+			<!--公司大事弹窗star-->
+			<div class="n_big_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司大事</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_big_table gongsi_dashi">
+					<div class="xq_gs_ds">
+						<table class="gs_big_tc">
+							<thead>
+								<tr>
+									<th class="n_big_time">时间</th>
+									<th class='n_big_type'>类型</th>
+									<th>公告名称</th>
+								</tr>
+							</thead>
+							<tbody id="eventTbody">
+								<!-- <tr>
+						<td>2017-05-13</td>
+						<td>公开转让说明书</td>
+						<td>公告名称</td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="npages" id="page" style="display: none;">
+					<a href="javascript:;">首页</a>
+					<a href="javascript:;">上一页</a>
+					<a href="javascript:;">下一页</a>
+				</div>
+			</div>
+			<!--公司大事弹窗end-->
+
+			<!--经营情况弹窗star-->
+			<div class="n_jyqk_dbox" style="display: none;">
+				<div class="n_gs_time">
+					<div class="top_title">
+						<h1>经营情况</h1>
+						<span id="opUpTime">更新时间:--</span>
+						<div class="clr"></div>
+					</div>
+				</div>
+				<div class="n_gs_close">
+					<span></span>
+					<b>业务收入</b>
+				</div>
+				
+				<div class="n_jyqk_scorr">
+					
+					<div class="clr"></div>
+					<div class="jyqk_tc">
+					<div class="n_jyqk_ywsr_table">
+						<table id="mainBusinessTablde">
+							<thead>
+								<tr id="mainBusinessHead">
+									<th class="cp_title" class="jiny_mc">产品</th>
+									<!-- 							<th colspan="2" scope="col">2015年1-3月</th> -->
+									<!-- 							<th colspan="2" scope="col">2014年度</th> -->
+									<!-- 							<th colspan="2" scope="col">2013年度</th> -->
+								</tr>
+								<tr id="mainBusinessCenter">
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+								</tr>
+							</thead>
+							<tbody id="mainBusinessTBody">
+								<!-- 						<tr> -->
+								<!-- 								<td>灌装机</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 						</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="clr"></div>
+					<div class="n_jyqk_title">
+						<span>主要客户</span>
+					</div>
+
+					<div class="clr"></div>
+					<div class="n_jyqk_table">
+						<table>
+							<thead>
+								<tr>
+									<th class="jiny_mc">客户名称</th>
+									<th class="jiny_jine">金额(万元)</th>
+									<th class="jine_zb">占比(%)</th>
+								</tr>
+							</thead>
+							<tbody id="ocTbody">
+								<!-- 					  <tr> -->
+								<!-- 						<td>灌装机</td> -->
+								<!-- 						<td>210000.00</td> -->
+								<!-- 						<td>88.46</td> -->
+								<!-- 					</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="clr"></div>
+					</div>
+					
+				</div>
+				
+			</div>
+			<!--经营情况弹窗end-->
+			<!--发行情况弹窗star-->
+			<div class="n_fxqkd_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>历次发行</b>
+				</div>
+				<div class="clr"></div>
+				<div class="gjj_fxqk_wk">
+					
+				
+				<div class="n_fxqkd_table">
+					<div class="xq_gs_ds">
+						<table id="nfxdx_tb">
+							<thead>
+								<tr>
+									<th>公告时间</th>
+									<th>最新价</th>
+									<th>发行价</th>
+									<th>溢价率</th>
+									<th>融资市盈率</th>
+									<th>募资金额(万元)</th>
+									<th>发行股数(万股)</th>
+									<th>最新进度</th>
+									<th>发行对象</th>
+								</tr>
+							</thead>
+							<tbody id="fxTbody">
+								<!-- <tr>
+						<td>2016-02-09</td>
+						<td>13.46</td>
+						<td>8.9</td>
+						<td>-36.88</td>
+						<td>188.03</td>
+						<td>786.00</td>
+						<td>2795</td>
+						<td>董事会通过</td>
+						<td><a href="javascript:;">查看</a></td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gs_time">
+					<span id="fxUpTime">更新时间:--</span>
+				</div>
+				<div class="clr"></div>
+				<div class="n_fxqk_tc_tc">
+					<div class="gg_gr_xinx">
+						<div class="n_fxqk_t_tc_btn" id="n_fxdx_t_tc_colse">
+							<!--<img src="/saasBeta/images/n_shouqi.png"/>-->
+							收起
+						</div>
+						<div class="n_fxqk_dbox">
+							<div class="n_fxqk_scroll">
+								<div class="n_fxqk_dtable">
+									<table>
+										<thead>
+											<tr>
+												<th class="fax_xuhao">序号</th>
+												<th>投资人</th>
+												<th>类型</th>
+												<th>每股价格(元)</th>
+												<th>投资数量(万股)</th>
+												<th>融资金额(万元)</th>
+											</tr>
+										</thead>
+										<tbody id="fxdxTbody">
+											<!-- <tr>
+						<td>1</td>
+						<td>北京明宇投资管理有限公司</td>
+						<td>PE/VC</td>
+						<td>8.9</td>
+						<td>220</td>
+						<td>220</td>
+					</tr> -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="clr"></div>
+
+						</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+				</div>
+			</div>
+			<!--发行情况弹窗end-->
+			<!--团队弹窗star-->
+			<div class="n_teamdbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>团队</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_fxtd_dbox">
+					<div class="n_fxqk_echars_dbox">
+						<div class="fxqk_echars_l fl">
+							<div class="fxqk_ec_title">
+								<span>员工组织结构</span>
+							</div>
+							<div class="fxqk_ec_info" id="ygzzjiegou">
+
+							</div>
+						</div>
+						<div class="fxqk_echars_r fr">
+							<div class="fxqk_ec_title">
+								<span>员工教育结构</span>
+							</div>
+							<div class="fxqk_ec_info" id="ygjyjiegou">
+
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="fxqk_ygbd_echars_dbox">
+						<div class="fxqk_ec_title">
+							<span>员工波动情况</span>
+						</div>
+						<div class="fxqk_bod_echar_info" id="fxqk_bod_echar_info">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--团队弹窗end-->
+			<!--数据弹窗star-->
+			<div class="wj_data_mark wj_none"></div>
+			<div class="wj_data_popUP wj_none shuju_tc">
+				<div class="wj_popUP_close"></div>
+				<div class="wj_popUP_wrap">
+					<div class="wj_exportProgress">
+						<svg xmlns="http://www.w3.org/200/svg" height="40" width="40" style="font-size:12px; font-family:Arial;">
+					        <circle cx="20" cy="20" r="18" fill="none" stroke="#dce2e8" stroke-width="3" stroke-linecap="round"/>
+					        <circle class="wj_progress" id="wj_progress" cx="20" cy="20" r="18" fill="none" stroke="#2f84d0" stroke-width="3" stroke-dasharray="0,10000"/>
+					        <text style="text-anchor: middle;dominant-baseline: middle;" x='20' y='22' fill="#1e7bcd" id="wj_progressText"></text>
+					    </svg>
+					</div>
+					<div class="wj_toast">保存成功！</div>
+					<div class="wj_popUP_tit">
+						<span id="chartTitle">软件产业：总收入</span>
+						<div class="wj_popUP_tit_tools"><a href="javascript:;" id="sjAddZB" >添加指标</a><a id="wj_export">导出</a></div>
+					</div>
+					<div class="wj_clear">
+						<div class="fl wj_dataTabs">
+							<!-- <span data-value="周">1W</span>
+							<span data-value="月">1M</span>
+							<span data-value="半年">6M</span>
+							<span data-value="1年">1Y</span>
+							<span data-value="3年">3Y</span>
+							<span data-value="5年">5Y</span>
+							<span data-value="ALL" class="wj_active" id="sjAll" >ALL</span> -->
+						</div>
+						<div class="fl wj_dataTimes">
+							<span class="fl">自定义时间范围</span>
+							<div class="fl wj_dataTimes_input">
+								<input type="text" readonly="readonly" value="" id="diyMinDate">
+								<i>-</i>
+								<input type="text" readonly="readonly" value="" id="diyMaxDate">
+							</div>
+							<div class="fl wj_editChart"><button id="changeParamToFindSearchIndicatorDataDeatil">查询</button></div>
+						</div>
+					</div>
+					<div class="wj_pop_echarts" id="wj_dataEcharts" style="width:960px; height:300px"></div>
+					<div class="compan_datas">
+						<div class="fl data_tl">
+							<table>
+								<thead>
+									<tr>
+										<th>指标名称</th>
+									</tr>
+
+								</thead>
+								<tbody id="shujuChartTableTitle">
+									<!-- <tr>
+										<td>净利润</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<div class="fl data_tr">
+							<table>
+								<thead id="shujuChartTableDate">
+									<!-- <tr>
+										<th>营业收入（万元）</th>
+										<th>净利润（万元）</th>
+										<th>总资产（万元）</th>
+										<th>总负债（万元）</th>
+										<th>股东权益（万元）</th>
+										<th>现金净流量（万元）</th>
+									</tr> -->
+								</thead>
+								<tbody id="shujuChartTableData">
+									<!-- <tr>
+										<td class="shuzi">391440.24</td>
+										<td class="shuzi">391440.24</td>
+										<td class="shuzi">391440.24</td>
+										<td class="shuzi">391440.24</td>
+										<td class="shuzi">391440.24</td>
+										<td class="shuzi">391440.24</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+			<!--数据弹窗end-->
+			<!--新闻的全屏显示-->
+			<div class="new_fullPage" id= "new_fullPageNews" style="display: none;">
+				<div class="new_moreContent">
+					<div class="fullPage_title">
+						<h2 id = "newsTitle"></h2>
+						<p>
+							<span>发布时间：<em class="shuzi" id = "newsTime"></em></span>
+							<span>来源：<em  id = "newsSource"></em></span>
+						</p>
+					</div>
+					<div class="news_content" id = "newsContent">
+						<!--有匹配的关键词加em标签给class是red的类-->
+						<!-- <p>【第三节公司业务概要|（四）“三流合一”打造...】“物流+信息流+现金流”三流合一，打造基于<em class="red">大数据</em>的金融服务平台。公司通过支</p> -->
+						<!-- <p>【第三节公司业务概要|（四）“三流合一”打造...】“物流+信息流+现金流”三流合一，打造基于大数据的金融服务平台。公司通过支</p> -->
+					</div>
+					<div class="tuichu_icon">
+						<div class="quanp_btn">
+							<em></em>
+							<span>退出全屏</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--公告的全屏显示-->
+			<div class="new_fullPage" id="new_fullPageGG" style="display: none;">
+				<div class="new_moreContent">
+					<div class="fullPage_title">
+						<h2 id = "GGTitle"></h2>
+						<p>
+							<span>发布时间：<em class="shuzi" id = "GGTime"></em></span>
+							<span>来源：<em id = "GGSource"></em></span>
+						</p>
+					</div>
+					<div class="news_content" id = "GGContent">
+						
+						<iframe id = "ggPDFId" frameborder=0 width="100%"  marginheight=0 marginwidth=0 scrolling=yes src=""></iframe> 
+						<script>
+							var screenHeight=$(window).height();
+							var height1=screenHeight-100;
+							$("#ggPDFId").css("height",height1);
+						</script>
+					</div>
+					<div class="tuichu_icon">
+						<div class="quanp_btn">
+							<em></em>
+							<span>退出全屏</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 研报的全屏显示-->
+			<div class="new_fullPage" id="new_fullPageYB" style="display: none;">
+				<div class="new_moreContent">
+					<div class="fullPage_title">
+						<h2 id = "YBTitle"></h2>
+						<p>
+							<span>发布时间：<em class="shuzi" id ="YBTime"></em></span>
+							<!-- <span>所属行业：<em>互联网</em></span> -->
+							<span>来源：<em id ="YBSource"></em></span>
+							<span id="yanbao_zsz">总市值：<em class="shuzi red" id="ZSZYB"></em>亿</span>
+							<span id="yanbao_syl">市盈率（静）：<em class="shuzi red" id="SYLYB"></em></span>
+						</p>
+					</div>
+					<div class="news_content" id = "YBContent">
+						<iframe id ="yanbaoPDFID" frameborder=0 width="100%" marginheight=0 marginwidth=0 scrolling=yes src=""></iframe>
+						<script>
+							var screenHeight1=$(window).height();
+							var height2=screenHeight1-100;
+							$("#yanbaoPDFID").css("height",height2);
+						</script>
+					</div>
+					<div class="tuichu_icon">
+						<div class="quanp_btn">
+							<em></em>
+							<span>退出全屏</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	</body>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		
+		<!--<script type="text/javascript" src="/saasBeta/js/header2.js"></script>-->
+		<script src="saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		
+
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<script src="/saasBeta/js/operationCenter.js" async="async"></script>
+		<script src="/saasBeta/newjs/searchList/setpaixu.js" type="text/javascript" charset="utf-8"></script>
+		<!--概况 js-->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/gjj_search.js" async="async"></script>
+		<!--概况 end-->
+		<!--行业排行 js-->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/hangyepaihang.js" async="async"></script>
+		<!--行业 end-->
+		<!--财务数据 js-->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/caiwushuju.js" async="async"></script>
+		<!--财务数据 end-->
+		<!--相关业务 js-->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/yewuxiangguan.js" async="async"></script>
+		<!--相关业务 end-->
+		<!--相关数据 js-->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/shujuxiangguan.js" async="async"></script>
+		<!--相关数据 end-->
+		
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/wlSearchList.js" async="async"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script> 
+		<!--script type="text/javascript" src="/saasBeta/js/wj_commonJs.js" async="async"></script-->
+		<!-- tab切换 -->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/wj_tab.js" async="async" ></script>
+		<!-- 行情模块 -->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/quotationModular.js" async="async" ></script>
+		<!-- 是否登录，关注，对比 -->
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<!-- 数据模块 -->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/dataModular.js" ></script>
+		
+		<!-- 高管和股东模块 -->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/dhModular.js" async="async"></script>
+		<!-- 智能搜索新闻，研报，公告 -->
+		<script type="text/javascript" src="/saasBeta/newjs/searchList/intelligent_search.js" async="async"></script>
+		 <script src="/saasBeta/newjs/searchList/d3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/searchList/dc3.js" type="text/javascript" charset="utf-8"></script>
+		<!--对标指数-->
+		<script src="/saasBeta/newjs/searchList/searchList.js" type="text/javascript" charset="utf-8"></script>
+		<!--公告模块接口-->
+		<script src="../../saasBeta/js/companyDetailNotice.js"></script>
+	<script>
+		var height=$(window).height()-130;
+//		$(".search_list_content").css("height",height);
+		var height2=$(window).height()-200;
+		$(".wushuju").css("height",height2);	
+		
+		$("#changeValue").change(function(){
+			var flag=0;
+		   	$.each(blockDiv,function(key,value){
+		   		if(!value){
+		   			flag++;
+		   		}
+		   	})
+		   	var content=getUrlParam("content");
+
+		   	if(flag==12){
+				$("#none_datas").show();
+				$("#no_data_titles").text(content);
+				$("#data_name").text(content);
+//				$("#tab_data").hide();
+//				$("#tab_yb").hide();
+//				$("#tab_xw").hide();
+//				$("#tab_gg").hide();
+//				$("#tab_gx").hide();
+			}else{
+				$("#none_datas").hide();
+			}
+			
+		})
+		function changeTime(){
+			var countTime=0;
+			var totalcount=0;
+			$(".search_tab li").each(function(index,item){
+				if(($(item).attr("data-time")!=null || $(item).attr("data-time")!=undefined) && $(item).attr("data-count")!=null || ($(item).attr("data-count")!=undefined)){
+					countTime+=Number($(item).attr("data-time"));
+					totalcount+=Number($(item).attr("data-count"));
+				}
+			})
+			$("#totalTime").text(countTime);
+			$("#totalCount").text(totalcount);
+		}
+//		$("#changeValue").change();
+//		$("#tab_gg").click(function(){
+//		    $(".select-box").removeClass("hide");
+//		})
+		$(".search_tab li").click(function(){
+		    if($(this).attr("name")=="公告"){
+                $(".select-box").removeClass("hide");
+                $(".search_nav").css("height","110px")
+			}else if($(this).attr("name")=="znyb"){
+                $("#content_znyb").show()
+			}else{
+                $(".select-box").addClass("hide");
+                $(".search_nav").attr("style","height:56px;")
+			}
+
+		})
+		//图标点击进入定位
+		var tab=getUrlParam("tab");
+		if(tab!='' && tab!=null && tab!=undefined){
+			console.log(tab!='' && tab!=null && tab!=undefined)
+			var liOn=tab.split("_")[1];
+			$(".serach_info_box").hide();
+			if(tab!="content_all"){
+				$("#content_all").css("display","none");
+			}
+			$("#"+tab).show();
+			$(".search_tab li").removeClass("on");
+			$("#tab_"+liOn).addClass("on");
+		}
+		
+	</script>
+</html>
+<!-- tests-->

@@ -1,0 +1,514 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>首页概览</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/management.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_project.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style_zwh.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/util/dateUtil.js"></script>
+		
+	</head>
+
+	<body>
+		<!--主体 star-->
+		<div class="right_main new_r_main">
+			<!--main  star-->
+			<div class="main new_main">
+				<div class="edit_box">
+					<div class="new_boar_main">
+						<div class="boar_l fl nav_left">
+							<ul>
+								<!--<li class="hover"><span></span><a href="#">首页概览</a></li>
+			     			<li><span></span><a href="#">企业资料</a></li>
+			     			<li><span></span><a href="#">董事会高管</a></li>
+			     			<li><span></span><a href="#">公司公告</a></li>
+			     			<li><span></span><a href="#">股本股东</a></li>
+			     			<li><span></span><a href="#">财务数据</a></li>
+			     			<li><span></span><a href="#">行业分析</a></li>
+			     			<li><span></span><a href="#">发行分配</a></li>
+			     		   <li><span></span><a href="#">舆情监测</a></li> -->
+								<div class="clr"></div>
+							</ul>
+						</div>
+						<div class="boar_r fr">
+							<div class="bora_r_top">
+								<div class="ora_r_Box">
+									<div class="r_top_l fl">
+										<div class="top_tit">
+											<h2 id="stockName">--</h2>
+											<span id="stockCode">--</span> </div>
+										<div class="top_btn" id="operation_div">
+											<!-- <a href="javascript:;" data-trading="430532" data-zxid="null"><img src="/saasBeta/images/jiahao.png">加入自选</a>
+				<button id="duibi" onclick="contrast(this)" data-name="北鼎晶辉" data-code="430532">对比</button> -->
+											<div class="add_zxg">
+												<div class="add_zxg_title"><span>加入自选股</span><i onclick="closeZxDiv(this)">X</i></div>
+												<div class="add_select">
+													<div class="selectBox">
+														<p>请选择</p>
+														<ul style="">
+															<li data-value="">
+																<a href="javascript:;">默认</a>
+															</li>
+															<li data-value="57e384383a939ff9df52c489">
+																<a href="javascript:;">中可asda</a>
+															</li>
+															<li data-value="57e383503a939ff9df52c487">
+																<a href="javascript:;">中科</a>
+															</li>
+															<li data-value="57e48a49aafca807a53ddca1">
+																<a href="javascript:;">456</a>
+															</li>
+															<li data-value="57e48c51aafca807a53ddca2">
+																<a href="javascript:;">678</a>
+															</li>
+														</ul>
+													</div>
+													<div class="add_se_btn">
+														<a href="javascript:;" onclick="saveZx(this)">确定</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="r_top_c fl">
+										<div class="r_top_price"> <span id="newPrice" class="new_price">--</span>
+											<div class="top_box up_gj">
+												<!--此处class:up_gj代表此股上涨  class:down代表此股下跌-->
+												<span id="changeAmount" class="zde_price">--</span> <span id="priceChangeRatio" class="zdf_bfb">--</span> </div>
+											<div class="clr"></div>
+										</div>
+										<div class="r_top_zd">
+											<p><span>涨停：</span><em id="limitUp" class="zt_pr">--</em></p>
+											<p><span>跌停：</span><em id="limitDown" class="dt_pr">--</em></p>
+										</div>
+										<div class="r_bot_time">
+											<p id="realTime">-- </p>
+										</div>
+									</div>
+									<div class="r_top_r fl">
+										<ul>
+											<li><span>今开:</span>
+												<p id="openPrice" class="red">--</p>
+											</li>
+											<li><span>昨收:</span>
+												<p id="yclosePrice">--</p>
+											</li>
+											<li><span>总市值:</span>
+												<p id="totalMarketValue">--</p>
+											</li>
+											<li><span>换手:</span>
+												<p id="turnover">--</p>
+											</li>
+											<li><span>最高:</span>
+												<p id="highPrice" class="red">--</p>
+											</li>
+											<li><span>成交量:</span>
+												<p id="tradingVolume">--</p>
+											</li>
+											<li><span>流通市值:</span>
+												<p id="cmValue">--</p>
+											</li>
+											<li><span>市净率:</span>
+												<p id="netRatio">--</p>
+											</li>
+											<li><span>最低:</span>
+												<p id="lowPrice" class="green">--</p>
+											</li>
+											<li><span>成交额:</span>
+												<p id="tradingAmount">--</p>
+											</li>
+											<li><span>振幅:</span>
+												<p id="amplitude">--</p>
+											</li>
+											<li><span>市盈率(动):</span>
+												<p id="priceEarningRatio">--</p>
+											</li>
+											<div class="clr"></div>
+										</ul>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="gsgq_box">
+								<div class="gsjj_new fl">
+									<div class="yjy_title newm_10"><span class="fl">公司简介</span>
+										<a href="#" id="moreXQ" class="fr">更多</a>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+									<div class="gs_jj_ninfo">
+										<ul>
+											<li><span>所属地区:</span>
+												<p id="state">北京市</p>
+											</li>
+											<li><span>所属行业:</span>
+												<p id="industry">家用电器 &mdash; 白色家电</p>
+											</li>
+											<li class="zyyw"><span>主营业务:</span>
+												<p id="mainBusiness" title="净化饮水设备研发、制造、安装与售后服务">净化饮水设备研发、制</p>
+											</li>
+											<li><span>上市日期:</span>
+												<p id="stockDate"></p>
+											</li>
+											<li><span>每股净资产:</span>
+												<p id="netAssetValuePerShare">0.99元</p>
+											</li>
+											<li><span>每股收益:</span>
+												<p id="earningsPerShare">-0.11元</p>
+											</li>
+											<li><span>净利润:</span>
+												<p id="netProfit">-0.02亿元</p>
+											</li>
+											<li><span>净利润增长率:</span>
+												<p id="netProfitGrowthRate">-16.1%</p>
+											</li>
+											<li><span>营业收入:</span>
+												<p id="operatingIncome">0.02亿元</p>
+											</li>
+											<li><span>每股现金流：</span>
+												<p id="cashFlowPerShare">-0.12元</p>
+											</li>
+											<li><span>每股公积金：</span>
+												<p id="accumulationFundShare">0元</p>
+											</li>
+											<li><span>每股未分配利润：</span>
+												<p id="undistributedProfit">-0.04元</p>
+											</li>
+											<li><span>总股本：</span>
+												<p id="generalCapital">0.19亿</p>
+											</li>
+											<li><span>流通股：</span>
+												<p id="circulationCapital">0亿</p>
+											</li>
+										</ul>
+
+									</div>
+								</div>
+								<div class="gsgqjg fr">
+									<div class="yjy_title newm_10"><span class="fl">股权结构</span>
+										<a href="#" id="moreGQ" class="fr">更多</a>
+										<div class="clr"></div>
+									</div>
+
+									<table width="100%" border="1">
+										<thead>
+											<tr>
+												<th scope="col">机构或基金名称</th>
+												<th scope="col">持有数量(万股)</th>
+												<th scope="col">持股变化(万股)</th>
+												<th scope="col"><span>占总股本比例(%)</span></th>
+												<th scope="col">实际增减持(%)</th>
+												<th scope="col">股份类型</th>
+											</tr>
+										</thead>
+										<tbody id="shareList">
+											<!-- <tr>
+									<td><i></i>周平</td>
+									<td class="clue">5631.19</td>
+									<td>不变</td>
+									<td>27.6</td>
+									<td>不变</td>
+									<td>流通A股</td>
+								</tr>  -->
+										</tbody>
+									</table>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+							<div class="cwfx_nbox">
+								<div class="yjy_title newm_10"><span class="fl">财务分析</span>
+									<a href="#" id="moreCW" class="fr">更多</a>
+									<div class="clr"></div>
+								</div>
+								<div class="cwfx_chars">
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司业绩增长情况</span></div>
+										<div class="chars_info" id="chars01">
+										</div>
+									</div>
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司盈利能力情况</span></div>
+										<div class="chars_info" id="chars02">
+										</div>
+									</div>
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司净资产收益率情况</span></div>
+										<div class="chars_info" id="chars03">
+										</div>
+									</div>
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司现金流情况</span></div>
+										<div class="chars_info" id="chars04">
+										</div>
+									</div>
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司资产规模情况</span></div>
+										<div class="chars_info" id="chars05">
+										</div>
+									</div>
+									<div class="chars_list fl">
+										<div class="chars_title"><span>公司负债情况</span></div>
+										<div class="chars_info" id="chars06">
+										</div>
+									</div>
+									<div class="clr"></div>
+
+								</div>
+							</div>
+
+							<div class="clr"></div>
+							<div class="hy_nfx">
+								<div class="yjy_title newm_10"><span class="fl">行业分析</span>
+									<a href="#" id="moreHY" class="fr">更多</a>
+									<div class="clr"></div>
+								</div>
+
+								<div class="dataAnalysisTable" data-num="3" id="field">
+									<div class="table_title">
+										<p>三级行业分类：<span><i id="industryThree"></i>（共<i id="pageCount"></i>家）</span></p>
+										<ul id="fieldRankBtns">
+											<!-- 				<li class="on">每股收益</li> -->
+											<li class="on" data-value="netAssetValuePerShare">每股净资产</li>
+											<li data-value="netCashFlowPerShare">每股现金流</li>
+											<li data-value="netProfit">净利润</li>
+											<li data-value="operatingIncome">营业收入</li>
+											<li data-value="totalAssets">总资产</li>
+											<li data-value="netAssetsIncomeRate">净资产收益率</li>
+											<!-- 				<li>股东权益比率</li> -->
+											<li data-value="grossProfitMargin">销售毛利率</li>
+											<li data-value="capitalStock">总股本</li>
+										</ul>
+										<!-- <p>三级行业分类：<span><i id="industry">机械设备-电气设备-其他设备</i>（共<i id="pageCount">26</i>家）</span></p>
+									<div class="xuan_time" id="select">
+										<span>报告期</span>
+									
+										<select name="fieldRankSl">
+											<option value="2015-12-31" selected="selected">2015年12月</option>
+											<option value="2015-06-30">2015年6月</option>
+											<option value="2014-12-31">2014年12月</option>
+											<option value="2014-06-30">2014年6月</option>
+										</select>
+									</div>
+									<ul id="fieldRankBtns">
+										<li class="on">每股收益</li>
+										<li>每股净资产</li>
+										<li>每股现金流</li>
+										<li>净利润</li>
+										<li>营业收入</li>
+										<li>总资产</li>
+										<li>净资产收益率</li>
+										<li>股东权益比率</li>
+										<li>销售毛利率</li>
+										<li>总股本</li>
+									</ul> -->
+									</div>
+									<div class="sjb_table" id="fieldRankChart">
+									</div>
+
+									<div class="clr"></div>
+
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="ggtd_fxfp">
+								<div class="ggtd_n_l fl">
+									<div class="yjy_title newm_10"><span class="fl">高管团队</span>
+										<a href="#" id="moreGG" class="fr">更多</a>
+										<div class="clr"></div>
+									</div>
+									<div class="ggtd_n_table">
+										<table width="100%" border="1" id="dignitaryTable">
+											<thead>
+												<tr>
+													<th scope="col">职务</th>
+													<th scope="col">姓名</th>
+													<th scope="col">基本资料</th>
+													<th scope="col">任职时间</th>
+												</tr>
+											</thead>
+											<tbody id="dignitaryList">
+												<!-- <tr>
+					<td><i></i>董事长</td>
+					<td> <a href="javascript:;">周平</a></td>
+					<td>45</td>
+					<td>2008-12-05</td>
+			</tr> 
+			<tr>
+					<td><i></i>董事长</td>
+					<td> <a href="javascript:;">周平</a></td>
+					<td>45</td>
+					<td>2008-12-05</td>
+			</tr> 
+			<tr>
+					<td><i></i>董事长</td>
+					<td> <a href="javascript:;">周平</a></td>
+					<td>45</td>
+					<td>2008-12-05</td>
+			</tr> 
+			<tr>
+					<td><i></i>董事长</td>
+					<td> <a href="javascript:;">周平</a></td>
+					<td>45</td>
+					<td>2008-12-05</td>
+			</tr>  -->
+											</tbody>
+										</table>
+										<a href="javascript:;" class="faxfp_close"><img src="/saasBeta/images/close1.png" alt="关闭"></a>
+										<div class="faxfp">
+											<div class="fax_fp_top">
+												<div class="fp_top_l fl">
+													<h2>徐国兴</h2>
+												</div>
+												<div class="fp_top_r fr">
+													<div class="top_r_list">
+														<span>董事长,董事</span><span>持股数：38.96万股</span>
+													</div>
+													<div class="top_r_list">
+														<span>男 41岁 硕士</span><span>任期：2015-12-25至今</span>
+													</div>
+												</div>
+
+											</div>
+											<div class="clr"></div>
+											<div class="fp_fax_box">
+												<p>徐国兴,副总经理,男,1975年5月出生,中国国籍,无境外永久居留权,研究生学历。1997年7月至1998年2月,招商银行兰州分行工作;1998年3月至1999年10月,甘肃省国税局工作,主任科员;1999年11月至2001年5月,中国化工集团工作;2001年6月至2005年8月,任华龙证券有限责任公司委托投资部总经理;2005年8月至2008年11月,任华龙证券有眼责任公司投资副总监;2008年11月至2014年10月,任华龙证券公司副总经理;2014年10月至今,任华龙证券股份有限公司副总经理。</p>
+												<div class="fax_time">
+													<span>报告期:2016-12-02</span>
+												</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+
+									</div>
+								</div>
+								<!-- 发行分配开始 -->
+								<div class="ggtd_n_r fr">
+									<div class="yjy_title newm_10"><span class="fl">发行分配</span>
+										<a href="#" id="moreFX" class="fr">更多</a>
+										<div class="clr"></div>
+									</div>
+
+									<div class="ggtd_n_table">
+										<table width="100%" border="1">
+											<thead>
+												<tr>
+													<th scope="col">公告日期 </th>
+													<th scope="col">最新进度</th>
+													<th scope="col">发行价(元/股)</th>
+													<th scope="col">发行量(万股)</th>
+													<th scope="col">募集金额(万元)</th>
+													<th scope="col">募集对象 </th>
+													<th scope="col">溢价率</th>
+												</tr>
+											</thead>
+											<tbody id="privatePlacement">
+												<!--  <tr>
+													<td><i></i>2015-12-12</td>
+													<td>实施完成</td>
+													<td>1.00</td>
+													<td>750.0</td>
+													<td>750.0</td>
+													<td>
+														<a href="javascript:;">5</a>
+													</td>
+													<td>-66.66%</td>
+												</tr>  -->
+											</tbody>
+										</table>
+										<div id="faxfp_dbox_newq">
+											<a href="javascript:;" class="faxfp_close2"><img src="/saasBeta/images/close1.png" alt="关闭"></a>
+											<div class="faxfp">
+												<table width="100%" border="1">
+													<thead>
+														<tr>
+															<th scope="col">发行对像</th>
+															<th scope="col">认购价格(元)</th>
+															<th scope="col">认购数量(万股)</th>
+															<th scope="col">认购金额(万元)</th>
+															<th scope="col">持股期限(月)</th>
+														</tr>
+													</thead>
+													<tbody id="purchaserInfo">
+														<!--   <tr>
+															<td>任宇昕</td>
+															<td>1.50</td>
+															<td>50.00</td>
+															<td>1000.00</td>
+															<td>12</td>
+														</tr>  -->
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+								<!-- 发行分配结束 -->
+							</div>
+							<!--对比弹层 star-->
+
+							<div class="contrast">
+								<div class="contrast_left">
+									<span>对比分析</span>
+								</div>
+								<div class="contrast_right">
+									<!-- <span>中新科技  (345789) <i>X</i></span>
+									<span>中新科技  (345789) <i>X</i></span>
+									<span>中新科技  (345789) <i>X</i></span> -->
+									<a href="javascript:;" id="contrastList_a">开始<br>对比</a>
+									<div class="contra_yc">
+										<span>隐藏</span>
+									</div>
+								</div>
+
+							</div>
+							<!--对比弹层 end-->
+						</div>
+						<div class="clr"></div>
+
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--main  end-->
+			<!--footer  star-->
+			
+			<!--footer  end-->
+		</div>
+		<!--主体 end-->
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/businessDetails/LeftCenter.js"></script>
+		<script src="/saasBeta/js/businessDetails/headRealTimeQuotes.js"></script>
+		<script src="/saasBeta/js/businessDetails/TBindex.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				var new_heigh = document.body.scrollHeight;
+				$(".boar_l").css("height", new_heigh);
+			});
+		</script>
+	</body>
+
+</html>

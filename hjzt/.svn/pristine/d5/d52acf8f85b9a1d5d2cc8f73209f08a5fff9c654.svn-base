@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>历史研报</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css">
+    <link href="/saasBeta/yanbao/css/cropper.css" rel="stylesheet">
+    <style>
+        .userMain-editPhoto .photo img {max-width: 100%; }
+        .d {display: none;}
+        .userCenter-photo_img {width: 60%; height: 60%; }
+        .userMain-editPhoto .photo img { width: initial;}
+        .userMain-list label.error {text-align: right!important; width: auto!important;margin-left: -130px;top: 9px;}
+        
+    </style>
+</head>
+
+<body>
+    <!-- <div class="userHead"></div> -->
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo">
+                    <img src="/saasBeta/yanbao/images/logo.png">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg3 col-md-3 col-sm-3">
+                <div class="user-layer userCenter-photo">
+                    <img id="headimg" width="160" height="160" src="images/userCenter-photo.jpg">
+                    <div class="userCenter-name"></div>
+                </div>
+                <div class="user-layer userMenu">
+                    <ul>
+                        <li class="active">
+                            <a class="userCenter">
+                                <em></em>基本资料</a>
+                        </li>
+                        <li>
+                            <a class="userFocus" href="userFocus.html">
+                                <em></em>关注领域</a>
+                        </li>
+                        <li>
+                            <a class="userAccount" href="userAccount.html">
+                                <em></em>社交账号</a>
+                        </li>
+                        <li>
+                            <a class="userChangePW" href="userChangePW.html">
+                                <em></em>修改密码</a>
+                        </li>
+                        <li>
+                            <a class="lishiyanbao" href="historicalResearchReport.html">
+                                <em></em>历史研报</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg9 col-md-9 col-sm-9">
+                <div class="user-layer userData">
+                    <div class="user-title">
+                        <h2>历史研报</h2>
+                    </div>
+                    <div class="yanbao-list">
+                    	<ul>
+                    		<li>
+                    			<span class="yb-name">中科软（430002）智能研报</span>
+                    			<span class="yb-date">2017-10-02 18:39:38</span>
+                    			<div class="clearfix"></div>
+                    		</li>
+                    		<li>
+                    			<span class="yb-name">中科软（430002）智能研报</span>
+                    			<span class="yb-date">2017-10-02 18:39:38</span>
+                    			<div class="clearfix"></div>
+                    		</li>
+                    		<li>
+                    			<span class="yb-name">中科软（430002）智能研报</span>
+                    			<span class="yb-date">2017-10-02 18:39:38</span>
+                    			<div class="clearfix"></div>
+                    		</li>
+                    	</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="uptouxia">
+        <div class="up_colse" id="btnZoomOut">
+            <span></span>
+        </div>
+        <div class="up_touxiang_title">
+            <span>修改头像</span>
+        </div>
+        <div class="action">
+            <div class="new-contentarea tc">
+                <em>上传头像</em>
+                <a href="javascript:void(0)" class="upload-img">
+                    <label for="upload-file">上传</label>
+                </a>
+                <input type="file" class="" name="upload-file" id="upload-file" />
+            </div>
+
+        </div>
+        <div class="row_list_dbox">
+            <div class="row_list_p">
+                <p>支持JPG、GIF、PNG格式图片，不超过5M。拖拽或缩放图中的虚线方格可调整头像，注意右侧小头像预览效果。</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="imageBox">
+                <div class="thumbBox"></div>
+                <div class="spinner" style="display: none"></div>
+            </div>
+            <div class="cropped">
+                <img src="/saasBeta/images/tx.png" align="absmiddle" style="width:90px;margin-top:0px;" />
+                <img src="/saasBeta/images/tx.png" align="absmiddle" style="width:30px;margin-top:10px;" />
+
+            </div>
+        </div>
+        <div class="up_tx_btn">
+            <div class="up_tx_true fl">
+                <input type="button" class="Btnsty_peyton" id="btnCrop" value="保存">
+            </div>
+            <div class="up_tx_qux fl">
+                <a href="javascript:;" id="quxiao_btn">取消</a>
+            </div>
+            <div class="clr"></div>
+        </div>
+    </div> -->
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/exif.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/distpicker.data.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/distpicker.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/cropbox.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/userCenter.js"></script>
+    <script src="/saasBeta/yanbao/js/upload.js"></script>
+</body>
+
+</html>

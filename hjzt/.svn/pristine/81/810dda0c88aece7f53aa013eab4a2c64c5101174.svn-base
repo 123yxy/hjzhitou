@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>汇金智投-忘记密码</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+
+	</head>
+	<body style="background: #fff;">
+		<div class="reg_main n_reg_main">
+			<div class="reg_info_dbox">
+				<div class="reg_l fl r_reg_l">
+					<div class="mim_zh">
+						<span class="zhanghao fl on"><em>1</em><i>确认账号</i></span>
+						<span class="chongzhi fl"><em>2</em><i>重置密码</i></span>
+						<div class="clr"></div>
+					</div>
+					<form id="testPhoneForm" >
+						<ul class="zh_quer">
+							<li>
+								<input type="text" placeholder="手机号" id="phoneNumber" name="phoneNumber" maxlength="11"/><!--<label>请输入手机号码</label>-->
+							</li>
+							<!--<li class="zh_yzm zh_yzm2">
+								<input type="text" id="verifyNum" name="verifyNum" placeholder="图形验证码"/>
+								<span><img src="/saasBeta/images/yzm_img.png" id="VerifyNumImg" alt="图形验证码" /></span>
+								<em>看不清?</em>
+								<div class="clr"></div>
+							</li>-->
+							<li class="zh_yzm">
+								<input type="text" name="verCode" id="verCode" placeholder="验证码" />
+								<button type="button" id="sendvCodeBtn">获取验证码</button>
+								<div class="clr"></div>
+							</li>
+							<li class="reg_next">
+								<button type="button" class="fl">下一步</button>
+								<a href="/nlogin.html" class="fl qu_xiao">取消</a>
+								<div class="clr"></div>
+							</li>
+						</ul>
+					</form>
+						<!--重置密码-->
+					<form id="resetPswForm" >
+						<ul class="mima_quer" style="display: none;">
+							<li>
+								<input type="password" id="password" data-value="password" name="password" placeholder="密码"/>
+							</li>
+							<li>
+								<input type="password" id="passwordRe" name="passwordRe" placeholder="重复密码"/>
+							</li>
+							<li class="mima_btn">
+								<span class="pre">上一步</span>
+								<span class="mima_shure" id="resetPswId">确定</span>
+							</li>
+						</ul>
+					</form>
+					<!--<form id="resetPswForm">
+						<ul>
+							<li ><span>手机号码:</span><input type="text" id="phoneNumber" name="phoneNumber" maxlength="11" placeholder="请输入手机号" />  <label>请输入手机号码</label> </li>
+							<div class="clr"></div>
+							<li class="reg_yzm"><span>手机验证码:</span><input type="text" name="verCode" id="verCode"  maxlength="5" placeholder="请输入手机验证码"  class="sjyzm"/>
+							<button type="button" id="sendvCodeBtn" class="send_yzm"/>获取验证码 <label>验证码错误</lable></li>
+							<div class="clr"></div>
+							<li><span>新密码:</span><input type="password" id="password" data-value="password" name=password  maxlength="12" placeholder="请设置密码,6-12位数字和英文组合" /> <label>请输入密码</label></li>
+							<div class="clr"></div>
+							<li><span>确认密码:</span><input type="password" id="passwordRe" name="passwordRe" maxlength="12" placeholder="请输确认密码" /><label>支持数字、字母、字符</label></li>
+							<div class="clr"></div>
+							<li class="reg_btn"><button type="button" id="resetPswId" class="reg_submit">确认</button><a href="nlogin.html" class="reg_qx">取消</a></li>
+						</ul>
+					</form>-->
+				</div>
+				<div class="reg_r fr">
+					
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>
+		<!-- md5加密 -->
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/personalCenter/personalInfor.js"></script>	
+		<script type="text/javascript" src="/saasBeta/js/personalCenter/resetPsw.js"></script>
+	</body>
+</html>

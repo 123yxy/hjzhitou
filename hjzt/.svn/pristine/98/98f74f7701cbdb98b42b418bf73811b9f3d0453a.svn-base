@@ -1,0 +1,361 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+    .container {
+        padding: 0;
+    }
+    .smjjtzqk .caiwu-table .table,.smjjtzqk .reyuan-table .table { table-layout:fixed;}
+    .smjjtzqk .caiwu-table .table tr td,.smjjtzqk .reyuan-table td {white-space:nowrap; text-overflow:ellipsis; overflow:hidden; padding-right:10px; text-overflow:ellipsis; -webkit-text-overflow: ellipsis;}
+    .smjjtzqk .caiwu-table .table tr td,.smjjtzqk .caiwu-table .table tr th { text-align:center;}
+    .smjjtzqk .caiwu-table .table tr td:nth-child(1),
+    .smjjtzqk .caiwu-table .table tr th:nth-child(1) {
+        padding-left: 20px;
+        box-sizing: border-box;
+        width: initial !important;
+        text-align:left;
+    }
+    .smjjtzqk .reyuan-table .table tr td:nth-child(1),.smjjtzqk .reyuan-table .table tr th:nth-child(1) { text-align:left; padding-left:20px;}
+    .reyuan-table .table tr td, .reyuan-table .table tr th { padding-right:10px;}
+    .kaik-content h3 {
+        color: #000;
+        margin-top: 15px;
+    }
+    .smjjtzqk .caiwu-table .table:first-child tr td:nth-child(2), .smjjtzqk .caiwu-table .table:first-child tr th:nth-child(2),.smjjtzqk .caiwu-table .table:first-child tr td:nth-child(4), .smjjtzqk .caiwu-table .table:first-child tr th:nth-child(4) { width:9%!important;}
+    .smjjtzqk .caiwu-table .table:first-child tr td:nth-child(3), .smjjtzqk .caiwu-table .table:first-child tr th:nth-child(3) { width:19%!important;}
+    .smjjtzqk .caiwu-table .table:first-child tr td:last-child, .smjjtzqk .caiwu-table .table:first-child tr th:last-child { text-align:center;}
+    .chakan { color:#2487df; cursor:pointer;}
+    .noscroll { position:absolute; width:100%; height:100%; overflow:hidden;}
+    .tzly { display:none}
+    .smjjtzqk .reyuan-table th:nth-child(1),.smjjtzqk .reyuan-table th:nth-child(2) { width:30%;}
+
+</style>
+<div class="company-business smjjtzqk">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+            <div class="public">
+
+                <div class="contents">
+                    <div class="section ">
+                        <!-- <h2>2.6所处行业分析</h2>
+						<div class="yewu-contents">
+							<h3>2.6.1行业简介</h3>
+							<p id="industryRemark"></p>
+						</div> -->
+                        <!-- 
+						<div class="hy-charts" id="IndustryAnalysis">
+
+						</div> -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+        </div>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../js/echarts-all-3.js"></script>
+<script src="../js/common/util.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/commonJs.js"></script>
+<script src="../js/bus/section02.js"></script> -->
+<script>
+    $(function () {
+        var windowHeight = $(window).height();
+        $(".smjjtzqk .container").height(windowHeight - 195);
+        $(".contents").height(windowHeight - 290);
+        $(".smjjtzqk").on("click",".chakan",function(e){
+            $(".marsk").show();
+            $("#tzlyTc").show();
+            $("#tzlyTc").find("p").html($(this).siblings(".tzly").html())
+            // console.log($(this).siblings(".tzly").html())
+            $("body").addClass("noscroll")
+        });
+        closeTc()
+    });
+    function closeTc(){
+        $(".tc-close").click(function(){
+            $(".marsk").hide();
+            $("#tzlyTc").hide();
+            $("body").removeClass("noscroll")
+        });
+        $(".marsk").click(function(){
+            $(".marsk").hide();
+            $("#tzlyTc").hide();
+            $("body").removeClass("noscroll")
+        });
+    }
+    var acStockCode = "" || UTIL.getPara("stockCode");
+    init(function (_callback) {
+        UTIL.axs(UTIL.CONFIG.findSmjj, { stockCode: acStockCode }, true, function (_data) {
+            if (_data.retCode == '0000') {
+                if (_data.retData !== null && _data.retData !== "null") {
+                    var sectioncp = $("<div class=caiwu-table>"), sectionglr = $("<div class=reyuan-table>");
+                    var sect;
+                    var retData = _data.retData;
+                    if (!retData.smjjCp.length && !retData.smjjglr.length) {//修改，原逻辑判断错误 shiqi 20171020
+                        var div = UTIL.oplugins._nodatawu();
+                        $(".smjjtzqk").find(".kaik-content").eq(0).append(div)
+                        return;
+                    }
+
+                    for (var i in retData) {
+                        var table = $("<table class=table>");
+                        var thead = $("<thead>");
+                        thead.append("<tr></tr>");
+                        table.append(thead);
+                        var _obj;
+                        if (i === "smjjCp") {
+                            sect = sectioncp;
+                            _obj = _thead.smjjCp;
+                        }
+                        else {
+                            sect = sectionglr;
+                            _obj = _thead.smjjglr;
+                            // table = UTIL.oplugins._listtable({ thead: "私募基金管理人", body: "无数据" });
+                            // sect.append(table)
+                        }
+
+                        $.each(retData[i], function (k1, v1) {
+                            // var li = UTIL.oplugins._litable._createli();
+                            var tr = $("<tr>");
+                            for (var i in v1) {
+                                if (i === "stockCode")
+                                    continue;
+
+                                // var cname = key_cname(i);
+                                var _x = 1;
+                                for (var ii in _obj) {
+                                    if (k1 === 0) {
+                                        _x += 1;
+                                        if (!thead.find("tr th").eq(_x - 2).length) {
+                                            thead.find("tr").append("<th></th>");
+                                        }
+                                        if (!tr.find("td").eq(_x - 2).length) {
+                                            tr.append("<td></td>");
+                                        }
+                                        if (ii === i) {
+
+                                            // if (thead.find("tr th").eq(_x - 2).length) {
+                                            thead.find("tr th").eq(_x - 2).text(_obj[ii]);
+                                            var val = ""
+                                            if (i === "zytzly"){
+                                                if (v1[i]==''){
+                                                    val = "";
+                                                }else{
+                                                    val = "<span class='chakan'>查看</span><div class='tzly'>"+v1[i]+"</div>";
+                                                    _title = "";
+                                                }
+                                            }
+                                            else{ 
+                                                val = v1[i] ? v1[i] : "无";
+                                                _title = v1[i] ? v1[i] : "无";
+                                            }
+                                            // $("#tzlyTc").find("p").html("a")
+                                            tr.find("td").eq(_x - 2).html(val);
+                                            tr.find("td").eq(_x - 2).attr("title",_title);
+                                            // }
+                                            // else {
+                                            //     thead.find("tr").append("<th>" + _obj[ii] + "</th>");
+                                            // }
+                                            // _x = 0;
+                                            // continue;
+                                            // return true;
+                                            // var val = ""
+                                            // if (i === "zytzly")
+                                            //     val = "查看"
+                                            // else val = v1[i] ? v1[i] : "无";
+                                            // tr.append("<td>" + val + "</td>");
+
+                                        }
+                                    }
+                                    else {
+                                        _x += 1;
+                                        if (!tr.find("td").eq(_x - 2).length) {
+                                            tr.append("<td></td>");
+                                        }
+                                        if (ii === i) {
+                                            var val = ""
+                                            if (i === "zytzly")
+                                                // val = "<span class='chakan'>查看</span><div class='tzly'>"+v1[i]+"</div>";
+                                                if (v1[i]==''){
+                                                    val = "";
+                                                }else{
+                                                    val = "<span class='chakan'>查看</span><div class='tzly'>"+v1[i]+"</div>";
+                                                    _title = "";
+                                                }
+                                            else{ 
+                                                val = v1[i] ? v1[i] : "无";
+                                                _title = v1[i] ? v1[i] : "无";
+                                            }
+                                            tr.find("td").eq(_x - 2).html(val);
+                                            tr.find("td").eq(_x - 2).attr("title",_title);
+                                            // tr.append("<td>" + val + "</td>");
+                                        }
+                                    }
+
+                                    // var val = ""
+                                    // if (i === "zytzly")
+                                    //     val = "查看"
+                                    // else val = v1[i] ? v1[i] : "无";
+                                    // tr.append("<td>" + val + "</td>");
+                                    // var cname = key_cname(i);
+                                    // var p = UTIL.oplugins._litable._createp(cname + ":", v1[i] ? v1[i] : "无");
+                                    // li.append(p);
+                                    // var _x = 0;
+                                    // for (var ii in _obj) {
+                                    //     _x += 1;
+
+
+                                    // }
+
+                                    // var val = ""
+                                    // if (i === "zytzly")
+                                    //     val = "查看"
+                                    // else val = v1[i] ? v1[i] : "无";
+                                    // tr.append("<td>" + val + "</td>");
+                                }
+
+                            }
+                            table.append(tr);
+                            // sect.append(li);
+                        })
+                        sect.append(table);
+                        // }
+
+                    }
+                    if (!retData.smjjCp.length) {
+                        sectioncp.append(UTIL.oplugins._nodatawu());
+                    }
+                    if (!retData.smjjglr.length) {
+                        sectionglr.append(UTIL.oplugins._nodatawu());
+                    }
+                   $(".smjjtzqk").find(".kaik-content").eq(0).append(UTIL.oplugins._head2level("基金产品")).append(sectioncp).append(UTIL.oplugins._head2level("私募基金管理人")).append(sectionglr);
+                   // $(".smjjtzqk").find(".kaik-content").eq(0).append(sectionglr);
+                }
+                else {
+                    var div = '<div class="noDatas">无</div>';
+                    $(".smjjtzqk").find(".kaik-content").eq(0).append(div)
+                }
+
+            }
+        });
+        // findIndustryAnalysis();
+
+
+        // industryRemark();
+    });
+    var key_cname = function (key) {
+        switch (key) {
+            case "jjmc":
+                return "基金产品名称"
+                break;
+            case "jjbh":
+                return "基本编号"
+                break;
+            case "jjlx":
+                return "基金类型"
+                break;
+            case "gllx":
+                return "管理类型"
+                break;
+            case "tgrmc":
+                return "托管人名称"
+                break;
+            case "zytzly":
+                return "主要投资领域"
+                break;
+            case "lx":
+                return "类型"
+                break;
+            case "stock_code":
+                return "股票代码"
+                break;
+            case "mc":
+                return "名称"
+                break;
+            case "zcd":
+                return "注册地"
+                break;
+            case "djbh":
+                return "登记编号"
+                break;
+            case "clsj":
+                return "成立时间"
+                break;
+            case "qyxz":
+                return "企业性质"
+                break;
+            default:
+                return "未知"
+                break;
+        }
+
+    }
+    function init(_callback) {
+        // var a = [
+
+        //     { showData: "true", code: "gsxx", name: "公司信息", zjLevel: 2, levelcode: "1-1" },
+
+
+
+        //     { showData: "false", code: "gaikuang", name: "概况", zjLevel: 1, levelcode: "1" }
+        // ]
+        // UTIL.searchsection._d
+        var section = $("<section>"), head1;
+        // alert(JSON.stringify (UTIL.searchsection._d))
+        $.each(UTIL.searchsection._d, function (k, v) {
+            if (v.zjLevel === 1) {
+                // $(".contents").eq(0).prev().remove();
+                $(".smjjtzqk .top-line").remove();
+                var Arabia_To_SimplifiedChinese = UTIL.Arabia_To_SimplifiedChinese(v.levelcode);//20170926 shiqi 转阿拉伯 
+                var head = UTIL.oplugins._head({ text: Arabia_To_SimplifiedChinese + "、" + v.name, logo: "images/section-logo.png" });
+                $(head).insertBefore(".smjjtzqk .contents");
+                // return true;
+            }
+            else if (v.zjLevel === 2) {
+                head1 = UTIL.oplugins._head1level(v.levelcode.replace("-", ".") + "" + v.name);
+                // if ($(".section").children().length)
+                section.prepend(head1);
+                var divcontent = $("<div>");
+
+                divcontent.addClass("kaik-content");
+                // alert(33333)
+                // var head1level = UTIL.oplugins._head2level(v.levelcode.replace("-", ".").replace("-", ".") + "" + v.name);
+                // divcontent.append(head1level);
+                section.append(divcontent);
+                // return true;
+            }
+            // alert(v.zjLevel)
+
+
+        })
+        if (section.html()) {
+            // alert(section.html())
+            $(".smjjtzqk .section").html(section.html());
+            // $(".lsyg .kaik-content")
+
+
+            // .eq(0).append("<p id= \"industryRemark\"></p>");
+            // $(".lsyg .kaik-content").eq(1).append("<div class=\"hy-charts\" id=\"IndustryAnalysis\"></div>");
+        }
+        _callback();
+    };
+
+    var _thead = {
+        smjjCp: {
+            jjmc: "基金产品名称",
+            jjbh: "基金编号",
+            jjlx: "基金类型",
+            gllx: "管理类型",
+            tgrmc: "托管人名称",
+            zytzly: "主要投资领域"
+        },
+        smjjglr: {
+            mc: "名称",
+            zcd: "注册地",
+            djbh: "登记编号",
+            clsj: "成立时间",
+            qyxz: "企业性质"
+        }
+    }
+</script>

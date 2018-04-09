@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>公司对标-深度对比工具-综合指标对比</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/wxl-new-style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyComparison.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/compre.css"/>
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<script src="/saasBeta/js/jquery.min.js" type="text/javascript"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script src="/saasBeta/js/header2.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<!--<script src="/saasBeta/js/newfooter.js"></script>-->
+		<!-- <script type="text/javascript" src="/saasBeta/newjs/comparis2.js"></script> -->
+		<script src="/saasBeta/newjs/duibinav.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/contrast/multidStockanalysisTable2.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		
+		
+	</head>
+
+	<body>
+		<div class="duibi_main_dbox">
+			<div class="clr"></div>
+			<div class="duibi_main">
+				<div class="duibi_nav">
+					<a href="javascript:;">对比工具&gt;</a><a href="javascript:;" class="yanjiu_nav_bg">综合指标对比</a>
+				</div>
+				<!--财务对比三页面公共部分起始位置-->
+			<div class="page_center comparison duibi_newcom">
+				<!--<div class="t_nav">
+					<div class="fl guide">
+						<a href="companyComparison.html" target="_blank">公司对比</a>
+						<a class="on" href="javascript:;">财务对比</a>
+						<div class="clr"></div>
+					</div>
+					
+				</div>-->
+				<!--公司对比-->
+				<!--财务对比-->
+				<div class="company_infor new_duib caiwu_comparison nes_com_pre">
+					<div class="add_Right_Tool">
+						<!--<div class="right_Tool">
+							
+							<div class="right_select_analysis fl down_list">
+								<div class="selectBox cwzb_duibi">
+									<p>多财务指标对比</p>
+									<ul id="selectUrl">
+										<li data-value="">
+											<a href="multidStockanalysisTable.html" data-type="" data-value="">多财务指标对比</a>
+										</li>
+										<li data-value="">
+											<a href="multidStockTrendComparison.html" data-type="2" data-value="">指标趋势对比</a>
+										</li>
+										<li data-value="">
+											<a href="multidStockRankingAnalysis.html" data-type="2" data-value="">指标行业排名分析</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="line_desed"></div>
+							<div class="clr"></div>
+
+						</div>-->
+						<div class="right_Tool">
+							<div class="right_analysis new_right_aysis">
+								<div class="r_analysis_tab">
+									<div class="analy_taba new_analy_taba" id="tagName">
+										<!-- <a href="#" class="on">财务比率比较</a>
+										<div id="diyLabel"><em>自定义标签</em><i>X</i>
+
+										</div> -->
+									</div>
+									<!--自定义标签弹窗 star-->
+									<div class="add_zxg" id="add_zxg">
+										<div class="add_zxg_title">
+											<span>自定义标签</span>
+											<b>请输入标签名称</b>
+											<i>X</i>
+										</div>
+										<div class="add_select">
+											<div class="add_tag_title">
+												<input type="text" name="" id="tagTitle" placeholder="1~20个字符" maxlength="20"/>
+											</div>
+											<div class="add_se_btn">
+												<a href="javascript:void(0);">确定</a>
+											</div>
+										</div>
+									</div>
+									<!--自定义标签弹窗 end-->
+									<div style="position: relative;display: none" id="showIndicators">
+										<div class="morezb_box">
+											<div class="zb_rbox fl" id="allIndicators">
+												<div class="clr"></div>
+											</div>
+											<div class="clr"></div>
+											<div class="zb_rbox_btn">
+												<a href="javascript:void(0);" id="submitButton">确定</a>
+												<a href="javascript:void(0);" id="cancelButton">取消</a>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="clr"></div>
+									<div class="annysisp" id="tagValue" style="display: none;">
+										<p><i data-value="3908">ROE(%)</i>
+											<i data-value="430">销售毛利率(%)</i></p>
+
+									</div>
+
+								</div>
+							</div>
+							<div class="clr"></div>
+
+						</div>
+						<div class="right_Tool">
+							<div class="right_analysis right_analy_time fl new_ana_com nn_time_wz" id="contrastDate">
+								<!-- <div class="data-checkbox">
+									<input type="checkbox" id="time1" value="2015-12-31" name="timeBk" />
+									<label for="time1" class="checkbox"></label>
+									<label class="checkboxWord" for="time1">2015-12-31</label>
+								</div> -->
+							</div>
+							<div class="clr"></div>
+
+						</div>
+					</div>
+					<div class="clr"></div>
+					<div class="right_table_sj">
+						<div class="sj_table_tb new_sj_table_tb">
+							<div id="sj_zhuxingtu" class="sj_zhuxingtu"></div>
+							<div class="sj_zhuxin_table new_sj_tab_ttable new_tables biaoge1">
+								<!--修改的表格-->
+								<div class="f_bg companies_inform caiwu_duibi1">
+								<div class="t_left">
+									<div class="left_top">
+										<table>
+											<tr>
+												<th>公司名称</th>
+											</tr>
+										</table>
+									</div>
+									<div class="cl_freeze">
+										<table id="zbmcTable">
+											 <!--  <tr>
+												<td>
+													<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+												</td> 
+											</tr>  -->
+										</table>
+									</div>
+								</div>
+								<div class="t_r com_r_company">
+									<table>
+										<thead id="dataTHead">
+											<!-- <tr>
+												 <th>成立时间</th>
+												<th>上市时间<b>（挂牌时间）</b></th>
+												<th>所属板块</th>
+												<th>注册地</th>
+												<th>注册资本<b>（万元）</b></th>
+												<th>总股本<b>（万股）</b></th>
+												<th>法人</th>
+												<th>从业人数</th>
+												<th>管理人数</th>
+												<th>律师事务所</th>
+												<th>会计事务所</th> 
+											</tr> -->
+										</thead>
+
+										<tbody id="dataTbody">
+											<!--  <tr>
+												 <td>2017-08-12</td>
+												<td>2008-02-56</td>
+												<td>新三板</td>
+												<td>北京</td>
+												<td>2819,36</td>
+												<td>9.36</td>
+												<td>李梅</td>
+												<td>23</td>
+												<td>20</td>
+												<td>证卷管理</td>
+												<td>证卷管理</td> 
+											</tr>  -->
+										</tbody>
+									</table>
+								</div>
+								<div class="clr"></div>
+							</div>
+								<!--<table width="100%" border="1" id="indicatorsComparisonInfo">-->
+									<!-- <tr>
+											<th scope="col">&nbsp;</th>
+											<th scope="col">指标名称</th>
+										</tr>
+										<tr>
+											<th scope="row">企业一</th>
+											<td>指标名称</td>
+										</tr> -->
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!--暂无数据-->
+				<div class="yanjiu_wushuju" style="display: none;">
+					<div class="wushuj_tub">
+						<span>
+							<img src="/saasBeta/images/zwsj.png">
+						</span>
+						<p class="yanjiu_tb_zwsj">暂无数据</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--自定义指标弹窗 star-->
+		<div class="diy_zb_tc" style="display: none">
+			<div class="diy_zb_title">
+				<div class="zhibiao_tips">
+					<span>选择指标</span>
+					<em>（<b class="xing">*</b>提示：最多选择10个指标）</em>
+					<div class="clr"></div>
+				</div>
+				<div class="diy_search">
+					<input type="text" name="" id="aaaaa" value="" />
+				</div>
+				<i id="diy_colse"></i>
+				<div class="clr"></div>
+			</div>
+			<div class="diy_zhuti">
+				<!--<div class="diy_zb_list first">
+					<ul>
+						<li class="on">偿债能力</li>
+						<li>运营能力</li>
+						<li>盈利能力</li>
+						<li>发展能力</li>
+						<li>现金流量</li>
+						<li>资本结构</li>
+						<li>综合分析</li>
+						<li>每股指标</li>
+						<li>估值指标</li>
+						<li>绩效指标</li>
+					</ul>
+				</div>
+				<div class="diy_zb_list second">
+					<ul>
+						<li class="on">
+							<div class="data-checkbox">
+									<input type="checkbox" value="资产负债表" name="" />
+									<label class="checkbox on"></label>
+									<label class="checkboxWord" >资产负债表</label>
+							</div>
+						</li>
+						<li>
+							<div class="data-checkbox">
+									<input type="checkbox"  value="利润表" name="" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">利润表</label>
+							</div>
+						</li>
+						<li>
+							<div class="data-checkbox">
+									<input type="checkbox"  value="现金流量表" name="" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">现金流量表</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="diy_zb_list three">
+					<ul>
+						<li>
+							<div class="data-checkbox">
+									<input type="checkbox" value="资产负债表1" name="" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord" >资产负债表1</label>
+							</div>
+						</li>
+						<li>
+							<div class="data-checkbox">
+									<input type="checkbox"  value="利润表1" name="" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">利润表1</label>
+							</div>
+						</li>
+						<li>
+							<div class="data-checkbox">
+									<input type="checkbox"  value="现金流量表1" name="" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">现金流量表1</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="diy_zb_list four">
+					<ul>
+						<li><a href="javascript:;">客户存款和同业存放款项净增加额</a></li>
+						<li><a href="javascript:;">处置以公允价值计量且其变动计入当期损益的金融资产</a></li>
+						<li><a href="javascript:;">处置固定资产、无形资产和其他长期资产收回的现金净额</a></li>
+						<li><a href="javascript:;">收到其他与投资活动有关的现金</a></li>
+						<li><a href="javascript:;">购建固定资产、无形资产和其他长期资产支付的现金</a></li>
+						<li><a href="javascript:;">取得子公司及其他营业单位支付的现金净额</a></li>
+						<li><a href="javascript:;">保户储金及投资款净增加额</a></li>
+						<li><a href="javascript:;">支付其他与经营活动有关的现金</a></li>
+						
+					</ul>
+				</div>-->
+				<div class="clr"></div>
+			</div>
+			<div class="diy_yx_zb">
+				<span>已选指标 ：</span>
+				<div class="diy_yx_box">
+					<!-- <a href="javascript:;">变现能力比率 <i></i></a>
+					<a href="javascript:;">变现能力比率 <i></i></a>
+					<a href="javascript:;">变现能力比率 <i></i></a> -->
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="diy_btn">
+				<a href="javascript:;" class="diy_true">确定</a>
+				<a href="javascript:;" class="diy_false">取消</a>
+			</div>
+		</div>
+		<!--自定义指标弹窗end-->
+		<div class="jiabeijing" style="display: none; opacity: .6;"></div>
+		<script src="/saasBeta/js/contrast/diyzhibiao.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/contrast/jsonSql.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/contrast/demo.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+
+</html>

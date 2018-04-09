@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>一、公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section zdsj">
+						<h2>1.8重大事件</h2>
+						<div class="tab-list">
+							<span class="on">图表</span>
+							<span>列表</span>
+							<div class="noPay">付费可以查看更多的数据</div>
+						</div>
+						<!--重大事件柱状图-->
+						<div class="zdsj" id="zdsjTB">
+							<div class="echarts-tb" id="importantEvent"></div>
+							<div class="sj-type" id="eventNum">
+								<!-- <span>重大事件：152件</span>(定增事件:6,对外投资:12,收购:0) -->
+							</div>
+						</div>
+
+						<div class="reyuan-table" style="display: none;" id="zdSJ">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>类型</th>
+										<th>时间</th>
+										<th>公告名称</th>
+										<th class="shuzi">公告详情</th>
+									</tr>
+								</thead>
+								<tbody id="eventListGG">
+									<!-- <tr>
+													<td>重大资产重组</td>
+													<td class="shuzi">2016-12-20</td>
+													<td>第六届懂事会第九次决议公告</td>
+													<td><span class="chakan">查看</span></td>
+												</tr> -->
+								</tbody>
+							</table>
+							<div class="pagination" id="ZDSJLB"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- 企业基本信息js-凡国庆 -->
+<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script> -->
+<script>
+//	sectionOne6();
+var isPay;
+	$(function () {
+		//UTIL.nologin('zdsj');
+		//判断用户是否是付费用户
+		payOrNot();//返回的true或者是false/true是已经付费的
+		deepLook();
+		
+		if(payOrNot()==true){//已付费的情况
+			$(".noPay").hide();
+			isPay="isPay";
+			sectionOne6(isPay);
+			zhongdaShiJian(isPay);
+		}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+			$(".noPay").show();
+			isPay=null;
+			sectionOne6(isPay);
+			zhongdaShiJian(isPay);
+		}
+		
+		var windowHeight = $(window).height()
+		$(".yuce-fx .container").height(windowHeight - 195);
+		$(".contents").height(windowHeight - 195-30)
+		// UTIL.sjly("#zdsjly","zdsj",".zdsj","sjlyy");
+		
+		//点击列表切换
+		$(".tab-list span").on("click",function(){
+			
+			if($(this).text()=="图表"){
+				$("#zdsjTB").show();
+				$("#zdSJ").hide();
+				if(payOrNot()==true){//已付费的情况
+					$(".noPay").hide();
+					isPay="isPay";
+					sectionOne6(isPay);
+					zhongdaShiJian(isPay);
+				}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+					$(".noPay").show();
+					isPay=null;
+					sectionOne6(isPay);
+					zhongdaShiJian(isPay);
+				}
+			}else{
+				$("#zdsjTB").hide();
+				$("#zdSJ").show();
+				if(payOrNot()==true){//已付费的情况
+					$(".noPay").hide();
+					isPay="isPay";
+					sectionOne6(isPay);
+					zhongdaShiJian(isPay);
+				}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+					$(".noPay").show();
+					isPay=null;
+					sectionOne6(isPay);
+					zhongdaShiJian(isPay);
+				}
+			}
+		})
+	})
+	
+	
+</script>

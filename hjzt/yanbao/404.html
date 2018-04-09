@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>访问资源不存在</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/cover.css">
+        <link rel="stylesheet" type="text/css" href="/saasBeta/yanbao/css/user.css"/>
+    </head>
+    <body>
+    	<div class="userHead">
+	        <div class="cotainer">
+	            <div class="row indexTop-main">
+	                <div class="col-lg-3 col-md-3 col-sm-3 userHead-logo">
+	                    <img src="/saasBeta/yanbao/images/logo.png">
+	                </div>
+	                <div class="col-lg-2 col-md-2 col-sm-2 indexTop-user">jiojijojoi</div>
+	                <div class="col-lg-5 col-md-5 col-sm-5 top-search">
+	                	<input type="text" placeholder="输入股票名称/代码" class="top-searched" id="topSearch" />
+	                </div>
+	                <div class="clearfix"></div>
+	            </div>
+	        </div>
+	    </div>
+        <!--<div class="cotainer">-->
+        	<!--<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 not-fonted">-->
+        		<div class="not-font">
+        			<div class="not-font-icon">
+        				<img src="/saasBeta/yanbao/images/404-icon.png" alt="" />
+        			</div>
+        			<div class="go-back">
+        				请返回
+        			</div>
+        		</div>
+        	<!--</div>
+        </div>-->
+        <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+        <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+         <script src="/saasBeta/yanbao/js/plugin/jquery-ui.min.js"></script> 
+        <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+        <script src="/saasBeta/yanbao/js/common/util.js"></script>
+        <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+        <script src="/saasBeta/yanbao/js/bus/userCenter.js"></script>
+    </body>
+    <script>
+    	$(function(){
+//  		$(".indexTop-user").html(sethead());
+    		
+    		var height=$(window).height()-60;
+    		var marginTop=((height-350)/2);
+    		$(".not-font").css("height",height);
+    		$(".not-font").css("padding-top",marginTop);
+    		$(".go-back").on("click",function(){
+    			history.back();
+    		})
+//  		$(".not-font-icon").css("margin-top",marginTop);
+    	})
+    </script>
+</html>

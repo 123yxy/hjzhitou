@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-财务数据</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css"/>
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script src="/saasBeta/js/businessDetails/financialData.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/businessDetails/GPleft.js"></script> 
+		<script src="/saasBeta/js/operationCenter.js"></script>
+
+		<!-- 是否登录，关注，对比 -->
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<!-- easyUi数据显示 -->
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<!-- <script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/jquery.datagrid.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/datagrid-groupview.js"></script> -->
+		
+	</head>
+	<body>
+		<!--主体 star-->
+		<div class="right_main new_TBmain_R new_r_main">
+			
+			<!--main  star-->
+			
+					<div class="new_boar_main new_styles fl">
+						<div class="new_nav_postion">
+							<a href="/security/myPreferredStock.html">证券管理</a> ><a href="javascript:void(0);" id="stockNameShow">铭慧阿胶</a>
+						</div>
+						<div class="boar_l new_boar_li">
+							<!--<div class="news_boar_ltop">
+								<h2>铭慧股份</h2>
+								<span>833822</span>
+								<div class="news_boar_gn">
+									<i class="news_boar_duibi"></i>
+									<i class="news_boar_tongzhi"></i>
+									<i class="news_boar_pk"></i>
+									<i class="news_boar_baogao"></i>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<ul>
+							<li class="n_gK hover"><span></span><a href="#">概况</a></li>
+			     			<li class="n_cwsJ"><span></span><a href="#">财务数据</a></li>
+			     			<li class="n_gxT"><span></span><a href="#">关系图</a></li>
+			     			<li class="n_yjjL"><span></span><a href="#">研究记录</a></li>
+			     			<li class="n_gG"><span></span><a href="#">公告</a></li>
+			     			<li class="n_xW"><span></span><a href="#">新闻</a></li>
+							<div class="clr"></div>
+							</ul>-->
+						</div>
+					</div>	
+						<div class="boar_r new_boar_lir new_r_styles fl">
+							<div class="bora_r_top">
+								<div class="gp_tab">
+									<a href="javascript:;" data-value="4" class="on">财务摘要</a>
+									<a href="javascript:;" data-value="1">资产负债表</a>
+									<a href="javascript:;" data-value="2">利润表</a>
+									<a href="javascript:;" data-value="3">现金流表</a>
+									<div class="clr"></div>
+								</div>
+								<div class="caiwu_sj_content">
+									<div class="caiwu_tiaoj">
+										<div class="list fl list_danwei">
+											<div class="select_box screen">
+												<div class="selectBox">
+
+													<p data-value="10000.00" id="danwei">万元</p>
+													<ul>	
+														<li data-value="1.00">
+															<a href="javascript:;">元</a>
+														</li>										
+														<li data-value="10000.00">
+
+															<a href="javascript:;">万元</a>
+														</li>
+														<li data-value="1000000.00">
+															<a href="javascript:;">百万</a>
+														</li>
+														<li data-value="10000000.00">
+															<a href="javascript:;">千万</a>
+														</li>
+														<li data-value="100000000.00">
+															<a href="javascript:;">亿元</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="list fl list_times">
+											<div class="select_box screen">
+												<div class="selectBox">
+													<p data-value="2" id="showLength">2年</p>
+													<ul>											
+														<li data-value="2">
+															<a href="javascript:;">2年</a>
+														</li>
+														<li data-value="3">
+															<a href="javascript:;">3年</a>
+														</li>
+														<li data-value="5">
+															<a href="javascript:;">5年</a>
+														</li>
+														<li data-value="100">
+															<a href="javascript:;">全部</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="nianbao fl">
+											<div class="data-checkbox fl">
+												<input type="checkbox" />
+												<label class="checkbox on" data-value="HY"></label>
+												<label class="checkboxWord">半年报</label>
+											</div>
+											<div class="data-checkbox fl">
+												<input type="checkbox" />
+												<label class="checkbox on" data-value="FY"></label>
+												<label class="checkboxWord">年报</label>
+											</div>
+											<div class="clr"></div>
+										</div>
+										<div class="daochu fr">
+											<div class="data-checkbox fl">
+												<input type="checkbox" />
+												<label class="checkbox on" id="yincangkongshuju"></label>
+												<label class="checkboxWord">隐藏空数据</label>
+											</div>
+											<div class="fl dao_shuj" style="cursor: pointer;">导出数据</div>
+											<div class="clr"></div>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<!--头部的折线图-->
+									<div class="caiwu_tb" id="nianbao"></div>
+
+									<!--<div class="caiwu_danwei">单位：<span id="showDanwei">万元</span></div>-->
+									<div class="nianbao_shuju">
+										<table id="financeDataTable" style="height: 300px;" ></table>
+										<!--<ul class="cw_shuju caiwuzhaiyao" id="financeData">-->
+											<!--左边的标题-->
+											<!-- <li class="zhibiao_titles fl">
+												<ul class="eve_zhibiao">
+													<li class="cw_titles">项目</li>
+													<li class="cw_yiji yiji_title">财务摘要</li>
+													盈利能力
+													<li class="erji_title1 erji_title on">盈利能力</li>
+													<li class="erji_zb1 eiji_shuji">营业收入</li>
+													<li class="erji_zb1 eiji_shuji">毛利率%</li>
+													<li class="erji_zb1 eiji_shuji">归属于挂牌公司股东的净利润</li>
+													<li class="erji_zb1 eiji_shuji">归属于挂牌公司股东的扣除非常性损益后的净利润</li>
+													<li class="erji_zb1 eiji_shuji">加权平均净资产收益率%（依据归属于挂牌公司股东的净利润计算）</li>
+													<li class="erji_zb1 eiji_shuji">加权平均净资产收益率%（归属于挂牌公司股东的扣除非常性损益后的净利润计算）</li>
+													<li class="erji_zb1 eiji_shuji">基本每股收益</li>
+													偿债能力
+													<li  class="erji_title2 erji_title on">偿债能力</li>
+													<li class="erji_zb2 eiji_shuji">资产总计</li>
+													<li class="erji_zb2 eiji_shuji">负债总计</li>
+													<li class="erji_zb2 eiji_shuji">归属于挂牌公司股东的净资产</li>
+													<li class="erji_zb2 eiji_shuji">归属于挂牌公司股东的每股净资产</li>
+													<li class="erji_zb2 eiji_shuji">资产负债率%（母公司）</li>
+													<li class="erji_zb2 eiji_shuji">资产负债率%（合并）</li>
+													<li class="erji_zb2 eiji_shuji">流动比率</li>
+													<li class="erji_zb2 eiji_shuji">利息保障倍数</li>
+													营运情况
+													<li class="erji_title3 erji_title on">营运情况</li>
+													<li class="erji_zb3 eiji_shuji">经营活动产生的现金流量净额</li>
+													<li class="erji_zb3 eiji_shuji">应收账款周转率</li>
+													<li class="erji_zb3 eiji_shuji">存货周转率</li>
+													成长情况
+													<li class="erji_title4 erji_title on">成长情况</li>
+													<li class="erji_zb4 eiji_shuji">总资产增长率%</li>
+													<li class="erji_zb4 eiji_shuji">营业收入增长率%</li>
+													<li class="erji_zb4 eiji_shuji">净利润增长率%</li>
+													
+													股本情况
+													<li class="erji_title5 erji_title on">股本情况</li>
+													<li class="erji_zb5 eiji_shuji">普通股总股本</li>
+													<li class="erji_zb5 eiji_shuji">计入权益的优先股数量</li>
+													<li class="erji_zb5 eiji_shuji">计入负债的优先股数量</li>
+											
+													非经常损益
+													<li class="erji_title6 erji_title on">非经常损益</li>
+													<li class="erji_zb6 eiji_shuji">计入当期的政府补助，但与企业正常经营业务密切相关，符合国家政策规定，按照一定标准定额或定量持续享受的政府补助外</li>
+													<li class="erji_zb6 eiji_shuji">除上述各项之外的其他营业外收入和支出</li>
+													<li class="erji_zb6 eiji_shuji">非经常性损益合计</li>
+													<li class="erji_zb6 eiji_shuji">所得税影响数</li>
+													<li class="erji_zb6 eiji_shuji">非经常性损益净额</li>
+												</ul>			
+											</li>
+											2015年年报
+											<li class="zhibiao_shuju fl">
+												<ul class="eve_zhibiao">
+													<li class="cw_titles">2015年年报</li>
+													财务摘要空白的li
+													<li class="cw_yiji"></li>
+													盈利能力
+													盈利能力中的li有的有值，有的没值
+													<li class="cw_erji">盈利能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb1 eiji_shuji">231231.33</li>
+													<li class="erji_zb1 eiji_shuji">12.40</li>
+													<li class="erji_zb1 eiji_shuji">114423.44</li>
+													<li class="erji_zb1 eiji_shuji">5656.88</li>
+													<li class="erji_zb1 eiji_shuji">2.30</li>
+													<li class="erji_zb1 eiji_shuji">5.60</li>
+													<li class="erji_zb1 eiji_shuji">50</li>
+													偿债能力
+													偿债能力中的li有的有值有的没值
+													<li class="cw_erji">偿债能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb2 eiji_shuji">235555.00</li>
+													<li class="erji_zb2 eiji_shuji">63523.10</li>
+													<li class="erji_zb2 eiji_shuji">852.00</li>
+													<li class="erji_zb2 eiji_shuji">50.00</li>
+													<li class="erji_zb2 eiji_shuji">2.3</li>
+													<li class="erji_zb2 eiji_shuji">5.6</li>
+													<li class="erji_zb2 eiji_shuji">2.00</li>
+													<li class="erji_zb2 eiji_shuji">0.3</li>
+													营运情况
+													<li class="cw_erji">营运情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb3 eiji_shuji">8625.00</li>
+													<li class="erji_zb3 eiji_shuji">7862.00</li>
+													<li class="erji_zb3 eiji_shuji">9623.00</li>
+													成长情况
+													<li class="cw_erji">成长情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb4 eiji_shuji">0.23</li>
+													<li class="erji_zb4 eiji_shuji">0.10</li>
+													<li class="erji_zb4 eiji_shuji">0.50</li>
+													股本情况
+													<li class="cw_erji">股本情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb5 eiji_shuji">85230.00</li>
+													<li class="erji_zb5 eiji_shuji">85634.00</li>
+													<li class="erji_zb5 eiji_shuji">12345.00</li>
+													非经常损益
+													<li class="cw_erji">非经常损益(这里位置有的有值有的没值)</li>
+													<li class="erji_zb6 eiji_shuji">5623.00</li>
+													<li class="erji_zb6 eiji_shuji">94120.56</li>
+													<li class="erji_zb6 eiji_shuji">5665465.00</li>
+													<li class="erji_zb6 eiji_shuji">45610.00</li>
+													<li class="erji_zb6 eiji_shuji">123456.00</li>
+												</ul>
+											</li>
+											2016年半年报
+											<li class="zhibiao_shuju fl">
+												<ul class="eve_zhibiao">
+													<li class="cw_titles">2016年半年报</li>
+													财务摘要空白的li
+													<li class="cw_yiji"></li>
+													盈利能力
+													盈利能力中的li有的有值，有的没值
+													<li class="cw_erji">盈利能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb1 eiji_shuji">231231.33</li>
+													<li class="erji_zb1 eiji_shuji">12.40</li>
+													<li class="erji_zb1 eiji_shuji">114423.44</li>
+													<li class="erji_zb1 eiji_shuji">5656.88</li>
+													<li class="erji_zb1 eiji_shuji">2.30</li>
+													<li class="erji_zb1 eiji_shuji">5.60</li>
+													<li class="erji_zb1 eiji_shuji">50</li>
+													偿债能力
+													偿债能力中的li有的有值有的没值
+													<li class="cw_erji">偿债能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb2 eiji_shuji">235555.00</li>
+													<li class="erji_zb2 eiji_shuji">63523.10</li>
+													<li class="erji_zb2 eiji_shuji">852.00</li>
+													<li class="erji_zb2 eiji_shuji">50.00</li>
+													<li class="erji_zb2 eiji_shuji">2.3</li>
+													<li class="erji_zb2 eiji_shuji">5.6</li>
+													<li class="erji_zb2 eiji_shuji">2.00</li>
+													<li class="erji_zb2 eiji_shuji">0.3</li>
+													营运情况
+													<li class="cw_erji">营运情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb3 eiji_shuji">8625.00</li>
+													<li class="erji_zb3 eiji_shuji">7862.00</li>
+													<li class="erji_zb3 eiji_shuji">9623.00</li>
+													成长情况
+													<li class="cw_erji">成长情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb4 eiji_shuji">0.23</li>
+													<li class="erji_zb4 eiji_shuji">0.10</li>
+													<li class="erji_zb4 eiji_shuji">0.50</li>
+													股本情况
+													<li class="cw_erji">股本情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb5 eiji_shuji">85230.00</li>
+													<li class="erji_zb5 eiji_shuji">85634.00</li>
+													<li class="erji_zb5 eiji_shuji">12345.00</li>
+													非经常损益
+													<li class="cw_erji">非经常损益(这里位置有的有值有的没值)</li>
+													<li class="erji_zb6 eiji_shuji">5623.00</li>
+													<li class="erji_zb6 eiji_shuji">94120.56</li>
+													<li class="erji_zb6 eiji_shuji">5665465.00</li>
+													<li class="erji_zb6 eiji_shuji">45610.00</li>
+													<li class="erji_zb6 eiji_shuji">123456.00</li>
+												</ul>
+											</li>
+											2015年半年报
+											<li class="zhibiao_shuju fl">
+												<ul class="eve_zhibiao">
+													<li class="cw_titles">2015年半年报</li>
+													财务摘要空白的li
+													<li class="cw_yiji"></li>
+													盈利能力
+													盈利能力中的li有的有值，有的没值
+													<li class="cw_erji">盈利能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb1 eiji_shuji">231231.33</li>
+													<li class="erji_zb1 eiji_shuji">12.40</li>
+													<li class="erji_zb1 eiji_shuji">114423.44</li>
+													<li class="erji_zb1 eiji_shuji">5656.88</li>
+													<li class="erji_zb1 eiji_shuji">2.30</li>
+													<li class="erji_zb1 eiji_shuji">5.60</li>
+													<li class="erji_zb1 eiji_shuji">50</li>
+													偿债能力
+													偿债能力中的li有的有值有的没值
+													<li class="cw_erji">偿债能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb2 eiji_shuji">235555.00</li>
+													<li class="erji_zb2 eiji_shuji">63523.10</li>
+													<li class="erji_zb2 eiji_shuji">852.00</li>
+													<li class="erji_zb2 eiji_shuji">50.00</li>
+													<li class="erji_zb2 eiji_shuji">2.3</li>
+													<li class="erji_zb2 eiji_shuji">5.6</li>
+													<li class="erji_zb2 eiji_shuji">2.00</li>
+													<li class="erji_zb2 eiji_shuji">0.3</li>
+													营运情况
+													<li class="cw_erji">营运情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb3 eiji_shuji">8625.00</li>
+													<li class="erji_zb3 eiji_shuji">7862.00</li>
+													<li class="erji_zb3 eiji_shuji">9623.00</li>
+													成长情况
+													<li class="cw_erji">成长情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb4 eiji_shuji">0.23</li>
+													<li class="erji_zb4 eiji_shuji">0.10</li>
+													<li class="erji_zb4 eiji_shuji">0.50</li>
+													股本情况
+													<li class="cw_erji">股本情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb5 eiji_shuji">85230.00</li>
+													<li class="erji_zb5 eiji_shuji">85634.00</li>
+													<li class="erji_zb5 eiji_shuji">12345.00</li>
+													非经常损益
+													<li class="cw_erji">非经常损益(这里位置有的有值有的没值)</li>
+													<li class="erji_zb6 eiji_shuji">5623.00</li>
+													<li class="erji_zb6 eiji_shuji">94120.56</li>
+													<li class="erji_zb6 eiji_shuji">5665465.00</li>
+													<li class="erji_zb6 eiji_shuji">45610.00</li>
+													<li class="erji_zb6 eiji_shuji">123456.00</li>
+												</ul>
+											</li>
+											2016年半年报
+											<li class="zhibiao_shuju fl">
+												<ul class="eve_zhibiao">
+													<li class="cw_titles">2016年半年报</li>
+													财务摘要空白的li
+													<li class="cw_yiji"></li>
+													盈利能力
+													盈利能力中的li有的有值，有的没值
+													<li class="cw_erji">盈利能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb1 eiji_shuji">231231.33</li>
+													<li class="erji_zb1 eiji_shuji">12.40</li>
+													<li class="erji_zb1 eiji_shuji">114423.44</li>
+													<li class="erji_zb1 eiji_shuji">5656.88</li>
+													<li class="erji_zb1 eiji_shuji">2.30</li>
+													<li class="erji_zb1 eiji_shuji">5.60</li>
+													<li class="erji_zb1 eiji_shuji">50</li>
+													偿债能力
+													偿债能力中的li有的有值有的没值
+													<li class="cw_erji">偿债能力(这里位置有的有值有的没值)</li>
+													<li class="erji_zb2 eiji_shuji">235555.00</li>
+													<li class="erji_zb2 eiji_shuji">63523.10</li>
+													<li class="erji_zb2 eiji_shuji">852.00</li>
+													<li class="erji_zb2 eiji_shuji">50.00</li>
+													<li class="erji_zb2 eiji_shuji">2.3</li>
+													<li class="erji_zb2 eiji_shuji">5.6</li>
+													<li class="erji_zb2 eiji_shuji">2.00</li>
+													<li class="erji_zb2 eiji_shuji">0.3</li>
+													营运情况
+													<li class="cw_erji">营运情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb3 eiji_shuji">8625.00</li>
+													<li class="erji_zb3 eiji_shuji">7862.00</li>
+													<li class="erji_zb3 eiji_shuji">9623.00</li>
+													成长情况
+													<li class="cw_erji">成长情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb4 eiji_shuji">0.23</li>
+													<li class="erji_zb4 eiji_shuji">0.10</li>
+													<li class="erji_zb4 eiji_shuji">0.50</li>
+													股本情况
+													<li class="cw_erji">股本情况(这里位置有的有值有的没值)</li>
+													<li class="erji_zb5 eiji_shuji">85230.00</li>
+													<li class="erji_zb5 eiji_shuji">85634.00</li>
+													<li class="erji_zb5 eiji_shuji">12345.00</li>
+													非经常损益
+													<li class="cw_erji">非经常损益(这里位置有的有值有的没值)</li>
+													<li class="erji_zb6 eiji_shuji">5623.00</li>
+													<li class="erji_zb6 eiji_shuji">94120.56</li>
+													<li class="erji_zb6 eiji_shuji">5665465.00</li>
+													<li class="erji_zb6 eiji_shuji">45610.00</li>
+													<li class="erji_zb6 eiji_shuji">123456.00</li>
+												</ul>
+											</li>
+										<div class="clr"></div>	 -->
+										<!--</ul>-->
+										
+									</div>
+									
+									
+								</div>
+							</div>
+							<div class="clr"></div>
+			</div>
+			<!--main  end-->
+			<!--footer  star-->
+			
+			<!--footer  end-->
+		</div>
+		<!--主体 end-->
+		
+		<!-- 导出的数据 -->
+		<table style="display: none" id="exportTable">
+			<thead>
+			 <tr>
+				<!--<th><span>投资人</span></th>
+				<th><span>投资事件总数</span></th>
+				<th><span>投资总金额</span></th>
+				<th><span>最新投资事件</span></th>-->
+			</tr> 
+			</thead>
+			<tbody id="exportTableHtml"></tbody>
+		</table>
+		<div id="nianbao_minDom" style=" height:200px;bottom: 5px;right: 5px; padding:5px;position: fixed; background-color: #fff; border: 1px solid #f3f3f3; -webkit-box-shadow:1px 0 10px rgba(237, 245, 253, 1);  
+  -moz-box-shadow:1px 0 10px rgba(237, 245, 253, 1);  
+  box-shadow:1px 0 10px rgba(237, 245, 253, 1); display: none;">
+			<span class="slt_cha" style="position: absolute; top: 8px; right: 9px; cursor: pointer; z-index: 2;" id="close_minDom">
+				<!--<img src="/saasBeta/images/chac.png" width="17" height="17"/>-->
+			</span>
+			<div id="nianbao_min" style="height: 200px; width: 550px; margin: 0 auto;"></div>
+		</div>
+		<div class="small_minDom">
+			<span>显示小图</span>
+		</div>
+	</body>
+
+</html>

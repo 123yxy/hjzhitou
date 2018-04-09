@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<title>投资日历</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+	<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyMap.css" />
+	<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+	<link rel="stylesheet" type="text/css" href="/saasBeta/css/Touyan.css" />
+    <link type="text/css" rel="stylesheet" href="/saasBeta/xym/shijiankj/jeDate-test.css">
+	<link type="text/css" rel="stylesheet" href="/saasBeta/xym/shijiankj/jedate.css">
+    <style>
+		/*下拉菜单样式*/
+		.select-time{width: 150px;top: -3px;right: 0;border: 1px solid #e4e4e4;float: left;margin-left: 10px;}
+		.select-time p{width: 100%;height: 26px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;line-height: 26px;}
+		.cw-reportDate{width: 100%;top: 26px;left: 0;border:1px solid #e4e4e4;z-index: 5;background-color: #fff;}
+		.main .newgup .sjzj .cw-reportDate li{width: 100%;line-height: 24px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;}
+		.main .newgup .sjzj .cw-reportDate li:hover{color: #fff;background-color: #1985e2;}
+		.main .newgup .sjzj .cw-reportDate li.on{color: #fff;background-color: #1985e2;}
+		/*.select-time p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 8px;right: 10px;background: url(images/zyyw.png)0 0 no-repeat;cursor: pointer;}
+		.select-time p:hover:after{background: url(/saasBeta/images/zyyw.png)-13px 0 no-repeat;}*/
+	</style>
+</head>
+
+<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+	<!--侧导航 end-->
+	<!--主体 star-->
+	<div class="right_main" id="tzrlhtml">
+		<!--main  star-->
+        <!--股份流通-->
+		<div class="main">
+            <div class="clr"></div>
+			<div class="l_main l_main_none nL_main AguList">
+			</div>
+			<div class="clr"></div>
+			<div class="newgup tzribt">
+				<div class="newgp_title tabBT">
+					<ul class="tabwhidth" id="ullll">
+						<li id="gflt">股份流通</li>
+						<li id="swyjhy">业绩预告</li>
+						<li id="swejhy">会议大全</li>
+						<div class="clr"></div>
+						<div class="hr"></div>
+					</ul>
+					
+				</div>
+				
+					
+			</div>
+            <div class="rlcd qlgxl"id="tzrldx">
+					<div class="select-time qlgdiv" id="gfltdiv">
+						<p class="cw-selectedTime" id='gfltp'></p>
+						<ul id="gfltul" class="cw-reportDate" style="display: none;">
+							<!-- <li>2015-56-78</li> -->
+						</ul>
+					</div>
+					<div class="clr"></div>
+					<div class="sjzj tzrlxlcd" id="hydqxlcd">
+						<div class="select-time" id="cwTimeO">
+							<p class="cw-selectedTime" id='hyxl'></p>
+							<ul id="cw-listO" class="cw-reportDate" style="display: none;">
+								<!-- <li>2015-56-78</li> -->
+							</ul>
+						</div>
+						<div class="select-time" id="cwTimeS">
+							<p class="cw-selectedTime" id='dqxl'></p>
+							<ul id="cw-listS" class="cw-reportDate" style="display: none;">
+								<!-- <li>2015-56-78</li> -->
+							</ul>
+						</div>
+						<div class="select-time" id="cwTimeT">
+							<p class="cw-selectedTime" id="rzxl"></p>
+							<ul id="cw-listT" class="cw-reportDate" style="display: none;">
+								<!-- <li>2015-56-78</li> -->
+							</ul>
+						</div>
+						<div class="jeinpbox"><input type="text" class="jeinput" id="test11" placeholder="YYYY-MM-DD"></div>
+					</div>
+					<div class="clr"></div>
+			</div>
+			
+				<div class="clr"></div>
+			<div class="newgp_dbox ">
+				<div class="sgbd">
+					<div class="zjh" id="zjh">
+							<div class="menu">
+								<div class="bdnr bkjkbt">
+									<div class="biaoTou hylbbd">
+										<ul>
+											<li>代码</li>
+											<li>名称</li>
+											<li>昨收</li>
+											<li>跌涨额（元）</li>
+											<li>跌涨幅（%）</li>
+											<li>成交额</li>
+											<li>代码</li>
+											<li>名称</li>
+										</ul>
+									</div>
+									<div class="lis" >
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+				
+
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+			
+
+		</div>
+        <!--业绩报告-->
+        <!--<div class="main">
+            <div class="clr"></div>
+			<div class="l_main l_main_none nL_main">
+			</div>
+			<div class="clr"></div>
+			<div class="newgup tzribt">
+				<div class="newgp_title tabBT">
+					<ul class="tabwhidth" id="ullll">
+						<li id="gflt">股份流通</li>
+						<li id="swyjhy">业绩报告</li>
+						<li id="swejhy">会议大全</li>
+						<div class="clr"></div>
+						<div class="hr"></div>
+					</ul>
+					
+				</div>
+				<div class="rlcd">
+					<div class="select-time" id="yjbgdiv">
+						<p class="cw-selectedTime" id='yjbgp'></p>
+						<ul id="yjbgul" class="cw-reportDate" style="display: none;">
+							<li>2015-56-78</li>
+						</ul>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+					
+			</div>
+			<div class="newgp_dbox ">
+				<div class="sgbd">
+					<div class="zjh" id="zjh">
+							<div class="menu">
+								<div class="bdnr bkjkbt">
+									<div class="biaoTou ">
+										<ul>
+											<li>代码</li>
+											<li>名称</li>
+											<li>昨收</li>
+											<li>跌涨额（元）</li>
+											<li>跌涨幅（%）</li>
+											<li>成交额</li>
+										</ul>
+									</div>
+									<div class="lis">
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+											<li>f</li>
+										</ul>
+										
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+				
+
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+			
+
+		</div>-->
+        <!--会议大全-->
+        <!-- <div class="main">
+
+			<div class="clr"></div>
+			<div class="l_main l_main_none nL_main">
+			</div>
+			<div class="clr"></div>
+			<div class="newgup">
+				<div class="newgp_dbox ">
+					<div class="sgbd">
+						<div class="">
+							<div class="menu">
+								<div class="rztitle">
+									<div class="newgup tzribt">
+                                        <div class="newgp_title tabBT">
+                                            <ul class="tabwhidth" id="ullll">
+                                                <li id="gflt">股份流通</li>
+                                                <li id="swyjhy">业绩报告</li>
+                                                <li id="swejhy">会议大全</li>
+                                                <div class="clr"></div>
+                                                <div class="hr"></div>
+                                            </ul>
+                                            
+                                        </div>
+                                        <div class="sjzj tzrlxlcd" id="tzrldx">
+                                            <div class="select-time" id="cwTimeO">
+                                                <p class="cw-selectedTime" id='hyxl'></p>
+                                                <ul id="cw-listO" class="cw-reportDate" style="display: none;">
+                                                    <li>2015-56-78</li>
+                                                </ul>
+                                            </div>
+                                            <div class="select-time" id="cwTimeS">
+                                                <p class="cw-selectedTime" id='dqxl'></p>
+                                                <ul id="cw-listS" class="cw-reportDate" style="display: none;">
+                                                    <li>2015-56-78</li>
+                                                </ul>
+                                            </div>
+                                            <div class="select-time" id="cwTimeT">
+                                                <p class="cw-selectedTime" id="rzxl"></p>
+                                                <ul id="cw-listT" class="cw-reportDate" style="display: none;">
+                                                    <li>2015-56-78</li>
+                                                </ul>
+                                            </div>
+                                            <div class="jeinpbox"><input type="text" class="jeinput" id="test11" placeholder="YYYY-MM-DD"></div>
+                                        </div>
+                                        <div class="clr"></div>
+                                            
+                                    </div>
+									
+									<div class="clr"></div>
+								</div>
+								<div class="bdnr rzlb">
+									<div class="biaoTou ">
+										<ul>
+											<li>公司</li>
+											<li>交易代码</li>
+											<li>申购代码</li>
+											<li>申购上限</li>
+											<li>发行量（万股）</li>
+										</ul>
+									</div>
+									<div class="lis lishei">
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+
+										</ul>
+										<ul>
+											<li>a</li>
+											<li>b</li>
+											<li>c</li>
+											<li>d</li>
+											<li>e</li>
+										</ul>
+
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="clr"></div>
+				</div>
+
+				<div class="clr"></div>
+			</div>
+
+		</div> -->
+		<!--main  end-->
+	</div>
+
+	<!--主体 end-->
+	<script src="/saasBeta/js/jquery.min.js"></script>
+	<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+
+
+	<!-- 分页 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+    <!--时间控件js-->
+	<!-- <script type="text/javascript" src="/saasBeta/xym/shijiankj/jedate-test.js"></script> -->
+	<script type="text/javascript" src="/saasBeta/xym/shijiankj/jquery.jedate.js"></script>
+
+	<script type="text/javascript" src="/saasBeta/xym/js/Touyan.js"></script>
+	
+	
+</body>
+
+</html>

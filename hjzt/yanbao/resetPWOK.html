@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>重设密码成功</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo"><img src="/saasBeta/yanbao/images/logo.png"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg12 col-md-12 col-sm-12">
+                <ul class="findPW-guiding">
+                    <li class="active"><span class="icon-sendCode"><em></em></span>发送手机验证码</li>
+                    <li class="active"><span class="icon-setPW"><em></em></span>重设密码</li>
+                    <li class="active"><span class="icon-OK"><em></em></span>完成</li>
+                </ul>
+            </div>
+            <div class="col-lg12 col-md-12 col-sm-12 user-layer findPW-group">
+                <div class="findPWOK">
+                    <p><span><em></em></span>密码设置成功，请牢记您的新密码！</p>
+                    <p><button id="login" class="button-blue button-blue-big">登录</button></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+        </div>
+    </div>
+  
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script>
+        $(".indexTop-user").html(sethead());
+        $(".userHead-logo").html(logourl());
+//      getuserinfo();
+        logFoot();
+       
+        $("#login").on("click", function () {
+            location.href = "login.html"
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="edge" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="renderer" content="webkit" />
+		<title>搜索结果页</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/cover.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/basic.css">
+        <link rel="stylesheet" type="text/css" href="/saasBeta/yanbao/css/user.css"/>
+        <link rel="stylesheet" type="text/css" href="/saasBeta/yanbao/css/searchResultsPage.css"/>
+	</head>
+	<body>
+		<div class="userHead">
+	        <div class="cotainer">
+	            <div class="row indexTop-main">
+	                <div class="col-lg-2 col-md-2 col-sm-2 userHead-logo">
+	                    <img src="/saasBeta/yanbao/images/logo.png">
+	                </div>
+	                <!--<div class="col-lg-4 col-md-4 col-sm-4 indexTop-user"></div>-->
+	                <div class="indexTop-user"></div>
+	                <!--<div class="member-service"><a href="memberRecord.html">会员服务</a></div>-->
+	                <div class="col-lg-5 col-md-5 col-sm-5 top-search">
+	                	<em class="sy-fdj"></em>
+	                	<input type="text" placeholder="输入股票名称/代码" class="top-searched" id="topSearchA" />
+	                	<ul class="his-search" style="display: none;">
+                			<!--<li><span>历史搜索</span><b class="clear-icon"></b></li>
+                			<li><span>4545</span></li>
+                			<li><span>4545</span></li>
+                			<li><span>4545</span></li>-->
+                		</ul>
+	                </div>
+	                
+	                <div class="clearfix"></div>
+	            </div>
+	        </div>
+	    </div>
+		<div class="result-searcher">
+			<div class="cotainer">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+					<div class="public">
+						<div class="top-list">
+							<div class="select-list">
+								<div class="fl hangye list-publick">
+									<p>行业</p>
+									<ul style="display: none;" id="hyUl" >
+									</ul>
+								</div>
+								<div class="fl diqu list-publick">
+									<p>地区</p>
+									<ul style="display: none;" id="dqUl" >
+									</ul>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="yx-tj">
+								<div class="fl slected">
+								</div>
+								<div class="fr clear-select">清空筛选</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="list-content">
+							<div class="select-num">
+								<div class="fl sousuo-js">搜索<span id="searchStr" >"--"</span>共匹配到<span id="companyTotal" >-</span>家公司</div>
+								<div class="fr paixu-list">
+									<span data-code="YYSR" >营业收入</span>
+									<span data-code="ZZC" >资产规模</span>
+									<span data-code="volume" >交易量</span>
+									<span class="on" data-code="ZSZ" >市值</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<ul class="search-result">
+								
+							</ul>
+							<div class="load-more">加载更多</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/jquery-ui.min.js"></script>   
+    <!-- 数据交互js -->
+    <script src="/saasBeta/yanbao/js/common/ajax.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+	<script src="/saasBeta/yanbao/js/bus/AsearchResultsPage.js"></script>
+   
+</html>

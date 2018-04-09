@@ -1,0 +1,232 @@
+/*市场概况*/
+body{
+    background-color: #F3F6F9;
+}
+.content{
+
+}
+.content .classiFL{
+    width:100%;
+}
+.classiFL .fllb{
+    background-color: #fff;
+}
+.classiFL .fllb li:nth-child(1){
+    margin-left: 6%;
+}
+.classiFL .fllb li{
+    float: left;
+    margin:1% 7% 2% 0;
+}
+.fllb li p{
+    text-align: center;
+}
+
+.content .menu{
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.content .menu h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px 0 13px 20px;
+    height: 32px;
+    line-height: 45px;
+}
+.content .menu .bdnr{
+    margin: 0 20px;
+}
+.content .menu .bdnr li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.content .menu .bdnr li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    width:15%;
+}
+.menu .biaoTou {
+    height: 30px;
+    background-color: #519BDB;
+    color: #fff;
+}
+.menu .biaoTou li{
+    float: left;
+    width:17%;
+    line-height: 30px;
+    text-align: center;
+}
+.menu .lis {
+    height: 300px;
+    /*background-color:yellow;*/
+    overflow:auto;
+}
+.menu .lis ul:nth-child(even){
+    background-color: #FAFAFA;
+}
+.menu .lis ul{
+    height: 30px;
+}
+.menu .lis li{
+    float: left;
+    width:17%;
+    text-align: center;
+}
+.menu .lis li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.menu .lis li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    width:15%;
+}
+
+
+
+/*版块监控*/
+.main .bkjkbt li{
+    width:17%;
+}
+.main .bkjkbt li:last-child{
+    width:15%;
+}
+
+.tabBT{
+    padding:10px 20px 0 20px;
+}
+.tabBT ul li{
+    font-weight: 700;
+}
+.tabBT ul li:hover{
+    color:rgb(25,133,226);
+    background: none;
+    border-bottom: 2px solid rgb(25,133,226);
+    box-sizing: border-box;
+}
+
+.newgp_dbox{
+    padding-top:0;
+}
+.sgbd{
+    width:100%;
+    height: 500px;
+}
+.sgbd .menu{
+    background-color: #fff;
+    padding:0px 20px 20px 0px;;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.sgbd .menu h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px 0 13px 20px;
+    height: 32px;
+    line-height: 45px;
+    /*width:250px;*/
+    /*float: left;*/
+    
+}
+.sgbd .menu .rztitle .sjzj{
+    float: right;
+    width:59%;
+    height: 30px;
+    margin-top: 10px;
+}
+.sgbd .menu .bdnr{
+    margin-left:20px;
+}
+.sgbd .menu .bdnr li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.sgbd .menu .bdnr li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.swy,.swe,.dqb{
+    display: none;
+}
+
+/*新股中心*/
+.menu .lishei{height: 200px;}
+
+.main .xgzcbt li{
+    width:12%;
+}
+.main .xgzcbt li:nth-child(7){
+    width:16%;
+}
+
+.main .lishei li{
+     width:12%;
+}
+
+/*融资列表*/
+.main .rzlb li{
+    width:20%;
+}
+.main .rzlb li:nth-child(1){
+    text-align: left;
+}
+.main .rzlb li:last-child{
+    text-align: right;
+}
+.main .newgup .menu .btzfd{
+    float: left;
+    width: 100px;
+}
+
+/*投资日历*/
+.main .tzribt {
+    position: relative;
+}
+.main .tzribt .rlcd{
+    position: absolute;
+    top:10px;
+    right: 21px;
+}
+.main .menu .tzrlxlcd{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main .qlgxl{
+    position: relative;
+}
+.main .qlgxl #tzrldx{
+    position: absolute;
+    top: -34px;
+    right: 20px;
+    display: none;
+}
+.main .qlgxl .tzrlxlcd{
+    position: absolute;
+    top: -34px;
+    right: 20px;
+}
+.main .newgp_dbox .menu .biaoTou .degbt{
+    width: 83%;
+    text-align: center;
+}
+.main .newgp_dbox .menu .hylbbd li{
+    width: 13%;
+}
+.main .newgp_dbox .menu .hylbbd li:last-child{
+    width: 9%;
+}
+
+.zwshuj{width: 100%;text-align: center;}
+
+
+
+
+

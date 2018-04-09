@@ -1,0 +1,71 @@
+@media screen and (min-width: 320px) and (max-width: 800px){
+	.left_nav{ width: 80px;}
+	html body{
+		font-size: 12px !important;
+		/*min-width: 0px;*/
+	}
+	.new_boar_main .new_boar_lir{
+		float: left;
+	}
+	.newSassHeader{
+		height: 40px;
+	}
+	.logoBackground{
+		height: 40px;
+		padding-top: 0;
+	}
+	.logoBackground a{
+		display: inline-block;
+		width: 100%;
+		height: 90%;
+		margin-top: 4px;
+	}
+	.logoBackground img{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.header_r, .email_icon, .pifu_icon, .search_icon {
+		height: 40px;
+		padding-top: 0px;
+	}
+	.newSassHeader .news_header{
+		height: 40px;
+	}
+	.newSassHeader .news_header a{
+		height: 40px;
+		line-height: 40px;
+		font-size: 12px;
+		padding:0px 5px;
+	}
+	.right_main{
+		padding-top: 40px;
+	}
+	.boar_r{
+		width: 84%;
+		padding-left: 10px;
+	}
+	.n_gsjbx,.n_ten_dbox, .n_gsgguan_dbox,.n_jyqk_dbox,.n_big_dbox,.n_teamdbox{
+		width: 600px;
+		height: 400px;
+		margin-left: -300px;
+		margin-top: -200px;
+	}
+	.n_gsjbx_dbox,.n_jyqk_scorr,.n_big_table,.n_fxtd_dbox,.n_fxqkd_dbox,.n_fxqkd_table{
+		height: 400px;
+	}
+	.n_ten_table{
+		height:  310px;
+	}
+	.notice_time{
+		width:55%;
+	}
+	.time_xz_l{width: 30%;}
+	.time_xz_l input{width: 40%;}
+	.right_main{ padding-left: 80px;}
+	.header{ line-height: 40px; height: 40px;}
+	.header_center a{line-height: 40px; font-size: 12px; padding: 0 5px;}
+	
+	
+}
+

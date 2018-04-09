@@ -1,0 +1,55 @@
+/*垂直居中*/
+.verticalAlign{ 
+	vertical-align:middle; display:inline-block; height:100%; margin-left:-1px;
+}
+
+.fxConfirm .fx_layer{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 999;
+}
+.fxConfirm .popBox{
+	position: fixed; left: 50%; top: 24%; background-color: #ffffff; z-index: 2147000001; width: 524px; height: 442px; 
+	margin-left: -262px; border-radius: 5px; font-weight: bold; color: #535e66;/*padding:0 33px;*/
+}
+.fxConfirm .popBox .ttBox{
+	height: 55px; line-height: 55px;border-bottom: solid 1px #eef0f1;margin:0 33px;margin-bottom: 5px;
+}
+.fxConfirm .popBox .ttBox .tt{
+	font-size: 16px; display: block; float: left; height: 55px; position: relative;color:#333333;font-weight: bold;
+}
+.fxConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-20%;top:-40%;
+}
+.fxConfirm .popBox .txtBox{
+	height: 383px; overflow: hidden;margin:0 33px;padding-top:10px;
+}
+.fxConfirm .popBox .txtBox .txtBoxImg{
+	margin-left:130px;margin-top:40px;
+}
+.fxConfirm .popBox .txtBox .txtBoxtt{
+	color:#333333;text-align: center;font-size:14px;line-height:14px;margin:0 auto;margin-top:22px;/*margin-bottom: 35px;*/
+}
+
+.fxConfirm .popBox .txtBox .btnArea{
+	height:32px;/*margin-top:75px;*/padding:0 108px;
+}
+
+.fxConfirm .popBox .sgBtn{
+	display: block; cursor: pointer; float: left; width: 100px; height: 32px; font-size:14px;line-height: 32px; text-align: center; color: #FFFFFF;
+	 border-radius: 5px;margin-left:0;margin-top: 0;
+}
+.fxConfirm .popBox .sgBtn.ok{
+	background-color: #1985e2; color: #FFFFFF;
+}
+.fxConfirm .popBox .sgBtn.cancel{
+	background-color: #fff; color: #1985e2;border:1px solid #1985e2;margin-left: 40px;height:30px;line-height: 30px;
+}
+
+
+@media screen and (min-width:1200px) and (max-width:1680px){
+	.fxConfirm .popBox{
+		top:18%;
+	}
+	.fxConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-10%;top:-10%;width:37px;height:37px;
+}
+}

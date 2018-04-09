@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>设置密码</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/loginReg.css">
+    </head>
+    <body>
+        <div class="cotainer">
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12 logHead">
+                </div>
+            </div>
+            <div class="row logReg-main">
+                <div class="col-lg12 col-md-12 col-sm-12">
+                    <div class="titTab">
+                        <span><a>设置密码</a></span>
+                    </div>
+                    <form>
+                        <ul>
+                            <li><input placeholder="密码" type="password"></li>
+                            <li><input placeholder="确认密码" type="password"><span class="icon-success"></span></li>
+                        </ul>
+                        <div class="loginReg-btn"><button>确 定</button></div>
+                        <div class="ewm">
+                            <p>关注我们</p>
+                            <p class="saoma-img"><img src="/saasBeta/yanbao/images/ewm.jpg"></p>
+                        	<p>使用微信扫一扫，访问投研有料服务号</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+                </div>
+            </div>
+        </div>
+        <script src="/saasBeta/yanbao/js/jquery.min.js"></script>
+        <script src="/saasBeta/yanbao/js/commonJS.js"></script>
+        <script>
+            logHead();
+            logFoot();
+        </script>
+    </body>
+</html>

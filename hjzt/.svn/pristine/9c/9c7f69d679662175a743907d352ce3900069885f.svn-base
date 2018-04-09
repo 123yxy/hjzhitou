@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-编辑图表</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/jquery.tinyscrollbar.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/cufon.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/website.js"></script>
+	</head>
+	<body>
+		<div class="tub_tc" style="display: none;"></div>
+		<div class="tub_tc2" style="display: none;"></div>
+		<!--分类的弹窗-->
+		<div class="fenlei_tc" style="display:none">
+			<div class="xinj_top">
+				<b class="tc_shanchu"></b>
+				<span>保存图表</span>
+			</div>
+			<div class="fenlei_search">
+				<div class="list">
+					<div class="select_box screen">
+						<div class="selectBox">
+							<p>选择分类</p>
+							<ul id="categoryList">
+								<!-- <li>
+									<a href="javascript:;">新建分类</a>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="saves">
+				<span class="baoc_qd">确定</span>
+				<span class="baoc_qx">取消</span>
+			</div>
+		</div>
+		<!--提示保存的弹窗-->
+		<div class="tips_shanchu" style="display: none;">
+			<b class="tc_shanchu"></b>
+			<h2>提示</h2>
+			<p>保存成功，可以到 “我的研究-研究图表”中查看</p>
+			<div class="shanchu_btn">
+				<span class="shanc_btn bianji_tub">确定</span>
+			</div>
+		</div>
+		<!--主体 star-->
+		<div class="yulan_titles">
+			<div class="fl">
+				<a href="/myResearch/researchChart.html">我的研究></a>
+				<a href="/myResearch/indexLibrary.html">图表分析></a>
+				<a href="javascript:;" class="com_now">编辑图表</a>
+			</div>
+			<div class="fr tubiao_btn">
+				<span id="saveChart">保存</span>
+				<em id="noSave">取消</em>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="right_main tubiao_bianji">
+			<!--main  star-->
+			<div class="main">
+				<div class="bianji_times">
+					<div class="fl time_list">
+						<a href="javascript:;" class="on">周</a>
+						<a href="javascript:;">月</a>
+						<a href="javascript:;">季</a>
+						<a href="javascript:;">半年</a>
+						<a href="javascript:;">1年</a>
+						<a href="javascript:;">2年</a>
+						<a href="javascript:;">3年</a>
+						<a href="javascript:;">5年</a>
+					</div>
+					<div class="fl data_times">
+						从<input type="text" id="startTime" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="" />到
+						<input type="text" id="endTime" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="" />
+					</div>
+					<div class="editChart_btn fl">
+						<a href="javascript:;" id="timeSearch">搜索</a>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--左边的折线图<-->
+				<div class="bianji_content">
+					<div class="fl zhibiao_datas">
+						<div class="bianji_tb" id="bj_tub"></div>
+						<!-- <div class="information">
+							<table>
+								<thead>
+									<tr id="dateTr">
+										<th>指标名称</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+									</tr>
+								</thead>
+								<tbody id="msgTbody">
+									<tr>
+										<td>净利润</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+									</tr>
+								</tbody>
+							</table>
+						</div> -->
+						<div class="f_bg">
+						<div class="tongzhi_zanwu_shuju1" style="display: none;">
+							<div class="wushuj_tub">
+								<span><img src="/saasBeta/images/zwsj.png" alt=""></span>
+								<p>暂无数据</p>
+							</div>
+						</div>
+						<div class="t_left information">
+								<div>
+									<table>
+										<tr>
+											<th>指标名称</th>
+										</tr>
+									</table>
+								</div>
+								<div class="cl_freeze" id="cl_freeze">
+									<table id="zbmcTable" >
+										<!-- <tr>
+											<td style="width: 40%" class="bordertop">1</td>
+										</tr>
+										<tr>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>4</td>
+										</tr> -->
+									</table>
+								</div>
+							</div>
+							<div class="t_r information">
+								<table>
+									<thead id="dataTHead" >
+										<!-- <tr>
+											<th style="width: 150px;">字段A</th>
+											<th style="width: 150px;">字段B</th>
+											<th style="width: 150px;">字段C</th>
+											<th style="width: 150px;">字段D</th>
+											<th style="width: 150px;">字段E</th>
+											<th style="width: 150px;">字段F</th>
+											<th style="width: 150px;">字段G</th>
+											<th style="width: 150px;">字段H</th>
+										</tr> -->
+									</thead>
+
+									<tbody id="dataTbody" >
+										<!-- <tr>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+											<td class="bordertop" style="width: 150px;">1</td>
+										</tr>
+										<tr>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+										</tr>
+										<tr>
+											<td style="width: 150px;">3</td>
+											<td style="width: 150px;">3</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+										</tr>
+										<tr>
+											<td style="width: 150px;">4</td>
+											<td style="width: 150px;">4</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+											<td style="width: 150px;">2</td>
+										</tr> -->
+									</tbody>
+								</table>
+
+							</div>
+							<div class="clr"></div>
+
+						</div>
+					</div>
+					<!--右边的指标-->
+					<div class="fr zhibaio_types">
+						<div class="zb_titles">
+							<span class="tb_shezhi on">
+								<!--<i></i>-->
+								<em>图表设置</em>
+								<div class="clr"></div>
+							</span>
+							<span class="zb_shezhi">
+								<!--<i></i>-->
+								<em>指标设置</em>
+								<div class="clr"></div>
+							</span>
+						</div>
+						<!--图表设置-->
+						<div class="tb_shezhi_zb">
+							<div class="bieming_infor">
+								<input type="text" id="chartTitle" maxlength="20" class="tub_titles" placeholder="图表标题（最多20字）" />
+								<textarea class="tub_miaoshu" id="chartRemark" maxlength="60" cols="30" placeholder="图表描述（最多60字）" rows="10"></textarea>
+							</div>
+							<div class="shuxing_shezhi">
+								<div class="top">
+									<span>图表属性设置</span>
+									<em></em>
+									<div class="clr"></div>
+								</div>
+								<!-- <div class="tubiao_leixing">
+									<h2>净利润</h2>
+									<input type="text" placeholder="指标别名"/>
+									<div class="tuxing_types">
+										<div class="fl lr_zhex type_public">
+											<i></i>
+											<em>折线</em>
+											<div class="clr"></div>
+										</div>
+										<div class="fl lr_zhux type_public">
+											<i></i>
+											<em>柱形</em>
+											<div class="clr"></div>
+										</div>
+										<div class="fl lr_mianj type_public">
+											<i></i>
+											<em>面积</em>
+											<div class="clr"></div>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div> -->
+							</div>
+						</div>
+						<!--指标设置-->
+						<div class="zb_shizhe" style="display: none;">
+							<div class="zb_leixing">
+								<span class="sanb_tj on">三板统计</span>
+								<span class="gegu_tj">个股指标</span>
+								<span class="paihb">排行榜</span>
+								<div class="clr"></div>
+							</div>
+							<div class="zb_biem">
+								<input type="text" placeholder="关键字" id="sechas" />
+							</div>
+							<div class="zb_list">
+								<ul id="zb_list">
+									<!--<li class="zb_public " style="display: block;"> 
+										<span class="tree_node on">市场规模</span>
+										<ul class="zb_public" style="display: block;">
+											<li>
+												<span class="tree_node on">市场规模统计</span>
+												<ul class="zb_public" style="display: block;">
+													<li>
+														<span class="tree_node on">挂牌公司家数</span>
+														<ul class="zb_public seacher" style="display: block;">
+																			<li>
+																				<div class="data-checkbox">
+																				<input type="checkbox" />
+																				<label class="checkbox"></label>
+																				<label class="checkboxWord">挂牌公司总数</label>
+																				</div>
+																			</li>
+																			<li>
+																				<div class="data-checkbox">
+																				<input type="checkbox" />
+																				<label class="checkbox"></label>
+																				<label class="checkboxWord">做市转让总数</label>
+																				</div>
+																			</li>
+																			<li >
+																				<div class="data-checkbox">
+																				<input type="checkbox" />
+																				<label class="checkbox"></label>
+																				<label class="checkboxWord">协议转让总数</label>
+																				</div>
+																			</li>
+																			<li >
+																				<div class="data-checkbox">
+																				<input type="checkbox" />
+																				<label class="checkbox"></label>
+																				<label class="checkboxWord">基础层公司总数</label>
+																				</div>
+																			</li>
+																			<li >
+																				<div class="data-checkbox">
+																				<input type="checkbox" />
+																				<label class="checkbox"></label>
+																				<label class="checkboxWord">创新层公司总数</label>
+																				</div>
+																			</li>
+																
+															
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>-->
+
+								</ul>
+							</div>
+							<!--已选指标-->
+							<div class="yix_zb">
+								<div class="top">
+									<span id="yxNumber"><!--已选指标（2/4）--></span>
+									<em></em>
+									<div class="clr"></div>
+								</div>
+								<div class="xuanh_zb" id="xuanh_zb">
+									<!--<a href="javascript:;">指标名称<i></i></a>-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+
+			</div>
+			<!--新建分类-->
+			<div class="xinjian_tc biaji_tc" style="display: none;">
+				<div class="xinjian_top">
+					<b class="xin_tc_shanchu"></b>
+					<h3 style="height: 42px; line-height: 42px; color: #fff;">新建图表分类</h3>
+				</div>
+				<!--<b class="tc_shanchu"></b>
+			<h3>新建图表分类</h3>-->
+				<div class="new_search bianji_tubiao">
+					<input type="text" placeholder="图表分类名称" id="categoryName" maxlength="15" />
+				</div>
+				<div class="fenlei_btn xinjian_btn">
+					<span class="fenlei_qd" onclick="addUserCategory()">确定</span>
+					<span class="fenlei_qx">取消</span>
+				</div>
+			</div>
+		</div>
+		<!--主体 end-->
+
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<!-- 自动补全 -->
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<script src="/saasBeta/js/echarts-all-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/myResearch/editChart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script>
+		
+
+	</body>
+
+</html>

@@ -1,0 +1,86 @@
+﻿.sel_input_text {
+	height: 100%;
+	padding: 0px;
+	float: left;
+}
+
+.sel_input_style {
+	cursor: pointer;
+	background: transparent;
+	float: left;
+	border: 0px;
+	height: 100%;
+	color: #999;
+	text-indent: .6rem;
+}
+
+.sel_input_text span {
+	float: right;
+	cursor: pointer;
+	width: 19px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	text-align: center;
+}
+.sel_input_text span img{vertical-align: middle;}
+.sel_input_list {
+	height: 200px;
+	overflow:scroll;
+	overflow-x: hidden;
+	list-style: none;
+	display: none;
+	text-align: left;
+	background: #fff;
+	border: 1px solid #d1d1d1;
+	z-index: 200;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	float: left;
+}
+
+.sel_input_list li {
+	float: left;
+	color: #666;
+	line-height: 24px;
+	height: 24px;
+	cursor: pointer;
+	text-indent: .6rem;
+	white-space: nowrap;
+	overflow: hidden;
+	border-bottom: 1px solid #e6e6e6;
+}
+.sel_input_list li.current {
+	float: left;
+	line-height: 24px;
+	height: 24px;
+	background: #f7f8fc;
+	cursor: pointer;
+}
+
+.sel_input_list li input {
+	float: left;
+}
+
+.sel_input_list li label {
+	float: left;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sel_input_list li.current input {
+	float: left;
+}
+
+.sel_input_list li.current label {
+	float: left;
+}
+@media(min-width: 1600px) {
+	.sel_input_style{
+	    text-indent: .3rem;
+	}
+}

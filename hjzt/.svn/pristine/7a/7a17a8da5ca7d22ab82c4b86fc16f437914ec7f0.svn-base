@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加研报</title>
+    <link rel="stylesheet" href="../../saasBeta/css/base.css">
+    <link rel="stylesheet" href="../../saasBeta/css/myResearch/add-report.css">
+    <script src="../../saasBeta/js/jquery.min.js"></script>
+    <script src="../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../saasBeta/js/common.js"></script>
+    <script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/saasBeta/js/reportAutocompleteContent.js"></script>
+    <!--错误提示-->
+    <link rel="stylesheet" href="/saasBeta/js/keep/css/bcConfirm.css">
+    <script src="/saasBeta/js/keep/js/bcConfirm.js"></script>
+    <script src="/saasBeta/js/myResearch/add-report.js"></script>
+</head>
+<body>
+<div class="title1">
+    <!--<span>我的研究&nbsp;&nbsp;></span>-->
+    <!--<strong>我的研究</strong>-->
+    <div class="jindu clear">
+        <div class="jindu_1 jd_1">1</div>
+        <div class="jindu_2 jd_2">选择研报类型</div>
+        <div class="jindu_3"></div>
+        <div class="jindu_1">2</div>
+        <div class="jindu_2">编写研报</div>
+        <div class="jindu_3"></div>
+        <div class="jindu_1">3</div>
+        <div class="jindu_2">完成编写</div>
+    </div>
+</div>
+    <div class="main">
+
+        <div class="report clearfix">
+            <div class="fl report-box">
+                <div class="report-title">智能研报</div>
+                <div class="img-box" name="left-item">
+                    <img src="../../saasBeta/images/Image/report-01.png" class=" ">
+                    <span class="opc"></span>
+                </div>
+            </div>
+            <div class="fr report-box report-box2">
+                <div class="report-title">空白研报</div>
+                <div class="img-box" name="right-item">
+                    <img src="../../saasBeta/images/Image/report-02.png" class="">
+                    <span class="opc"></span>
+                </div>
+            </div>
+        </div>
+        <div class="report-content">
+            <p class="">请选择一种编写模式，便于快速编写研报！</p>
+            <div class="report-item hide" id="left-item">
+                <div class="input-box" id="reportObject">
+                    <label>研究对象：</label>
+                    <input type="text" placeholder="请输入研究对象" class="ui-autocomplete-input-company" autocomplete="off" maxlength="30">
+                </div>
+                <div class="input-box">
+                    <label>研报标题：</label>
+                    <input type="text" placeholder="请输入研报标题" autocomplete="off" maxlength="30">
+                </div>
+                <div class="templet-box">
+                    <span>选择模板：</span>
+                    <label class="radio  radio-a active">
+                        <input name="temp" type="radio" value="a"/>
+                        <!--<b class="button"></b>-->
+                    </label>
+                    <span class="standard">标准模板</span>
+                   <!--  <label class="radio  radio-b">
+                        <input name="temp" type="radio" value="b"/>
+                        
+                    </label> -->
+                    <!-- <span class="standard1">模板一</span> -->
+                </div>
+                <div class="item-box">
+                    <img src="../../saasBeta/images/Image/moban.jpg">
+                    <!-- <img src="../../saasBeta/images/Image/moban.jpg"> -->
+                </div>
+                <div class="btn-box">
+                    <button class="button_special">生成研报</button>
+                    <button class="button_com goback">放弃编写</button>
+                </div>
+            </div>
+            <div class="report-item hide" id="right-item">
+                <div class="input-box">
+                    <label>研究对象：</label>
+                    <input type="text" placeholder="请输入研究对象" class="ui-autocomplete-input-company" autocomplete="off"  maxlength="30">
+                </div>
+                <div class="input-box">
+                    <label>研报标题：</label>
+                    <input type="text" placeholder="请输入研报标题" autocomplete="off" maxlength="30">
+                </div>
+                <div class="btn-box">
+                    <button class="button_special">编辑研报</button>
+                    <button class="button_com goback">放弃编写</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

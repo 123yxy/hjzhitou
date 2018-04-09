@@ -1,0 +1,14 @@
+.not-nav>div:first-child {
+    width:68px;
+}
+.rulue-item{
+    border-bottom: 1px dashed #E4E4E4;
+    padding: 9px 0 14px 0;
+    display: block;
+}
+.rulue-item>div:nth-child(2){
+    margin-top:6px;
+}
+.rulue-item>p{
+    line-height:24px;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>完善个人信息</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo"><img src="/saasBeta/yanbao/images/logo.png"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg12 col-md-12 col-sm-12 user-layer loginFocus-group">
+                <div class="loginFocus-title"><span>完善个人信息</span></div>
+                <form id="perForm">
+                    <ul class="userMain-list">
+                        <li><label><i>*</i>姓名</label><input type="text" id="username" name="username" maxlength="20"></li>
+                        <!-- <li><label><i>*</i>昵称</label><input type="text" id="nickname" name="nickname"></li> -->
+                        <li><label><i>*</i>性别</label><input type="radio" id="male" name="sex" checked><label>男</label>
+                            <input type="radio" name="sex" id="female"><label>女</label></li>
+                        <li><label>微信号</label><input type="text" id="weinum" name="weinum" maxlength="20"></li>
+                        <li><label><i>*</i>职位</label><input type="text" id="pos" name="pos" maxlength="20"></li>
+                        <li><label><i>*</i>公司</label><input type="text" id="company" name="company" maxlength="20"></li>
+                        <!-- <li><label>地区</label><input type="text" id="area" name="area"></li> -->
+                        <li><label></label><button class="button-blue button-blue-big" id="save">确定</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <!-- <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script> -->
+    <!-- <script src="/saasBeta/yanbao/js/plugin/jquery-ui.min.js"></script> -->
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <!-- <script src="/saasBeta/yanbao/js/bus/login.js"></script> -->
+    <!-- <script src="/saasBeta/yanbao/js/reg.js"></script> -->
+    <script>
+        $(".indexTop-user").html(sethead());
+        $(".userHead-logo").html(logourl());
+        getuserinfo();
+        logFoot();
+        $(function () {
+            //登录表单验证
+            var rgValidator = $("#perForm").validate({
+                rules: {
+                    username: {
+                        required: true,
+                        maxlength: 20
+                    },
+                    // nickname: {
+                    //     required: true,
+                    //     maxlength: 20
+                    // },
+                    sex: {
+                        required: true
+                    },
+                    pos: {
+                        required: true,
+                        maxlength: 20
+                    },
+                    company: {
+                        required: true,
+                        maxlength: 20
+                    },
+                    weinum: {
+                        maxlength: 20
+                    }
+                },
+                messages: {
+                    username: {
+                        required: "请填写用户姓名",
+                        maxlength: "用户姓名最多支持20个汉字",
+                    },
+                    // nickname: {
+                    //     required: "请填写用户昵称",
+                    //     maxlength: "用户昵称最多支持20个汉字",
+                    // },
+                    sex: {
+
+                    },
+                    pos: {
+                        required: "请填写职位名称",
+                        maxlength: "职位最多支持20个汉字"
+                    },
+                    company: {
+                        required: "请填写公司名称",
+                        maxlength: "公司名称最多支持20个汉字"
+                    },
+
+                    weinum: {
+                        maxlength: "微信最多支持20个汉字"
+                    }
+                }
+            })
+            $("#save").on("click", function () {
+                if ($("#perForm").valid()) {
+                    save();
+                    return false;
+                }
+            });
+            function save() {
+                var sex = 1;
+                $("#male")[0].checked ? sex = 1 : sex = 2;
+                // $("#female")[0].checked
+                param = { userName: $("#username").val(), sex: sex, wechatNumber: $("#weinum").val(), position: $("#pos").val(), company: $("#company").val() };
+                UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.updatetUser, param, true, function (data) {
+                    if (data.retCode == "0000") {
+                        // var result = data.retData;
+                        // if (result == null) {
+                        //     return false;
+                        // } else {
+                        //数据入缓存
+                        // localStorage.setItem('UU', result.UU);
+                        // localStorage.setItem('userId', result.userId);
+                        // localStorage.setItem('phone', result.Phone);
+                        // localStorage.setItem('userName', result.UserName);
+                        // localStorage.setItem('headImg', result.imageUrl);
+                        // localStorage.setItem('signature', result.signature);
+                        // localStorage.setItem('qqName', result.qqName);
+                        // localStorage.setItem('weChatName', result.weChatName);
+                        // localStorage.setItem('weiBoName', result.weiBoName);
+                        //记住密码
+                        // if ($("#checkboxLo").is(':checked') == true) {
+                        //     localStorage.setItem(result.Phone, $("#passwordLo").val());
+                        // }
+                        // findFollow();
+                        window.location.href = "index.html";
+                        // }
+                    } else {
+                        $.zmAlert(data.retMsg);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

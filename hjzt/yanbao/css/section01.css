@@ -1,0 +1,667 @@
+
+
+/*body,html{
+	background: url(../images/body-bd.jpg)repeat-y;
+}*/
+/*// .yuce-fx{margin-top: 36px;}
+// .yuce-bg{
+// 	width: 100%;
+// 	height: 720px;
+// 	background: url(../images/company-bg.png)left top no-repeat;
+// }*/
+.container .public{
+	width: 100%;
+	padding:0px 0 30px 30px;
+	box-sizing: border-box;
+}
+#tzlyTc p{font-size: 14px;}
+.contents{
+	width: 100%;
+	/* // height: 530px; */
+	/*padding-right: 46px;*/
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding-right:20px;
+}
+.top-tiltes{
+	height: 55px;
+	padding-right: 38px;
+}
+.top-line{
+	height: 55px;
+	border-bottom: 1px solid #cccccc;
+}
+.section-name{
+	font-size: 18px;
+	color: #333;
+	font-weight: 700;
+	line-height: 55px;
+	padding-left: 0px;
+}
+.scetion-logo{
+	text-align: right;
+	line-height: 50px;
+	padding-right: 0px;
+}
+.section h2{
+	color: #555;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.kaik-content h3{
+	font-size: 15px;
+	color: #1985e2;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+.kaik-content h3:nth-child(1){margin-top: 0;}
+.kaik-content h4{
+	font-size:15px;
+	color:#333;
+	font-weight:bold;
+	margin:10px 0;
+}
+.kaik-content{margin-bottom: 20px;}
+.kaik-content p{font-size: 14px;color: #555;line-height: 24px;}
+.gsxx-list li{
+	width: 50%;
+	float: left;
+	/*height: 30px;*/
+	/*line-height: 30px;*/
+}
+.gsxx-list li>em{
+	display: inline-block;
+	font-size: 14px;
+	color: #7a7a7a;
+	width: 110px;
+	/*width: 30%;*/
+	padding-left:10px;
+	box-sizing: border-box;
+	height: 30px;
+	line-height: 30px;
+}
+/*.gsxx-list.gp-infor li>em{
+	display: block;
+	float: left;
+}
+.gsxx-list.gp-infor li>span{
+	display: block;
+	float: left;
+	/*width: 350px;
+	width: 76%;
+	line-height: 30px;
+}*/
+.gsxx-list li>span{
+	display: inline-block;
+	font-size: 14px;
+	color: #333;
+	width:calc(100% - 110px);
+	vertical-align:middle;
+}
+.gsxx-list li:nth-child(1),.gsxx-list li:nth-child(2),.gsxx-list li:nth-child(5),.gsxx-list li:nth-child(6),.gsxx-list li:nth-child(9),.gsxx-list li:nth-child(10),
+.gsxx-list li:nth-child(13),.gsxx-list li:nth-child(14),.gsxx-list li:nth-child(17){background-color: #f5f7f9;}
+
+.gsxx-list li.busniess-main{
+	width: 100%;
+	padding:4px 0 10px 0;
+}
+.gsxx-list li.konggu{background-color: #f5f7f9;}
+.gsxx-list li.kongzhiR{background-color: #fff;}
+.gsxx-list li.busniess-main em{
+	display: block;
+	float: left;
+}
+.gsxx-list li.busniess-main span{
+	display: block;
+	float: left;
+	width: 83%;
+	line-height: 24px;
+}
+.gsxx-list li span.zhuanli{color: #2487df;cursor: pointer;}
+.gsxx-list li span.wu{color: #333;cursor: default;}
+.gsxx-list .liut-num {width: 100%;}
+.percen-infor{
+	width: 100%;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.percen-infor .names{
+	display: inline-block;
+	width:60px;
+	font-size: 14px;
+	color: #333;
+	font-weight: 700;
+	float: left;
+}
+.percen-infor-list{
+	display: inline-block;
+	float: left;
+}
+.percen-infor-list span{
+	font-size: 14px;
+	color: #555;
+	line-height: 24px;
+}
+/*.tab-list{margin-bottom: 20px;}*/
+/* .tuli-content{ 20171017 shiqi 合并相同样式到common.css
+	width: 70%;
+	margin-bottom: 10px;
+	margin: 0 auto;
+	text-align: center;
+}
+.tuli-content span{
+	color: #666;
+	font-size: 14px;
+	position: relative;
+	line-height: 22px;
+	padding-left: 26px;
+	margin-right: 20px;
+}
+.tuli-content span:before{
+	display: block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top: 4px;
+	left: 0px;
+}
+.tuli-content span.zygys:before{
+	background-color: #9675da;
+}
+.tuli-content span.zygs:before{
+	background-color: #feb535;
+}
+.tuli-content span.zykh:before{
+	background-color: #64a4f2;
+} */
+.tab-list span{
+	display: inline-block;
+	font-size: 14px;
+	color: #444;
+	width: 48px;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+}
+.gudong-num .tab-list {margin-bottom: 10px;}
+.tab-list span.on{
+	background-color: #2e8bdc;
+	color: #fff;
+	border-radius: 5px;
+}
+.echarts-tb{
+	width: 100%;
+	height: 360px;
+}
+.list-name{margin-bottom: 10px;}
+	
+
+/*表格样式*/
+.caiwu-table .table{
+	margin-bottom: 0;
+}
+.caiwu-table .table thead tr{
+	background-color: #559cd9;
+	color: #fff;
+	font-size: 14px;
+}
+.caiwu-table .table tr td{
+	font-size: 14px;
+	color: #333;	
+}
+.caiwu-table .table td.shuzi{font-family: arial;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{border-top: 0;border-bottom: 0;padding:0px;height: 30px;line-height: 30px;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{width: 15%;}
+.caiwu-table .table tr td:nth-child(1),.caiwu-table .table tr th:nth-child(1){padding-left: 20px;box-sizing: border-box;width: 30%;}
+.caiwu-table .table tr:nth-child(even){background-color: #f5f7f9;}
+.caiwu-table .table tr td.shuzi{font-family: arial;}
+.reyuan-table.dongjiangao .table tr td:nth-last-child(1),.reyuan-table.dongjiangao .table tr th:nth-last-child(1){text-align: right;width: 8% !important;}
+.caiwu-table.sdgd .table tr th,.caiwu-table.sdgd .table tr td{width: 33% !important;}
+.caiwu-table.sdgd .table tr th:nth-child(2),.caiwu-table.sdgd .table tr td:nth-child(2){padding-right: 15%;box-sizing: border-box;}
+/*.kaik-content .reyuan-table .table tr td:nth-child(6){text-align: right;}*/
+.caiwu-table.zdsj-tc .table tr td{text-align: left;}
+.caiwu-table.zdsj-tc .table tr th:nth-last-child(1),.caiwu-table.zdsj-tc .table tr td:nth-last-child(1){width: 15%;}
+.caiwu-table.zdsj-tc .table tr th:nth-child(1),.caiwu-table.zdsj-tc .table tr td:nth-child(1){width: 20%;}
+.caiwu-table.zdsj-tc .table tr th:nth-child(3),.caiwu-table.zdsj-tc .table tr td:nth-child(3){width: 35%;text-align: left;}
+.caiwu-table.zdsj-tc .table tr th:nth-child(3){text-align: center;}
+.caiwu-table.zdsj-tc .table tr th:nth-child(2),.caiwu-table.zdsj-tc .table tr td:nth-child(2){width:20%;text-align: center!important;}
+.caiwu-table.zdsj-tc .table .chakan{color: #2487df;cursor: pointer;}
+.reyuan-table.fx-tc .table tr th:nth-child(1),.reyuan-table.fx-tc .table tr td:nth-child(1){width: 45%!important;}
+.reyuan-table.fx-tc .table tr th:nth-child(2){text-align: right;}
+.reyuan-table.fx-tc .table tr th:nth-child(2),.reyuan-table.fx-tc .table tr td:nth-child(2){width: 25%!important;padding-right: 6%!important;}
+.reyuan-table.fx-tc .table tr th:nth-child(3),.reyuan-table.fx-tc .table tr td:nth-child(3){width: 25%!important;}
+
+.reyuan-table.trzfx-table .table tr th span{display:inline-block;width:100%;height:100%;position: relative;cursor: pointer;}
+.reyuan-table.trzfx-table .table tr th span em{display: inline-block;width: 14px;height: 100%;background: url(../images/tz-paixu.png)-28px top no-repeat;position: absolute;top: 5px;right: 0;cursor: pointer;}
+.reyuan-table.trzfx-table .table tr th span em.down{background: url(../images/tz-paixu.png)-14px top no-repeat;}
+.reyuan-table.trzfx-table .table tr th span em.up{background: url(../images/tz-paixu.png)0px top no-repeat;}
+/*提示框*/
+.tooltips{padding:6px;box-sizing: border-box;background-color: rgba(104,104,104,.6);border-radius: 5px;}
+.tooltips h4{color: #fff;font-size: 16px;}
+.tips-num{margin-top: 4px;}
+.tips-num span{display:inline-block;color: #fff;font-size: 14px;line-height: 24px;padding: 0 10px;box-sizing: border-box;margin-right: 6px;}
+.tips-num em{display:inline-block; font-size: 18px;color: #fff;font-family: arial;line-height: 26px;}
+.tips-num span.name1{background-color: #65a8ef;}
+.tips-num span.name2{background-color: #fcb444;}
+
+
+.reyuan-table .table{margin-bottom: 0;}
+.reyuan-table .table thead tr{background-color: #559cd9;color: #fff;font-size: 14px;}
+.reyuan-table .table tr th,.reyuan-table .table tr td{text-align: center;}
+.reyuan-table .table tr td{font-size: 14px;color: #333;}
+.reyuan-table .table tr td,.reyuan-table .table tr th{border-top: 0;border-bottom: 0;padding:0px;height: 30px;line-height: 30px;vertical-align: middle;}
+.reyuan-table .table tr:nth-child(even){background-color: #f5f7f9;}
+.reyuan-table .table tr td .chakan{color: #1985e2;cursor: pointer;display: inline-block;width: 100%;height: 100%;text-align: right;}
+.dongjiangao.reyuan-table .table tr td:nth-child(2){text-align: center;padding-left: 20px;box-sizing: border-box;width: 260px;}
+/*.dongjiangao.reyuan-table{max-height: 180px;overflow-y: auto;}*/
+.reyuan-table .table tr td,.reyuan-table .table tr th{max-width:373px;}
+.reyuan-table .table thead tr th{max-width:400px;}
+.kaik-content h3 {margin-bottom:7px;}
+
+#outboundInvestment tr td:nth-child(1),#outboundInvestment tr th:nth-child(1){text-align: left;padding-left: 14px;box-sizing: border-box;}
+#outboundInvestment tr td{font-size: 12px;}
+#patentnumListT tr td:nth-child(1){text-align: left;padding-left: 14px;box-sizing: border-box;}
+#patentnumListT tr:nth-child(odd),#copyrightnumList tr:nth-child(odd){border-bottom: 1px solid #dce2e8;}
+
+
+.comparis{padding:2px 20px 20px 20px;box-sizing: border-box;background-color: #f5f7f9;}
+.comparis h6{font-size: 14px;color: #333;font-weight: bold;line-height: 22px;margin-top: 16px;}
+.comparis p{font-size: 14px;color: #555;}
+
+.sj-type{padding:14px 20px;box-sizing: border-box;background-color: #f5f7f9;font-size: 14px;color: #555;}
+.sj-type span{font-weight: bold;margin-right: 4px;}
+
+.fengxian-list{padding-left: 5px;box-sizing: border-box;}
+.risk-type{
+	display: inline-block;
+	height: 108px;
+	width: 21.8%;
+	border-radius: 5px;
+	box-shadow: 0 0 3px rgba(41,94,140,.5);
+	/*margin: 0 10px;*/
+	padding-top: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin-right: 3%;
+}
+.fengxian-list .risk-type:nth-child(4){
+	margin-right: 0;
+}
+.type-icon{
+	width: 43%;
+	height: 100%;
+	display:block;
+	box-sizing: border-box;
+	text-align: right;
+	float:left;
+	margin-right: 5%;
+	padding-top: 12px;
+}
+.type-icon span{
+	display: inline-block;
+	height: 30px;
+	width: 33px;
+}
+.falv-icon{
+	background: url(../images/falv-icon.png)center center no-repeat;
+}
+.jy-icon{
+	background: url(../images/yic-icon.png)center center no-repeat;
+}
+.gq-icon{
+	background: url(../images/gq-icon.png)center center no-repeat;
+}
+.qs-icon{
+	background: url(../images/gg-icon.png)center center no-repeat;
+}
+.type-num{float:left;width: 46%;height:100%;display:block;box-sizing: border-box;box-sizing: border-box;}
+.type-num p{font-size: 14px;color: #777;}
+.type-num p:nth-child(1){font-size: 42px;color: #444;}
+
+
+
+.zhuanli-tc{
+	width: 1000px;
+	position: fixed;
+	z-index: 61;
+	height: 500px;
+	background-color: #fff;
+	top: 50%;
+	left: 50%;
+	margin-top: -250px;
+	margin-left: -500px;
+	border-radius: 5px;
+	padding:10px 20px 20px 20px;
+	box-sizing: border-box;
+}
+.tc-close{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background: url(../images/tc-close.png)center center no-repeat;
+	position: absolute;
+	top: -90px;
+	right: -80px;
+	cursor: pointer;
+}
+.zhuanli-tc h2{
+	width: 100%;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+	border-bottom: 1px solid #dce2e8;
+	line-height: 30px;
+	padding-bottom: 2px;
+	margin-bottom: 12px;
+	box-sizing: border-box;
+}
+.zhuanli-ck-tc{
+	position: relative;
+}
+#patentnumTc .reyuan-table,#copyrightnumTc .reyuan-table{max-height: 430px;overflow-y: auto;}
+.chakan-tc{
+	/*width: 960px;*/
+	height: 300px;
+	background-color: #fff;
+	/*position: absolute;
+	z-index: 3;
+	top: 36px;
+	right: 0;*/
+	box-shadow: 0 0 8px rgba(195,220,242,.8);
+	border-radius: 5px;
+	border:1px solid #dce2e8;
+	padding:6px 20px 20px 20px;
+	box-sizing: border-box;
+}
+#issueList .chakan-tc{
+	width: 960px;
+	position: absolute;
+	z-index: 3;
+	top: 36px;
+	right: 10px;
+}
+.chakan-tc .zl-list{max-height: 230px;overflow-y: auto;padding-right: 10px;box-sizing: border-box;}
+.zhijian{display: block;width: 30px;height: 18px;background: url(../images/zhijian.png)center center no-repeat;position: absolute;top: -16px;right: 30px;}
+.xq-tc .chakan-tc{position: relative;}
+/*.xq-tc .zhijian{top: -16px;}*/
+.chakan-tc h3{
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	font-weight: bold;
+	border-bottom: 1px solid #dce2e8;
+}
+.zhuanli-img{
+	width: 100%;
+	height: 90px;
+	padding:14px 0px;
+	box-sizing: border-box;
+}
+.zhuanli-img span{
+	display: block;
+	width: 84px;
+	height: 62px;
+	margin: 0 auto;
+}
+/*.zhuanli-list{height: 140px;overflow-y: auto;}*/
+/*.zhuanli-list ul{height: 140px;overflow-y: auto;}*/
+.zhuanli-list li{
+	width: 50%;
+	float: left;
+	text-align: left;	
+	padding-right:10px;
+	box-sizing: border-box;
+}
+
+
+.zhuanli-list li em{display:block;width: 90px;font-size: 14px;color: #777;float: left;height: 100%;}
+.zhuanli-list li span{display:block;font-size: 14px; color: #333;float: left;width: 334px;}
+
+.zhuanli-list li.zhuanli-zhaiyao{width: 100%;}
+.zl-list .zhuanli-list li.zhuanli-zhaiyao span{width: 87%;line-height: 24px;}
+
+.zl-list .zhuanli-list li span {width: 76%;}
+
+.reyuan-table.guben-gudong{width: 100%;padding: 0 2px;box-sizing: border-box;}
+.reyuan-table .table.guben-table th{background-color: #519bdb;color: #fff;}
+.reyuan-table .table.guben-table tr.td-gray td{background-color: #e5ebf0;}
+.reyuan-table .table.guben-table td{border-bottom: 1px solid #c9d3dd;background-color: #fff;}
+.reyuan-table .table.guben-table td.hebing{border-right: 1px solid #c9d3dd;vertical-align: middle;}
+.reyuan-table .table.guben-table tbody{
+	border-right: 1px solid #c9d3dd;border-left: 1px solid #c9d3dd;
+	box-sizing: border-box;
+}
+#djgUL tr td:nth-child(2){padding-left: 14px;box-sizing: border-box;text-align: left;}
+.jl-tc { display:none;}
+.jl-tc.chakan-tc{background-color: #F9FBFC;max-height: 200px;position: absolute;right: 10px;width: 912px;}
+.reyuan-table.dongjiangao .table tr th:nth-child(2){width: 300px;}
+
+.jianli_infor{
+	width: 100%;
+	padding: 10px 0px 12px 14px;
+	/*height: 0px;*/
+	border:1px solid #dce2e8;
+	background-color: #f9fbfc;
+	box-sizing: border-box;
+	margin-top: 5px;
+	position: relative;
+	box-shadow: 0px 0px 5px #e1eefb;
+	box-sizing: border-box;
+
+}
+
+.gudong_infor.on  .jianli_infor{
+	height:196px;
+}
+.jianli_content{
+	width: 100%;
+	height: 170px;
+	overflow: auto;
+}
+.jianli_sj{
+	position: absolute;
+	height: 14px;
+	width: 20px;
+	background: url(../images/zhijian.png)center center no-repeat;
+	top: -14px;
+	right: 22px;	
+}
+.chakan-tc.gg-tc{height: 170px;}
+.chakan-tc.gg-tc .reyuan-table{max-height: 150px;overflow-y: auto;}
+.chakan-tc.gg-tc .jianli_sj{right: 54px;}
+.jianli_infor ul{
+	width: 100%;
+	padding-left: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+.jianli_infor .infor_public{
+	margin-top: 3px;
+}
+.infor_public span{
+	margin-right: 10px;
+}
+
+.infor_public ul .infor_yd{
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 4px;
+	background-color: #4a95d6;
+	position: absolute;
+	top: 10px;
+	left: 0px;
+}
+.jianli_infor ul li{
+	line-height: 22px;
+}
+.jianli_infor li.jiben_titles span{
+	font-size: 14px;
+	color: #222;
+}
+.jiben_xinx li span{
+	display: inline-block;
+	font-size: 14px;
+	color: #777;
+	margin-right: 20px;
+}
+.infor_public li.jiben_titles span{
+	color: #222;
+}
+.jiaoyu_jl span,.cy_jl span{
+	font-size: 14px;
+	color: #444;
+}
+.infor_public span.shuzi{
+	font-family: arial;
+}
+.infor_public li{
+	text-align: left;
+}
+.infor_public ul{
+	padding-left: 16px;
+	box-sizing: border-box;
+	position: relative;
+}
+.jiben_xinx li span em{
+	color: #444;
+}
+#faxingNum tr td:nth-last-child(1){padding-right: 20px;}
+
+/* by wangjing */
+.flss li { border-bottom:1px dashed #e4e4e4; padding:20px 0;}
+.flss li > p { font-size:15px; color:#222;}
+.flss li > div { margin-top:5px; font-size:14px; color:#777;}
+.flss li > div > span { margin-right:40px;}
+.wj-commonTable .table tr td { padding:10px; line-height:150%;}
+.wj-commonTable .table tr td.td-left { text-align:left;}
+.wj-commonTips { margin-top:8px; font-size:13px; color:#777;}
+.wj-commonTips i { color:#f4363e;}
+.faxing-tc .wj-commonTable .table tr td{padding: 0;line-height: 30px;}
+.faxing-tc .wj-commonTable{max-height: 420px;overflow-y: auto;}
+.faxing-tc .wj-commonTable tr:nth-child(even){background-color: #f5f7f9;}
+.flss ul{max-height: 424px;overflow-y: auto;}
+.reyuan-table.wj-commonTable tr th:nth-child(1),.reyuan-table.wj-commonTable tr td:nth-child(1){
+	text-align: left;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+#tenShareholders tr td:nth-child(1){text-align: left;}
+/*K线图*/
+.lines-type span{color: #444;font-size: 14px;padding:6px 10px 6px 10px;border-radius: 5px;cursor: pointer;}
+.lines-type span.on{color: #fff;background-color: #2e8bdc;}
+.k-line{width: 100%;margin-top: 16px;}
+.kLineData-list span{color: #444;font-size: 14px;margin-right: 0px;display: inline-block;width: 120px;}
+.kLineData-list span em.up{color: #f13944;}
+.kLineData-list span em.down{color: #2ea749;}
+.lines-echarts{width:100%;height: 440px;}
+.jiaoyi-qk{position: relative;height: 500px;}
+.line-cjl{position: absolute;top:55%;left: 8%;font-size: 14px;color: #444;}
+/*风险信息改造*/
+.fxxx-list{margin-bottom: 10px;}
+.fxxx-list .caiwu-table .table tr td{line-height: 20px;padding-top: 4px;padding-bottom: 4px;}
+.fxxx-list p{font-size: 15px;color: #333;font-weight: bold;line-height: 24px;margin-bottom: 5px;}
+.fxxx-list .noDatas{font-size: 13px;color: #777777;}
+.fxxx-list .caiwu-table .table tr th{text-align: center;}
+#Law .caiwu-table .table tr th:nth-child(1){width: 35%;text-align: left;padding-left: 20px;}
+#Law .caiwu-table .table tr td:nth-child(1){width: 35%;text-align: justify;text-align: left;padding-left: 20px;}
+#Law .caiwu-table .table tr td:nth-child(4){text-align: justify;}
+#Law .caiwu-table .table tr td:nth-last-child(1),#Law .caiwu-table .table tr th:nth-last-child(1){width:18%;text-align: right;}
+#Law .caiwu-table .table tr td:nth-last-child(2),#Law .caiwu-table .table tr th:nth-last-child(2){width:10%;}
+#Law .caiwu-table .table tr td:nth-last-child(3),#Law .caiwu-table .table tr th:nth-last-child(3){width:10%;}
+#yiChang .caiwu-table .table tr th:nth-child(1){width: 21%;text-align: left;padding-left: 20px;}
+#yiChang .caiwu-table .table tr td:nth-child(1){width: 21%;text-align: left;padding-left: 20px;}
+
+#yiChang .caiwu-table .table tr td:nth-child(1),#yiChang .caiwu-table .table tr td:nth-child(3){text-align: justify;}
+#yiChang .caiwu-table .table tr th:nth-last-child(1){width: 21%;text-align: right;padding-left: 20px;}
+#yiChang .caiwu-table .table tr td:nth-last-child(1){width: 21%;text-align: right;padding-left: 20px;}
+/*#yiChang .caiwu-table .table tr th:nth-last-child(3){text-align: right;padding-left: 20px;}
+#yiChang .caiwu-table .table tr td:nth-last-child(3){text-align: right;padding-left: 20px;}*/
+
+#guQuan .caiwu-table .table tr td{width: 120px;}
+#guQuan .caiwu-table .table tr td:nth-child(1),#guQuan .caiwu-table .table tr th:nth-child(1){padding-left: 20px;text-align: left;}
+#guQuan .caiwu-table .table tr td:nth-last-child(1),#guQuan .caiwu-table .table tr th:nth-last-child(1){padding-left: 20px;text-align: right;}
+#guQuan .caiwu-table .table tr td:nth-child(2),#guQuan .caiwu-table .table tr td:nth-child(6){width: 180px;}
+#guQuan .caiwu-table .table tr td:nth-child(3){width: 60px;}
+/*#guQuan .caiwu-table .table{max-height: 200px;overflow: auto;}*/
+
+#yiChang .caiwu-table .table #findAbnormalData tr td.yc{text-align: center!important;}
+#Law .caiwu-table .table #findLegalData tr td.falv{text-align: center!important;}
+
+#zdSJ .table tr th:nth-child(1){text-align: left;padding-left: 20px;box-sizing: border-box;}
+#zdSJ .table tr td:nth-child(1){text-align: left;padding-left: 20px;box-sizing: border-box;}
+#gongGao .caiwu-table .table tr td:nth-child(1),#gongGao .caiwu-table .table tr th:nth-child(1){padding-left: 20px;text-align: left;}
+#gongGao .caiwu-table .table tr td:nth-last-child(1),#gongGao .caiwu-table .table tr th:nth-last-child(1){padding-left: 20px;text-align: right;}
+
+.reyuan-table.trzfx-table .table tr th.shijian{text-align: right!important;}
+.reyuan-table.trzfx-table .table tr th.shijian span{text-align: right;padding-right: 16px;}
+.reyuan-table.zuoshishang .table tr th,.reyuan-table.zuoshishang .table tr td{width: 20%!important;}
+.reyuan-table.zuoshishang .table tr th:nth-child(2),.reyuan-table.zuoshishang .table tr td:nth-child(2){padding-right: 5%!important;text-align: right;}
+
+.reyuan-table.trzfx-table .table tr th:nth-child(2){width: 10%;}
+
+@media only screen and (min-width: 100px) and (max-width: 1400px) {
+	.tc-close{
+		top: -58px;
+	}
+}
+
+
+/*表单  减少  字体样式*/
+.reyuan-table .table tr td  .gern{color: #26a844;cursor: pointer;}
+/*表单  增加  字体样式*/
+.reyuan-table .table tr td .Red{color: #f4363e;cursor: pointer;}
+/*表单  不变和新进  字体样式*/
+.reyuan-table .table tr td .Hei{color: #000;font-weight: 900; cursor: pointer;}
+.fxxx-list .qsgg.caiwu-table .table tr th:nth-child(1),.fxxx-list .qsgg.caiwu-table .table tr td:nth-child(1){width: 15%;}
+
+.reyuan-table.dongjiangao .table tr th:nth-child(1),.reyuan-table.dongjiangao .table tr td:nth-child(1){text-align: left;padding-left: 20px;box-sizing: border-box;}
+
+
+.reyuan-table.trzfx-table .table tr th:nth-child(1),.reyuan-table.trzfx-table .table tr td:nth-child(1){text-align: left;padding-left: 20px;}
+.reyuan-table.trzfx-table .table tr td:nth-last-child(1),.reyuan-table.trzfx-table .table tr th:nth-last-child(1){text-align: right;padding-right: 20px;}
+.reyuan-table .table tr .trzLeft{padding-left: 20px;text-align: left;box-sizing: border-box;}
+.reyuan-table .table tr .trzRight{padding-right: 20px;text-align: right;box-sizing: border-box;}
+
+/*分页样式*/
+#pages,#pagesFlss,#pagesDWTZ{
+	font-size: 14px;
+	right: 30px;
+	position: initial;
+	margin: 0;
+	bottom: 0;
+	right: 0;
+}
+.pagination>.active>a, .pagination>.active>span {
+	background-color: #1985e2;
+	border-color: #1985e2;
+	color: #fff;
+}
+.pagination>.active>span:hover,
+.pagination>.active>a:focus, .pagination>.active>span:focus{
+	border-color: #1e7bcd;
+	/* color: #666; */
+}
+.pagination>li>a, .pagination>li>span{
+	background-color: #f3f6f9;
+	border: #f3f6f9;
+	padding: 3px 10px;
+	color: #666;
+}
+.pagination li{
+		display:block;
+		height: 26px;
+		float: left;
+		margin: 0 5px;
+	}
+.pagination>li>a:hover, .pagination>li>span:hover{
+	color: #fff;
+	background-color: #1e7bcd;
+	border-color: #1e7bcd;
+}

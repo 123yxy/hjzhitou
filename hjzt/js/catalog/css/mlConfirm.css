@@ -1,0 +1,163 @@
+/*垂直居中*/
+.verticalAlign{ 
+	vertical-align:middle; display:inline-block; height:100%; margin-left:-1px;
+}
+
+.mlConfirm .ml_layer{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 3;
+}
+.mlConfirm .popBox{
+	position: fixed; left: 50%; top: 24%; background-color: #ffffff; z-index:9; width: 687px; height: 470px; 
+	margin-left: -343.5px; border-radius: 5px; font-weight: bold; color: #535e66;/*padding:0 33px;*/
+}
+.mlConfirm .popBox .ttBox{
+	height: 55px; line-height: 55px;border-bottom: solid 1px #eef0f1;margin:0 33px;margin-bottom: 20px;
+}
+.mlConfirm .popBox .ttBox .tt{
+	font-size: 16px; display: block; float: left; height: 55px; position: relative;color:#333333;font-weight: bold;
+}
+.mlConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-13%;top:-25%;
+}
+
+
+/*公司概述*/
+.mlConfirm .popBox .txtBox_No1{
+	height: 92px;margin:0 33px;/*padding-top:10px;*//*background: blue;*/
+}
+.mlConfirm .popBox .txtBox_No1 span{
+	display: inline-block;cursor: pointer;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_img{
+	float: left;margin-right:6px;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_text{
+	float: left;font-size:14px;line-height: 16px;margin:0;font-weight:bold;color:#555555;
+}
+.clear{
+	clear: both;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_list{
+	display:block;height:62px;margin-top:5px;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_list span{
+	    display: inline-block;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_list span .list_img{
+	float: left;margin-right:6px;margin-top: 6px;
+}
+.mlConfirm .popBox .txtBox_No1 .No1Box_list span .list_txt{
+	float: left;font-size:14px;width:133px;line-height: 31px;margin:0;/*margin-right:84px;*/color:#555555;font-weight: normal;
+}
+
+
+ /*公司业务*/
+.mlConfirm .popBox .txtBox_No2{
+	height:66px;/*background:red;*/margin:0 33px;
+}
+.mlConfirm .popBox .txtBox_No2 span{
+	display: inline-block;cursor: pointer;
+}
+.mlConfirm .popBox .txtBox_No2 .No2Box_img{
+	float: left;margin-right:6px;
+}
+.mlConfirm .popBox .txtBox_No2 .No2Box_text{
+	float: left;font-size:14px;line-height: 16px;margin:0;
+}
+.mlConfirm .popBox .txtBox_No2 .No2Box_list{
+	display:block;height:36px;margin-top:5px;
+}
+
+.mlConfirm .popBox .txtBox_No2 .No2Box_list span{
+	    display: inline-block;
+}
+.mlConfirm .popBox .txtBox_No2 .No2Box_list span .list_img{
+	float: left;margin-right:6px;margin-top: 6px;
+}
+.mlConfirm .popBox .txtBox_No2 .No2Box_list span .list_txt{
+	float: left;font-size:14px;line-height: 31px;margin:0;width:133px;color:#555555;font-weight: normal;
+}
+
+
+
+/*财务分析*/
+.mlConfirm .popBox .txtBox_No3{
+	height:66px;/*background:#000;*/margin:0 33px;
+}
+.mlConfirm .popBox .txtBox_No3 span{
+	display: inline-block;cursor: pointer;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_img{
+	float: left;margin-right:6px;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_text{
+	float: left;font-size:14px;line-height: 16px;margin:0;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_list{
+	display:block;height:36px;margin-top:5px;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_list span{
+	    display: inline-block;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_list span .list_img{
+	float: left;margin-right:6px;margin-top: 6px;
+}
+.mlConfirm .popBox .txtBox_No3 .No3Box_list span .list_txt{
+	float: left;font-size:14px;line-height: 31px;margin:0;width:133px;color:#555555;font-weight: normal;
+}
+
+
+
+/*盈利预测*/
+.mlConfirm .popBox .txtBox_No4{
+	height:66px;/*background:#333333;*/margin:0 33px;
+}
+.mlConfirm .popBox .txtBox_No4 span{
+	display: inline-block;cursor: pointer;
+}
+.mlConfirm .popBox .txtBox_No4 .No4Box_img{
+	float: left;margin-right:6px;
+}
+.mlConfirm .popBox .txtBox_No4 .No4Box_text{
+	float: left;font-size:14px;line-height: 16px;margin:0;
+}
+.mlConfirm .popBox .txtBox_No4 .No4Box_list{
+	display:block;height:36px;margin-top:5px;
+}
+.mlConfirm .popBox .txtBox_No4 .No4Box_list span{
+	    display: inline-block;
+}
+
+.mlConfirm .popBox .txtBox_No4 .No4Box_list span .list_img{
+	float: left;margin-right:6px;margin-top: 6px;
+}
+.mlConfirm .popBox .txtBox_No4 .No4Box_list span .list_txt{
+	float: left;font-size:14px;line-height: 31px;margin:0;width:133px;color:#555555;font-weight: normal;
+}
+
+
+
+.mlConfirm .popBox .btnArea{
+	height:32px;/*margin-top:75px;*/padding:0 228px;margin-top:30px;
+}
+
+.mlConfirm .popBox .sgBtn{
+	display: block; cursor: pointer; float: left; width: 100px; height: 32px; font-size:14px;line-height: 32px; text-align: center; color: #FFFFFF;
+	 border-radius: 5px;margin-left:0;margin-top: 0;
+}
+.mlConfirm .popBox .sgBtn.ok{
+	background-color: #1985e2; color: #FFFFFF;
+}
+.mlConfirm .popBox .sgBtn.cancel{
+	background-color: #fff; color: #1985e2;border:1px solid #1985e2;margin-left: 20px;height:30px;line-height: 30px;
+}
+
+
+@media screen and (min-width:1200px) and (max-width:1680px){
+	.mlConfirm .popBox{
+		top:12%;
+	}
+	.mlConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-9%;top:-9%;width:37px;height:37px;
+}
+}

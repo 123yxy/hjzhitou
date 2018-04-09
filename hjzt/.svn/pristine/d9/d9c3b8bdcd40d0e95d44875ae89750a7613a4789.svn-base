@@ -1,0 +1,107 @@
+//初始化
+var stockCode = getUrlParam("stockCode");
+$(function() {
+	getByCodeName(stockCode);
+});
+//获取列表
+function getByCodeName(stockCode) {
+	$.axs("/betaStock/enterPriseData/findEnterpriseExtend.do", {
+		stockCode: stockCode,
+	}, true, function(data) {
+		if(data.retCode == 0000) {
+			var result = data.retData;
+			if(result.chiName==null){//公司名称
+				$("#chiName").text("--");
+			}else{
+				$("#chiName").text(result.chiName);
+			}//股票编码
+			if(result.stockCode==null){
+				$("#stockCode2").text("--");		
+			}else{
+				$("#stockCode2").text(result.stockCode);
+			}//注册时间
+			if(result.registrationDate ==null){
+				$("#registrationDate").text("--");
+			}else{
+				$("#registrationDate").text(result.registrationDate);
+			}//注册资金
+			if(result.registeredCapital==null){
+				$("#registeredCapital").text("--");
+			}else{
+				$("#registeredCapital").text(result.registeredCapital);
+			}//挂牌时间
+			if(result.stockDate==null){
+				$("#stockDate").text("--");
+			}else{
+				$("#stockDate").text(result.stockDate);
+			}//公司介绍
+			if(result.enterpriseintroduction==null){
+				$("#enterpriseintroduction").text("--");
+			}else{
+				$("#enterpriseintroduction").text(result.enterpriseintroduction);
+			}//行业
+			if(result.industry==null){
+				$("#industry").text("--");
+			}else{
+				$("#industry").text(result.industry);
+			}//地区
+			if(result.state==null){
+				$("#state").text("--");
+			}else{
+				$("#state").text(result.state);
+			}//经营范围
+			if(result.businessScope==null){
+				$("#businessScope").text("--");
+			}else{
+				$("#businessScope").text(result.businessScope);
+			}//股票公开转让场所
+			if(result.transferPlace==null){
+				$("#transferPlace").text("--");
+			}else{
+				$("#transferPlace").text(result.transferPlace);
+			}//主要产品与服务项目
+			if(result.productType==null){
+				$("#productType").text("--");
+			}else{
+				$("#productType").text(result.productType);
+			}//普通股股票转让方式
+			if(result.dealType==null){
+				$("#dealType").text("--");
+			}else{
+				$("#dealType").text(result.dealType);
+			}//普通股总股本
+			if(result.generalCapital==null){
+				$("#generalCapital").text("--");
+			}else{
+				$("#generalCapital").text(result.generalCapital);
+			}//控股股东
+			if(result.shareholder==null){
+				$("#shareholder").text("--");
+			}else{
+				$("#shareholder").text(result.shareholder);
+			}//实际控制人
+			if(result.actualController==null){
+				$("#actualController").text("--");
+			}else{
+				$("#actualController").text(result.actualController);
+			}//是否拥有高新技术企业资格
+			if(result.qualification==null){
+				$("#qualification").text("--");
+			}else{
+				$("#qualification").text(result.qualification);
+			}//公司拥有的专利数量
+			if(result.patentNumber==null){
+				$("#patentNumber").text("--");
+			}else{
+				$("#patentNumber").text(result.patentNumber);
+			}//公司拥有的“发明专利”数量
+			if(result.inventionPatent==null){
+				$("#inventionPatent").text("--");
+			}else{
+				$("#inventionPatent").text(result.inventionPatent);
+			}
+		}else{
+			errorAlert(data.retCode,data.retMsg);
+		}
+	});
+}

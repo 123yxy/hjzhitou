@@ -1,0 +1,184 @@
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section03.css" />
+
+		<div class="company-analysis">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 company-background">
+					<div class="company-content">					
+						<div class="top-tiltes">
+							<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>三、财务分析</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+										<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="company-main">
+							<div class="section hxcwsj">
+								<h2>3.2核心财务数据</h2>
+								<!--<div class="chakan-db"><a class="look-company">查看对标公司</a></div>-->
+								<div class="caiwu-table">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>核心指标</th>
+											<th id="finance_3_1_stockName" class="shuzi">--</th>
+											<th>对标平均</th>
+											<th>对标数据</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>市值总额(亿元)</td>
+											<td class="shuzi" id="ShiZhiZongE_value">--</td>
+											<td class="shuzi" id="ShiZhiZongE_avg">--</td>
+											<td><span class="look-data" data-name="ZSZ" data-type="3">查看</span></td>
+										</tr>
+										<tr>
+											<td>市盈率</td>
+											<td class="shuzi" id="ShiYingLv_value">--</td>
+											<td class="shuzi" id="ShiYingLv_avg">--</td>
+											<td><span class="look-data" data-name="HQSYL1" data-type="3">查看</span></td>
+										</tr>
+										<tr>
+											<td>市净率</td>
+											<td class="shuzi" id="ShiJingLv_value">--</td>
+											<td class="shuzi" id="ShiJingLv_avg">--</td>
+											<td><span class="look-data" data-name="SJL" data-type="3">查看</span></td>
+										</tr>
+										<tr>
+											<td>每股收益(元/每股)</td>
+											<td class="shuzi" id="MeiGuShouYi_value">--</td>
+											<td class="shuzi" id="MeiGuShouYi_avg">--</td>
+											<td><span class="look-data" data-name="每股收益" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>每股净资产(元/每股)</td>
+											<td class="shuzi" id="MeiGuJingZiChan_value">--</td>
+											<td class="shuzi" id="MeiGuJingZiChan_avg">--</td>
+											<td><span class="look-data" data-name="每股净资产" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>每股经营现金流(元/每股)</td>
+											<td class="shuzi" id="MeiGuJingYingXianJinLiu_value">--</td>
+											<td class="shuzi" id="MeiGuJingYingXianJinLiu_avg">--</td>
+											<td><span class="look-data" data-name="每股经营现金流" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>资产负债率(%)</td>
+											<td class="shuzi" id="ZiChanFuZhaiLv_value">--</td>
+											<td class="shuzi" id="ZiChanFuZhaiLv_avg">--</td>
+											<td><span class="look-data" data-name="资产负债率" data-type="2">查看</span></td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>盈利指标</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>EBIT(万元)</td>
+											<td class="shuzi" id="XiShuiQianLiRun_value">--</td>
+											<td class="shuzi" id="XiShuiQianLiRun_avg">--</td>
+											<td><span class="look-data" data-name="EBIT" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>EBITDA(万元)</td>
+											<td class="shuzi" id="XiShuiZheJiuJiTanXiaoQianLiRun_value">--</td>
+											<td class="shuzi" id="XiShuiZheJiuJiTanXiaoQianLiRun_avg">--</td>
+											<td><span class="look-data" data-name="EBITDA" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>净利润(万元)</td>
+											<td class="shuzi" id="f2JLR_value">--</td>
+											<td class="shuzi" id="f2JLR_avg">--</td>
+											<td><span class="look-data" data-name="净利润" data-type="1">查看</span></td>
+										</tr>
+										<tr>
+											<td>净资产收益率(%)</td>
+											<td class="shuzi" id="JingZiChanShouYiLv_value">--</td>
+											<td class="shuzi" id="JingZiChanShouYiLv_avg">--</td>
+											<td><span class="look-data" data-name="净资产收益率" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>销售毛利率(%)</td>
+											<td class="shuzi" id="XiaoShouMaoLiLv_value">--</td>
+											<td class="shuzi" id="XiaoShouMaoLiLv_avg">--</td>
+											<td><span class="look-data" data-name="销售毛利率" data-type="2">查看</span></td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>成长性指标</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>营业收入增长率(%)</td>
+											<td class="shuzi" id="REVZengZhangLv_value">--</td>
+											<td class="shuzi" id="REVZengZhangLv_avg">--</td>
+											<td><span class="look-data" data-name="营业收入增长率" data-type="2">查看</span></td>
+										</tr>
+										<tr>
+											<td>净利润增长率(%)</td>
+											<td class="shuzi" id="JingLiRunZengZhangLv_value">--</td>
+											<td class="shuzi" id="JingLiRunZengZhangLv_avg">--</td>
+											<td><span class="look-data" data-name="净利润增长率" data-type="2">查看</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+				
+			</div>
+		</div>
+	<!-- 业务js -->
+	<!-- <script src="/saasBeta/yanbao/js/bus/section03.js"></script> -->
+	<!-- 加载3-1 -->
+	<script>
+		//判断是否登录
+		UTIL.nologin('hxcwsj');
+		//核心数据
+		findFinanceKernelData();
+		//财务核心数据同行业前10名公司(根据营业收入排序)
+		//findFinanceKernelDataStockInTrade();
+		//查询对标数据
+		findIFinanceData();
+		
+		
+		$(function(){
+		    var windowHeight = $(window).height();
+		    $(".company-analysis .container").height(windowHeight-195);
+			$(".company-main").height(windowHeight - 195-30)
+			// UTIL.sjly("#hxcwsjly","hxcwsj",".hxcwsj","sjlyy");
+			
+			//点击的对标的公司查看
+//			$(".chakan-db").on("click",".look-company",function(){
+//				$(".marsk").show();
+//				$("#benchMarke").show();
+//				findFinanceKernelDataStockInTrade();
+//				$("body,html").css("overflow","hidden");
+//			})
+			chakan();
+			
+		})
+	</script>
+	

@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-报告预览</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<!--主体 star-->
+		<div class="content_center">
+			<!--<div class="bgyl_nav">
+				 <a href="/myResearch/researchReport.html">我的研究></a> 
+				<a href="/myResearch/researchReport.html">研究报告></a>
+				<a href="javascript:;" class="yulan_com">报告预览</a>
+				<em class="fr d_out">导出</em>
+				<span class="fr">编辑</span>
+				<div class="clr"></div>
+			</div>-->
+			<div class="yulan_nav">
+				<a href="/myResearch/researchReport.html">我的研究></a>
+				<a href="javascript:void(0);" class="gs_fenxi_bg">报告预览</a>
+			</div>
+			<div class="right_main tubiao_fenxi">
+				<!--main  star-->
+				<div class="main bg_yulan" id="pdfContent">
+					<!--<div class="yulan_titles yjbg_top">
+						<div class="fl">
+							 <a href="javascript:;" id="studyName"></a>
+						<a href="javascript:;">研究报告></a> 
+							<a href="javascript:;" class="com_now"></a>
+						</div>
+						<div class="fr tubiao_btn">
+							<span>编辑</span>
+							 <em>导出</em> 
+						</div>
+						<div class="clr"></div>
+					</div>-->
+					<div class="bg_cjr">
+						<div class="fl com_name">
+							<h2 id="thisTitle"></h2>
+							<p>
+								<em class="yjbg_cjr" id="thisUserName"></em><!-- 韩梅梅韩梅梅行 -->
+								<b class="yjbg_shij" id="thisTime"></b><!-- 2017-03-15 17:37 -->
+							</p>
+						</div>
+						<div class="fr bgyl_nav">
+							<em class="fr d_out">导出</em>
+							<span class="fr">编辑</span>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!--左边的图片-->
+					<div class="yulan_neirong">
+						<div class=" fl ylcontent">
+							<div class="yulan_content">
+							</div>
+						</div>
+						<!--右边的公司的股价情况-->
+						<div class="fr yulan_zb">
+							<!-- 第二版本（2017-07-17） -->
+							<!--<div class="company_inform">
+								<div class="gs_mc">
+									<span>天阳科技(835713)</span>
+									<em>收起</em>
+									<b style="display: none;">展开</b>
+									<div calss="clr"></div>
+								</div>
+								<div class="shouqi_nr">
+									分时图
+									<div class="zhexian_types">
+										<div class="tux_tab">
+											<span class="rxt on">日线图</span>
+											<span class="fst">分时图</span>
+											<span class="szt">市值</span>
+											<div class="clr"></div>
+										</div>
+										<div class="baogao_tubiao1" id="newprice"></div>
+									</div>
+									
+									<div class="gongsi_xq">
+										<ul>
+											<li>
+												<span>最新价</span>
+												<em>12.3</em>
+											</li>
+											<li>
+												<span>涨跌幅%</span>
+												<em>0.38%</em>
+											</li>
+											<li>
+												<span>总市值（亿）</span>
+												<em>175.07</em>
+											</li>
+											<li>
+												<span>流通市值（亿）</span>
+												<em>135.47</em>
+											</li>
+											<li>
+												<span>目标市值（亿）</span>
+												<em>230.00</em>
+											</li>
+											<li>
+												<span>总股本</span>
+												<em>155.27</em>
+											</li>
+											<li>
+												<span>行业</span>
+												<em>金融财务软件开发</em>
+											</li>
+											<li>
+												<span>行业三板公司总数</span>
+												<em>184</em>
+											</li>
+											<li>
+												<span>市盈率</span>
+												<em>62.76</em>
+											</li>
+											<li>
+												<span>市净率</span>
+												<em>13.31</em>
+											</li>
+											<li>
+												<span>PE(TTM)行业中值</span>
+												<em>86.69</em>
+											</li>
+											<li>
+												<span>主办券商</span>
+												<em>中证证券</em>
+											</li>
+											<div class="clr"></div>
+										</ul>
+									</div>
+									<div class="yjjilu">
+										<div class="yanjiujilu">
+											<span>研究记录</span>
+											<em>查看全部</em>
+											<div class="clr"></div>
+										</div>
+										<ul class="baog_types">
+											<li>
+												当类型是报告时class是baogao，图表为tubiao，券商为quanshang
+												<span class="baogao">报告</span>
+												<a href="javascript:;">关于财务软件研究分析报告</a>
+												<b>2017-06-25</b>
+												<div class="clr"></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>-->
+							
+							<!-- 以前第一版本 -->
+							<!-- <div class="company_inform">
+								<div class="gs_mc">
+									<span>天阳科技(835713)</span>
+									<em>收起</em>
+									<b style="display: none;">展开</b>
+									<div calss="clr"></div>
+								</div>
+								<div class="shouqi_nr">
+									分时图
+									<div class="baogao_tubiao1" id="newprice">
+
+									</div>
+									<div class="baogao_tubiao2" id="newnumber">
+
+									</div>
+									<div class="gongsi_xq">
+										<ul>
+											<li>
+												<span>最新价</span>
+												<em>12.3</em>
+											</li>
+											<li>
+												<span>涨跌幅%</span>
+												<em>0.38%</em>
+											</li>
+											<li>
+												<span>总市值（亿）</span>
+												<em>175.07</em>
+											</li>
+											<li>
+												<span>流通市值（亿）</span>
+												<em>135.47</em>
+											</li>
+											<li>
+												<span>目标市值（亿）</span>
+												<em>230.00</em>
+											</li>
+											<li>
+												<span>总股本</span>
+												<em>155.27</em>
+											</li>
+											<li>
+												<span>行业</span>
+												<em>金融财务软件开发</em>
+											</li>
+											<li>
+												<span>行业三板公司总数</span>
+												<em>184</em>
+											</li>
+											<li>
+												<span>市盈率</span>
+												<em>62.76</em>
+											</li>
+											<li>
+												<span>市净率</span>
+												<em>13.31</em>
+											</li>
+											<li>
+												<span>PE(TTM)行业中值</span>
+												<em>86.69</em>
+											</li>
+											<li>
+												<span>主办券商</span>
+												<em>中证证券</em>
+											</li>
+											<div class="clr"></div>
+										</ul>
+									</div>
+									<div class="yjjilu">
+										<div class="yanjiujilu">
+											<span>研究记录</span>
+											<em>查看全部</em>
+											<div class="clr"></div>
+										</div>
+										<ul class="baog_types">
+											<li>
+												当类型是报告时class是baogao，图表为tubiao，券商为quanshang
+												<span class="baogao">报告</span>
+												<a href="javascript:;">关于财务软件研究分析报告</a>
+												<b>2017-06-25</b>
+												<div class="clr"></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div> -->
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!-- <div class="ylcont_btn">
+					<a href="/myResearch/researchReport.html">确定</a>
+				</div> -->
+				</div>
+
+			</div>
+		</div>
+		<!--主体 end-->
+
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<!-- 导出PDF -->
+		<script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/jspdf.debug.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/html2canvas.js"></script>
+		<!-- 导出PDF -->
+		<script src="/saasBeta/js/echarts-all-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/myResearch/reportPreview.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+
+</html>

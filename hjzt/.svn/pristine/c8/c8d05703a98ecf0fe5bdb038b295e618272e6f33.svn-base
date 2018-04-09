@@ -1,0 +1,218 @@
+.main{
+    width:600px;
+    padding-top:50px;
+    padding-bottom:100px;
+    margin:0 auto;
+}
+.hide{
+    display: none;
+}
+.img-box .opc{
+    display: none;
+}
+.report-box{
+    width:185px;
+    text-align: center;
+}
+.report-title{
+    font-size:20px;
+    font-weight: bold;
+    margin-bottom:25px;
+    color:#333;
+}
+.report-box2>.report-title{
+    margin-bottom:39px;
+}
+.img-box{
+    position:relative;
+    cursor: pointer;
+}
+/*.img-box>img.active{*/
+    /*!*transform: scale(1.1);*!*/
+    /*width:178px;*/
+    /*margin-top:10px;*/
+/*}*/
+.img-box span{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background:url("../../../saasBeta/images/Image/checked.png");
+    position:absolute;
+    right: 15px;
+    bottom: 10px;
+}
+.img-box span.active{
+    opacity: 0;
+}
+.report-content{
+    margin-top:40px;
+}
+.report-content>p{
+    font-size:16px;
+    text-align: center;
+}
+.input-box,.templet-box{
+    width:500px;
+    margin:0 auto;
+    font-size:14px;
+ margin-bottom: 20px;
+ position: relative;
+}
+.input-box .bigcomplete{z-index: 10;}
+.input-box>input{
+    width:400px;
+    height:32px;
+    margin-left:20px;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+.templet-box{
+    position:relative;
+}
+.templet-box>span:first-child{
+    margin-right:20px;
+}
+.templet-box>.radio{
+    margin-right:10px;
+    display: inline-block;
+    width:14px;
+    height:14px;
+    /*position:relative;*/
+    position: absolute;
+    top:0;
+    background:url("../../../saasBeta/images/Image/radius.png")
+}
+.templet-box>.radio.active{
+    background:url("../../../saasBeta/images/Image/radius-acitive.png")
+}
+.standard{
+    display: inline-block;
+    margin-left:27px;
+}
+.standard1{
+    display: inline-block;
+    margin-left:87px;
+}
+.templet-box>.radio-a{
+    left:95px;
+}
+.templet-box>.radio-b{
+    left:240px;
+}
+.templet-box>.radio:last-child{
+    margin-left:35px;
+}
+.button{
+    display: inline-block;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+   border:1px solid #1885E2;
+    cursor: pointer;
+}
+.bg{
+    display: inline-block;
+    width:8.5px;
+    height:8.5px;
+    border-radius: 50%;
+    background:#1885E2;
+    position:absolute;
+    top:4.5px;
+    left:4.5px;
+    cursor: pointer;
+}
+
+.radio > input[type=radio]{
+    display: none;
+}
+
+.item-box{
+    width:500px;
+    margin:0 auto;
+    padding-left:170px;
+}
+.item-box>img:first-child{
+    margin-right:73px;
+}
+.btn-box{
+    width:500px;
+    margin:0 auto;
+    margin-left:150px;
+    margin-top:25px;
+}
+.btn-box button{
+    width:120px;
+    height:35px;
+    margin-right:40px;
+}
+
+
+
+.title1{
+    height: 70px;
+    background: #f3f7fa;
+    position: relative;
+    margin-top: 65px
+}
+.title1 span{
+    position: absolute;
+    display: block;
+    top: 25px;
+    left: 50px;
+}
+.title1 strong{
+    position: absolute;
+    top: 25px;
+    left: 135px;
+}
+.title1 .jindu{
+    width: 700px;
+    height: 70px;
+    margin: 54px auto 0;
+}
+.title1 .jindu .jindu_1{
+    float: left;
+    height: 32px;
+    width: 32px;
+    background:url("../../../saasBeta/images/Image/circle.png");
+    /*border: 2px solid #c6cdd3;*/
+    /*border-radius: 50%;*/
+    line-height: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #c6cdd3;
+    margin-top: 19px;
+    cursor: pointer;
+}
+.title1 .jindu .jindu_1:hover{
+    /*border: 2px solid #1886e5;*/
+    background:url("../../../saasBeta/images/Image/circle-active.png");
+    color: #1886E5;
+}
+.title1 .jindu .jd_1{
+    /*border: 2px solid #1886e5;*/
+    background:url("../../../saasBeta/images/Image/circle-active.png");
+    color: #1886E5;
+}
+.title1 .jindu .jd_2{
+    color: #1886E5 !important;
+}
+.title1 .jindu .jindu_2{
+    float: left;
+    margin-top: 25px;
+    color: #888888;
+    margin-left: 14px;
+    cursor: pointer;
+}
+.title1 .jindu .jindu_2:hover{
+    color: #1886E5;
+}
+.title1 .jindu .jindu_3{
+    float: left;
+    width: 120px;
+    height: 1px;
+    background: #c5ccd4;
+    margin-top: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

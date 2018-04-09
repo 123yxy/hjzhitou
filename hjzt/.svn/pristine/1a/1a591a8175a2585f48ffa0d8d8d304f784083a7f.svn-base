@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-研究报告</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/wl_searchlist.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="tub_tc" style="display: none;"></div>
+		<div class="tips_shanchu" style="display: none;">
+			<b class="tc_shanchu"></b>
+			<h2>删除提示</h2>
+			<p>是否确认删除研报？</p>
+			<div class="shanchu_btn">
+				<span class="shanc_btn" onclick="deleBtUserStudyReport()">删除</span>
+				<span class="shanc_qux">取消</span>
+			</div>
+		</div>
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main yanjiu_baogao">
+				<div class="yanjiu_bg_nav">
+					<a href="javascript:;">我的研究></a>
+					<a href="javascript:;" class="yanjiu_nav_bg">研究报告</a>
+				</div>
+				<div id="text"></div>
+				<div class="baogao_main">
+					<div class="baogao_titles">
+						<!--<span>研究报告</span>-->
+						<a href="/myResearch/add-report.html" class="tj_yanbao" target="_blank">添加研报</a>
+						<div class="clr"></div>
+					</div>
+					<div class="baog_list">
+						<div class="bj_baogao_bt">
+							<div class="l_baogao">
+								<div class="fl title_l">
+									<div class="fl yanj_content baogao_mc">
+										<span>报告名称</span>
+									</div>
+									<div class="fl yanjiu_duix">
+										<span>研究对象</span>
+									</div>
+									<div class="fl chuangjianren">
+										<span>创建人</span>
+									</div>
+									<div class="fl yanjiu_shijian">
+										<i>时间</i>
+									</div>
+									<div class="clr"></div>
+								</div>	
+								<div class="fl yanjiu_top_cz">
+									<i>操作</i>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<ul id="studyReportList" class="yanbao_lb">
+							<!-- <li>
+								<div class="fl f_baogao">
+									<div class="fl yanj_content">
+										<b class="yanjiubaogao">研究报告</b>
+										<span>两会再谈创新，敏慧等中</span>
+									</div>
+									<div class="fl yanjiu_duix">
+										<div class="yanjiu_content">
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<div class="shizhi_num">
+											<div class="gs_shizhi" style="display: none;">
+												<span class="gs_sz">市值</span>
+												<div class="sz_tc" style="display: none;">
+													<ul>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="fl chuangjianren">
+										<span>韩梅梅</span>
+									</div>
+									<div class="fl yanjiu_shijian">
+										<i>2017-03-25</i>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fl baogao_cz">
+									<div class="caozuo_icon" style="display: block;">
+										<b title="编辑"></b>
+										<em title="删除"></em>
+										<div class="clr"></div>
+									</div>
+								</div>	
+								<div class="clr"></div>
+							</li> -->
+							<!-- <li>
+								<div class="fl f_baogao">
+									<div class="fl yanj_content">
+										
+										<b class="moxingbaogao">模型报告</b>
+										<span>两会再谈创新，敏慧等中</span>
+									</div>
+									<div class="fl yanjiu_duix">
+										<div class="yanjiu_content">
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<div class="shizhi_num">
+											<div class="gs_shizhi" style="display: none;">
+												<span class="gs_sz">市值</span>
+												<div class="sz_tc" style="display: none;">
+													<ul>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="fl chuangjianren">
+										<span>韩梅梅</span>
+									</div>
+									<div class="fl yanjiu_shijian">
+										<i>2017-03-25</i>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fl baogao_cz">
+									<div class="caozuo_icon" style="display: block;">
+										<b title="编辑"></b>
+										<em title="删除"></em>
+										<div class="clr"></div>
+									</div>
+								</div>	
+								<div class="clr"></div>
+							</li> -->
+							<!-- <li>
+								<div class="fl f_baogao">
+									<div class="fl yanj_content">
+										
+										<b class="qiyebaogao">企业报告</b>
+										<span>两会再谈创新，敏慧等中</span>
+									</div>
+									<div class="fl yanjiu_duix">
+										<div class="yanjiu_content">
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<span class="bg_gs_mc">天阳科技</span>
+											<div class="shizhi_num">
+											<div class="gs_shizhi" style="display: none;">
+												<span class="gs_sz">市值</span>
+												<div class="sz_tc" style="display: none;">
+													<ul>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+														<li>
+															<i class="gs_list_icon"></i>
+															<span>天阳科技（876433）</span>
+															<p>
+																<span>当前市值：<em class="dq_shiz">765</em>亿</span>
+																<span>期望市值：<em class="dq_shiz">987</em>亿</span>
+															</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="fl chuangjianren">
+										<span>韩梅梅</span>
+									</div>
+									<div class="fl yanjiu_shijian">
+										<i>2017-03-25</i>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fl baogao_cz">
+									<div class="caozuo_icon" style="display: block;">
+										<b title="编辑"></b>
+										<em title="删除"></em>
+										<div class="clr"></div>
+									</div>
+								</div>	
+								<div class="clr"></div>
+							</li> -->
+						</ul>
+						<!--暂无数据得div-->
+						<div class="baogao_zwsj" style="display: none;">
+							<div class="bg_zwsj_tup">
+								<span></span>
+							</div>
+							<p style="padding-left: 0; margin-left:-14px ;">您还没有创建过研究报告</p>
+							<a href="/myResearch/add-report.html" class="zwsj_qcj">去创建</a>
+						</div>
+						<div class="pages" id="pages"></div>
+					</div>
+					<div class="list_more">
+						<span id="moreCloud">加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/newjs/left.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>	
+		<!-- 自动补全 -->
+		
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+
+		<script src="/saasBeta/newjs/myResearch/researchReport.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+
+	</body>
+
+</html>

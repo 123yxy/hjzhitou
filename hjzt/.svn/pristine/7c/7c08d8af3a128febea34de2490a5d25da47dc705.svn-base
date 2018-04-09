@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+.container {
+	padding: 0;
+}
+#marketType{color: #2487df;}
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>一、公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+							    <img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section">
+						<h2>1.2挂牌信息</h2>
+						<ul class="gsxx-list gp-infor">
+							<li><em>挂牌时间</em><span id="stockdate"></span>
+							<div class="clearfix"></div></li>
+							<li><em>证券简称</em><span id="stockname"></span>
+							<div class="clearfix"></div></li>
+							<li><em>证券代码</em><span id="stockcode"></span>
+							<div class="clearfix"></div></li>
+							<li><em>所属层级</em><span id="stockblock"></span>
+							<div class="clearfix"></div></li>
+							<li class="zhuanrang"><em>转让方式</em><span id="dealtype"></span>
+							<div class="clearfix"></div></li>
+							<li id="zuoShiShang"><em>做市商</em><span id="marketType" style="cursor: pointer">--</span>
+							<div class="clearfix"></div></li>
+							<li><em>主办券商</em><span id="sponsoredbroker"></span>
+							<div class="clearfix"></div></li>
+							<li><em>会计事务所</em><span id="ccountingfirm"></span>
+							<div class="clearfix"></div></li>
+							<li><em>律师事务所</em><span id="lawname"></span>
+							<div class="clearfix"></div></li>
+							<li><em>董秘</em><span id="secretary"></span>
+							<div class="clearfix"></div></li>
+							<li><em>流通股本</em><span
+								id="circulationcapital"></span>
+							<div class="clearfix"></div></li>
+							<li><em>总股本</em><span id="totalsharecapital"></span>
+							<div class="clearfix"></div></li>
+							<li class="liut-num konggu"><em>控股股东</em><span id="shareholder"
+								style="cursor: pointer"></span>
+							<div class="clearfix"></div></li>
+							<li class="liut-num kongzhiR"><em>实际控制人</em><span id="actualcontroller"
+								style="cursor: pointer"></span>
+							<div class="clearfix"></div></li>
+							
+							<div class="clearfix"></div>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- 企业基本信息js-凡国庆 -->
+<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script> -->
+<script>
+	marketList();
+	sectionOne2();
+	
+	$(function(){
+	    var windowHeight = $(window).height()
+	    $(".yuce-fx .container").height(windowHeight-195);
+	    $(".contents").height(windowHeight - 290);
+	     $("#marketType").on("click",function(){
+		 	$("#marketNum").show();
+		 	$(".marsk").show();
+		 })
+	})
+</script>

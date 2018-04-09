@@ -1,0 +1,159 @@
+.main_form{width: 50%; border: 1px solid #ccc; box-sizing: border-box; padding: 20px;}
+.main_f_title{width: 100%; height: 40px; line-height: 40px;}
+.main_f_title span{display: block;width: 100%; text-align: center; box-sizing: border-box; font-size: 18px; color: #333;}
+.main_f_box{width: 100%; box-sizing: border-box; padding-top: 30px;}
+.main_f_box ul li{width: 100%; height: 30px; line-height: 30px; margin-bottom:20px;}
+.main_f_box ul li span{display: block;width: 100px; float: left;}
+.main_f_box ul li input,.main_f_box ul li select{display: block;width:200px;float: left; border:1px solid #ccc;height: 30px; line-height: 30px;}
+.main_f_box ul li button{ width:100px; height:30px; line-height:30px; text-align:center; border:none; background:#2fa6dc; color:#fff; font-size:16px; display:block; margin-left:150px;}
+/**我的自选股**/
+.main_choice_table {width: 100%;margin: 0 auto;	margin-top: 30px;}
+.main_choice_table table {	border: none;border-collapse: collapse;width: 100%;}
+.main_choice_table table tr {background: #fff none repeat scroll 0 0;}
+.main_choice_table table tr:nth-child(1) {border-bottom: 1px solid #999;}
+.main_choice_table table tr.hover {background: #e3f1f4;}
+.main_choice_table table th {color: #333;font-size: 18px;font-weight: normal;height: 40px;line-height: 40px;text-align: center;}
+.main_choice_table table td {border-bottom: 1px solid #e3e3e3;border-left: 1px dotted #e3e3e3;font-size: 12px;height: 40px;line-height: 40px;
+	text-align: center;word-break: break-all;word-wrap: break-word;color: #333;}
+.main_choice_table table td:nth-child(1) {border-left: none;}
+.main_choice_table table td a {color: #6dc3ea;}
+.main_choice_table table td em {font-style: normal;font-size: 12px;}
+.choice_title{ width:100%;border-bottom:1px solid #ccc; padding-bottom:10px;}
+.choice_title a{ display:inline-block;border:1px solid #ccc; border-radius: 3px; margin-right: 1%; float:left; text-align:center; padding:3px 10px;}
+.choice_input{ float:left; width:20%;}
+.choice_input input{ display:block; width:100%; border:1px solid #ccc; box-sizing:border-box; padding:3px 0px;padding-left:10px;}
+/*用户管理*/
+.choice_title a.fr{ float: right;}
+.choice_title a.sonzh{border:none;}
+.choice_title a.newfaile{width: 8%;}
+.choice_title a.kaitong{ width: 20px; height: 20px; display: block;background:url(../images/set.png) center center no-repeat ; background-size: 20px 20px; border: none; margin-top: 5px;}
+.main_choice_table table tr .quanxuan{ width:70px;}
+.main_choice_table table tr .quanxuan input.qx{ display:inline-block; margin-right:5px;}
+/*日志管理*/
+.choice_title button{ border:1px solid #ccc; border-radius: 3px; margin-right: 1%; float:left; width:4%; text-align:center; padding:2px 0px; display: block; margin-top: -1px; cursor: pointer;}
+/*我的云盘*/
+.choice_input.fr,.choice_title button.fr{float:right;height: 27px;}
+.main_choice_table table tbody td span.word{ display: inline-block; background: url(../images/world.png) left center no-repeat; padding: 5px 0px 5px 25px; background-size: 20px 20px;}
+.main_choice_table table tbody td span.folder{display: inline-block; background: url(../images/folder.png) left center no-repeat; height: 40px; line-height: 40px; padding-left: 25px; background-size: 20px 20px; float: left; cursor: pointer;}
+.main_choice_table table tbody td.textleft{ text-align: left; padding-left: 20px;}
+.main_choice_table table tbody td.textleft input{width: 150px; height: 30px; line-height: 30px; border: 1px solid #ccc; padding-left: 10px; display:block; margin-top: 5px;}
+.main_choice_table table tbody td.textleft a{display: inline-block;float: left;}
+.main_choice_table table tbody td.textleft a img{width: 30px; display: inline-block; margin-top: 5px;}
+.cz_btn{ float: left; width: 40%; display: none;}
+.cz_btn a{ display: inline-block;float: left;margin-right: 1%;padding:3px 10px;border-radius: 3px;border:1px solid #ccc; text-align: center; }
+.choice_title .file{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 3px 10px;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    overflow: hidden;
+}
+.choice_title .file input {
+    position: absolute;
+    height: 27px;
+    font-size: 100px;
+    width: 100%;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+/*权限管理*/
+.authority{ width: 100%; margin: 0 auto;}
+.authority_l{width: 20%; box-sizing: border-box; border: 1px solid #ccc; margin-right: 1%;}
+.auth_add_btn{ height: 50px; width: 100%; line-height: 50px; text-align: right; }
+.auth_add_btn a{display:inline-block; height: 30px; border: 1px solid #ccc; border-radius: 3px; line-height: 30px; margin-top: 10px; box-sizing: border-box; padding: 0px 10px; margin-right: 20px;}
+.authority_r{width: 79%;box-sizing: border-box;border: 1px solid #ccc;}
+.authority_table {width: 100%;margin: 0 auto;}
+.authority_table table {	border: none;border-collapse: collapse;width: 100%; margin-top: 20px; border-top: 1px solid #ccc;}
+.authority_table table tr {background: #fff none repeat scroll 0 0;}
+.authority_table table tr:nth-child(1) {border-bottom: 1px solid #999;}
+.authority_table table tr.hover {background: #e3f1f4;}
+.authority_table table th {color: #333;font-size: 18px;font-weight: normal;height: 40px;line-height: 40px;text-align: center;}
+.authority_table table td {border-bottom: 1px solid #e3e3e3;border-left: 1px dotted #e3e3e3;font-size: 12px;height: 40px;line-height: 40px;
+	text-align: center;word-break: break-all;word-wrap: break-word;color: #333;}
+.authority_table table td:nth-child(1) {border-left: none;}
+.authority_table table td a {color: #6dc3ea; padding: 0px 10px;}
+.authority_table table td em {font-style: normal;font-size: 12px;}
+.auth_list ul.treemenu .toggler { cursor: pointer;}
+.auth_list ul.treemenu .toggler:before { display: inline-block;margin-right: 2pt;}
+.auth_list ul li.tree-empty > .toggler { color: #fff; }
+.auth_list ul li.tree-empty > .toggler:before { content: "\2212"; }
+.auth_list ul li.tree-closed > .toggler:before { content: "+"; }
+.auth_list ul li.tree-opened > .toggler:before { content: "\2212"; }
+.auth_list ul.tree {  color:#fff;width:100%;margin:0 auto;}
+.auth_list ul.tree li,.auth_list ul.tree li > a,.auth_list ul.tree li > span {padding: 4pt;border-radius: 4px;}
+.auth_list ul.tree li a {color:#fff; text-decoration: none; line-height: 20pt;border-radius: 4px;}
+.auth_list ul.tree li a:hover {color: #2fa6dc;}
+.auth_list ul .active {color: white;}
+.auth_list ul .active a {color: #fff;}
+.auth_list ul.treemenu li{background: #3d4f60; margin-bottom: 1px;}
+.auth_list ul.treemenu li.tree-opened ul.treemenu li{background: #4c5e70; margin-bottom: 1px;}
+.auth_list ul.treemenu li.tree-opened ul.treemenu li.tree-opened ul.treemenu li{background: #3d4f60; margin-bottom: 1px;}
+.authrity_btn{width:100%; margin: 0 auto;}
+.authrity_btn a{display:inline-block; height: 30px; border: 1px solid #ccc;border-radius: 3px; line-height: 30px; margin-top: 10px; box-sizing: border-box; padding: 0px 10px; margin-left: 20px;}
+.auth_tc{width: 500px; display: none; position: fixed; top: 22%; left: 50%; margin-left: -250px; z-index: 101; background: #fff; border: 1px solid #ccc; box-shadow: 0 0 8px #000; border-radius: 3px;}
+.auth_tc_title{width: 100%; height: 40px; line-height: 40px; border-bottom: 1px solid #ccc; position: relative;}
+.auth_tc_title a{ display: block; width: 20px; height: 20px; font-size: 12px; font-family: arial; color: #333; position: absolute; right: 10px; top: 5px; line-height: 10px;}
+.auth_tc_title a img{ display: block; width: 100%;}
+.auth_tc_title span{width: 100%; text-align: center; font-size: 18px; display: block;height: 40px; line-height: 40px;}
+.auth_tc_info{ width: 80%; margin: 0 auto; padding-top: 30px; padding-bottom: 30px;}
+.auth_tc_info ul li{ width: 100%; margin-bottom: 10px;}
+.auth_tc_info ul li span{ display: inline-block; width: 80px; height: 30px; line-height: 30px; text-align: right; margin-right: 5px;}
+.auth_tc_info ul li input{ display: inline-block; height: 30px; width: 60%; line-height: 30px; border: 1px solid #ccc; box-sizing: border-box; padding-left: 10px;}
+.auth_tc_info ul li button{display: block; width: 100px; margin: 0 auto; height: 30px;border: 1px solid #ccc; box-sizing: border-box; line-height: 30px; margin-top: 5px; text-align: center; cursor: pointer;}
+/*点击修改时的弹出框*/
+.bgMask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0px;
+	left:0px;
+	background-color: rgba(0,0,0,.6);
+	z-index: 100;
+}
+.changeMain{
+	padding-left:20px;
+	padding-top:10px;
+	width: 400px;
+	position:absolute;
+	left:50%;
+	margin-left:-200px;
+	top:26%;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	z-index: 101;
+	max-height: 400px;	
+}
+.changeMain i,em{
+	cursor: pointer;
+	font-size: 16px;
+	margin-right: 6px;
+}
+.changeMain .treeMsg>li ul>li{
+	padding-left: 20px;
+}
+.changeMain .treeMsg>li ul>li a{
+	height: 26px;
+	line-height: 26px;
+}
+.changeMain .treeMsg a{
+	font-size: 16px;
+}
+.changeMain .sure{
+	width: 30%;
+	height: 40px;
+	font-size: 26px;
+	border-radius: 5px;
+	background-color: $666;
+	margin-left: 35%;
+	cursor: pointer;
+}
+/*进度条*/
+.range{width: 14%;height: 20px;border: 1px solid #ccc;float: left;margin-left: 30px;margin-top: 10px;border-radius: 5px;position: absolute;top:190px;left:30%;}
+.range .bar{display: inline-block;height: 20px;border-radius: 5px;background-color: #00C531;position: absolute;top:0;left: 0;z-index: 106;}
+.range .rangeText{width:100%;height:20px;line-height: 20px;z-index: 200;position: absolute;top:0px;left:0;text-align: center;}

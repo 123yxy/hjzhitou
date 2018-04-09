@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-投资人</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<!-- <script type="text/javascript" src="/saasBeta/newjs/threeLibrary/three_selected.js"></script> -->
+
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main c_right">
+			<!--main  star-->
+			<div class="main new_main">
+				<!--头部的图片-->
+				<div class="xinsanban_waik">
+					<div class="banner gs_img">
+						<div class="gs_search">
+							<input type="text" id="investorsNameSeach" placeholder="投资人/投资机构名称" />
+							<span class="lanse" id="seach">搜索</span>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="page_center">
+						<div class="shaix_public">
+							<div class="list list1 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资领域</p>
+										<ul id="hangye">
+											<!-- <li>
+												<a href="javascript:;">挂牌家数</a>
+											</li>
+											<li>
+												<a href="javascript:;">每日新增</a>
+											</li>
+											<li>
+												<a href="javascript:;">总股本</a>
+											</li>
+											<li>
+												<a href="javascript:;">流通股本</a>
+											</li>
+											<li>
+												<a href="javascript:;">成交数量</a>
+											</li>
+											<li>
+												<a href="javascript:;">成交金额</a>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list2 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>地区</p>
+										<ul id="diqu">
+											<!-- <li>
+												<a href="javascript:;">上海</a>
+											</li>
+											<li>
+												<a href="javascript:;">云南</a>
+											</li>
+											<li>
+												<a href="javascript:;">北京</a>
+											</li>
+											<li>
+												<a href="javascript:;">天津</a>
+											</li>
+											<li>
+												<a href="javascript:;">宁夏</a>
+											</li>
+											<li>
+												<a href="javascript:;">安徽</a>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list3 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资人类型</p>
+										<ul id="touzirenleixing">
+											<!-- <li data-value="">
+												<a href="javascript:;">投资人类型</a>
+											</li> -->
+											<li data-value="1">
+												<a href="javascript:;">个人投资</a>
+											</li>
+											<li data-value="2">
+												<a href="javascript:;">机构投资者</a>
+											</li>
+											<li data-value="0">
+												<a href="javascript:;">PE/VC投资者</a>
+											</li>
+											<!-- <li>
+												<a href="javascript:;">做市商</a>
+											</li>
+											<li>
+												<a href="javascript:;">公司法人股东</a>
+											</li>
+											<li>
+												<a href="javascript:;">公司董监高</a>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="list list5 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资时间</p>
+										<ul id="touzishijian">
+											<!-- <li data-value="">
+												<a href="javascript:;">投资时间</a>
+											</li> -->
+											<li data-value="近一周">
+												<a href="javascript:;">近一周</a>
+											</li>
+											<li data-value="近一月">
+												<a href="javascript:;">近一月</a>
+											</li>
+											<li data-value="近三月">
+												<a href="javascript:;">近三月</a>
+											</li>
+											<li data-value="近六月">
+												<a href="javascript:;">近六月</a>
+											</li>
+											<li data-value="近一年">
+												<a href="javascript:;">近一年</a>
+											</li>
+											<!-- <li data-value="近一年">
+												<a href="javascript:;">近一年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2016年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2015年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2014年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2013年</a>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list6 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资事件总数</p>
+										<ul id="touzishijianzongshu">
+											<!-- <li data-value="">
+												<a href="javascript:;">投资事件总数</a>
+											</li> -->
+											<li data-value="1">
+												<a href="javascript:;">1-50次</a>
+											</li>
+											<li data-value="2">
+												<a href="javascript:;">50-100次</a>
+											</li>
+											<li data-value="3">
+												<a href="javascript:;">100-200次</a>
+											</li>
+											<li data-value="4">
+												<a href="javascript:;">200次以上</a>
+											</li>
+
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list5 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资总额</p>
+										<ul id="touzizonge">
+											<!-- <li data-value="">
+												<a href="javascript:;">投资总额</a>
+											</li> -->
+											<li data-value="1">
+												<a href="javascript:;">0-1亿</a>
+											</li>
+											<li data-value="2">
+												<a href="javascript:;">1-10亿</a>
+											</li>
+											<li data-value="3">
+												<a href="javascript:;">10-30亿</a>
+											</li>
+											<li data-value="4">
+												<a href="javascript:;">30-50亿</a>
+											</li>
+											<li data-value="5">
+												<a href="javascript:;">50亿以上</a>
+											</li>
+											<!-- <li data-value="近一年">
+												<a href="javascript:;">近一年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2016年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2015年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2014年</a>
+											</li>
+											<li>
+												<a href="javascript:;">2013年</a>
+											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="yixuan_tiaojian" style="display:none;">
+							<span><em></em>清除检索条件</span>
+							<div class="fl tj_selected" id="jiansuotianjian">
+								<!-- <a href="javascript:;">北京<i></i></a>
+								<a href="javascript:;">电子设备<i></i></a>
+								<a href="javascript:;">2017年3月<i></i></a>
+								<a href="javascript:;">30万元<i></i></a>
+								<a href="javascript:;">做市<i></i></a> -->
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+						</div>
+
+						<!--筛选条件 end-->
+
+						<div class="clr"></div>
+						<div class="types_total">
+							<span class="fl selection_totals">共<em class="shuzi">0</em>条结果</span>
+							<span class="pay fl">导出数据</span>
+							<div class="clr"></div>
+						</div>
+						<div class="company_information">
+							<table>
+								<thead class="sanban_paixu">
+									<tr>
+										<th class="nsd_qx"><input type="checkbox" class="gs_qx" /></th>
+										<th>投资人</th>
+										<th><span data-value="eventNum">投资事件总数</span></th>
+										<th><span data-value="investSum">投资总金额</span></th>
+										<th><span data-value="noticeDate" class="down">最新投资事件</span></th>
+										<th>工具</th>
+									</tr>
+								</thead>
+								<tbody class="gs_dx" id="investmentSituation">
+									<!-- <tr>
+										<td><input type="checkbox" /></td>
+										<td class="company_info investor">
+											<div class="compamy_logo fl">
+												<img src="/saasBeta/images/gs_logo.png" alt="" />
+											</div>
+											<div class="investor_infor fl">
+												<span>共青城海棠投资管理合伙企业(有限合伙)</span>
+												<p>共青城海棠投资管理合伙企业(有限合伙)成立于2016年5月20日，统一社会信用代码为</p>
+											</div>
+										</td>
+										<td class="shuzi">1</td>
+										<td class="shuzi">1500万</td>
+										<td class="company_rz">
+											<em class="shuzi">2016-12-19</em>
+											<i class="shuzi">雷钰股份(834928)</i>
+											<span>300万</span>
+										</td>
+										<td>
+											<span class="gz_company on">关注</span>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td class="company_info investor">
+											<div class="compamy_logo fl">
+												<img src="/saasBeta/images/gs_logo.png" alt="" />
+											</div>
+											<div class="investor_infor fl">
+												<span>朱佳伟</span>
+												<p>共青城海棠投资管理合伙企业(有限合伙)成立于2016年5月20日，统一社会信用代码为</p>
+											</div>
+										</td>
+										<td class="shuzi">1</td>
+										<td class="shuzi">1500万</td>
+										<td class="company_rz">
+											<em class="shuzi">2016-12-19</em>
+											<i class="shuzi">雷钰股份(834928)</i>
+											<span>300万</span>
+										</td>
+										<td>
+											<span class="gz_company on">关注</span>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<div class="pages" id="page"></div>
+						<div class="clr"></div>
+
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+		<!-- 导出的数据 -->
+		<table style="display: none" id="exportTable">
+			<thead>
+				<tr>
+					<th><span>投资人</span></th>
+					<th><span>投资事件总数</span></th>
+					<th><span>投资总金额</span></th>
+					<th><span>最新投资事件</span></th>
+				</tr>
+			</thead>
+			<tbody id="exportTableHtml"></tbody>
+		</table>
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/investor.js"></script>
+	<!-- 是否登录，关注，对比 -->
+	<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+	<!-- 分页 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+
+</html>

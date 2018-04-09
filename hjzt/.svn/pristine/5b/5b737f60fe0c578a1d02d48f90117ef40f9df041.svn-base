@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>重设密码</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+    <style>
+        .userMain-list li span {
+            /* right: 110px !important; */
+        }
+
+        .userMain-list li span,
+        error {
+            position: absolute;
+            display: block;
+            right: 16px;
+            top: 0;
+            line-height: 36px;
+        }
+
+        .userMain-list li span.tips-error,
+        label.error,
+        span.error {
+            color: #f4363e;
+            right: 100px;
+            position: absolute;
+            top: 6px;
+            font-weight: 100;
+        }
+
+        .userMain-list input {
+            border: 1px solid #c8d1da;
+            border-radius: 5px;
+            color: #3d464d;
+            width: 340px;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 14px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo"><img src="/saasBeta/yanbao/images/logo.png"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg12 col-md-12 col-sm-12">
+                <ul class="findPW-guiding">
+                    <li class="active"><span class="icon-sendCode"><em></em></span>发送手机验证码</li>
+                    <li class="active"><span class="icon-setPW"><em></em></span>重设密码</li>
+                    <li><span class="icon-OK"><em></em></span>完成</li>
+                </ul>
+            </div>
+            <div class="col-lg12 col-md-12 col-sm-12 user-layer findPW-group">
+                <form id="reForm">
+                    <ul class="userMain-list">
+                        <!-- <li><label>用户名</label><input type="text" readonly value="韩梅梅"></li> -->
+                        <li><label>密码</label><input type="password" placeholder="请输入新的登录密码" id="passwordQE" name="password" autocomplete="off"><span></span></li>
+                        <li><label>确认密码</label><input type="password" placeholder="请再次输入密码" id="repassword" name="repassword"
+                                autocomplete="off"><span></span></li>
+                        <div class="login-tools checkbox-group">密码仅支持数字、字母、字符,长度6-12位</div>
+                        <li><label></label><button id="next" type="button" class="button-blue">下一步</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script>
+        logFoot();
+        $(".indexTop-user").html(sethead());
+        $(".userHead-logo").html(logourl());
+//      getuserinfo();
+        $(function () {
+        	$("#passwordQE").val("");
+        	$("#repassword").val("");
+        	
+            var smsCodes; //短信验证码计时器
+            var rgValidator = $("#reForm").validate({
+                rules: {
+
+                	passwordQE: {
+                        required: true,
+                        password: true,
+                        rangelength: [6, 16]
+                    },
+                    repassword: {
+                        required: true,
+                        password: true,
+                        rangelength: [6, 16],
+                        equalTo: "#passwordQE"
+                    }
+
+                },
+                messages: {
+
+                	passwordQE: {
+                        required: "请填写密码",
+                        password: "密码格式不正确",
+                        rangelength: "密码长度6-12位"
+                    },
+                    repassword: {
+                        required: "请填写确认密码",
+                        password: "密码格式不正确",
+                        rangelength: "密码长度6-12位",
+                        equalTo: "两次密码不一致"
+                    },
+
+                },
+                errorElement: "span", //可以用其他标签，记住把样式也对应修改
+                success: function (label) {
+                    //label指向上面那个错误提示信息标签em
+                    label.text(" ")        //清空错误提示消息
+                        .addClass("icon-success");  //加上自定义的success类
+                },
+                showErrors: function (errorMap, errorList) {
+                    // if (!errorList.length)
+                    //     return;
+                    $("#password-error").removeClass("icon-success");
+
+                    $("#repassword-error").removeClass("icon-success");
+
+
+                    this.defaultShowErrors();
+                }
+
+            });
+            $("#next").on("click", function () {
+                if ($("#reForm").valid()) {
+                    var p = UTIL.getUrlPara("p"), v = UTIL.getUrlPara("v");
+                    UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.updatePassWord, {
+                        password: md5($("#passwordQE").val()), verification_Code: v, mobile: p
+                    }, true, function (_data) {
+                        if (_data.retCode === "0000") {
+                            localStorage.clear();
+                            location.href = "resetPWOK.html";
+                        }
+
+                    }
+                    )
+                }
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>

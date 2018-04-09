@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>社交账号</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css">
+
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo">
+                    <img src="/saasBeta/yanbao/images/logo.png">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg3 col-md-3 col-sm-3">
+                <div class="user-layer userCenter-photo">
+                    <img id="headimg" width="160" height="160" src="images/userCenter-photo.jpg">
+                    <div class="userCenter-name"></div>
+                </div>
+                <div class="user-layer userMenu">
+                    <ul>
+                        <li>
+                            <a class="userCenter" href="userCenter.html">
+                                <em></em>基本资料</a>
+                        </li>
+                        <li>
+                            <a class="userFocus" href="userFocus.html">
+                                <em></em>关注领域</a>
+                        </li>
+                        <li class="active">
+                            <a class="userAccount">
+                                <em></em>社交账号</a>
+                        </li>
+                        <li>
+                            <a class="userChangePW" href="userChangePW.html">
+                                <em></em>修改密码</a>
+                        </li>
+                        <li>
+                            <a class="lishiyanbao" href="historicalResearchReport.html">
+                                <em></em>历史研报</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg9 col-md-9 col-sm-9">
+                <div class="user-layer userData">
+                    <div class="user-title">
+                        <h2>社交账号</h2>
+                    </div>
+                    <div class="userAccount-group">
+                        <div class="userMain-list">
+                            <ul>
+                                <form id="ua">
+                                    <li>
+                                        <label>微信号：</label>
+                                        <input id="weichatnum1" type="text" readonly value="">
+                                        <!--<button id="weichatnum" class="button-normal">重新绑定</button>-->
+                                        <!--<button id="saveweichatnum" class="button-blue b">保存</button>
+                                        <button id="cancelweichatnum" class="button-normal b">取消</button>-->
+                                    </li>
+                                    <li>
+                                        <label>邮箱：</label>
+                                        <input id="email1" type="text" readonly value="">
+                                        <!--<button id="email" class="button-blue">立即绑定</button>-->
+                                        <!--<button id="saveemail" class="button-blue b">保存</button>
+                                        <button id="cancelemail" class="button-normal b">取消</button></li>-->
+                                        <li>
+                                            <label>手机号：</label>
+                                            <input id="phone1" type="text" readonly value="">
+                                            <!--<button id="phone" class="button-normal">重新绑定</button>-->
+                                            <!--<button id="savephone" class="button-blue b">保存</button>
+                                        <button id="cancelphone" class="button-normal b">取消</button>-->
+                                        </li>
+                                    </li>
+                                </form>
+                            </ul>
+                        </div>
+                        <script>
+
+                            UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.findAppUser, {}, true, function (_data) {
+                                if (_data.retCode === "0000") {
+                                    var result = _data.retData;
+                                    //      	console.log(_data)
+                                    //      	console.log(result.mobile)
+                                    if (result.mobile != "" && result.mobile != null && result.mobile != undefined) {
+                                        $("#phone1").val(result.mobile);
+                                    } else {
+                                        $("#phone1").val("未绑定");
+                                    }
+                                    if (result.email != "" && result.email != null && result.email != undefined) {
+                                        $("#email1").val(result.email);
+                                    } else {
+                                        $("#email1").val("未绑定");
+                                    }
+                                    if (result.wechatNumber != "" && result.wechatNumber != null && result.wechatNumber != undefined) {
+                                        $("#weichatnum1").val(result.wechatNumber);
+                                    } else {
+                                        $("#weichatnum1").val("未绑定");
+                                    }
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script>
+     // $(".indexTop-user").html(sethead());
+        // $(".userHead-logo").html(logourl());
+
+        // getuserinfo();
+        // userinfo();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+
+/*body,html{
+	background: url(../images/body-bd.jpg)repeat-y;
+}
+// .yuce-fx{margin-top: 36px;}*/
+.yuce-bg{
+	width: 100%;
+	/*// height: 720px;
+	// background: url(../images/company-bg.png)left top no-repeat;*/
+}
+
+.section h2{
+	color: #555;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.yuce-tips{
+	margin-top: 12px;
+	color: #666;
+	font-size: 14px;
+}
+.yuce-tips em{display: inline-block;color: #f4363d;margin-right: 8px;}
+/*表格样式*/
+.caiwu-table .table{
+	margin-bottom: 0;
+}
+.caiwu-table .table thead tr{
+	background-color: #559cd9;
+	color: #fff;
+	font-size: 14px;
+}
+.caiwu-table .table tr td{
+	font-size: 14px;
+	color: #333;	
+}
+.caiwu-table .table td.shuzi{font-family: arial;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{border-top: 0;border-bottom: 0;padding:0px;height: 30px;line-height: 30px;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{width: 15%;}
+.caiwu-table .table tr td:nth-child(1),.caiwu-table .table tr th:nth-child(1){padding-left: 44px;box-sizing: border-box;width: 28%;}
+.caiwu-table .table tr:nth-child(even){background-color: #f5f7f9;}
+.caiwu-table.ylyc-table .table tr td:nth-child(1){text-align: left;}
+.yuce-content h3{
+	font-size: 15px;
+	color: #333;
+	font-weight: bold;
+}
+.yuce-content p{
+	font-size: 14px;
+	line-height: 26px;
+	color: #555;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.contentnes{margin-top: 10px;}

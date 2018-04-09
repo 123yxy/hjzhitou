@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+		<title>资讯数据-三板市场-市场概况</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+		<!--<script src="/saasBeta/js/jquery.min.js"></script>-->	
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/echarts/3.2.0/echarts.min.js"></script>
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockQuotes.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockTransaction.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/overViewCount.js"></script>
+
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main">
+				<div class="l_main l_main_none sb-t-main">
+					<div class="clr"></div>
+					<div class="m_left">
+						<div class="overview" id="marketedList">
+							<a href="stockQuotes.html" class="on">每日市场概览</a>
+							<a href="monthlyMarket.html">月度市场概览</a>
+							<p class="list_date">日期 <span id="listDate">2016-11-11</span></p>
+							<div class="clr"></div>
+							<div class="hr"></div>
+						</div>
+						
+						<div class="information meiri_shichang">
+							<table>
+								<thead>
+									<tr>
+										<th>项目</th>
+										<th>做市转让</th>
+										<th>协议转让</th>
+										<th>合计</th>
+									</tr>
+								</thead>
+								<tbody id="todayCount">
+									<!-- <tr>
+										<td>挂牌公司家数</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>当前新增家数</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>总股本(亿股)</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>流通股本(亿股)</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>成交股票只数</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>成交金额(万元)</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr>
+									<tr>
+										<td>成交数量(万股)</td>
+										<td>8086</td>
+										<td>8086</td>
+										<td>8086</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<div class="clr"></div>
+						<div class="history">
+							<div class="top">
+								<span>历史记录</span>
+								<div class="list" id="list">
+									<div class="select_box gree">
+										<div class="selectBox">
+											<p>每日新增</p>
+											<ul id="indicatorName">
+												<li><a href="javascript:;" data-value="0">挂牌家数</a></li>
+												<li><a href="javascript:;" data-value="1">每日新增</a></li>
+												<li><a href="javascript:;" data-value="2">总股本(亿股)</a></li>
+												<li><a href="javascript:;" data-value="3">流通股本(亿股)</a></li>
+												<li><a href="javascript:;" data-value="4">成交数量(万股)</a></li>
+												<li><a href="javascript:;" data-value="5">成交金额(万元)</a></li>
+											</ul>
+										</div>
+									</div>	
+								</div>
+								<span>市场指标</span>
+							</div>
+							<div class="clr"></div>
+							<div class="tuxing" id="histogram"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="information sanban_shichang" id="information1">
+							<table>
+								<thead>
+									<tr>
+										<th>日期</th>
+										<th>挂牌家数</th>
+										<th>每日新增</th>
+										<th>总股本(亿股)</th>
+										<th>流通股本(亿股)</th>
+										<th>成交数量(万股)</th>
+										<th>成交金额(万元)</th>
+									</tr>
+								</thead>
+								<tbody id="todayListHistory">
+									<!-- <tr>
+										<td>08-04</td>
+										<td>8068</td>
+										<td>42</td>
+										<td>4829.77</td>
+										<td>83.72</td>
+										<td>83.72</td>										
+										<td>83.72</td>
+									</tr>
+									<tr>
+										<td>08-04</td>
+										<td>8068</td>
+										<td>42</td>
+										<td>4829.77</td>
+										<td>83.72</td>
+										<td>83.72</td>										
+										<td>83.72</td>
+									</tr>
+									<tr>
+										<td>08-04</td>
+										<td>8068</td>
+										<td>42</td>
+										<td>4829.77</td>
+										<td>83.72</td>
+										<td>83.72</td>										
+										<td>83.72</td>
+									</tr>
+									<tr>
+										<td>08-04</td>
+										<td>8068</td>
+										<td>42</td>
+										<td>4829.77</td>
+										<td>83.72</td>
+										<td>83.72</td>										
+										<td>83.72</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+							
+						</div>
+						<div class="stockQuotesPages">
+						<div id="pages" class="pages pagination" style="display: none"></div>
+						<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="transacte_list" id="transacteList">
+							<a href="javascript:;" class="on" data-value="1">新股挂牌</a>
+							<a href="javascript:;" data-value="3">发行股份挂牌转让</a>
+							<a href="javascript:;" data-value="4">转让方式变更</a>							
+							<a href="javascript:;" data-value="5">除权除息</a>
+							<a href="javascript:;" data-value="6">暂停转让</a>
+							<a href="javascript:;" data-value="7">恢复转让</a>
+							<a href="javascript:;" data-value="2">退出做市</a>
+							<div class="stock_number stock_news_number">							
+							<div class="date">
+								<span id="todayList">2016-11-11</span>
+							</div>
+							<!--<p id="listCount">
+							新股挂牌共 <span>29</span>只
+							</p>-->
+						</div>
+						<div class="clr"></div>
+							<div class="hr"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="information sanban_shichang">
+							<table> 
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价(元/股)</th>
+										<th>涨跌幅(%)</th>
+										<th>市值(亿元)</th>
+										<th>市盈率(LYR)</th>
+										<th>市销率(LYR)</th>
+										<th>收入(百万元)</th>
+										<th>利润(百万元)</th>										
+									</tr>
+								</thead>
+								<tbody id="marketList">
+									<!-- <tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>
+									<tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>					
+									</tr>				 -->	
+								</tbody>
+							</table>
+							<!-- <div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+							
+						</div>
+						<div class="stockQuotesPages">
+						<div id="page1" class="pages pagination " style="display: none"></div>
+						<div class="clr"></div>
+						</div>
+
+					</div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</html>

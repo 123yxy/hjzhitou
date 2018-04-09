@@ -1,0 +1,528 @@
+/*市场概况*/
+body{
+    background-color: #F3F6F9;
+}
+
+.content .classiFL{
+    width:100%;
+}
+.classiFL .fllb{
+    background-color: #fff;
+}
+.classiFL .fllb li:nth-child(1){
+    margin-left: 6%;
+}
+.classiFL .fllb li{
+    float: left;
+    margin:1% 7% 2% 0;
+}
+.fllb li p{
+    text-align: center;
+}
+
+.content .menu{
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.content .menu h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px 0 13px 20px;
+    height: 32px;
+    line-height: 45px;
+}
+.content .menu .bdnr{
+    margin: 0 20px;
+}
+.content .menu .bdnr li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.content .menu .bdnr li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    width:15%;
+}
+.menu .biaoTou,.menu .mbtc-biaotou {
+    height: 30px;
+    background-color: #519BDB;
+    color: #fff;
+}
+.menu .biaoTou li{
+    float: left;
+    width:17%;
+    line-height: 30px;
+    text-align: center;
+}
+.menu .lis {
+    height: 290px;
+    /*background-color:yellow;*/
+    overflow:auto;
+}
+.menu .lis ul:nth-child(even){
+    background-color: #FAFAFA;
+}
+.menu .lis ul{
+    height: 30px;
+}
+.menu .lis li{
+    float: left;
+    width:17%;
+    text-align: center;
+}
+.menu .lis li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.menu .lis li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+    width:15%;
+}
+
+.rztitle{width: 100%;height: 50px;border-bottom: 1px solid #e4e4e4;padding-top:11px;box-sizing: border-box;position: relative;}
+
+/*版块监控*/
+.main .sgbd .menu .bdnr .template-monitoring li{
+    width:14%;
+}
+.main .sgbd .menu .bdnr .template-monitoring li:nth-child(2){
+    /* width:28%; */
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.main .sgbd .menu .bdnr .template-monitoring li.mbri{text-align: right;padding-right: 20px;box-sizing: border-box;width: 16%;}
+.main .sgbd .menu .bdnr .template-monitoring li.mbrii{text-align: right!important;padding-right: 30px;box-sizing: border-box;width: 16%;}
+.template-monitoring span{cursor: pointer;margin-right: 10px;}
+.tabBT{
+    padding:10px 20px 0 20px;
+}
+.tabBT ul li{
+    font-weight: 700;
+}
+.tabBT ul li:hover{
+    color:rgb(25,133,226);
+    background: none;
+    border-bottom: 2px solid rgb(25,133,226);
+    box-sizing: border-box;
+}
+
+.newgp_dbox{
+    padding-top:0;
+}
+.newgp_dbox {
+    margin-bottom:0!important;
+}
+.sgbd{
+    width:100%;
+    /* height: 500px; */
+}
+.sgbd .menu{
+    background-color: #fff;
+    padding:0px 20px 0px 20px;;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.sgbd .menu .menu{padding: 0;margin: 0;}
+.sgbd .menu h2{
+    font-size: 16px;
+    font-weight: 700;
+    /*height: 32px;*/
+    /*line-height: 45px;*/
+    /*width:250px;*/
+    /*float: left;*/
+    
+}
+.scgk{width: 100%;height: 28px;padding-top: 4px;box-sizing: border-box;position: absolute;left: 0;top: 11px;}
+/*原来的样式*/
+/*.sgbd .menu .rztitle .sjzj{
+    float: right;
+    width:59%;
+    height: 30px;
+    margin-top: 10px;
+}*/
+/*.sgbd .menu .bdnr{
+    margin-left:20px;
+}*/
+.sgbd .menu .bdnr li:nth-child(1){
+    padding-left: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.sgbd .menu .bdnr li:last-child{
+    padding-right: 20px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.sgbd .menu .bdnr li.scgk-cje{text-align: center !important;}
+.swy,.swe,.dqb{
+    display: none;
+}
+
+/*修改的样式*/
+.sgbd .menu .rztitle .sjzj{width: 100%;height: 100%;}
+.bkjk{float: left;height: 38px;padding-top: 7px;box-sizing: border-box;}
+.bkjk.listed1{width: 100%;}
+.bkjk.listed2{width: 25%;}
+.bkjk.listed1>span{float: left;padding-bottom: 6px;}
+.bkjk.listed1 .mb-date{font-size: 13px;}
+.bkjk.listed1 .mb-date span{padding: 0;margin: 10px;font-weight: normal;cursor: default;font-size: 13px;}
+/*新股中心*/
+/* .menu .lishei{height: 400px;} */
+.menu .bygd{
+    height: auto;
+}
+.main .xgzcbt li{
+    width:12%;
+}
+.main .xgzcbt li:nth-child(7){
+    width:16%;
+}
+
+.main .lishei li{
+     width:12%;
+}
+/*表单  减少  字体样式*/
+.gern{color: #26a844;}
+/*表单  增加  字体样式*/
+.Red{color: #f4363e;}
+/*表单  不变和新进  字体样式*/
+.Hei{color: #000;font-weight: 900; }
+/*融资列表*/
+.main .menu .rzw li{
+    width:27%;
+}
+.main .menu .rzw .biaoTou1 li:nth-child(3){
+    width: 25%!important;
+}
+.main .menu .rzw li:nth-child(1){
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+.main .menu .rzw li:last-child{
+    width: 19%;
+    padding-right: 80px;
+    box-sizing: border-box;
+}
+.main .rzlb li:nth-child(1){
+    text-align: left;
+}
+.main .rzlb li:last-child{
+    text-align: right;
+}
+.main .menu .rzz li{
+    width:25%;
+}
+.main .menu .rzz li:last-child{
+    width:60%;
+    text-align: left!important;
+}
+.main .newgup .menu .btzfd{
+    float: left;
+    width: 100px;
+}
+.main .rzli li{
+	height: 30px;
+	line-height: 30px;
+    width: 16%;
+}
+.main .zjkd li:nth-child(1){
+    width: 22%;
+}
+.main .zjkd li:nth-child(2){
+    width: 10%;
+}
+.main .zjkd li:last-child{
+    width: 7%;
+}
+.main .menu .sjzj .rzdxl{
+    position: relative;
+}
+/*.main .menu .sjzj .rzdxl .jeinpbox{
+    position: absolute;
+    right: 0;
+    top:-5px;
+}*/
+.main .menu .sjzj .rzdxl .jeinpbox{float: right;}
+.main .menu .sjzj .rzdxl #hy{
+    position: absolute;
+    right: 38%;
+}
+.main .menu .sjzj .rzdxl #qy{
+    position: absolute;
+}
+/* .main .menu .sjzj .rzdxl #rzfs{
+    position: absolute;
+    left: -20%;
+} */
+.main .menu .sjzj .rzsj{
+    position: absolute;
+    right: 30%;
+}
+.main .menu .sjzj .rzhy{
+    position: absolute;
+    right: 80%;
+}
+.main .menu .sjzj .rzqy{
+    position: absolute;
+    left:-6%;
+}
+.main .menu .sjzj .rzfs{
+    position: absolute;
+    left:-30%;
+}
+/*投资日历*/
+/* .main .menu .bdnr .biaoTou .yjbgul li{
+    width: 21%;
+}.main .menu .bdnr .biaoTou .yjbgul li:last-child{
+    width: 16%;
+} */
+.main .menu .bdnr .rzli .hydqlb .hyck{
+    width: 8%;
+    text-align: right;
+}
+.main .menu .bdnr .rzli .hydqlb .hyck span{
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+.main .menu .bdnr .rzli .hydqlb li:nth-child(1),.main .menu .bdnr .rzli .hydqlb li:nth-child(4),.main .menu .bdnr .rzli .hydqlb li:nth-child(5){
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.main .menu .rzli li:nth-child(6),.main .menu .rzli li:nth-child(7){
+    text-align: right;
+}
+.main .menu .bdnr .biaoTou1 .biaoTou li p{
+    height: 30px!important;
+    line-height: 30px!important;
+    padding-right: 12px!important;
+}
+.main .menu .sjzj .rzdxl .xzkd{
+    width: 150px;
+}
+.main .menu .sjzj .rzdxl .xzkd #qy li a{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.main .tzribt {
+    position: relative;
+}
+.main .tzribt .rlcd{
+    position: absolute;
+    top:10px;
+    right: 21px;
+}
+.main .menu .tzrlxlcd{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main .qlgxl{
+    /* position: relative;  */
+    width: 60%;
+    float: right; 
+}
+.main .qlgdiv{
+    position: relative;
+}
+.main .qlgdiv ul{
+    position: absolute;
+    top:30px;
+}
+
+.rzdxl{width: 75%;float: right;}
+/*.main .qlgxl .qlgdiv{
+    position: absolute;
+    
+}*/
+.main .qlgxl .tzrlxlcd{
+    position: absolute;
+    top: -34px;
+    right: 20px;
+}
+.main .newgp_dbox .menu .biaoTou .degbt{
+    width: 85%;
+    text-align: center;
+}
+.main .newgp_dbox .menu .hylbbd li{
+    width: 13%;
+}
+.main .bkjkbt .lis li:last-child{
+    width: 85%;
+}
+.main .sjzj .tzrlxl{
+    position: absolute;
+    right: 4%;
+}
+.main .hydqlb li{
+    width: 12%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.main .gulbul li:nth-child(2){
+    width: 75%;
+    text-align: center!important;
+
+}
+
+
+.zwshuj{width: 100%;text-align: center;}
+.mbjkTc{cursor: pointer;color: #2892EA;}
+.mbjkTT{cursor: pointer;color: #2892EA;}
+.lis li.up{color: #f4343c;}
+.lis li.down{color: #26a844;}
+.lis li.up{color: #333333;}
+.lis li.shuzi{font-family: arial;}
+
+
+
+/* 查看弹框样式 */
+
+/* 文本格式彈框 */
+.marsk{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(47,48,70,.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+    z-index: 60;
+    display: none;
+}
+.marsk .gban{
+    width: 5%;
+    height: 8%;
+    background: url("/saasBeta/images/gban.png") no-repeat 100% 100%;
+    position: fixed;
+    top: 10%;
+	right: 10%;
+	z-index: 60;
+}
+.marsk .mtzx{
+    width: 60%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+	top: 20%;
+	left: 20%;
+	z-index: 60;
+}
+.marsk h2 {
+    display: block;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    margin:0 20px;
+    border-bottom: 1px solid #ccc;
+}
+.marsk .mowb{
+    width: 100%;
+    margin:10px 20px;
+}
+.marsk .mowb p{
+    font-size: 14px;
+}
+
+
+
+/* 表单格式弹框 */
+.martable .mtzx .menu p{
+    /* height:350px;  */
+    color:rgb(85,85,85);
+    font-size: 14px;
+    line-height: 24px;
+    overflow:auto;
+}
+.martable .mtzx{
+    width: 60%;
+    height: 60%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+	top: 20%;
+	left: 20%;
+	z-index: 60;
+    border-radius: 5px;
+    overflow:auto;
+    
+}
+.martable .gban{
+    width: 50px;
+    height: 8%;
+    background: url("/saasBeta/images/gban.png") no-repeat 100% 100%;
+    position: fixed;
+    top: 10%;
+	right: 10%;
+	z-index: 60;
+	cursor: pointer;
+}
+.martable h2 {
+    display: block;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    margin:0 20px;
+    border-bottom: 1px solid #ccc;
+}
+.martable .mtzx .menu{
+    margin:10px 20px;
+}
+.martable .mtzx .menu .bdnr li:nth-child(1){
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.martable .mtzx .menu .bdnr li:last-child{
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.martable .mtzx .menu .bdnr .biaoTou li{
+    width: 16%;
+}
+.martable .mtzx .menu .bdnr .mtlis ul{
+    width: 100%;
+    height: 24px;
+
+}
+#templateMonitoring .template-monitoring ul{width: 100%; height: 30px;}
+
+.martable .mtzx .menu .bdnr .mtlis ul li{
+    width:16%;
+    float: left;
+
+}
+.martable .mtzx .menu .bdnr .mtlis ul:nth-child(even){
+    background-color: #F6F7F9;
+}
+
+.mbjk-bt.bdnr li{width: 16%;float: left;height: 30px;line-height: 30px;text-align: center;}
+.martable .menu .mbjk-bt.bdnr .mbtc-biaotou ul li.list-rg,.martable .menu .mbjk-bt.bdnr .mtlis ul li.list-rg{width: 20%;text-align: right;padding-right: 20px;box-sizing: border-box;}
+.mbjk-tc{margin-right: 8px;cursor: pointer;}
+.mtlis{overflow: auto;}
+
+
+/*上面切换的字体图标大小*/
+.main .l_main .t_main.new_t_main ul li div div{text-align: center;}
+.abkjk i{font-size: 40px;color: #fff;line-height: 66px;}
+.abkjk i,.atzrl i,.ascgk i,.axgzx i,.arz i{font-size: 30px;color: #fff;line-height: 66px;}
+
+.main .l_main .t_main.new_t_main ul li div div:hover{-webkit-transform:scale(1.2);
+-moz-transform:scale(1.2);
+-o-transform:scale(1.2); transition: transform 0.3s ease-in-out 0s;}
+
+
+@media only screen and (min-width: 100px) and (max-width: 1400px) {
+	.menu .bdnr .minW{height: 267px;}
+}

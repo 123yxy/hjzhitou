@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>个人信息设置| 汇金智投：投融资大数据服务云平台</title>
+		<meta name="keywords" content="新三板，SaaS投研，金融分析工具，大数据，大数据分析，金融大数据，新三板创新层，新三板基础层，做市指数，协议成交指数查询，
+新三板挂牌，新三板市场，新三板行情，新三板研究，新三板股票，新三板交易，新三板定增，新三板券商，新三板做市，新三板协议">
+		<meta name="description" content="汇金智投以“数字科学，创造财富”为主旨，围绕金融数据价值挖掘、数据推动决策、数据提升运营效率搭建业务运营体系，为用户提供以资源精准匹配为基础的应用服务。">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<!--上传头像样式文件-->
+		<link href="/saasBeta/upload/cropper.css" rel="stylesheet">
+		<!--上传头像样式文件-->
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/newIndex.css" />
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<!-- MD5加密 -->
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>  
+		<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+		<!-- 弹框样式 -->
+		<!--<link rel="stylesheet" type="text/css" href="/www/css/zmAlert.css">-->
+		<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="/saasBeta/js/newSassHeader.js"></script>-->
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<!-- 验证用户是否登录 -->
+		<!--<script src="/www/js/toLogin.js"></script>-->
+		<script type="text/ecmascript" src="/saasBeta/js/personalCenter/personalInformation.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+	<body>
+		<div class="jiabeijing2"></div>
+		<div class="jiabeijing"></div>
+	<div class="newline"></div>
+		<div class="personal_infor">
+			
+				<div class="p_shezhi">
+					<a href="/personalCenter/personalAlbum.html">个人中心</a>
+					<i></i>
+					<span>个人设置</span>
+					<div class="clr"></div>
+				</div>
+				<div class="infor_tab">
+					<!--当a中有on是背景颜色是灰色-->
+					<a href="#" id="msgTab">个人资料</a>
+					<a href="#" id="rePwdTab" class="on">密码修改</a>
+					<div class="clr"></div>
+				</div>
+				<!--个人资料-->
+				<div class="per_infor">
+					<div class="base_infor">
+						<span>基本信息</span>
+					</div>
+					<div class="base_content">
+						<div class="fl touxiang">
+							<div id="crop-avatar">
+									<div class="avatar-view" title="">
+										<div class="avatar_img">
+										<img src="/saasBeta/images/tx.png" >	
+										</div>
+						   <div class="img_infor">
+								<span class="cro">上传头像</span>
+							</div>
+								    </div>
+							
+							<!--<div class="tx_img" id="preview_img" onClick="selectimg()" style="background-image: url(/www/images/tx.png);background-repeat: no-repeat; background-position: center center; background-size: contain;">
+							</div>-->
+						
+							</div>
+						</div>
+						<div class="fl infor_show">
+							<ul>
+								<li>
+									<span>姓名昵称:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="user_name" id="userNameInp" maxlength="6"/>
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<!--给i加上on的时候是添加编辑的图标-->
+										<span><em id="userNameShow" ></em><i></i><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>性别:</span>
+									<div class="gr_base_infor">
+										<div class="sex_types">
+											<p id="sex" >男</p>
+											<ul class="s_sex" style="display: none;">
+												<li  data-field="sex" >
+													<a href="javascript:void(0);">男</a>
+												</li>
+												<li data-field="sex">
+													<a href="javascript:void(0);">女</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span>手机号:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" readonly="readonly" data-field="mobile"  id="phone" maxlength="11"/>
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="phoneShow" ></em><!-- <i></i> --><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>电子邮箱:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="email"  id="email"/>
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="emailShow"></em><i></i><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>微信号:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="wechat_number"  id="weChat" />
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="weChatShow"></em><i></i><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>所在地区:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="region"  id="region"  maxlength="10"/>
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="regionShow" ></em><i></i><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>公司职务:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="position" id="position"  maxlength="15"/>
+											<em></em>
+											<i></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="positionShow" ></em><i></i><div class="clr"></div></span>
+									</div>
+								</li>
+								<li>
+									<span>个人签名:</span>
+									<div class="gr_base_infor">
+										<div class="bianji">
+											<input type="text" data-field="signature"  id="signature"  maxlength="30"/>
+											<em></em>
+											<i class="bianji_xinxi"></i>
+											<div class="clr"></div>
+										</div>
+										<span><em id="signatureShow" ></em><i class="bianji_xinxi"></i><div class="clr"></div></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="hobby">
+						<div class="base_infor">
+							<span>个人爱好</span>
+						</div>
+						<div class="gz_hobby">
+							<ul>
+								<li>
+									<span>使用目的：</span>
+									<div class="xg_infor">
+										<div class="modify">
+											<span><i></i><div class="clr"></div></span>
+											<div class="tc_modify" style="display: none;">
+												<span>来汇金智投的目的<i></i></span>
+												<div class="content_list">
+													<div class="c_modify" id="c_modify">
+														<a href="javascript:void(0);">找投资</a>
+														<a href="javascript:void(0);">找投资对象</a>
+														<a href="javascript:void(0);">找业务机会</a>
+														<a href="javascript:void(0);">找报道对象</a>
+														<a href="javascript:void(0);">找中介公司</a>
+														<a href="javascript:void(0);">查资料</a>
+														<a href="javascript:void(0);">随便转转</a>													
+														<div class="clr"></div>
+													</div>
+													<span class="qd_select mudi_qued" data-field="purpose" >确定</span>
+												</div>
+											</div>
+										</div>
+										<span class="selectHy" id="purpose" ><!--随便转转--></span>
+									</div>
+									<div class="clr"></div>
+								</li>
+								<li>
+									<span>关注领域：</span>
+									<div class="xg_infor">
+										<div class="modify">
+											<span><i></i><div class="clr"></div></span>
+											<div class="tc_modify" style="display: none;">
+												<span>选择信息行业，信息更对味<i></i></span>
+												<div class="content_list">
+													<p>请选择3-6个行业</p>
+													<div class="c_modify s_hy_types" id="xuanz_hy">
+														<!--<a href="javascript:void(0);" class="on">金融</a>
+														<a href="javascript:void(0);">教育</a>
+														<a href="javascript:void(0);">汽车交通</a>
+														<a href="javascript:void(0);">找报道对象</a>
+														<a href="javascript:void(0);">找中介公司</a>
+														<a href="javascript:void(0);">查资料</a>
+														<a href="javascript:void(0);">随便转转</a>													-->
+														<div class="clr"></div>
+													</div>
+													<span class="qd_select hy_qued" data-field="focusArea">确定</span>
+												</div>
+											</div>
+										</div>
+										<span class="selectHy" id="focusArea" ><!--随便转转--></span>
+									</div>
+									<div class="clr"></div>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--密码修改-->
+				<div class="xg_pass" style="display: none;">
+					<form>
+						<ul>
+							<li>
+								<span>原密码</span>
+								<div class="passes">
+									<input type="password" id="oldPassword"/>
+								</div>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<span>新密码</span>
+								<div class="passes">
+									<input type="password" id="newPassword" readonly="readonly"/>
+								</div>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<span>再次输入</span>
+								<div class="passes">
+									<input type="password" id="reNewPassword" readonly="readonly"/>
+								</div>
+								<div class="clr"></div>
+							</li>
+						</ul>
+						<div class="per_btn">
+							<a href="javascript:;" id="upPassword" >提交</a>
+						</div>
+					</form>
+				</div>
+						
+		</div>
+		
+		<!--裁剪图片弹窗-->
+	<script type="text/javascript" src="/saasBeta/upload/cropbox.js"></script>
+	<div class="uptouxia">
+		<div class="up_colse" id="btnZoomOut">
+			<span></span>
+		</div>
+		<div class="up_touxiang_title">
+			<span>修改头像</span>
+		</div>
+		<div class="action"> 
+    <div class="new-contentarea tc"> 
+    	<em>上传头像</em>
+     <a href="javascript:void(0)" class="upload-img">
+      <label for="upload-file">上传</label>
+      </a>
+      <input type="file" class="" name="upload-file" id="upload-file" />
+    </div>
+
+  </div>
+	<div class="row_list_dbox">
+		<div class="row_list_p">
+			<p>支持JPG、GIF、PNG格式图片，不超过5M。拖拽或缩放图中的虚线方格可调整头像，注意右侧小头像预览效果。</p>
+		</div>
+	</div>
+	<div class="container">
+  <div class="imageBox">
+    <div class="thumbBox"></div>
+    <div class="spinner" style="display: none"></div>
+  </div>
+  <div class="cropped">
+  	<img src="/saasBeta/images/tx.png" align="absmiddle" style="width:90px;margin-top:0px;"/>
+  	<img src="/saasBeta/images/tx.png" align="absmiddle" style="width:30px;margin-top:10px;"/>
+  	
+  </div>
+</div>
+<div class="up_tx_btn">
+	<div class="up_tx_true fl">
+    <input type="button"   class="Btnsty_peyton" id="btnCrop" value="保存">
+	</div>
+	<div class="up_tx_qux fl">
+		<a href="javascript:;" id="quxiao_btn">取消</a>
+	</div>
+	<div class="clr"></div>
+</div>
+	</div>
+	<script type="text/javascript" src="/saasBeta/upload/uptouxiang.js"></script>
+	<!--上传头像弹窗 end-->
+	</body>
+</html>

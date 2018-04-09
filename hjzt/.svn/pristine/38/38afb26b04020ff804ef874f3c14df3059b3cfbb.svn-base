@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>公司对比| 汇金智投：投融资大数据服务云平台</title>
+		<meta name="keywords" content="新三板，SaaS投研，金融分析工具，大数据，大数据分析，金融大数据，新三板创新层，新三板基础层，做市指数，协议成交指数查询，
+新三板挂牌，新三板市场，新三板行情，新三板研究，新三板股票，新三板交易，新三板定增，新三板券商，新三板做市，新三板协议">
+		<meta name="description" content="汇金智投以“数字科学，创造财富”为主旨，围绕金融数据价值挖掘、数据推动决策、数据提升运营效率搭建业务运营体系，为用户提供以资源精准匹配为基础的应用服务。">
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/wxl-new-style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyComparison.css">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		
+		<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<!--验证登录表单-->
+		<!-- 自动补全样式 -->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<!--<script src="/saasBeta/js/newfooter.js"></script>-->
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/comparis.js"></script>
+	</head>
+
+	<body>
+
+		<div class="duibi_main">
+			<!--<div class="duib_titles">
+				<p>温馨提示：可添加4个企业</p>
+			</div>-->
+			<div class="newline"></div>
+			<div class="page_center comparison" style="padding-top: 30px;">
+				<div class="t_nav">
+					<div class="fl guide">
+						<a href="javascript:;" class="on">公司对比</a>
+						<a class="caiwu_duibi" href="multidStockanalysisTable.html" target="_blank">财务对比</a>
+						<div class="clr"></div>
+					</div>
+					<!--<div class="fr derived">
+						导出数据
+					</div>-->
+				</div>
+				<!--公司对比-->
+				<div class="company_infor new_duib com_comparison">
+					<ul class="db_company" id="company_duibi">
+						<li class="duibi_types" id="companyComparison">
+							<ul>
+								<li></li>
+								<li>基本信息对比</li>
+								<li>融资信息对比</li>
+								<li>主营业务对比</li>
+								<li>行业对比</li>
+							</ul>
+						</li>
+						<!--中间的需要循环的公司的信息的li  start-->
+						<!--<li class="duibi_companys">-->
+							<!--第一个公司的内容-->
+							<!--<ul>
+								<li>
+									<a href="#">天阳科技(835713)</a>
+								</li>
+								<li>
+									<span><em>成立时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>挂牌时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>主办券商：</em><i>招商整证券</i><div class="clr"></div></span>
+									<span><em>律所：</em><i>2北京中银律师事务所</i><div class="clr"></div></span>
+									<span><em>会计所：</em><i>立信会计事务所</i><div class="clr"></div></span>
+									<span><em>地区：</em><i>北京</i><div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>融资总额：</em><i class="shuzi">28936.89</i>万元<div class="clr"></div></span>
+									<span><em>融资次数：</em><i class="shuzi">2</i>次<div class="clr"></div></span>
+									<span><em>最近一笔融资：</em><i class="shuzi">26600.0</i>万元<div class="clr"></div></span>
+									<span class="rongzi_time"><em class="shuzi">2017-01-06</em></span>
+								</li>
+								<li>
+									<span><em>主营业务收入：</em><i class="shuzi">1.58</i>亿元<div class="clr"></div></span>
+									<span><em>软件开发：</em><i class="shuzi">43.8</i>%<div class="clr"></div></span>
+									<span><em>专业测试：</em><i class="shuzi">46.8</i>%<div class="clr"></div></span>
+									<span><em>运维服务：</em><i class="shuzi">9.4</i>%<div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>所属行业：</em><i>计算机软件</i><div class="clr"></div></span>
+									<span><em>行业公司数：</em><i class="shuzi">123</i>家<div class="clr"></div></span>
+									<span><em>公司排名：</em><i class="shuzi">95</i>名<div class="clr"></div></span>
+									<span class="hy_redu"><em>行业热度：</em><i class="on"><b style="width: 85%;"></b></i><div class="clr"></div></span>
+									<span class="hy_hots"><em class="shuzi">85</em>%</span>
+								</li>
+							</ul>
+						</li>
+						<li class="duibi_companys">-->
+							<!--第一个公司的内容-->
+							<!--<ul>
+								<li>
+									<a href="#">天阳科技(835713)</a>
+								</li>
+								<li>
+									<span><em>成立时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>挂牌时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>主办券商：</em><i>招商整证券</i><div class="clr"></div></span>
+									<span><em>律所：</em><i>2北京中银律师事务所</i><div class="clr"></div></span>
+									<span><em>会计所：</em><i>立信会计事务所</i><div class="clr"></div></span>
+									<span><em>地区：</em><i>北京</i><div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>融资总额：</em><i class="shuzi">28936.89</i>万元<div class="clr"></div></span>
+									<span><em>融资次数：</em><i class="shuzi">2</i>次<div class="clr"></div></span>
+									<span><em>最近一笔融资：</em><i class="shuzi">26600.0</i>万元<div class="clr"></div></span>
+									<span class="rongzi_time"><em class="shuzi">2017-01-06</em></span>
+								</li>
+								<li>
+									<span><em>主营业务收入：</em><i class="shuzi">1.58</i>亿元<div class="clr"></div></span>
+									<span><em>软件开发：</em><i class="shuzi">43.8</i>%<div class="clr"></div></span>
+									<span><em>专业测试：</em><i class="shuzi">46.8</i>%<div class="clr"></div></span>
+									<span><em>运维服务：</em><i class="shuzi">9.4</i>%<div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>所属行业：</em><i>计算机软件</i><div class="clr"></div></span>
+									<span><em>行业公司数：</em><i class="shuzi">123</i>家<div class="clr"></div></span>
+									<span><em>公司排名：</em><i class="shuzi">95</i>名<div class="clr"></div></span>
+									<span class="hy_redu"><em>行业热度：</em><i class="on"><b style="width: 85%;"></b></i><div class="clr"></div></span>
+									<span class="hy_hots"><em class="shuzi">85</em>%</span>
+								</li>
+							</ul>
+						</li>
+						<li class="duibi_companys">-->
+							<!--第一个公司的内容-->
+							<!--<ul>
+								<li>
+									<a href="#">天阳科技(835713)</a>
+								</li>
+								<li>
+									<span><em>成立时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>挂牌时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>主办券商：</em><i>招商整证券</i><div class="clr"></div></span>
+									<span><em>律所：</em><i>2北京中银律师事务所</i><div class="clr"></div></span>
+									<span><em>会计所：</em><i>立信会计事务所</i><div class="clr"></div></span>
+									<span><em>地区：</em><i>北京</i><div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>融资总额：</em><i class="shuzi">28936.89</i>万元<div class="clr"></div></span>
+									<span><em>融资次数：</em><i class="shuzi">2</i>次<div class="clr"></div></span>
+									<span><em>最近一笔融资：</em><i class="shuzi">26600.0</i>万元<div class="clr"></div></span>
+									<span class="rongzi_time"><em class="shuzi">2017-01-06</em></span>
+								</li>
+								<li>
+									<span><em>主营业务收入：</em><i class="shuzi">1.58</i>亿元<div class="clr"></div></span>
+									<span><em>软件开发：</em><i class="shuzi">43.8</i>%<div class="clr"></div></span>
+									<span><em>专业测试：</em><i class="shuzi">46.8</i>%<div class="clr"></div></span>
+									<span><em>运维服务：</em><i class="shuzi">9.4</i>%<div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>所属行业：</em><i>计算机软件</i><div class="clr"></div></span>
+									<span><em>行业公司数：</em><i class="shuzi">123</i>家<div class="clr"></div></span>
+									<span><em>公司排名：</em><i class="shuzi">95</i>名<div class="clr"></div></span>
+									<span class="hy_redu"><em>行业热度：</em><i class="on"><b style="width: 85%;"></b></i><div class="clr"></div></span>
+									<span class="hy_hots"><em class="shuzi">85</em>%</span>
+								</li>
+							</ul>
+						</li>
+						<li class="duibi_companys">-->
+							<!--第一个公司的内容-->
+							<!--<ul>
+								<li>
+									<a href="#">天阳科技(835713)</a>
+								</li>
+								<li>
+									<span><em>成立时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>挂牌时间：</em><i class="shuzi">2013-12-11</i><div class="clr"></div></span>
+									<span><em>主办券商：</em><i>招商整证券</i><div class="clr"></div></span>
+									<span><em>律所：</em><i>2北京中银律师事务所</i><div class="clr"></div></span>
+									<span><em>会计所：</em><i>立信会计事务所</i><div class="clr"></div></span>
+									<span><em>地区：</em><i>北京</i><div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>融资总额：</em><i class="shuzi">28936.89</i>万元<div class="clr"></div></span>
+									<span><em>融资次数：</em><i class="shuzi">2</i>次<div class="clr"></div></span>
+									<span><em>最近一笔融资：</em><i class="shuzi">26600.0</i>万元<div class="clr"></div></span>
+									<span class="rongzi_time"><em class="shuzi">2017-01-06</em></span>
+								</li>
+								<li>
+									<span><em>主营业务收入：</em><i class="shuzi">1.58</i>亿元<div class="clr"></div></span>
+									<span><em>软件开发：</em><i class="shuzi">43.8</i>%<div class="clr"></div></span>
+									<span><em>专业测试：</em><i class="shuzi">46.8</i>%<div class="clr"></div></span>
+									<span><em>运维服务：</em><i class="shuzi">9.4</i>%<div class="clr"></div></span>
+								</li>
+								<li>
+									<span><em>所属行业：</em><i>计算机软件</i><div class="clr"></div></span>
+									<span><em>行业公司数：</em><i class="shuzi">123</i>家<div class="clr"></div></span>
+									<span><em>公司排名：</em><i class="shuzi">95</i>名<div class="clr"></div></span>
+									<span class="hy_redu"><em>行业热度：</em><i class="on"><b style="width: 85%;"></b></i><div class="clr"></div></span>
+									<span class="hy_hots"><em class="shuzi">85</em>%</span>
+								</li>
+							</ul>
+						</li>-->
+						<div class="clr"></div>
+					</ul>
+					<!--暂无数据的图标-->
+					<div class="duib_zanwu_shuju" style="display: none;">
+						<div class="zanwu_tub">
+							<span></span>
+							<p>请添加企业对比进行对比</p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+
+	<script src="/saasBeta/js/contrast/companyComparison.js"></script>
+
+</html>

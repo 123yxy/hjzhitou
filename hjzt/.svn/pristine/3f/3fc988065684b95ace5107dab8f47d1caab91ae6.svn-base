@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>企业资料-公司大事</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="/saasBeta/css/amazeui.datetimepicker.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/management.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_project.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style_zwh.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/companyMap.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/wxl-new-style.css" />
+<!-- 自动补全样式 -->
+<script src="/saasBeta/js/jquery.min.js"></script>
+<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript"
+	charset="utf-8"></script>
+<script src="/saasBeta/js/jquery.validate.min.js"></script>
+<script src="/saasBeta/js/header2.js"></script>
+</head>
+
+<body>
+
+	<!--主体 star-->
+	<div class="right_main new_r_main">
+		<!--main  star-->
+		<div class="main new_main">
+			<div class="edit_box">
+				<div class="new_boar_main">
+					<div class="boar_l fl nav_left">
+						<ul>
+							<!--<li><span></span><a href="#">首页概览</a></li>
+					<li><span></span><a href="#">企业资料</a></li>
+					<li><span></span><a href="#">董事会高管</a></li>
+					<li class="hover"><span></span><a href="#">公司公告</a></li>
+					<li><span></span><a href="#">股本股东</a></li>
+					<li><span></span><a href="#">财务数据</a></li>
+					<li><span></span><a href="#">行业分析</a></li>
+					<li><span></span><a href="#">发行分配</a></li>
+					<!-- <li><span></span><a href="#">舆情监测</a></li> -->
+							
+							<div class="clr"></div>
+						</ul>
+					</div>
+					<div class="boar_r fr hq">
+						<div class="bora_r_top hq_top">
+							<div class="ora_r_Box">
+								<div class="r_top_l fl">
+									<div class="top_tit">
+										<h2 id="stockName">--</h2>
+										<span id="stockCode">--</span>
+									</div>
+									<div class="top_btn" id="operation_div">
+										<!-- <a href="javascript:;" data-trading="430532" data-zxid="null"><img src="/saasBeta/images/jiahao.png">加入自选</a>
+				<button id="duibi" onclick="contrast(this)" data-name="北鼎晶辉" data-code="430532">对比</button> -->
+										<div class="add_zxg">
+											<div class="add_zxg_title">
+												<span>加入自选股</span><i onclick="closeZxDiv(this)">X</i>
+											</div>
+											<div class="add_select">
+												<div class="selectBox">
+													<p>请选择</p>
+													<ul style="">
+														<li data-value=""><a href="javascript:;">默认</a></li>
+														<li data-value="57e384383a939ff9df52c489"><a
+															href="javascript:;">中可asda</a></li>
+														<li data-value="57e383503a939ff9df52c487"><a
+															href="javascript:;">中科</a></li>
+														<li data-value="57e48a49aafca807a53ddca1"><a
+															href="javascript:;">456</a></li>
+														<li data-value="57e48c51aafca807a53ddca2"><a
+															href="javascript:;">678</a></li>
+													</ul>
+												</div>
+												<div class="add_se_btn">
+													<a href="javascript:;" onclick="saveZx(this)">确定</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="r_top_c fl">
+									<div class="r_top_price">
+										<span id="newPrice" class="new_price">--</span>
+										<div class="top_box up_gj">
+											<!--此处class:up_gj代表此股上涨  class:down代表此股下跌-->
+											<span id="changeAmount" class="zde_price">--</span> <span
+												id="priceChangeRatio" class="zdf_bfb">--</span>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="r_top_zd">
+										<p>
+											<span>涨停：</span><em id="limitUp" class="zt_pr">--</em>
+										</p>
+										<p>
+											<span>跌停：</span><em id="limitDown" class="dt_pr">--</em>
+										</p>
+									</div>
+									<div class="r_bot_time">
+										<p id="realTime">--</p>
+									</div>
+								</div>
+								<div class="r_top_r fl">
+									<ul>
+										<li><span>今开:</span>
+											<p id="openPrice" class="red">--</p></li>
+										<li><span>昨收:</span>
+											<p id="yclosePrice">--</p></li>
+										<li><span>总市值:</span>
+											<p id="totalMarketValue">--</p></li>
+										<li><span>换手:</span>
+											<p id="turnover">--</p></li>
+										<li><span>最高:</span>
+											<p id="highPrice" class="red">--</p></li>
+										<li><span>成交量:</span>
+											<p id="tradingVolume">--</p></li>
+										<li><span>流通市值:</span>
+											<p id="cmValue">--</p></li>
+										<li><span>市净率:</span>
+											<p id="netRatio">--</p></li>
+										<li><span>最低:</span>
+											<p id="lowPrice" class="green">--</p></li>
+										<li><span>成交额:</span>
+											<p id="tradingAmount">--</p></li>
+										<li><span>振幅:</span>
+											<p id="amplitude">--</p></li>
+										<li><span>市盈率(动):</span>
+											<p id="priceEarningRatio">--</p></li>
+									</ul>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="clr"></div>
+						<div class="main_r_center bfff qyhq">
+							<div class="yjy_title newm_10">
+								<i class="qy_event"></i> <span class="fl">公司大事</span>
+								<div class="clr"></div>
+							</div>
+							<div class="clr" id="SummaryEventsAll"></div>
+							<!-- <div class="event_public">
+								<div class="event_title">
+									<span>重大诉讼、仲裁事项</span>
+								</div>
+								<div class="event_content information">
+									<table>
+										<thead>
+											<tr>
+												<th>重大诉讼、仲裁事项</th>
+												<th>涉及金额</th>
+												<th>占期末净资产比例%</th>
+												<th>是否结束</th>
+												<th>临时公告披露时间</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>唐山中下党产开发有爱公司松松</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>2015-10-19</td>
+											</tr>
+											<tr>
+												<td>和别炼钢为荣誉若放点挨打就干游侠公司</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>公开转让说明书</td>
+											</tr>
+											<tr>
+												<td>归属于挂牌公司股东的净利润</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>2015-10-19</td>
+											</tr>
+											<tr>
+												<td>太近的个人观点郭德纲水果蛋糕各个大概 是否</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>公开转让说明书</td>
+											</tr>
+											<tr>
+												<td>加权平均净资产收益率</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>2015-10-19</td>
+											</tr>
+											<tr>
+												<td>基本每股收益(元/股)</td>
+												<td>74,304,567.85</td>
+												<td>14.06%</td>
+												<td>是</td>
+												<td>公开转让说明书</td>
+											</tr>
+											<tr>
+												<td>总计</td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="event_public">
+								<div class="eve_title">
+									<span>标题</span>
+								</div>
+								<div class="eve_info">
+									<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+								</div>
+							</div> -->
+							<!--对比弹层 star-->
+							<div class="contrast">
+								<div class="contrast_left">
+									<span>对比分析</span>
+								</div>
+								<div class="contrast_right">
+									<!-- 		<span>中新科技  (345789) <i>X</i></span> -->
+									<!-- 		<span>中新科技  (345789) <i>X</i></span> -->
+									<!-- 		<span>中新科技  (345789) <i>X</i></span> -->
+									<a href="javascript:;" id="contrastList_a">开始<br>对比
+									</a>
+									<div class="contra_yc">
+										<span>隐藏</span>
+									</div>
+								</div>
+
+							</div>
+							<!--对比弹层 end-->
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--main  end-->
+			<!--footer  star-->
+		
+			<!--footer  end-->
+		</div>
+		<!--主体 end-->
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/businessDetails/headRealTimeQuotes.js"></script>
+		<!-- 自动补全 -->
+
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script src="/saasBeta/js/businessDetails/LeftCenter.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script type="text/javascript"
+			src="/saasBeta/js/businessDetails/CorporateEvents.js" type="text/javascript"
+			charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				var new_heigh = document.body.scrollHeight;
+				$(".boar_l").css("height", new_heigh);
+			});
+			$(".header_box").find("div").eq(0).addClass(".logoBackground");
+		</script>
+</body>
+</html>

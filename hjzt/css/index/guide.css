@@ -1,0 +1,53 @@
+html{width:100%;height:100%;}  
+	*{margin:0;padding:0;}
+	body{width:100%;height:100%;}  
+	.cover {  
+	    display: none;  
+	    position: absolute;  
+	    width: 0; height: 0;  
+	    left: 0; top: 0; right: 0; bottom: 0;  
+	    border: 0 solid #000;  
+	    opacity: .6;  
+	    filter: alpha(opacity=5);  
+	    z-index: 9;  
+	    /* 过渡效果 */  
+	    /*transition: all .25s;  */
+	    /* 边缘闪动问题fix */  
+	    box-shadow: 0 0 0 100px #000;  
+	    overflow: hidden;  
+	}  
+	.cover::before {  
+	    content: '';  
+	    width: 100%; height:100%;  
+	    /*border-radius: 50%;  */
+	    border: 400px solid #000;  
+	    position: absolute;  
+	    left: -400px; top: -400px;  
+	    box-shadow: inset 0 0 5px 2px rgba(0,0,0,.5);  
+	}  
+	/* IE7, IE8 img */  
+	.cover > img {  
+	    width: 100%; height: 100%;      
+	}  
+	/*a{display: block;width:100px;height:50px;line-height: 50px;font-size:12px;}*/
+	/*#aa{width:100%;height:50px;line-height:50px;margin-top:10px;}  */
+	/*.header{width:100%;line-height:50px;}*/
+    .guide_nav{z-index:9999;color:#fff;position: absolute;top:65px;left:100px;display: none;transition: all 1s;}
+    .guide_user{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:65px;right:100px;display:inline-block;display: none;}
+    .guide_data{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:504px;left:28.75%;display:inline-block;display: none;}
+    /*.guide_btn{position: absolute;cursor: pointer;left:39%;top:10px;}*/
+    .left_img{position: absolute; cursor: pointer;left: 39%;top: 178px;}
+   	.right_img{position: absolute; cursor: pointer;right:37%;top: 178px;}
+   	.guide_search{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:88px;right:70%;display:inline-block;display: none;}
+   	.guide_top{position: absolute;right:0;}
+   	.guide_middle{position: absolute;right:0;top:140px;}
+   	.guide_bottom{position: absolute;right:0;top:440px;}
+   	.guide_bott{position: absolute;right:0;top:749px;}
+   	.right_btn{position: relative;top:914px;left:-66%;cursor: pointer;}
+
+
+   	.guide_desk{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:147px;right:28.75%;display:inline-block;display: none;}
+	.desk_top{position: absolute;right:0;}
+   	.desk_middle{position: absolute;right:0;top:410px;}
+   	.desk_bottom{position: absolute;right:0;top:700px;}
+   	.desk_btn{position: relative;top:860px;left:-66%;cursor: pointer;}

@@ -1,0 +1,205 @@
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+		<style>
+			.container { padding:0; }
+			.guben{position: relative;}
+			.yx-select{position: absolute;top: 0;right: 0;font-size: 14px;}
+		</style>
+		
+		<div class="yuce-fx">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>一、公司概况</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+									<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+									</div>
+								</div>
+							</div>	
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>1.4股本及变动情况</h2>
+									<div class="tab-list list-name guben">
+										<span class="on">图表</span>
+										<span>列表</span>
+										<div class="noPay">付费可以查看更多的数据</div>
+										<div class="yx-select" style="display: none;">可选择1-2个报告期</div>
+									</div>
+									<!--股本及变动情况-->
+									<div class="echarts-tb" id="equitySituation"></div>
+									<div class="reyuan-table guben-gudong" style="display: none;">
+                                            <table class="table guben-table">
+                                            	<thead>
+                                                <tr>
+                                                    <th colspan="2">股份性质</th>
+                                                    <th colspan="2">期初</th>
+                                                    <th>本期变动</th>
+                                                    <th colspan="2">期末</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="capitalStructureTable" >
+                                                <!-- <tr class="td-gray">
+                                                    <td colspan="2"></td>
+                                                    <td>数量</td>
+                                                    <td>比例</td>
+                                                    <td></td>
+                                                    <td>数量</td>
+                                                    <td>比例</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="4" class="hebing">无限售条件股份</td>
+                                                    <td>无限售股份总数</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>控股股东、实际控制人</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>董事、监事、高管</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>核心员工</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="4" class="hebing">有限售条件股份</td>
+
+                                                    <td>无限售股份总数</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>控股股东、实际控制人</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>董事、监事、高管</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>核心员工</td>
+
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                    <td>232,137,4</td>
+                                                    <td>232,137,4</td>
+                                                    <td>83%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="hebing"><b>总股本</b></td>
+                                                    <td><b>137,4</b></td>
+                                                    <td><b>137,4</b></td>
+                                                    <td><b>137,4</b></td>
+                                                    <td><b>137,4</b></td>
+                                                    <td><b>137,4</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2" class="hebing"><b>普通股股东人数</b></td>
+                                                    <td class="no-border"></td>
+                                                    <td class="no-border"><b>137,4</b></td>
+                                                    <td class="no-border"></td>
+                                                    <td class="no-border"></td>
+                                                    <td class="no-border"></td>
+                                                </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+								</div>
+							</div>
+							
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+			</div>
+		</div>
+		
+	<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script>	 -->
+	<script type="text/javascript">
+		
+		$(function(){
+			//UTIL.nologin('gbbdqk');
+			
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+		    $(".contents").height(windowHeight - 290);
+		    
+		    //用户是否是付费的状态
+			payOrNot();
+			if(payOrNot()==true){//已付费的情况
+				$(".noPay").hide();
+				$(".yx-select").show();
+			}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+				$(".noPay").show();
+				$(".yx-select").hide();
+			}
+			//点击深度查看
+			deepLook();
+		    
+		    //点击tab切换
+			$(".tab-list").delegate("span","click",function(){
+				if($(this).hasClass("on")){
+					return false;
+				}else{
+					$(this).addClass("on").siblings().removeClass("on");
+					if($(this).text()=="图表"){
+						$(".echarts-tb").show();
+						$(".guben-gudong").hide();
+						$(".yx-select").show();
+						payOrNot();
+						if(payOrNot()==true){//已付费的情况
+							$(".noPay").hide();
+						}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+							$(".noPay").show();
+						}
+					}else{
+						$(".noPay").hide();
+						$(".echarts-tb").hide();
+						$(".guben-gudong").show();
+						$(".yx-select").hide();
+					}
+				}
+			})
+			findTWOHis();
+			findStructureTable();
+		})
+	</script>
+

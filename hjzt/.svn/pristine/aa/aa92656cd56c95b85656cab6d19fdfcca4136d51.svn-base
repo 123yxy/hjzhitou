@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能研报</title>
+    <link rel="stylesheet" href="../../saasBeta/css/base.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_234130_nem7eskcrkpdgqfr.css">
+    <link rel="stylesheet" href="../../saasBeta/css/schedule.css">
+    <link rel="stylesheet" href="../../saasBeta/css/companyNotice/companyNotice.css">
+    <link rel="stylesheet" href="../../saasBeta/css/reportList/reportList.css">
+    <!--<link rel="stylesheet" href="../../saasBeta/css/reportList/reportListSelect.css">-->
+    <link rel="stylesheet" href="../../saasBeta/css/reportList/reportListSelect2.css">
+    <script src="../../saasBeta/js/jquery.min.js"></script>
+    <script src="../../saasBeta/js/common.js"></script>
+     <script src="../../saasBeta/js/reportList/reportList.js"></script>
+    <!--<script src="../../saasBeta/js/reportList/reportList_select.js"></script>-->
+    <script src="../../saasBeta/js/select.js"></script>
+    <script src="../../saasBeta/js/schedule.js"></script>
+    <script src="../../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+        <div class="main">
+            <div class="notice">
+                <div class="title-box">
+                    <div class="not-nav report-title clearfix">
+                        <div class="fl">智能研报</div>
+                        <div class="fr">
+                            <b class="search-icon"></b>
+                            <input type="text" placeholder="关键词" class="input" id="search">
+                        </div>
+                    </div>
+                    <div class="select-box clearfix">
+                        <span class="fl">筛选:</span>
+                        <ul class="fl">
+                            <li class="select three" name="sb">
+                                <div class="s-title" name="" data="">全部类型<span></span></div>
+                            	<div class="s-content big-box">
+                                <ul class="content-box">
+                                	<li>
+                                		<a href="#" name="all" class="all">全部</a>
+                                	</li>
+                                    <li>
+                                        <a href="#" name="sb">三板</a>
+                                    </li>
+                                    <li><a href="#" name="aw">A股</a></li>
+
+                                </ul>
+                                <div class="item-content hide" style="padding:8px;">
+                                    <ul>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                            </li>
+                            <!--<li class="select two"  name="aw"><div class="s-title" name="" data="">A股<span></span></div></li>-->
+                        </ul>
+                        <!--<div class="s-content width hide sb">
+                            <ul class="content-box">
+
+
+                            </ul>                                       
+                        </div>-->
+
+
+
+                         <!--<div class="s-content sm_width hide aw">
+                            <ul class="content-box">
+                                <li>
+                                    <a href="#">投资</a>
+                                </li>
+                                <li><a href="#">转股</a></li>
+                                <li><a href="#">签证</a></li>
+                                <li><a href="#">经济</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="notice-title">
+                        <div class="not-left fl">
+                            <span>约<span class="num totalNum"></span>篇</span>
+                        </div>
+                    </div>
+                    <div class="notice-content">
+                        <!--<a href="#" class="con-item">-->
+                            <!--<p>中科软(43001)智能研报</p>-->
+                            <!--<div>-->
+                                <!--<span>发布时间：2017-07-25</span>-->
+                                <!--<span>所属行业：互联网</span>-->
+                                <!--<span>来源：金融界</span>-->
+                                <!--<span>本次评级：买入</span>-->
+                                <!--<span>分析师：马先文</span>-->
+                                <!--<span>总市值：<span class="num">63.04</span>亿</span>-->
+                                <!--<span>市盈率（静）：<span>33.04</span></span>-->
+                            <!--</div>-->
+                            <!--<div>随着Sass市场份额的逐渐扩大，中国EA汽车行业市场的稳定格局将被打破。大数据、人工智能（AI）创新技术的融入，为中国EA软件市场带来新的突破。IDC中国企业级应用汽车市场研究经理机构净额哇附件PD</div>-->
+                        <!--</a>-->
+
+                    </div>
+                    <div class="btn">
+                        <button class="add-more">加载更多</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+
+
+
+    </script>
+</body>
+</html>

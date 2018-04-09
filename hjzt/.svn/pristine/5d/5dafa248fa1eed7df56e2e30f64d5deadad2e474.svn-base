@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>新股中心</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyMap.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/Touyan.css" />
+	</head>
+	<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+	<!--侧导航 end-->
+	<!--主体 star-->
+	<div class="right_main">
+		<!--main  star-->
+		<div class="main">
+			
+			<div class="clr"></div>
+			<div class="l_main l_main_none nL_main">
+			</div>
+			<div class="clr"></div>
+			<div class="newgup">
+				
+				<div class="newgp_dbox ">
+					<div class="sgbd">
+						<div class="zjh" id="zjh">
+							<div class="menu">
+									<h2>2017-12-15 星期三 （2家）</h2>
+									<div class="bdnr">
+										<div class="biaoTou xgzcbt">
+											<ul>
+												<li>公司</li>
+												<li>交易代码</li>
+												<li>申购代码</li>
+												<li>申购上限</li>
+												<li>发行量（万股）</li>
+												<li>发行价（元/股）</li>
+												<li>预计上网发行量（万股）</li>
+												<li>主承销商</li>
+											</ul>
+										</div>
+										<div class="lis lishei">
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+									
+							</div>
+							<div class="menu">
+									<h2>2017-12-15 星期三 （2家）</h2>
+									<div class="bdnr">
+										<div class="biaoTou xgzcbt">
+											<ul>
+												<li>公司</li>
+												<li>交易代码</li>
+												<li>申购代码</li>
+												<li>申购上限</li>
+												<li>发行量（万股）</li>
+												<li>发行价（元/股）</li>
+												<li>预计上网发行量（万股）</li>
+												<li>主承销商</li>
+											</ul>
+										</div>
+										<div class="lis lishei">
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											<ul>
+												<li>a</li>
+												<li>b</li>
+												<li>c</li>
+												<li>d</li>
+												<li>e</li>
+												<li>f</li>
+												<li>e</li>
+												<li>f</li>
+											</ul>
+											
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+									
+							</div>
+							
+						</div>
+						
+					</div>
+					
+
+					<div class="clr"></div>
+				</div>
+				
+				<div class="clr"></div>
+			</div>
+			
+		</div>
+		<!--main  end-->
+	</div>
+	
+	<!--主体 end-->
+		<script src="/saasBeta/js/jquery.min.js"></script>	
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/listedCompaniesToListed.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/listedCompanies.js"></script>
+	<!-- 分页 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+	
+	</html>

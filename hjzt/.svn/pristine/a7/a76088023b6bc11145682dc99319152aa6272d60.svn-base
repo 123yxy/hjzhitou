@@ -1,0 +1,772 @@
+{
+    "Result": {
+        "Node": {
+            "name": "中科软科技股份有限公司",
+            "KeyNo": "884dad8155b8c88a766a657f7b2fb517",
+            "Category": 1,
+            "ShortName": "中科软",
+            "Count": 61,
+            "Level": 0,
+            "FundedAmount": null,
+            "FundedRate": null,
+            "children": [
+                {
+                    "name": "对外投资",
+                    "KeyNo": null,
+                    "Category": 2,
+                    "ShortName": "对外投资",
+                    "Count": 16,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "安徽中科软科技信息有限公司",
+                            "KeyNo": "512a81ae8652d1fbc63470336cded519",
+                            "Category": 2,
+                            "ShortName": "中科软科技信",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "广州中科软信息科技有限公司",
+                            "KeyNo": "5f593269192b418cfbe6a72739d6ca22",
+                            "Category": 2,
+                            "ShortName": "中科软信息",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中科软科技长春有限公司",
+                            "KeyNo": "d7836c2bd981e245f0136a5c4f049e0d",
+                            "Category": 2,
+                            "ShortName": "中科软科技长",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中科软科技无锡有限公司",
+                            "KeyNo": "0e0a655a3d3e4b0bc125d0e11ec6da96",
+                            "Category": 2,
+                            "ShortName": "中科软科技无",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中科软科技黑龙江有限公司",
+                            "KeyNo": "b7f5464ab2d1c7f0b7f56ba02f5fba75",
+                            "Category": 2,
+                            "ShortName": "中科软科技黑",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "宁波中科软信息技术有限公司",
+                            "KeyNo": "34c1c191b696491945ed9dba0d0077cf",
+                            "Category": 2,
+                            "ShortName": "中科软信息技",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中科软（天津）科技有限公司",
+                            "KeyNo": "e417e19b8f10efa96115b0cdd05ca512",
+                            "Category": 2,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "深圳中科软科技信息系统有限公司",
+                            "KeyNo": "e3277b7e1abf79389f009fab0b4f1037",
+                            "Category": 2,
+                            "ShortName": "中科软科技信",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "上海中科软科技有限公司",
+                            "KeyNo": "1ce49cb972f877397f3ce24772945737",
+                            "Category": 2,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中科软科技四川有限公司",
+                            "KeyNo": "6de98e899209b3a124009fbe281c59cc",
+                            "Category": 2,
+                            "ShortName": "中科软科技四",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "武汉中科软科技有限公司",
+                            "KeyNo": "0b450193791eccb0a97e046e1cdeabe1",
+                            "Category": 2,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京荣光中科软教育科技有限公司",
+                            "KeyNo": "a09a14bb045f317fd80200b41f27bff7",
+                            "Category": 2,
+                            "ShortName": "荣光中科软教",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "深圳中科软创新数据集成有限公司",
+                            "KeyNo": "f1bdd060a495c3b10892ad8e5bad1375",
+                            "Category": 2,
+                            "ShortName": "中科软创新数",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京中科软科技有限公司",
+                            "KeyNo": "fa567d84d4cc0e2e3665f479e4d3cbd9",
+                            "Category": 2,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京中科软信息系统工程监理有限公司",
+                            "KeyNo": "b47940db6995d53a71ac9ed00808aa19",
+                            "Category": 2,
+                            "ShortName": "中科软信息系",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京中科安胜信息技术有限公司",
+                            "KeyNo": "63089182190336380a5b1bdd6b5eee99",
+                            "Category": 2,
+                            "ShortName": "中科安胜信息",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "股东",
+                    "KeyNo": null,
+                    "Category": 3,
+                    "ShortName": "股东",
+                    "Count": 6,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "新华企业（沈阳）有限公司",
+                            "KeyNo": "884dad8155b8c88a766a657f7b2fb517_新华企业（沈阳）有限公司",
+                            "Category": 3,
+                            "ShortName": "企业法人",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京市四博连通用机械新技术公司",
+                            "KeyNo": "351396ca227d6562296ca00bf2a89669",
+                            "Category": 3,
+                            "ShortName": "企业法人",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京知金科技投资有限公司",
+                            "KeyNo": "a3a9c197b56f66fed80313844cc3686f",
+                            "Category": 3,
+                            "ShortName": "企业法人",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "北京市海淀区国有资产投资经营公司",
+                            "KeyNo": "74305142091a6463d2303f71b5a68bc3",
+                            "Category": 3,
+                            "ShortName": "企业法人",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "中国科学院软件研究所",
+                            "KeyNo": "884dad8155b8c88a766a657f7b2fb517_中国科学院软件研究所",
+                            "Category": 3,
+                            "ShortName": "企业法人",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        },
+                        {
+                            "name": "冯玉琳",
+                            "KeyNo": "884dad8155b8c88a766a657f7b2fb517_冯玉琳",
+                            "Category": 3,
+                            "ShortName": "自然人股东",
+                            "Count": 0,
+                            "Level": 1,
+                            "FundedAmount": "",
+                            "FundedRate": "",
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "高管",
+                    "KeyNo": null,
+                    "Category": 4,
+                    "ShortName": "高管",
+                    "Count": 10,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "蔡庆安",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "监事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "陈建军",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "冯卓志",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "独立董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "李明",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "独立董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "梁赓",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "林屹",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "蒲洁宁",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "监事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "张天伴",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "监事会主席",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "张玮",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "赵玉焕",
+                            "KeyNo": null,
+                            "Category": 4,
+                            "ShortName": "独立董事",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "法院公告",
+                    "KeyNo": null,
+                    "Category": 5,
+                    "ShortName": "法院公告",
+                    "Count": 0,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": []
+                },
+                {
+                    "name": "历史股东",
+                    "KeyNo": null,
+                    "Category": 8,
+                    "ShortName": "历史股东",
+                    "Count": 5,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "冯玉琳等14人",
+                            "KeyNo": null,
+                            "Category": 8,
+                            "ShortName": "",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "冯玉琳等14人",
+                            "KeyNo": null,
+                            "Category": 8,
+                            "ShortName": "",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "江苏东昊创业投资有限责任公司",
+                            "KeyNo": "58f1f4ac3a1c1a09b0c0e1564b673457",
+                            "Category": 8,
+                            "ShortName": "",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "股份报价转让试点股权",
+                            "KeyNo": null,
+                            "Category": 8,
+                            "ShortName": "",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "北京天圣元建筑工程有限公司",
+                            "KeyNo": null,
+                            "Category": 8,
+                            "ShortName": "",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "历史法人",
+                    "KeyNo": null,
+                    "Category": 9,
+                    "ShortName": "历史法人",
+                    "Count": 2,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "李玉成",
+                            "KeyNo": null,
+                            "Category": 9,
+                            "ShortName": null,
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "何川",
+                            "KeyNo": null,
+                            "Category": 9,
+                            "ShortName": null,
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "裁判文书",
+                    "KeyNo": null,
+                    "Category": 6,
+                    "ShortName": "裁判文书",
+                    "Count": 22,
+                    "Level": 0,
+                    "FundedAmount": null,
+                    "FundedRate": null,
+                    "children": [
+                        {
+                            "name": "北京盛世骄阳文化传播有限公司",
+                            "KeyNo": "91cfca530aef5fd5893cf4b87fb74300",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "北京盛世骄阳文化传播有限公司",
+                            "KeyNo": "91cfca530aef5fd5893cf4b87fb74300",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "北京盛世骄阳文化传播有限公司",
+                            "KeyNo": "91cfca530aef5fd5893cf4b87fb74300",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "北京盛世骄阳文化传播有限公司",
+                            "KeyNo": "91cfca530aef5fd5893cf4b87fb74300",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "连云港中洋易惠网络工程有限公司",
+                            "KeyNo": "452456d653220886e8f333c1ea580415",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "杭州精益电子科技有限公司",
+                            "KeyNo": "fc7b3ac0b2b0697d144f879cabf8e451",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网（天津）信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        },
+                        {
+                            "name": "乐视网(天津)信息技术有限公司",
+                            "KeyNo": "d954f50ae1c93d6984ce942bddfc7630",
+                            "Category": 6,
+                            "ShortName": "中科软",
+                            "Count": 0,
+                            "Level": 0,
+                            "FundedAmount": null,
+                            "FundedRate": null,
+                            "children": null
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "Status": 200,
+    "Message": null
+}

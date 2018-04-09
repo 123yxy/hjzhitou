@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>汇金智投</title>
+		<link rel="stylesheet" type="text/css" href="../saasBeta/css/base.css?1" />
+		<link rel="stylesheet" type="text/css" href="../saasBeta/css/index/index.css" />
+		<link rel="stylesheet" type="text/css" href="../saasBeta/css/index/guide.css" />
+		<link rel="stylesheet" href="../saasBeta/css/index/swiper.min.css">
+		<!-- 选择行业弹框css -->
+		<link rel="stylesheet" type="text/css" href="../saasBeta/js/industry/css/xcConfirm.css" />
+		<link rel="stylesheet" href="/saasBeta/js/keep/css/bcConfirm.css">
+		<link rel="stylesheet" href="../saasBeta/js/kLineChart/k-line-chart.css">
+		
+		<script src="../saasBeta/js/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../saasBeta/js/common.js"></script>
+		<script src="../saasBeta/js/calendar/js/calendar.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../saasBeta/js/index/swiper.min.js"></script>-->
+		<script src="../saasBeta/js/industry/js/xcConfirm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../saasBeta/js/jquery.SuperSlide.2.1.1.js"></script>
+		<script src="/saasBeta/js/keep/js/bcConfirm.js"></script>
+   </head>
+
+	<body>
+		<!-- 引导页 -->
+		<div id="cover" class="cover"></div> 
+		<span class="guidei guide_nav">
+		<img src="../saasBeta/images/Image/GuidePage/guide_nav_cont.png">
+		<img class="guide_btn left_img" src="../saasBeta/images/Image/GuidePage/guide_know.png">
+		</span>
+		<span class="guidei guide_user">
+		<img src="../saasBeta/images/Image/GuidePage/guide_user_cont.png">
+		<img class="guide_btn right_img" src="../saasBeta/images/Image/GuidePage/guide_know.png">
+		</span>
+		<span class="guidei guide_data">
+		<img src="../saasBeta/images/Image/GuidePage/guide_data.png">			
+		<img class="guide_btn left_img" src="../saasBeta/images/Image/GuidePage/guide_know.png">
+		</span>
+		<span class="guidei guide_search">
+		<img src="../saasBeta/images/Image/GuidePage/guide_search.png" class="guide_top">
+		<img src="../saasBeta/images/Image/GuidePage/guide_sampan.png" class="guide_middle">
+		<img src="../saasBeta/images/Image/GuidePage/guide_entry.png" class="guide_bottom">
+		<img src="../saasBeta/images/Image/GuidePage/guide_report.png" class="guide_bott">
+		<img class="guide_btn right_btn" src="../saasBeta/images/Image/GuidePage/guide_know.png">
+		</span>
+		<span class="guidei guide_desk">
+		<img src="../saasBeta/images/Image/GuidePage/desk_my.png" class="desk_top">
+		<img src="../saasBeta/images/Image/GuidePage/desk_day.png" class="desk_middle">
+		<img src="../saasBeta/images/Image/GuidePage/desk_optional.png" class="desk_bottom">
+		<img class="guide_btn desk_btn" src="../saasBeta/images/Image/GuidePage/guide_know.png">
+		</span>
+	
+
+		<!--大家一起用的蒙版  z-index：100-->
+		<div class="mask">
+
+		</div>
+		<!--新建日程 弹窗-->
+		<div class="new_pro_window">
+			<div class="new_pro_main">
+				<div class="new_pro_title">新建日程</div>
+				<table>
+					<tr>
+						<td class="name">标题：&nbsp;</td>
+						<td class="bt"><input type="text" placeholder="请填写事件标题" class="rl-input" id="log-title"/></td>
+						<td class="name">全天事件：&nbsp;</td>
+						<td><img class="yes_no" src="../saasBeta/images/Image/Index/no.png" name="0"/></td>
+					</tr>
+					<tr>
+						<td class="name start_data">开始时间：&nbsp;</td>
+						<td class="data">
+							<input class="ipt_data start-time rl-input" type="text" placeholder="选择起始日期"/>
+							<div id='schedule-box1' class="boxshaw" style="z-index: 10000;display:none"></div>
+						</td>
+						<td class="name end_data">结束时间：&nbsp;</td>
+						<td class="data">
+							<input class="ipt_data end-time rl-input" type="text" placeholder="选择结束时间"/>
+							<div id='schedule-box2' class="boxshaw" style="z-index: 10000;display:none;"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="name">重复：&nbsp;</td>
+						<td>
+							<!--<select>-->
+								<!--<option value="volvo">不重复</option>-->
+								<!--<option value="saab">重复</option>-->
+							<!--</select>-->
+							<div class="cf_select" id="cf_select"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="name">提醒：&nbsp;</td>
+						<td>
+							<!--<select>-->
+								<!--<option value="volvo">不提醒</option>-->
+								<!--<option value="saab">提醒</option>-->
+							<!--</select>-->
+							<div class="tx_select" id="tx_select"></div>
+						</td>
+					</tr>
+				</table>
+				<table class="mt10">
+					<tr>
+						<td class="name xq">详情：&nbsp;</td>
+						<td>
+							<textarea placeholder="填写事项说明" name="" rows="" cols="" id="log-content" autocomplete="off"></textarea>
+						</td>
+					</tr>
+				</table>
+				<input class="button_com cancel" type="button" value="取消" />
+				<input class="button_special save save1" type="button" value="保存" style="display: none"/>
+				<input class="button_special save save2" type="button" value="保存" style="display:none">
+			</div>
+		</div>
+		<!--新建模型弹窗-->
+		<!--<div class="new_mode_window">
+			<div class="new_mode_title">
+				创建我的模型
+				<i></i>
+			</div>
+			<div class="new_mode_body">
+				请先输入要分析的股票
+				<input type="text" />
+			</div>
+		</div>-->
+		<!-- <div id="header" style="width:100%;height: 65px;background: red;top:0px;z-index: 10000000;"></div> -->
+		<iframe name="ifarmeB" src="http://yanbao.159jh.com/user/ssoLogin/user.do?redirect= " id="'ifarmeB'"  marginwidth="0" marginheight="0" scrolling="no"  frameborder="0" WIDTH="100" height="100" style="display:none"></iframe>
+		<iframe name="ifarmeA" src="http://testty.159jh.com/user/ssoLogin/user.do?redirect=" id="'ifarmeA'"  marginwidth="0" marginheight="0" scrolling="no"  frameborder="0" WIDTH="100" height="100" style="display:none"></iframe>
+		<div class="main clear">
+			<div class="left" id="left">
+				<div class="left_top bw">
+					<ul class="clear">
+						<li class="lt_li1">
+							<a href="reportList/reportList.html" target="_blank">
+								<div class="lt_first"></div>
+								<span class="lt_t1">智能研报</span>
+								<span class="lt_t2">大数据智能研报</span>
+							</a>
+						</li>
+						<li class="lt_li2">
+							<a href="news/news.html" target="_blank">
+								<div class="lt_second"></div>
+								<span class="lt_t1">新闻资讯</span>
+								<span class="lt_t2">全面经济股市资讯</span>
+							</a>
+						</li>
+						<li class="lt_li3">
+							<a href="threeReport/threeReport.html" target="_blank">
+								<div class="lt_three"></div>
+								<span class="lt_t1">三方研报</span>
+								<span class="lt_t2">机构券商投资研究</span>
+							</a>
+						</li>
+						<li class="lt_li4">
+							<a href="companyNotice/companyNotice.html" target="_blank">
+								<div class="lt_four"></div>
+								<span class="lt_t1">公司公告</span>
+								<span class="lt_t2">监会指定信息披露</span>
+							</a>
+						</li>
+						<li class="lt_li5">
+							<a href="rulue/rulue.html" target="_blank">
+								<div class="lt_five"></div>
+								<span class="lt_t1">政策法规</span>
+								<span class="lt_t2">国家政策法规</span>
+							</a>
+						</li>
+						<li class="lt_li6">
+							<a href="myResearch/newsindexLibrary.html" target="_blank">
+								<div class="lt_six"></div>
+								<span class="lt_t1">宏观数据</span>
+								<span class="lt_t2">宏观的数据信息</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="left_bottom bw" id="kanban_data">
+					<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+					<div class="databoard" id="data-kanban">
+						<span class="look">数据看板</span>
+						<span class="switch active" data-type="SB">新三板</span>
+						<span class="switch" data-type="A">A股</span>
+						<span class="databoard_more"><a href="threeLibrary/stockQuotes.html" target="_blank">更多</a></span>
+					</div>
+					<div class="sampan">
+						<div class="exponent clear" id="kanban-zhishu"> 
+							<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+						</div>
+						<div class="eight clear" id="SzsSfcList">
+							<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+							<!--<div class="eight_">
+								<div class="eight_data">1152.55</div>
+								<div class="eight_zui">最新</div>
+							</div>-->
+							<!--<div class="eight_ bg_blue">-->
+								<!--<div class="eight_data">1152.55</div>-->
+								<!--<div class="eight_zui">最高</div>-->
+							<!--</div>-->
+							<!--<div class="eight_">-->
+								<!--<div class="eight_data">1152.55</div>-->
+								<!--<div class="eight_zui">成交量</div>-->
+							<!--</div>-->
+							<!--<div class="eight_ bg_blue">-->
+								<!--<div class="green eight_data">-0.33</div>-->
+								<!--<div class="eight_zui">涨跌额</div>-->
+							<!--</div>-->
+							<!--<div class="eight_ bg_blue">-->
+								<!--<div class="eight_data">1152.55</div>-->
+								<!--<div class="eight_zui">最低</div>-->
+							<!--</div>-->
+							<!--<div class="eight_">-->
+								<!--<div class="eight_data">1152.55</div>-->
+								<!--<div class="eight_zui">开盘</div>-->
+							<!--</div>-->
+							<!--<div class="eight_ bg_blue">-->
+								<!--<div class="eight_data">1152.55</div>-->
+								<!--<div class="eight_zui">成交额</div>-->
+							<!--</div>-->
+							<!--<div class="eight_">-->
+								<!--<div class="green eight_data">-0.33</div>-->
+								<!--<div class="eight_zui">涨跌幅</div>-->
+							<!--</div>-->
+						</div>
+						<!--<div class="chart clear">
+							<div class="k_map clear">
+								<span class="sp_on">日K图</span>
+								<span>周K图</span>
+								<span>月K图</span>
+							</div>
+							<div class="data-list">
+                                <span id="dataTime"></span>
+                                <span>开：
+                                    <em id="open" class="down"></em>
+                                </span>
+                                <span>收：
+                                    <em id="close" class="up"></em>
+                                </span>
+                                <span>高：
+                                    <em id="highest" class="up"></em>
+                                </span>
+                                <span>低：
+                                    <em id="lowest" class="up"></em>
+                                </span>
+                                <span>涨跌：
+                                    <em id="zhangDie" class="up"></em>
+                                </span>
+                                <span>涨幅：
+                                    <em id="zhangFu">--</em>
+                                </span>
+                            </div>
+							<div class="KLine-contents">
+								<div class="map" id="KLine"></div>
+							<div class="line-cjl">成交量：
+                                    <span id="line-cjl"></span>
+                                </div>
+							</div>
+						</div>-->
+						<div class="contents" id="KLine-index">
+							<div class="section">
+								<div class="lines-type">
+									<span class="on">日K图</span>
+									<span class="">周K图</span>
+									<span class="">月K图</span>
+								</div>
+								<div class="k-line">
+									<div class="data-list">
+										<span class="dataTime"></span>
+										<span>开：<em id="open" class="open up"></em></span>
+										<span>收：<em id="close" class="close down"></em></span>
+										<span>高：<em id="highest" class="highest up"></em></span>
+										<span>低：<em id="lowest" class="lowest down"></em></span>
+										<span>涨跌：<em id="zhangDie" class="zhangDie up"></em></span>
+										<span>涨幅：<em id="zhangFu" class="zhangFu up"></em></span>
+									</div>
+									<div class="jiaoyi-qk">
+										<div class="lines-echarts KLineEcharts">
+										</div>
+										<div class="line-cjl">成交量：
+											<span class="line-cjl-span"></span>
+										</div>
+									</div>
+						
+								</div>
+							</div>
+						</div>
+						<div class="line">
+							<div class="ph clear">
+								<p class="rz">排名动态</p>
+								<a href="dataAnalysis/financingAnalysis.html" class="li_more" target="_blank">更多</a>
+							</div>
+							<div class="choice">
+								<div class="area_select" id="area_select"></div>
+								<div class="hy_select" id="hy_select"></div>
+								<div class="profits_select" id="pm_select"></div>
+								
+							</div>
+							<div class="li-chart" id="rongzi_jiner"></div>
+						</div>
+					</div>
+					<div class="sampan"></div>
+				</div>
+			</div>
+			<div class="middle" id="middle">
+				<div class="middle_top bw">
+					<div class="m94">
+						<input isjump="true" class="input select ui-autocomplete-input-company" type="text" placeholder="请输入公司名称/代码" id="inputReportObject" autocomplete="off"><i class="sc-icon"></i>
+						<div class="hot">
+							<span style="color:#333">热搜</span>
+						</div>
+					</div>
+				</div>
+				<div class="middle_middle1 bw" id="picListSB">
+					<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>	
+					<div class="middle_wrap">
+						<div class="yanbaoname1">
+							新三板智能研报
+						</div>
+						<div class="picScroll-left">
+							<div class="bd">
+								<ul class="picList picListA">
+									<!--<li>-->
+										<!--<a>-->
+											<!--<div class="pic slide1">-->
+												<!--<div class="item-title">-->
+													<!--<b></b>-->
+													<!--<span>运输</span>-->
+												<!--</div>-->
+												<!--<div class="con-img">-->
+													<!--<img src="../saasBeta/images/Image/con-pic.jpg">-->
+												<!--</div>-->
+												<!--<div class="con-name">-->
+													<!--<div>中科软（43006）</div>-->
+													<!--<span>智能研报</span>-->
+												<!--</div>-->
+											<!--</div>-->
+										<!--</a>-->
+									<!--</li>-->
+								</ul>
+							</div>
+							<div class="hd hdA clear">
+								<ul class="clear"></ul>
+							</div>
+						</div>
+      
+					</div>
+				</div>
+				<div class="middle_middle2 bw" id="picListA">
+					<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>	
+					<div class="middle_wrap">
+						<div class="yanbaoname2">
+							A股智能研报
+						</div>
+
+						<div class="picScroll-left picScroll-leftSB">
+
+							<div class="bd">
+								<ul class="picList picListSB">
+									<!--<li>-->
+										<!--<div class="pic slide2">-->
+											<!--<div class="item-title">-->
+												<!--<b></b>-->
+												<!--<span>医药</span>-->
+											<!--</div>-->
+											<!--<div class="con-img">-->
+												<!--<img src="../saasBeta/images/Image/con-pic2.png">-->
+											<!--</div>-->
+											<!--<div class="con-name">-->
+												<!--<div>中科软（43006）</div>-->
+												<!--<span>智能研报</span>-->
+											<!--</div>-->
+										<!--</div>-->
+
+									<!--</li>-->
+								</ul>
+							</div>
+							<div class="hd hdSB clear">
+								<ul class="clear"></ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="middle_bottom bw" id="yanbao_news"> 
+					<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>	
+					<div class="newshead">
+						<span class="on" name="mb_news">研报</span>
+						<span name="zx_news">资讯</span>
+						<a href="javascript:void(0)" target="_blank">更多</a>
+					</div>
+					<div>
+						<div class="mb_news">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right" id="right">
+				<div class="right_top1 bw my_yb">
+					<div class="right_in right_in_top">
+						<i></i>
+						<span><a href="myResearch/researchReport.html" style="color:#363636" target="_blank">我的研报</a></span>
+						<a href="myResearch/add-report.html" target="_blank">创建</a>
+						<!-- <a href="#">创建</a> -->
+					</div>
+				</div>
+				<div class="clear">
+					<div class="right_top2 bw  my_tb">
+						<div class="right_in">
+							<i></i>
+							<a href="myResearch/researchChart.html" target="_blank">
+							<span>我的图表</span>
+							<span class="red num" id="chartCount"></span>
+							</a>
+							<a href="myResearch/newsindexLibrary.html" class="create">创建</a>
+						</div>
+					</div>
+					<div class="right_top3 bw my_sc">
+						<div class="right_in">
+							<i></i>
+							<a href="personalCenter/personalCenter.html?typeId=2" target="_blank">
+								<span>我的收藏</span>
+								<span class="red num">0</span>
+							</a>
+						</div>
+					</div>
+					<div class="right_top4 bw my_yp">
+						<div class="right_in">
+							<i></i>
+							<a href="myResearch/myResearch.html" target="_blank">
+							<span>我的云盘</span>
+							<span class="red num" id="cloud">0</span>
+							</a>
+							<a href="myResearch/myResearch.html" class="create" target="_blank">上传</a>
+						</div>
+					</div>
+					<div class="right_top5 bw my_mx">
+						<div class="right_in">
+							<i></i>
+							<a href="myResearch/researchReport.html" target="_blank">
+							<span>我的模型</span>
+							<span class="red num" id="modelCount"></span>
+							</a>
+							<a href="javascript:void(0)" id="createModel-click" class="create" target="_blank">创建</a>
+						</div>
+					</div>
+				</div>
+				<div class="right_middle bw">
+					<!--新建日历弹窗-->
+					<div class="new_data_window">
+						<div class="new_data_chouse">
+							<span class="data_forward"></span>
+							<ul class="data_chouse1">
+								<li class="select">
+									<div class="s-title">2015<span></span></div>
+									<div class="s-content">
+										<ul>
+											<li>
+												<a href="javascript:void(0);">2015</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2016</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2017</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2018</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2019</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2020</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2021</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2022</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2023</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2024</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2025</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2026</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2027</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2028</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2029</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">2030</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<span class="fl">年</span>
+							<ul class="data_chouse2">
+								<li class="select">
+									<div class="s-title">十一月<span></span></div>
+									<div class="s-content">
+										<ul>
+											<li>
+												<a href="javascript:void(0);">一月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">二月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">三月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">四月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">五月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">六月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">七月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">八月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">九月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">十月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">十一月</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">十二月</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+							<span class="data_backward"></span>
+						</div>
+						<div class="data_main">1</div>
+					</div>
+
+					<div class="prog_xr">
+						<div class="prog_manage">
+							<span>日程管理</span>
+							<input class="button_com new_pro" type="button" value="新建日程" />
+						</div>
+						<div class="prog_calendar">
+							<i></i>
+							<span class="layui-input" id="choice-date" placeholder="yyyy-MM-dd" lay-key="29"></span>
+							<i class="open_calendar"></i>
+						</div>
+					</div>
+					<div class="prog_xm clear">
+						<!--<ul class="clear">-->
+							<!--<li>2017.11.20</li>-->
+							<!--<li>参与企业尽调</li>-->
+							<!--<li>-->
+								<!--<i class="pk bj-log"></i>-->
+								<!--<i class="del"></i>-->
+							<!--</li>-->
+						<!--</ul>-->
+						<div id="RiChengList"></div>
+						<div class="no-data hide">
+							<img src="../saasBeta/images/Image/no-data-2.png">
+							<div>
+								<span class="no-datawu" style="margin-left:-50px;">未记录工作日程</span><br><span class="no-dataup richeng">点击此处</span> 添加工作安排
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right_bottom bw">
+					<div class="free">
+						<span class="free_stock">自选股</span>
+						<span class="add_stock">
+							<a href="security/myPreferredStock.html">
+								<i></i>
+								<span>添加</span>
+						</a>
+						</span>
+					</div>
+					<div class="stock">
+						<span>股票</span>
+						<span>最新价</span>
+						<span>涨跌幅</span>
+						<span>深度操作</span>
+					</div>
+					<div class="stock_massage clear">
+						<!--<ul class="clear">-->
+							<!--<li>天阳科技</li>-->
+							<!--<li>2451234513151</li>-->
+							<!--<li>12345.00</li>-->
+							<!--<li>-->
+								<!--<i class="pk"></i>-->
+								<!--<i class="del"></i>-->
+							<!--</li>-->
+						<!--</ul>-->
+
+					</div>
+					<div class="no-data hide">
+						<img src="../saasBeta/images/Image/tishi.png">
+						<div>
+							<span class="no-datawu">暂无您的股票池噢!</span><br><span class="no-dataup gupiao">点击添加按钮</span> 前往选股
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--pk-->
+		<div class="gegu_zb tanc_public" id="tanc_public" style="display: none;">
+			<!--<div class="xbg_sc_dianji" style="display: none;"><em class="tiaoguo">跳过</em>
+				<div class="gegu_show_img1"></div>
+				<div class="gegu_show_img2" style="display: none;"></div>
+				<div class="gegu_show_img3" style="display: none;"></div>
+				<div class="shure_btn"><span class="gegu_wzhidao"></span></div>
+			</div>-->
+			<i class="chahao"></i>
+			<div class="top_titles"><span>个股对标<em>（2/4）</em></span></div>
+			<!--<div class="fl yanjiu_leixing">
+				<ul><li class="czzx_ditu" onclick="window.location.href=&quot;/dataAnalysis/companyQuotation.html&quot;"><i></i><a href="/dataAnalysis/companyQuotation.html">地图选股</a></li>
+					<li class="czzx_hy" onclick="window.location.href=&quot;/dataAnalysis/stockRankings.html&quot;"><i></i><a href="/dataAnalysis/stockRankings.html">行业选股</a></li>
+					<li class="caiwushuju" onclick="window.location.href=&quot;/contrast/comprehensive.html&quot;"><i></i><a href="/contrast/comprehensive.html">深度对比</a></li>
+				</ul>
+			</div>-->
+			<div class="fl gegu_zhib">
+				<ul class="duibi_zb_ui" id="duibi_zb-ul"> 
+				</ul>
+				<div class="cz_duibi"><span>对比</span></div>
+				<div id="duibi_zb-xg-box">
+					<div class="loadingBox"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>	
+					<p class="title-xg">相关企业</p>
+					<ul class="duibi_zb_ui no-close" id="duibi_zb-xg">
+						
+					</ul>
+				</div>
+				
+			</div>
+			<div class="fl gegu_searches" style="display: none;">
+				<div class="zixuan_xuank">
+					<input type="text" placeholder="搜索公司简称/代码，添加对比" id="SearchStockComparison" class="ui-autocomplete-input" autocomplete="off"><i class="search_zixuan_icon"></i>
+				</div>
+				<div class="yindao_gegu"><span></span></div>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<script src="../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+		
+
+		<script type="text/javascript" src="../saasBeta/js/select/Common.Tools.Select.js"></script>
+		<script type="text/javascript" src="../saasBeta/js/echarts.min.js"></script>
+		<script src="../saasBeta/js/kLineChart/echarts-all-3.js"></script>
+		<script src="../saasBeta/js/kLineChart/k-line-chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="../saasBeta/js/laydate/theme/default/laydate.css" />
+		<script src="../saasBeta/js/laydate/laydate.js" type="text/javascript"></script>
+		<script src="../saasBeta/js/index/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--创建模型弹框-->
+		
+		<script src="/saasBeta/js/index/createModel.js" type="text/javascript" charset="utf-8"></script>
+		<!--首页热搜检索-->
+		<script src="/saasBeta/js/reportAutocompleteContent.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+
+</html>

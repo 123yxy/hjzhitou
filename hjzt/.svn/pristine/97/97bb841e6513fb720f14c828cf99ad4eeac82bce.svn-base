@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>修改密码</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css">
+
+    <!-- <style>
+        span.error {
+            color: #f4363e;
+            /* right: 100px; */
+            /* position: absolute; */
+            top: 6px;
+            font-weight: 100;
+            margin-left: 10px;
+
+        }
+
+        .userMain-list input {
+            border: 1px solid #c8d1da;
+            border-radius: 5px;
+            color: #3d464d;
+            width: 340px;
+            height: 36px;
+            line-height: 36px;
+            padding-left: 14px;
+            box-sizing: border-box;
+        }
+
+        .userMain-list input:focus {
+            border-color: #1985e2;
+        }
+
+        .userChangePW-group li .icon-success {
+            margin-left: 0;
+        }
+
+        /*nieshi 20170907*/
+    </style> -->
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo">
+                    <img src="/saasBeta/yanbao/images/logo.png">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg3 col-md-3 col-sm-3">
+                <div class="user-layer userCenter-photo">
+                    <img id="headimg" width="160" height="160" src="images/userCenter-photo.jpg">
+                    <div class="userCenter-name"></div>
+                </div>
+                <div class="user-layer userMenu">
+                    <ul>
+                        <li>
+                            <a class="userCenter" href="userCenter.html">
+                                <em></em>基本资料</a>
+                        </li>
+                        <li>
+                            <a class="userFocus" href="userFocus.html">
+                                <em></em>关注领域</a>
+                        </li>
+                        <li>
+                            <a class="userAccount" href="userAccount.html">
+                                <em></em>社交账号</a>
+                        </li>
+                        <li class="active">
+                            <a class="userChangePW">
+                                <em></em>修改密码</a>
+                        </li>
+                        <li>
+                            <a class="lishiyanbao" href="historicalResearchReport.html">
+                                <em></em>历史研报</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg9 col-md-9 col-sm-9">
+                <div class="user-layer userData">
+                    <div class="user-title">
+                        <h2>修改密码</h2>
+                    </div>
+                    <div class="userChangePW-group">
+                        <style>
+                           span.error {
+                                color: #f4363e;
+                                /* right: 100px; */
+                                /* position: absolute; */
+                                top: 6px;
+                                font-weight: 100;
+                                margin-left: 10px;
+
+                            }
+
+                            .userMain-list input {
+                                border: 1px solid #c8d1da;
+                                border-radius: 5px;
+                                color: #3d464d;
+                                width: 340px;
+                                height: 36px;
+                                line-height: 36px;
+                                padding-left: 14px;
+                                box-sizing: border-box;
+                            }
+
+                            .userMain-list input:focus {
+                                border-color: #1985e2;
+                            }
+
+                            .userChangePW-group li .icon-success {
+                                margin-left: 0;
+                            }
+
+                            /*nieshi 20170907*/
+                        </style>
+                      
+                        <div class="userMain-list">
+                            <form id="pwForm">
+                                <ul>
+                                    <li>
+                                        <label>当前密码</label>
+                                        <input type="text" value="" id="password" name="password" onfocus="this.type='password'">
+                                        <!--<span class="icon-error">-->
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label>新密码</label>
+                                        <input type="password" value="" id="newpassword" name="newpassword">
+                                        <!--<span class="icon-success"></span>-->
+                                        <span></span>
+                                    </li>
+                                    <li>
+                                        <label>重复新密码</label>
+                                        <input type="password" value="" id="repassword" name="repassword">
+                                        <!-- <span class="tips-error">密码不一致</span> -->
+                                        <span></span>
+                                    </li>
+
+                                    <div class="login-tools checkbox-group">密码仅支持数字、字母、字符,长度6-12位</div>
+                                    <li>
+                                        <label></label>
+                                        <button type="button" id="save2" class="button-blue">保存</button>
+                                    </li>
+                                </ul>
+
+                            </form>
+                        </div>
+                        <script> 
+                            $(function () {
+
+
+                                // $(".userHead-logo").html(logourl());
+                                // $(".indexTop-user").html(sethead());
+                                // getuserinfo();
+                                // userinfo();
+                                var rgValidator = $("#pwForm").validate({
+                                    rules: {
+                                        password: {
+                                            required: true,
+                                            password: true,
+                                            rangelength: [6, 16]
+
+                                        },
+                                        newpassword: {
+                                            required: true,
+                                            password: true,
+                                            rangelength: [6, 16]
+
+                                        },
+                                        repassword: {
+                                            required: true,
+                                            password: true,
+                                            rangelength: [6, 12],
+                                            equalTo: "#newpassword"
+                                        }
+                                    },
+                                    messages: {
+                                        password: {
+                                            required: "请填写原密码",
+                                            password: "密码格式不正确",
+                                            maxlength: "密码长度6-12位"
+                                            // remote: "您的手机号还没有注册"
+                                        },
+                                        newpassword: {
+                                            required: "请填写新密码",
+                                            password: "密码格式不正确",
+                                            rangelength: "密码长度6-12位"
+                                            // remote: "新密码不能与原密码相同"
+                                        },
+                                        repassword: {
+                                            required: "请填写确认密码",
+                                            password: "密码格式不正确",
+                                            rangelength: "密码长度6-12位",
+                                            equalTo: "俩次密码不一致"
+                                        }
+                                    },
+                                    errorElement: "span", //可以用其他标签，记住把样式也对应修改
+                                    success: function (label) {
+                                        //label指向上面那个错误提示信息标签em
+                                        label.text(" ")        //清空错误提示消息
+                                            .addClass("icon-success");  //加上自定义的success类
+                                    },
+                                    showErrors: function (errorMap, errorList) {
+                                        // if (!errorList.length)
+                                        //     return;
+                                        $("#password-error").removeClass("icon-success");
+                                        $("#newpassword-error").removeClass("icon-success");
+                                        $("#repassword-error").removeClass("icon-success");
+
+
+                                        this.defaultShowErrors();
+                                    }
+
+                                });
+                                $("#save2").on("click", function () {
+                                    if ($("#pwForm").valid())
+                                        save2();
+                                })
+                                function save2() {
+                                    UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.updatePwd, {
+                                        newPwd: md5($("#newpassword").val()),
+                                        oldPwd: md5($("#password").val())
+                                    }, true, function (_data) {
+                                        if (_data.retCode === "0000") {
+                                            // $("#opwdcheck").removeClass("none");
+                                            // $("#opassword").addClass("mui-icon-checkmarkempty");
+                                            // $$.toast('密码修改成功', { duration: 'long', type: 'div' })
+                                            setTimeout(function () {
+                                                localStorage.clear();
+                                                location.href = "login.html";
+                                                // location.href = "userCenter.html"
+                                            }, 1000);
+                                        }
+                                        else {
+                                            // $$.toast('旧密码错误', { duration: 'long', type: 'div' })
+                                            //showAlert();
+                                            $.zmAlert(_data.retMsg);
+                                        }
+
+                                    })
+                                }
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <!-- <script>
+        $(function () {
+
+
+            // $(".userHead-logo").html(logourl());
+            // $(".indexTop-user").html(sethead());
+            // getuserinfo();
+            // userinfo();
+            var rgValidator = $("#pwForm").validate({
+                rules: {
+                    password: {
+                        required: true,
+                        password: true,
+                        rangelength: [6, 16]
+
+                    },
+                    newpassword: {
+                        required: true,
+                        password: true,
+                        rangelength: [6, 16]
+                        // remote: {
+                        //     url: UTIL.CONFIG.isYPassword, //后台处理程序
+                        //     type: "post", //数据发送方式
+                        //     dataType: "json", //接受数据格式   
+                        //     data: {//要传递的数据
+                        //         new_password: function () {
+                        //             return md5($("#newpassword").val());
+                        //         }
+                        //     },
+                        //     //nieshi 20170907 接口返回Json格式,如接口返回true/false,无需下面代码
+                        //     dataType: 'json',
+
+                        //     dataFilter: function (data, type) {
+
+                        //         // console.log(data);
+                        //         var data = JSON.parse(data);
+                        //         result = data.retData;//这个result在ajax外定义了
+                        //         return result ? false : true;
+                        //         // console.log("result:" + result);
+
+                        //     }
+                        // }
+                    },
+                    repassword: {
+                        required: true,
+                        password: true,
+                        rangelength: [6, 12],
+                        equalTo: "#newpassword"
+                    }
+                },
+                messages: {
+                    password: {
+                        required: "请填写原密码",
+                        password: "密码格式不正确",
+                        maxlength: "密码长度6-12位"
+                        // remote: "您的手机号还没有注册"
+                    },
+                    newpassword: {
+                        required: "请填写新密码",
+                        password: "密码格式不正确",
+                        rangelength: "密码长度6-12位"
+                        // remote: "新密码不能与原密码相同"
+                    },
+                    repassword: {
+                        required: "请填写确认密码",
+                        password: "密码格式不正确",
+                        rangelength: "密码长度6-12位",
+                        equalTo: "俩次密码不一致"
+                    }
+                },
+                errorElement: "span", //可以用其他标签，记住把样式也对应修改
+                success: function (label) {
+                    //label指向上面那个错误提示信息标签em
+                    label.text(" ")        //清空错误提示消息
+                        .addClass("icon-success");  //加上自定义的success类
+                },
+                showErrors: function (errorMap, errorList) {
+                    // if (!errorList.length)
+                    //     return;
+                    $("#password-error").removeClass("icon-success");
+                    $("#newpassword-error").removeClass("icon-success");
+                    $("#repassword-error").removeClass("icon-success");
+
+
+                    this.defaultShowErrors();
+                }
+
+            });
+            $("#save").on("click", function () {
+                if ($("#pwForm").valid())
+                    save();
+            })
+            function save() {
+                UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.updatePwd, {
+                    newPwd: md5($("#newpassword").val()),
+                    oldPwd: md5($("#password").val())
+                }, true, function (_data) {
+                    if (_data.retCode === "0000") {
+                        // $("#opwdcheck").removeClass("none");
+                        // $("#opassword").addClass("mui-icon-checkmarkempty");
+                        // $$.toast('密码修改成功', { duration: 'long', type: 'div' })
+                        setTimeout(function () {
+                            localStorage.clear();
+                            location.href = "login.html";
+                            // location.href = "userCenter.html"
+                        }, 1000);
+                    }
+                    else {
+                        // $$.toast('旧密码错误', { duration: 'long', type: 'div' })
+                        //showAlert();
+                        $.zmAlert(_data.retMsg);
+                    }
+
+                })
+            }
+        })
+    </script> -->
+</body>
+
+</html>

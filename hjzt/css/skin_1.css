@@ -1,0 +1,210 @@
+/*黑色*/
+.left_top_image {background: #272731;}
+.left_list ul li.hover {background-color: #5bc0de;}
+.left_list ul li:hover {background-color: #5bc0de;color: #fff;}
+.footer {background: #8d8f90;}
+.left_list ul li.left_index {
+	background: url(../images/icon/left_green.png) 6px 0px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_index.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px 0px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+}
+
+.left_list ul li.left_index:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px 0px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_qytp {
+	background: url(../images/icon/left_green.png) 6px -45px no-repeat;
+	background-size: 40px 500px;
+	
+}
+.left_list ul li.left_qytp.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -45px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_qytp:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -45px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_yqgz {
+	background: url(../images/icon/left_green.png) 6px -90px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_yqgz.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -90px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_yqgz:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -90px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_gpdb {
+	background: url(../images/icon/left_green.png) 6px -135px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_gpdb.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -135px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_gpdb:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -135px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_gpph {
+	background: url(../images/icon/left_green.png) 6px -180px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_gpph.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -180px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_gpph:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -180px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_qydt {
+	background: url(../images/icon/left_green.png) 6px -225px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_qydt.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -225px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_qydt:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -225px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_qybg {
+	background: url(../images/icon/left_green.png) 6px -270px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_qybg.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -270px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_qybg:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -270px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_dwxg {
+	background: url(../images/icon/left_green.png) 6px -315px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_dwxg.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -315px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_dwxg:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -315px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_gjfx {
+	background: url(../images/icon/left_green.png) 6px -360px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_gjfx.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -360px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_gjfx:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -360px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_sjk {
+	background: url(../images/icon/left_green.png) 6px -405px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_sjk.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -405px no-repeat;
+	background-size: 40px 500px;
+   background-color: #5bc0de;
+
+}
+.left_list ul li.left_sjk:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -405px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_xmdt {
+	background: url(../images/icon/left_green.png) 6px -450px no-repeat;
+	background-size: 40px 500px;
+}
+.left_list ul li.left_xmdt.hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -450px no-repeat;
+	background-size: 40px 500px;
+    background-color: #5bc0de;
+
+}
+.left_list ul li.left_xmdt:hover {
+	background: url(../images/icon/left_blue_hover.png) 6px -450px no-repeat;
+	background-size: 40px 500px;
+	background-color: #5bc0de;
+}
+.left_list ul li.left_index,.left_list ul li.left_index.hover,.left_list ul li.left_index:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_index,.left_nav.close .left_list ul li.left_index.hover,.left_nav.close .left_list ul li.left_index:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_qytp,.left_list ul li.left_qytp.hover,.left_list ul li.left_qytp:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_qytp,.left_nav.close .left_list ul li.left_qytp.hover,.left_nav.close .left_list ul li.left_qytp:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_yqgz,.left_list ul li.left_yqgz.hover,.left_list ul li.left_yqgz:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_yqgz,.left_nav.close .left_list ul li.left_yqgz.hover,.left_nav.close .left_list ul li.left_yqgz:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_gpdb,.left_list ul li.left_gpdb.hover,.left_list ul li.left_gpdb:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_gpdb,.left_nav.close .left_list ul li.left_gpdb.hover,.left_nav.close .left_list ul li.left_gpdb:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_gpph,.left_list ul li.left_gpph.hover,.left_list ul li.left_gpph:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_gpph,.left_nav.close .left_list ul li.left_gpph.hover,.left_nav.close .left_list ul li.left_gpph:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_qydt,.left_list ul li.left_qydt.hover,.left_list ul li.left_qydt:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_qydt,.left_nav.close .left_list ul li.left_qydt.hover,.left_nav.close .left_list ul li.left_qydt:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_dwxg,.left_list ul li.left_dwxg.hover,.left_list ul li.left_dwxg:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_dwxg,.left_nav.close .left_list ul li.left_dwxg.hover,.left_nav.close .left_list ul li.left_dwxg:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_gjfx,.left_list ul li.left_gjfx.hover,.left_list ul li.left_gjfx:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_gjfx,.left_nav.close .left_list ul li.left_gjfx.hover,.left_nav.close .left_list ul li.left_gjfx:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_sjk,.left_list ul li.left_sjk.hover,.left_list ul li.left_sjk:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_sjk,.left_nav.close .left_list ul li.left_sjk.hover,.left_nav.close .left_list ul li.left_sjk:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_qybg,.left_list ul li.left_qybg.hover,.left_list ul li.left_qybg:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_qybg,.left_nav.close .left_list ul li.left_qybg.hover,.left_nav.close .left_list ul li.left_qybg:hover{ background-position-x: 6px;}
+
+.left_list ul li.left_xmdt,.left_list ul li.left_xmdt.hover,.left_list ul li.left_xmdt:hover{ background-position-x: 18px;}
+.left_nav.close .left_list ul li.left_xmdt,.left_nav.close .left_list ul li.left_xmdt.hover,.left_nav.close .left_list ul li.left_xmdt:hover{ background-position-x: 6px;}
+
+ @media only screen and (min-width: 1601px) and (max-width: 2000px) {
+.left_nav {background: #32323a;}
+}
+ @media only screen and (min-width: 100px) and (max-width: 1600px) {
+.left_nav {background: #32323a;}
+}

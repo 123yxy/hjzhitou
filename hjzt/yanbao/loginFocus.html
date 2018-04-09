@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>关注领域</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+    </head>
+    <body>
+        <div class="userHead">
+            <div class="cotainer">
+                <div class="row indexTop-main">
+                    <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo"><img src="/saasBeta/yanbao/images/logo.png"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cotainer">
+            <div class="row userMain">
+                <div class="col-lg12 col-md-12 col-sm-12 user-layer loginFocus-group">
+                    <div class="loginFocus-title"><span>关注领域</span></div>
+                    <ul class="userFocus-checkbox">
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                        <li><input type="checkbox"><label>文化娱乐</label></li>
+                    </ul>
+                    <div class="loginFocus-button-group">
+                        <div class="loginFocus-tips"><i>*</i> 至少关注3个领域</div>
+                        <div class="loginFocus-button"><button class="button-blue">确定</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+                </div>
+            </div>
+        </div>
+        <script src="/saasBeta/yanbao/js/jquery.min.js"></script>
+        <script src="/saasBeta/yanbao/js/common/commonJS.js"></script>
+        <script>
+            $(".indexTop-user").html(sethead());
+            $(".userHead-logo").html(logourl());
+            getuserinfo();
+            logFoot();
+        </script>
+    </body>
+</html>

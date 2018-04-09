@@ -1,0 +1,22 @@
+{
+    "retCode": "0000",
+    "retMsg": "成功",
+    "retData": {
+        "f1ZCZJ_showName": "总资产",
+        "portTime": [
+            "2015-12-31",
+            "2016-12-31"
+        ],
+        "ZongZiChanZengZhangLv_showName": "总资产同比增长率",
+        "ZongZiChanZengZhangLv_unit": "%",
+        "f1ZCZJ_unit": "万元",
+        "f1ZCZJ": [
+            "3479.26",
+            "3634.15"
+        ],
+        "ZongZiChanZengZhangLv": [
+            "19.62",
+            "4.45"
+        ]
+    }
+}

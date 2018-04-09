@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section04.css" />
+<style>
+	.container { padding:0; }
+</style>
+		<div class="yuce-fx">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>四、盈利预测</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>4.2盈利风险提示</h2>
+									<div>
+										<p id="yc" >--</p>
+									</div>
+									<div class="yuce-content contentnes" id="ycfxTips" >
+									</div>
+								</div>
+							</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+			</div>
+		</div>
+	<!-- <script src="/saasBeta/yanbao/js/bus/section04.js"></script> -->
+	<script type="text/javascript">
+		//判断是否登录
+		UTIL.nologin('ycfxts');
+		findRiskTipsByCode();
+		$(function(){
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+		    $(".contents").height(windowHeight - 290)
+		})
+	</script>

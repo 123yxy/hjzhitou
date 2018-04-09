@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究--编辑报告</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/edit.css" />
+
+		
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="tub_tc" style="display: none;"></div>
+		<form id="uploadWordForm" enctype="multipart/form-data" style="display: none" action="/betaInvest/report/uploadWordTohtml.do" method="POST">
+			<input name="fileName" type="text" id="fileName"/>
+			<input type="file" name="file" id="wordFile" onchange="addWordFile()">
+		</form>
+		<!--主体 star-->
+		<div class="right_main news_ereport">
+			<div class="edit_nav news_editnav ">
+				<a href="/myResearch/researchReport.html" target="_blank">我的研究</a> >
+				<a href="javascript:;">研究报告</a>
+			</div>
+			<!--main  star-->
+			<div class="main p_top0 nes_edit_main">
+				<div class="edit_title">
+					 <b class="hongxing">*</b> 
+					<input type="text" class="baogao_zhuti" id="title" placeholder="研究主题（最多50字）" maxlength="50"/>
+					<!-- <a href="javascript:;" class="daoru" id="importWord">导入word解析</a>
+					<a href="javascript:;" id="addReport">保存</a> -->
+				</div>
+				<div class="editArticles">
+					<div class="top">
+						<div class="zhongyaodu">
+							<span><i>*</i>重要程度</span>
+							<div class="xingxing fl">
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="pingji">
+							<span>评级</span>
+							<div class="fl chiyou">
+							<p id="holdStatus">请选择评级</p>
+							<ul class="chiyou_list" style="display: none;">
+								<li>
+									<a href="javascript:;">请选择评级</a>
+								</li>
+								<li>
+									<a href="javascript:;">买入</a>
+								</li>
+								<li>
+									<a href="javascript:;">增持</a>
+								</li>
+								<li>
+									<a href="javascript:;">维持</a>
+								</li>
+								<li>
+									<a href="javascript:;">减持</a>
+								</li>
+								<li>
+									<a href="javascript:;">卖出</a>
+								</li>
+							</ul>
+						</div>
+						<div class="clr"></div>
+						</div>
+						<div class="news_yj_object">
+							<span class="obj_tit">研究对象</span>
+							<div class="news_object_list fl">
+								<!-- <span> 
+									<em>
+										天阳科技
+									</em>
+									<i></i>
+									<b></b>
+									<div class="clr"></div>
+								</span>
+								<span> 
+									<em>
+										天阳科技
+									</em>
+									<i></i>
+									<b></b>
+									<div class="clr"></div>
+								</span>
+								<span> 
+									<em>
+										天阳科技
+									</em>
+									<i></i>
+									<b></b>
+									<div class="clr"></div>
+								</span> -->
+							</div>
+							<div class="new_yjObject_btn fl">
+								<a href="javascript:;" id="yjdxAdd">添加股票</a>
+								<em>(最多可添3个)</em>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="news_yjdx_bbtn">
+							<!--插入研究图表-->
+						
+						<div class="daoru_word fr">
+							<a href="javascript:;" class="daoru" id="importWord">导入word解析</a>
+						</div>
+						<div class="fr char_yjtb">
+							<span class="chart_span">插入研究图表</span>
+							<div class="charu_lexing" style="display: none;">
+								<div class="top">
+									<i class="shanchu_icon"></i>
+									<span>选择研究图表<em>（每次最多选择4个）</em></span>
+									<div class="fr tubiao_fenlei">
+										<p data-value="">全部分类</p>
+										<ul class="all_types" style="display: none;">
+											<li data-value="">
+												<a href="javascript:;">全部分类</a>
+											</li>
+											<!--<li>
+											 	<a href="javascript:;">默认分类</a>
+											</li>
+											<li>
+												<a href="javascript:;">分类名称1</a>
+											</li>
+											<li>
+												<a href="javascript:;">分类名称2</a>
+											</li> -->
+										</ul>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fanshi">
+									<!-- <a href="javascript:;">股票与汇率关<i></i></a>
+									<a href="javascript:;">股票债券2017<i></i></a>
+									<a href="javascript:;">股票与汇率关<i></i></a>
+									<a href="javascript:;">股票与汇率关<i></i></a> 
+									<div class="clr"></div>-->
+								</div>
+								<ul class="all_tubiao">
+									<!-- <li class="on">
+										<div class="yanjiu_tubiao">
+											<span>
+												<img src="/saasBeta/images/edit_tb.png" alt="" />
+											</span>
+											<p>股票与汇率关系图</p>
+										</div>
+										<i></i>
+									</li>
+									<li>
+										<div class="yanjiu_tubiao">
+											<span>
+												<img src="/saasBeta/images/edit_tb.png" alt="" />
+											</span>
+											<p>股票与汇率关系图</p>
+										</div>
+										<i></i>
+									</li>
+									<li>
+										<div class="yanjiu_tubiao">
+											<span>
+												<img src="/saasBeta/images/edit_tb.png" alt="" />
+											</span>
+											<p>股票与汇率关系图</p>
+										</div>
+										<i></i>
+									</li>
+									<li>
+										<div class="yanjiu_tubiao">
+											<span>
+												<img src="/saasBeta/images/edit_tb.png" alt="" />
+											</span>
+											<p>股票与汇率关系图</p>
+										</div>
+										<i></i>
+									</li>
+									<li>
+										<div class="yanjiu_tubiao">
+											<span>
+												<img src="/saasBeta/images/edit_tb.png" alt="" />
+											</span>
+											<p>股票与汇率关系图</p>
+										</div>
+										<i></i>
+									</li>
+									<div class="clr"></div> -->
+								</ul>
+								<div class="zwu_shuju" style="display: none;">
+									<div class="wushuj_tub">
+										<span>
+											<img src="/saasBeta/images/zwsj.png" alt="">
+										</span>
+										<p class="bianji_zwsj">暂无数据</p>
+									</div>
+								</div>
+								<!--<div class="btn_more">加载更多</div>-->
+								<div class="tubiao_lx">
+									<span>确定</span>
+									<b>取消</b>
+								</div>
+							</div>
+						</div>
+						<div class="clr"></div>
+						</div>
+						<div class="fl yanjiu_duixiang">
+							<!--<span>研究对象:<em id="researchStockNum">（0）</em></span>-->
+							<div class="yjdx_list" style="display: none;">
+								<div class="duixiang_top">
+									<span>添加研究对象</span>
+									<i></i>
+								</div>
+								<div class="sousuo">
+									<ul class="yix_gs" id="researchStock">
+										<!-- <li>
+											<a href="javascript:;">天阳科技（835713）</a>
+											<em style="display:none"></em>
+											<div class="clr"></div>
+										</li> -->
+									</ul>
+									<div class="yjdx_ss">
+										<em>研究对象</em>
+										<input type="text" placeholder="请输入公司简称/股票代码" id="searchCompanys"/>
+										<!--<span class="tianjia">添加</span>-->
+										<div class="clr"></div>
+									</div>
+									<div class="yjdx_shizhi">
+										<em>填写市值</em>
+										<div class="yjdx_select">
+											<div class="fl data-checkbox on">
+											<input type="checkbox">
+											<label class="checkbox"></label>
+											</div>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="yjsz_input m_00">
+										<em>当前市值</em>
+										<div class="input_box">
+											<input type="text" name="" id="thisValue" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10"/>
+											<i>百万</i>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="yjsz_input">
+										<em>期望市值</em>
+										<div class="input_box">
+											<input type="text" name="" id="expectValue" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10"/>
+											<i>百万</i>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="yjszline"></div>
+									<div class="yjsz_bbttnn">
+										<a href="javascript:;" class="addyjdx">添加</a>
+										<a href="javascript:;" class="quxiaoyjdx">取消</a>
+									</div>
+									<!--<p>最多可添加3个</p>-->
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						
+					</div>
+					<div class="edit_zt_dbox">
+						<script id="editor" type="text/plain" style="width:100%;height:500px;"></script>
+					</div>
+					<div class="edit_ttbtn">
+						<a href="javascript:;" id="addReport">保存</a>
+						<a href="javascript:;" id="quxiaoAddReport" onclick="javascript:window.location.href='/myResearch/researchReport.html'">取消</a>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+
+				</div>
+			</div>
+
+		</div>
+		<!--<div class="loadingBox"></div>-->
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/jquery.form.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<!--<script src="/saasBeta/newjs/left.js"></script>-->
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<!-- 自动补全 -->
+
+		<!-- 百度富文本 -->
+		<script type="text/javascript" charset="utf-8" src="/saasBeta/myResearch/UEditor/ueditor.config.js"></script>
+		<script type="text/javascript" charset="utf-8" src="/saasBeta/myResearch/UEditor/ueditor.all.min.js">
+		</script>
+		<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+		<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+		<script type="text/javascript" charset="utf-8" src="/saasBeta/myResearch/UEditor/lang/zh-cn/zh-cn.js"></script>
+		<script src="/saasBeta/myResearch/UEditor/editArticles.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+
+</html>

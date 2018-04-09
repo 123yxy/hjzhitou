@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>公司业务分析</title>
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+	</head>
+	<body>
+		<div class="company-business">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>二.公司业务</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>2.1主要产品和服务及主营业务收入</h2>
+									<div class="yewu-contents">
+										<h3>2.1.1主要产品及服务</h3>
+										<p>财险网销车险合作平台、社保与医保自主服务微平台、互联网保险微门店平台、保险第三方管理公司业务管理系统、保险+智能穿戴应用平台、基于云平台的人寿保险综合管理系统、基于跨领域结构的保险行业解耦化应用系统、公共卫生数据交换与分析平台、移动互联网电子商务系统等六十多项研发项目。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.1.2主营业务收入</h3>
+										<div class="caiwu-table">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>项目</th>
+														<th>金额(万元)</th>
+														<th>收入占比(%)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>系统集成及服务收入</td>
+														<td class="shuzi">5527</td>
+														<td class="shuzi">82%</td>
+													</tr>
+													<tr>
+														<td>系统集成及服务收入</td>
+														<td class="shuzi">5527</td>
+														<td class="shuzi">82%</td>
+													</tr>
+													<tr>
+														<td>系统集成及服务收入</td>
+														<td class="shuzi">5527</td>
+														<td class="shuzi">82%</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									
+								</div>
+								<div class="section">
+									<h2>2.2商业模式寄回来规划</h2>
+									<div class="yewu-contents">
+										<h3>2.2.1商业模式</h3>
+										<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										<p>公司通过向客户提供软件定制化产品及技术支持服务来实现收入。中科软的商业模式是以核心业务系统为基础，在为客户提供持续化软件服务的同时，不断研发新技术、新产品，为客户提供各类应用集成服务。并借助“互联网+”战略，由内而外辐射核心行业外围，通过“外端”集成，与互联网企业建立良好合作关系。截至报告披露日，公司的商业模式无重大变化。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.2.2未来规划</h3>
+										<ul>
+											<li><span>1、行业核心业务系统综合技术发展战略</span></li>
+											<li><span>2、行业核心业务系统综合技术发展战略</span></li>
+											<li><span>3、行业核心业务系统综合技术发展战略</span></li>
+											<li><span>4、行业核心业务系统综合技术发展战略</span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="section">
+									<h2>2.3上下游关系</h2>
+									<div class="guanxi-tab">
+										<div class="tab-list">
+											<!--span含有on是选中的状态-->
+											<span class="on">图表</span>
+											<span>列表</span>
+										</div>
+										<!--图表的div-->
+										<div class="gx-tb">
+											
+										</div>
+										<!--列表的div-->
+										<div class="gx-table">
+											<div class="caiwu-table">
+											<h5>主要供应商</h5>
+											<table class="table">
+												<thead>
+													<tr>
+														<th>供应商名称</th>
+														<th>采购金额(万元)</th>
+														<th>年度采购占比</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>北京中金财产公司</td>
+														<td class="shuzi">8522</td>
+														<td class="shuzi">32%</td>
+													</tr>
+													<tr>
+														<td>北京中金财产公司</td>
+														<td class="shuzi">8522</td>
+														<td class="shuzi">32%</td>
+													</tr>
+												</tbody>
+											</table>
+											<h5>主要供应商</h5>
+											<table class="table">
+												<thead>
+													<tr>
+														<th>供应商名称</th>
+														<th>销售金额(万元)</th>
+														<th>年度销售占比</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>北京中金财产公司</td>
+														<td class="shuzi">8522</td>
+														<td class="shuzi">32%</td>
+													</tr>
+													<tr>
+														<td>北京中金财产公司</td>
+														<td class="shuzi">8522</td>
+														<td class="shuzi">32%</td>
+													</tr>
+												</tbody>
+											</table>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<div class="section">
+									<h2>2.4所处行业分析</h2>
+									<div class="yewu-contents">
+										<h3>2.4.1行业情况</h3>
+										<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.4.2影响行业的因素</h3>
+										<div class="competion">
+											<h6>1.有利因素</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+										<div class="competion">
+											<h6>2.不利因素</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+									</div>	
+									<div class="yewu-contents">
+										<h3>2.4.3行业政策和事件</h3>
+										<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.4.4同行业竞争</h3>
+										<div class="competion">
+											<h6>1.优势</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+										<div class="competion">
+											<h6>2.劣势</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+										<div class="competion">
+											<h6>3.主要竞争对手</h6>
+											<div class="caiwu-table">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>被投资企业名称</th>
+														<th>被投资法人</th>
+														<th>注册资本(万元)</th>
+														<th>投资数额(万元)</th>
+														<th>投资占比(%)</th>
+														<th>注册时间</th>
+														<th>状态</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td class="shuzi">2017-10-10</td>
+														<td>续存</td>
+													</tr>
+													<tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td class="shuzi">2017-10-10</td>
+														<td>续存</td>
+													</tr>
+													<tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td class="shuzi">2017-10-10</td>
+														<td>续存</td>
+													</tr>
+												</tbody>
+											</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</body>
+	<script src="/saasBeta/yanbao/js/jquery.min.js"></script>
+	<script src="/saasBeta/yanbao/js/echarts-all-3.js"></script>
+	<script src="/saasBeta/yanbao/js/section02.js"></script>
+</html>

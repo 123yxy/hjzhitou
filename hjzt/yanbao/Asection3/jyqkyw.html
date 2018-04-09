@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+
+<style type="text/css">
+	.container {
+		padding: 0;
+	}
+</style>
+<div class="company-business">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>三、公司业务分析</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section jyqkyw">
+						<h2>3.2经营情况</h2>
+						<div class="yewu-contents">
+							<h3 id="businessIncomeShowName">3.2.1营业收入及同比增长率</h3>
+							<div class="jyqk-tb" id="businessIncome"></div>
+						</div>
+						<div class="yewu-contents">
+							<h3 id="totalProfitShowName">3.2.2利润总额及同比增长率</h3>
+							<div class="jyqk-tb" id="totalProfit"></div>
+						</div>
+						<div class="yewu-contents">
+							<h3 id="netProfitShowName">3.2.3净利润及同比增长率</h3>
+							<div class="jyqk-tb" id="netProfit"></div>
+						</div>
+						<div class="yewu-contents">
+							<h3 id="totalAssetsShowName">3.2.4总资产及同比增长率</h3>
+							<div class="jyqk-tb" id="totalAssets"></div>
+						</div>
+						<div class="yewu-contents">
+							<h3>3.2.5销售毛利率与销售净利率变动情况</h3>
+							<div class="jyqk-tb" id="interestRateChange"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+
+<script>
+	// var busine;
+	//判断是否登录，没登录直接跳到登录页面
+	UTIL.Anologin('jyqkyw');
+	// $(function () {
+	var windowHeight = $(window).height()
+	$(".yuce-fx .container").height(windowHeight - 195);
+	$(".contents").height(windowHeight - 290);
+
+
+	setTimeout(function () {
+		var busine = AbusinessIncome();
+		var findtotalp = AfindTotalProfit();
+		var findnet = AfindNetProfit();
+		var findtotala = AfindTotalAssets();
+		var findinter = AfindInterestRateChange();
+
+//
+		if (busine==false && findtotalp==false && findnet==false && findtotala==false && findinter==false) {
+			// console.log(11111)
+			var div = $(UTIL.oplugins._nodata());
+			div.addClass("noDatas-s1");
+			$(".yewu-contents").remove();
+			// var h2 = $(".jyqkyw").find("h2");
+			$(".jyqkyw").html(div);
+			// div.insertBefore(h2);
+		}
+	}, 500);
+
+
+	// })
+</script>

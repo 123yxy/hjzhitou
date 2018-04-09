@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-关系图</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/saasBeta/newjs/aaa/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css" />
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+		<!-- bootstrap -->
+
+		<link rel="stylesheet" href="/saasBeta/newjs/aaa/qunee.css">
+
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+		<!-- 自动补全样式 -->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/d3.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script src="/saasBeta/newjs/qunee-min-checked.js"></script>
+		<!--<script src="/saasBeta/newjs/guanxitu.js"></script>-->
+	</head>
+
+	<body>
+		<!--主体 star-->
+		<div class="right_main new_r_main">
+			
+			<!--main  star-->
+					<div class="new_boar_main new_styles fl">
+						<div class="new_nav_postion">
+							<a href="/security/myPreferredStock.html">证券管理</a> >
+							<a id="stockNameShow" href="javascript:;">--</a>
+						</div>
+						<div class="boar_l nav_left new_boar_li">
+							<ul>
+								<!--<li><span></span><a href="#">首页概览</a></li>
+					<li><span></span><a href="#">企业资料</a></li>
+					<li><span></span><a href="#">董事会高管</a></li>
+					<li class="hover"><span></span><a href="#">公司公告</a></li>
+					<li><span></span><a href="#">股本股东</a></li>
+					<li><span></span><a href="#">财务数据</a></li>
+					<li><span></span><a href="#">行业分析</a></li>
+					<li><span></span><a href="#">发行分配</a></li>
+					<!-- <li><span></span><a href="#">舆情监测</a></li> -->
+								<div class="clr"></div>
+							</ul>
+						</div>
+					</div>	
+						<div class="boar_r new_r_styles fl">
+							<div class="main_r_center bfff border_bottom">
+								<div class="yjy_title newm_10">
+									<!-- <i class="xinwen_new"></i> --><span class="fl" id="showSockNameGuanxi"></span>
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+								<div class="gqgx_ddbox">
+									<div class="gqgx_tab">
+										<ul>
+											<li class="on">股权关系</li>
+											<li>上下游关系</li>
+										</ul>
+									</div>
+									<div class="clr"></div>
+									<!-- d3画图 -->
+									<!-- <div class="gqgx_3d" id="gqgx_echars">
+
+				</div>
+				<div class="gqgx_3d" id="sxy_echars" style="display: none;">
+
+				</div> -->
+
+									<!-- bootStrap画图 -->
+									<div id="graph_panel" class="q-panel">
+										<div role="toolbar" class="q-toolbar">
+											<div>
+												<div id="toolbar">
+													<span style="cursor: pointer;display: none;" id="youbiangengduoshuju">加载更多</span>
+													<em style="cursor: pointer;">&nbsp;</em>
+													<i style="cursor: pointer;">&nbsp;</i>
+													<a href="javascript:void(0);" style="cursor: pointer;">全屏</a>
+												</div>
+												<div class="tuli">
+													<label class="zygys"><i></i>十大股东</label>
+													<label class="gongsi"><i></i>公司</label>
+													<label class="zykh"><i></i>参控股公司</label>
+												</div>
+											</div>
+										</div>
+										<div class="q-content">
+											<div id="canvas" />
+
+										</div>
+									</div>
+									<div class="clr"></div>
+
+								</div>
+								<div class="clr"></div>
+
+							</div>
+							<div class="clr"></div>
+
+						</div>
+
+						<div class="clr"></div>
+			
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/businessDetails/GPleft.js"></script>
+		<script src="/saasBeta/js/businessDetails/companyHome.js"></script>
+		<!-- bootstrap -->
+		<!--插件公共资源-->
+		<!-- <script src="jquery-1.11.1.min.js"></script> -->
+		<script src="/saasBeta/newjs/aaa/bootstrap.js"></script>
+		<script src="/saasBeta/newjs/aaa/qunee-min-checked.js"></script>
+		<script src="/saasBeta/newjs/aaa/common.js"></script>
+		<!-- <script src="/saasBeta/newjs/aaa/graph.js"></script> -->
+		<!-- <script src="/saasBeta/newjs/aaa/demo2.js"></script> -->
+		<!--当前页JS-->
+		<script src="/saasBeta/newjs/aaa/main.js"></script>
+		<script src="/saasBeta/newjs/aaa/analytics.js"></script>
+
+	</body>
+
+</html>

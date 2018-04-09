@@ -1,0 +1,81 @@
+*{
+	margin:0;padding:0;font-weight: normal;
+}
+/*垂直居中*/
+.verticalAlign{ 
+	vertical-align:middle; display:inline-block; height:100%; margin-left:-1px;
+}
+
+.upConfirm .bc_layer{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.6; z-index: 999;
+}
+.upConfirm .popBox{
+	position: fixed; left: 50%; top: 25%; background-color: #ffffff; z-index: 2147000001; width: 524px; height: 276px; 
+	margin-left: -262px; border-radius: 5px; font-weight: bold; color: #535e66;/*padding:0 33px;*/
+}
+.upConfirm .popBox .ttBox{
+	height: 55px; line-height: 55px;border-bottom: solid 1px #eef0f1;margin:0 5%;margin-bottom: 5px;
+}
+.upConfirm .popBox .ttBox .tt{
+	font-size: 16px; display: block; float: left; height: 55px; line-height:55px;position: relative;color:#333333;font-weight: bold;
+}
+.upConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-20%;top:-40%;
+}
+.upConfirm .popBox .txtBox{
+	height: 208px; overflow: hidden;margin:0 33px;padding-top:10px;
+}
+.upConfirm .popBox .txtBox p.txtBoxtt{
+	color:#a0a0a0;font-size:14px;height:14px;line-height:14px;margin-left:60px;/*margin-bottom: 35px;*/
+}
+.upConfirm .popBox .txtBox .upload{
+	display: block;height:32px;margin-top:9px;
+}
+.upConfirm .popBox .txtBox .upload .xing{
+	float: left;color:#f3343c;margin-top:3px;
+}
+.upConfirm .popBox .txtBox .upload .file{
+	float:left;color:#222222;margin-left:5px;line-height: 32px;
+}
+.upConfirm .popBox .txtBox .upload .file_span{
+	width:395px;height:30px;border:1px solid #cccccc;float: right;display: block;background: #f9f9f9;
+}
+.file_show{
+	float: left;height:30px;line-height: 30px;margin-left:10px;
+}
+.file_btn{
+	float: right;margin-right:13px;
+}
+.file_a{
+	float: right;color:#1985e2;text-decoration: underline;margin-right:13px;cursor:pointer;line-height:30px;
+}
+
+
+
+.upConfirm .popBox .txtBox .tit{
+	display: block;height:32px;margin-top:20px;
+}
+.upConfirm .popBox .txtBox .tit .tit_xing{
+	float: left;color:#f3343c;margin-top:3px;
+}
+.upConfirm .popBox .txtBox .tit .tit_text{
+	float:left;color:#222222;margin-left:5px;line-height: 32px;
+}
+.upConfirm .popBox .txtBox .tit .tit_ipt{
+	width:385px;height:30px;padding-left:10px;color:#9e9e9e;border:1px solid #cccccc;float: right;display: block;background: #f9f9f9;
+}
+
+.upConfirm .popBox .txtBox .btnArea{
+	height:32px;margin-top:30px;padding-left:192px;
+}
+
+.upConfirm .popBox .txtBox .sgBtn{
+	display: block; cursor: pointer; float: left; width: 100px; height: 32px; font-size:14px;line-height: 32px; text-align: center; color: #FFFFFF;
+	 border-radius: 5px;margin-left:0;margin-top: 0;
+}
+.upConfirm .popBox .txtBox .sgBtn.ok{
+	background-color: #1985e2; color: #FFFFFF;
+}
+.upConfirm .popBox .txtBox .sgBtn.cancel{
+	background-color: #fff; color: #1985e2;border:1px solid #1985e2;margin-left: 40px;height:30px;line-height: 30px;
+}

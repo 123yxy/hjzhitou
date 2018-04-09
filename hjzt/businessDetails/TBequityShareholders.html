@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>股本股东</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/management.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_project.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/companyMap.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+<script src="/saasBeta/js/jquery.min.js"></script>
+<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript"
+	charset="utf-8"></script>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+</head>
+
+<body>
+
+	<!--主体 star-->
+	<div class="right_main" style="padding-left: 0;">
+
+		<!--main  star-->
+		<div class="main new_main" style="padding-bottom: 100px;">
+			<div class="edit_box">
+				<div class="clr"></div>
+				<div class="new_boar_main">
+					<div class="boar_l fl nav_left">
+						<!-- <ul>
+		<li><span></span>
+			<a href="#">首页概览</a>
+		</li>
+		<li><span></span>
+			<a href="#">企业资料</a>
+		</li>
+		<li><span></span>
+			<a href="#">董事会高管</a>
+		</li>
+		<li><span></span>
+			<a href="#">公司公告</a>
+		</li>
+		<li class="hover"><span></span>
+			<a href="#">股本股东</a>
+		</li>
+		<li><span></span>
+			<a href="#">财务数据</a>
+		</li>
+		<li><span></span>
+			<a href="#">行业分析</a>
+		</li>
+		<li><span></span>
+			<a href="#">发行分配</a>
+		</li>
+		<li><span></span><a href="#">舆情监测</a></li>
+		<div class="clr"></div>
+	</ul> -->
+					</div>
+					<div class="boar_r fr">
+						<div class="bora_r_top">
+							<div class="ora_r_Box">
+								<div class="r_top_l fl">
+									<div class="top_tit">
+										<h2 id="stockName">--</h2>
+										<span id="stockCode">--</span>
+									</div>
+									<div class="top_btn" id="operation_div">
+										<!-- <a href="javascript:;" data-trading="430532" data-zxid="null"><img src="/saasBeta/images/jiahao.png">加入自选</a>
+				<button id="duibi" onclick="contrast(this)" data-name="北鼎晶辉" data-code="430532">对比</button> -->
+										<div class="add_zxg">
+											<div class="add_zxg_title">
+												<span>加入自选股</span><i onclick="closeZxDiv(this)">X</i>
+											</div>
+											<div class="add_select">
+												<div class="selectBox">
+													<p>请选择</p>
+													<ul style="">
+														<li data-value=""><a href="javascript:;">默认</a></li>
+														<li data-value="57e384383a939ff9df52c489"><a
+															href="javascript:;">中可asda</a></li>
+														<li data-value="57e383503a939ff9df52c487"><a
+															href="javascript:;">中科</a></li>
+														<li data-value="57e48a49aafca807a53ddca1"><a
+															href="javascript:;">456</a></li>
+														<li data-value="57e48c51aafca807a53ddca2"><a
+															href="javascript:;">678</a></li>
+													</ul>
+												</div>
+												<div class="add_se_btn">
+													<a href="javascript:;" onclick="saveZx(this)">确定</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="r_top_c fl">
+									<div class="r_top_price">
+										<span id="newPrice" class="new_price">--</span>
+										<div class="top_box up_gj">
+											<!--此处class:up_gj代表此股上涨  class:down代表此股下跌-->
+											<span id="changeAmount" class="zde_price">--</span> <span
+												id="priceChangeRatio" class="zdf_bfb">--</span>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="r_top_zd">
+										<p>
+											<span>涨停：</span><em id="limitUp" class="zt_pr">--</em>
+										</p>
+										<p>
+											<span>跌停：</span><em id="limitDown" class="dt_pr">--</em>
+										</p>
+									</div>
+									<div class="r_bot_time">
+										<p id="realTime">--</p>
+									</div>
+								</div>
+								<div class="r_top_r fl">
+									<ul>
+										<li><span>今开:</span>
+											<p id="openPrice" class="red">--</p></li>
+										<li><span>昨收:</span>
+											<p id="yclosePrice">--</p></li>
+										<li><span>总市值:</span>
+											<p id="totalMarketValue">--</p></li>
+										<li><span>换手:</span>
+											<p id="turnover">--</p></li>
+										<li><span>最高:</span>
+											<p id="highPrice" class="red">--</p></li>
+										<li><span>成交量:</span>
+											<p id="tradingVolume">--</p></li>
+										<li><span>流通市值:</span>
+											<p id="cmValue">--</p></li>
+										<li><span>市净率:</span>
+											<p id="netRatio">--</p></li>
+										<li><span>最低:</span>
+											<p id="lowPrice" class="green">--</p></li>
+										<li><span>成交额:</span>
+											<p id="tradingAmount">--</p></li>
+										<li><span>振幅:</span>
+											<p id="amplitude">--</p></li>
+										<li><span>市盈率(动):</span>
+											<p id="priceEarningRatio">--</p></li>
+									</ul>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="clr"></div>
+						<div class="main_r_center">
+							<div class="clr"></div>
+							<div class="yjy_title newm_10">
+								<span class="fl">十大股东</span>
+								<div class="n_center_title" id="dateList">
+									<!-- <a href="javascript:;" class="hover">2014-08-08</a> 
+									<a href="javascript:;">2014-08-08 </a> 
+									<a href="javascript:;">2014-08-08 </a> 
+									<a href="javascript:;">2014-08-08 </a> -->
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+
+							<div class="sdgd_box">
+								<div class="sdgd_title">
+									<span>主要股东持股变动公告</span>
+								</div>
+								<div class="sdgd_table">
+									<table width="100%" border="1" id="topTenShareList">
+										<thead>
+											<tr>
+												<th scope="col" class="jjname">机构或基金名称</th>
+												<th scope="col">持有数量(万股)</th>
+												<th scope="col">持股变化(万股)</th>
+												<th scope="col">占总股本比例(%)</th>
+												<th scope="col">实际增减持(%)</th>
+												<th scope="col">股份类型</th>
+											</tr>
+										</thead>
+										<!-- <tbody>
+											<tr>
+												<td class="jjname">中国农业银行海口市金贸区支行</td>
+												<td>575.00</td>
+												<td class="zhang"><span>575.00</span></td>
+												<td>0.95</td>
+												<td class="die"><span>0.95</span></td>
+												<td>境内法人股</td>
+											</tr>
+										</tbody> -->
+									</table>
+								</div>
+							</div>
+							<div class="yjy_title newm_10">
+								<span class="fl">股东变化</span>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+							<div class="gbgd">
+								<div class="gbgd_list fl">
+									<div class="gbgd_list_title">
+										<span>同行业股东人数增减量前10名</span>
+									</div>
+									<div class="gbgd_table">
+										<table width="100%" border="1">
+											<thead>
+												<tr>
+													<th scope="col">股票名称</th>
+													<th scope="col">股东人数</th>
+													<th scope="col">较上期变化</th>
+												</tr>
+											</thead>
+											<tbody id="topTenList">
+												<!-- <tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr> -->
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="gbgd_list fr">
+									<div class="gbgd_list_title">
+										<span>同行业股东人数增减量后10名</span>
+									</div>
+									<div class="gbgd_table">
+										<table width="100%" border="1">
+											<thead>
+												<tr>
+													<th scope="col">股票名称</th>
+													<th scope="col">股东人数</th>
+													<th scope="col">较上期变化</th>
+												</tr>
+											</thead>
+											<tbody id="lastTenList">
+												<!-- <tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;">三花股份</a></td>
+													<td>64916</td>
+													<td>-12.06%</td>
+												</tr> -->
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+							<div class="yjy_title newm_10">
+								<span class="fl">股本结构</span>
+								<div class="clr"></div>
+							</div>
+							<div class="gbjg_box">
+								<ul>
+									<li id="noticeDate"><span>股份构成</span>
+									<!-- <span>2015-12-31</span><span>2015-06-30</span><span>2014-12-31</span><span>2014-06-30</span> --></li>
+									<li id="generalCapital"><span>总股本(万股)</span>
+									<!-- <span>16000.00</span><span>16000.00</span><span>10400.00</span><span>10400.00</span> --></li>
+									<li id="generalCapitalA"><span>A股总股本</span>
+									<!-- <span>16000.00</span><span>16000.00</span><span>10400.00</span><span>10400.00</span> --></li>
+									<li id="circulationAShares"><span>流通A股</span>
+									<!-- <span>12208.33</span><span>12208.33</span><span>4841.67</span><span>5066.67</span> --></li>
+									<li id="restrictedAShare"><span>限售A股</span>
+									<!-- <span>3791.67</span><span>3791.67</span><span>5558.33</span><span>5333.33</span> --></li>
+									<li id="causeOfChange"><span>变动原因</span>
+									<!-- <span>年报</span><span>半年报</span><span>年报</span><span>半年报</span> --></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clr"></div>
+						<!--对比弹层 star-->
+						<div class="contrast">
+							<div class="contrast_left">
+								<span>对比分析</span>
+							</div>
+							<div class="contrast_right">
+								<!-- <span>中新科技 (345789) <i>X</i></span> <span>中新科技 (345789) <i>X</i></span>
+								<span>中新科技 (345789) <i>X</i></span> --> <a href="javascript:;"
+									id="contrastList_a">开始<br>对比
+								</a>
+								<div class="contra_yc">
+									<span>隐藏</span>
+								</div>
+							</div>
+
+						</div>
+						<!--对比弹层 end-->
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<!--main  end-->
+		<!--footer  star-->
+		
+		<!--footer  end-->
+	</div>
+	<!--主体 end-->
+	<!-- 分页 -->
+	<!-- 分页 -->
+	<!-- 自动补全 -->
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			var new_heigh = document.body.scrollHeight;
+			$(".boar_l").css("height", new_heigh);
+		});
+	</script>
+	<script src="/saasBeta/js/check.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/jquery-ui.min.js"></script>
+	<script src="/saasBeta/js/businessDetails/LeftCenter.js"></script>
+	<script src="/saasBeta/js/businessDetails/headRealTimeQuotes.js"></script>
+	<script src="/saasBeta/js/businessDetails/TBequityShareholders.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</body>
+
+</html>

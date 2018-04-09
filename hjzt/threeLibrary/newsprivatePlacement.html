@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>资讯数据-三板市场-定向增发</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyMap2.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+	</head>
+
+	<body>
+		<div class="jiabeijing"></div>
+		<!--header  star-->
+		<!--侧导航 star-->
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main">
+				<div class="newgup_nav">
+					<a href="stockQuotes.html">资讯数据</a>>
+					<a href="stockQuotes.html">三板市场</a>>
+					<a>定向增发</a>
+				</div>
+				<div class="clr"></div>
+				<div class="l_main l_main_none nL_main sb-t-main"></div>
+				<div class="clr"></div>
+				<div class="nigp_tongji" style="margin-top: 20px;">
+					<div class="nigp_l ding_z_l fl dz_public">
+						<span>最新定增预案</span>
+						<i id="showDateTime1">2016-11-11</i>
+						<h2 id="statistics_1">0</h2>
+					</div>
+					<div class="ding_z_center fl">
+						<h2>定增进度</h2>
+						<ul>
+							<li><i></i>
+								<p>审批中</p><span id="statistics_2">0</span></li>
+							<li><span id="statistics_3">0</span>
+								<p>实施中</p><i></i></li>
+						</ul>
+					</div>
+					<div class="nigp_l ding_z_r dz_public">
+						<span>最新已经完成定增</span>
+						<i id="showDateTime2">2016-11-11</i>
+						<h2 id="statistics_4">0</h2>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+				<div class="main_box guanpai_title">
+
+					<div class="yjy_title bor_btn">
+						<span class="fl">定增信息查询</span>
+						<div class="clr"></div>
+					</div>
+					<div class="dingz_shaixuan_box ">
+						<ul class="dingzeng">
+							<li class="dz">
+								<span><em></em><i>定增进度</i></span>
+								<div class="li_right fl">
+									<div class="fenlei" id="scheduleDiv">
+										<a href="javascript:viod(0);" class="on">全部</a>
+										<a href="javascript:viod(0);">董事会通过</a>
+										<a href="javascript:viod(0);">股东大会通过</a>
+										<a href="javascript:viod(0);">证监会通过</a>
+										<a href="javascript:viod(0);">停止实施</a>
+										<a href="javascript:viod(0);">已完成</a>
+										<!--<div class="chaxun_btn"><button>查询</button></div>-->
+										<div class="clr"></div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><em></em><i>所属版块</i></span>
+								<div class="li_right fl">
+									<div class="fenlei" id="panelnameDiv">
+										<a href="javascript:viod(0);" class="on">全部</a>
+										<a href="javascript:viod(0);">基础层</a>
+										<a href="javascript:viod(0);">创新层</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><em></em><i>交易方式</i></span>
+								<div class="li_right fl">
+									<div class="fenlei" id="tradingTypeDiv">
+										<a href="javascript:viod(0);" class="on">全部</a>
+										<a href="javascript:viod(0);">协议</a>
+										<a href="javascript:viod(0);">做市</a>
+									</div>
+
+								</div>
+							</li>
+							<li>
+								<span><em></em><i>所属行业</i></span>
+								<div class="li_right fl">
+									<div class="shaix_select">
+										<div class="selectBox2">
+											<p id="hy">请选择企业所在行业</p>
+											<div class="qy_box" id="qy_box">
+												<!-- 行业信息 -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span><em></em><i>所在地区</i></span>
+								<div class="li_right fl">
+									<div class="list">
+										<div class="shaix_select">
+											<div class="selectBox dz_xuanz">
+												<p id="city">请选择</p>
+												<ul id="firstLevelArea"></ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<div class="sqzk_qp">
+								<li class="line"></li>
+								<li>
+									<span><em></em><i>定增价格</i></span>
+									<div class="li_right fl">
+										<div class="dingz_input">
+											<input type="text" id="minPrivatePriceInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<i></i>
+											<input type="text" id="maxPrivatePriceInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<div class="clr"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span><em></em><i>折溢价比例</i></span>
+									<div class="li_right fl">
+										<div class="dingz_input">
+											<input type="text" id="minPremiumRateInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<i></i>
+											<input type="text" id="maxPremiumRateInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<div class="clr"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span><em></em><i>定增股数</i></span>
+									<div class="li_right fl">
+										<div class="dingz_input">
+											<input type="text" id="minPrivateNumInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<i></i>
+											<input type="text" id="maxPrivateNumInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<div class="clr"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span><em></em><i>募集资金</i></span>
+									<div class="li_right fl">
+										<div class="dingz_input">
+											<input type="text" id="minRaisePriceInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<i></i>
+											<input type="text" id="maxRaisePriceInput" value="" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')" maxlength="10" />
+											<div class="clr"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span><em></em><i>公告日期</i></span>
+									<div class="li_right fl">
+										<div class="dingz_input">
+											<input type="text" id="minPlacementDateStrInput" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="" />
+											<i></i>
+											<input type="text" id="maxPlacementDateStrInput" onchange="dateJudge();" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="" />
+											<div class="clr"></div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span><em></em><i>定增对象</i></span>
+									<div class="li_right fl">
+										<div class="fenlei">
+											<a href="javascript:viod(0);" class="on quanbu">全部</a>
+											<a href="javascript:viod(0);" id="wqd" class="bqd">未确定</a>
+											<a href="javascript:viod(0);" id="qd_in" class="qd">确定</a>
+											<div class="dingz_qd qd_input">
+												<input type="text" id="minPurchaserNumInput" value="" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" maxlength="10" />
+												<i></i>
+												<input type="text" id="maxPurchaserNumInput" value="" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" maxlength="10" />
+												<div class="clr"></div>
+											</div>
+											<div class="clr"></div>
+										</div>
+
+									</div>
+								</li>
+
+								<li class="search_bbtn">
+									<a href="javascript:viod(0);" id="search_newCx">查询</a>
+								</li>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+							<div class="sq_bbtn"><span>更多筛选</span></div>
+						</ul>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+				<div class="shaixuan_tiaojian">
+					<ul>
+						<li class="last">
+
+							<div class="sxtj_caozuo">
+								<div class="sx_cz_l fl" id="jstj">
+									<div class="jstj_new fl">
+										<!--<b>检索条件:</b>-->
+										<a href="javascript:viod(0);" id="clear_tj">清除检索条件</a>
+										<div class="baoc_btn fl">
+											<button onclick="saveParam()" style="display: none;">保存我的筛选</button>
+										</div>
+										<!--已保存筛选按钮star-->
+										<div id="conditionsList" style="display: none;" class="new_sxgd_info fl am_dashed">
+											<!-- 此处点击添加class="hover" 筛选个数为零的时候 添加calss="am_dashed" 在DIV层添加 -->
+											<p>已保存筛选<i id="searchNum">(0)</i></p>
+											<ul id="searchNameList">
+												<!-- <li><a href="#">二级行业：公路铁路运输</a><i></i></li> 
+										<li><a href="#">二级行业：公路铁路运输</a><b></b></li> 
+										<li><a href="#">二级行业：公路铁路运输</a><b></b></li> 
+										<li><a href="#">二级行业：公路铁路运输</a><b></b></li>  -->
+											</ul>
+										</div>
+										<div id="saveParamTitle" class="tips fl">请选择筛选条件</div>
+										<!--已保存筛选按钮end-->
+										<div class="clr"></div>
+									</div>
+
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--<div class="dingz_table_title">
+					<div class="title_page">
+						<p>共<em id="dataTotal">0</em>家</p>
+					</div>
+					<div class="clr"></div>
+				</div>-->
+				<div class="guapai_table_box">
+					<div class="guapai_table" style="margin-top: 0;">
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">股票名称 </th>
+									<th scope="col">公告日期 </th>
+									<th scope="col">最新进度</th>
+									<th scope="col">发行价(元)</th>
+									<th scope="col">发行量(万股)</th>
+									<th scope="col">募集资金(万元)</th>
+									<!--  <th scope="col">融资市盈率</th>
+									<th scope="col">溢价率</th>-->
+									<th scope="col">发行对象</th>
+								</tr>
+							</thead>
+							<tbody id="privatePlacementInfo">
+								<!-- <tr>
+									<td>
+										<a href="#">八达股份(839306)</a>
+									</td>
+									<td>2016-10-11</td>
+									<td>董事会通过</td>
+									<td class="shuzi">1.5</td>
+									<td class="shuzi">1.5</td>
+									<td class="shuzi">1.5</td>
+									<td class="shuzi">1.5</td>
+									<td class="shuzi">1.5</td>
+									<td class="chakan">
+										<a href="javascript:;">查看</a>
+									</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="dingz_table_title" style="margin-bottom: 80px;">
+					<div class="title_page">
+						<div class="fr">
+							<div id="page" class="pages pagination pagesPright0" style="display: none"></div>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--发行对象弹窗-->
+		<!-- <div class="fxdx_dbox">
+			<div class="fxdx_title"><span>发行对象</span>
+				<a href="javascript:;" id="closefxtc"><img src="/saasBeta/images/icon/alertClose.png" /></a>
+			</div>
+			<div class="fxdx_info_box">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">发行对象</th>
+							<th scope="col">认购价格(元)</th>
+							<th scope="col">认购数量(万股)</th>
+							<th scope="col">认购金额(万元)</th>
+							<th scope="col">持股期限(月)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>金衡和科技有限公司</td>
+							<td class="shuzi">6.00</td>
+							<td class="shuzi">100.000</td>
+							<td class="shuzi">60.00</td>
+							<td class="shuzi">12</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div> -->
+		<!--发行对象弹窗-->
+		<!--主体 end-->
+
+		<!--保存检索条件 star-->
+		<div class="tcbackground"></div>
+		<div class="qrdele top2" id="savaParam">
+			<div class="qr_title"><span>保存我的检索</span>
+				<a href="javascript:void(0);">X</a>
+			</div>
+			<div class="qr_box">
+				<ul>
+					<li class="clearfix"><span>搜索条件：</span><textarea disabled="disabled"></textarea></li>
+					<li class="clearfix"><span>命名自定义检索：</span><input type="text" placeholder="请输入一个检索方案名" value="" /><b id="paramName">请输入一个检索方案名</b></li>
+				</ul>
+				<div class="clr"></div>
+			</div>
+			<div class="qr_dele_btn"><button class="save">保存</button><button class="quxiao">取消</button></div>
+		</div>
+		<!--保存检索条件 end-->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script src="/saasBeta/js/common.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+		<script>
+			findTradeSecond();
+		</script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/index/hangye.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/index/privatePlacement.js"></script>
+		<script src="/saasBeta/js/index/zksq.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+
+</html>

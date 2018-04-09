@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>多维选股-指标行业排名分析</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/wxl-new-style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyComparison.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/compre.css" />
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+		<script src="/saasBeta/js/jquery.min.js" type="text/javascript"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="http://cdn.bootcss.com/echarts/3.3.2/echarts.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/newjs/duibinav.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main new_duibi_main">
+			<div class="duibi_nav">
+				<a href="javascript:;">对比工具&gt;</a>
+				<a href="javascript:;" class="yanjiu_nav_bg">指标行业排名对比</a>
+			</div>
+			<!--财务对比三页面公共部分起始位置-->
+			<!--main  star-->
+			<div class="main new_duibi_main2">
+				<!--<div class="duib_titles">
+					<p  id="tipsTitle">温馨提示：可添加4个企业</p>
+				</div>-->
+				<!--<div class="t_nav">
+					<div class="fl guide">
+						<a href="/contrast/companyComparison.html" target="_blank">公司对比</a>
+						<a class="caiwu_duibi on" href="multidStockanalysisTable.html" target="_blank">财务对比</a>
+						<div class="clr"></div>
+					</div>
+					
+				</div>-->
+				<div class="main_add_box zhibiao noeborder">
+					<div class="addRight pp20">
+						<div class="add_Right_Tool">
+						</div>
+						<div class="clr"></div>
+						<div class="right_table_sj mm0">
+							<div class="hy_rank_title">
+								<span>行业地位分析</span><em id="industryList" title=""></em>
+								<!-- 行业类别：医药生物--生物制品--生物制品Ⅲ -->
+							</div>
+							<div class="hy_rank_tab">
+								<ul id="sortChart">
+									<li data-colum="422" class="on">
+										<a href="javascript:void(0);">每股收益</a>
+									</li>
+									<li data-colum="423">
+										<a href="javascript:void(0);">每股净资产</a>
+									</li>
+									<li data-colum="424">
+										<a href="javascript:void(0);">每股现金流</a>
+									</li>
+									<li data-colum="425">
+										<a href="javascript:void(0);">净利润</a>
+									</li>
+									<li data-colum="426">
+										<a href="javascript:void(0);">营业收入</a>
+									</li>
+									<li data-colum="427">
+										<a href="javascript:void(0);">总资产</a>
+									</li>
+									<li data-colum="428">
+										<a href="javascript:void(0);">净资产收益率</a>
+									</li>
+									<li data-colum="429">
+										<a href="javascript:void(0);">股东权益比率</a>
+									</li>
+									<li data-colum="430">
+										<a href="javascript:void(0);">销售毛利率</a>
+									</li>
+									<li data-colum="431">
+										<a href="javascript:void(0);">总股本</a>
+									</li>
+									<div class="clr"></div>
+								</ul>
+								<div class="clr"></div>
+								<div class="hy_rank_zxt">
+									<!-- <div class="hy_rank_btn">
+										<span>只显示选择股票</span>
+									</div> -->
+									<div id="hy_ran_zxt_box">
+
+									</div>
+									<div class="clr"></div>
+									<div class="hy_ran_table sj_zhuxin_table new_sj_tab_ttable new_tables">
+										<div class="f_bg companies_inform">
+											<div class="t_left">
+												<div class="left_top">
+													<table>
+														<tr>
+															<th>排名</th>
+															<th>公司名称</th>
+														</tr>
+													</table>
+												</div>
+												<div class="cl_freeze">
+													<table id="zbmcTable">
+														<!-- <tr>
+															<td>
+																<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+															</td>
+														</tr> -->
+													</table>
+												</div>
+											</div>
+											<div class="t_r com_r_company">
+												<table>
+													<thead id="dataTHead">
+														<tr>
+															<!-- <th>排名</th> -->
+															<!-- <th>股票代码</th> -->
+															<th>每股收益（元）</th>
+															<th>每股净资产（元）</th>
+															<th>每股现金流（元）</th>
+															<th>净利润（亿元）</th>
+															<th>营业收入（亿元）</th>
+															<th>总资产（亿元）</th>
+															<th>净资产收益率（%）</th>
+															<th>股东权益比率（%）</th>
+															<th>销售毛利率（%）</th>
+															<th>总股本（亿股）</th>
+														</tr>
+													</thead>
+
+													<tbody id="dataTbody">
+														<!-- <tr>
+															<td class="shuzi">1</td>
+															<td class="shuzi">123456</td>
+															<td class="shuzi">2</td>
+															<td class="shuzi">2</td>
+															<td class="shuzi">12</td>
+															<td class="shuzi">9.36</td>
+															<td class="shuzi">536.5</td>
+															<td class="shuzi">23</td>
+															<td class="shuzi">20</td>
+															<td class="shuzi">20</td>
+															<td class="shuzi">20</td>
+															<td class="shuzi">20</td>
+														</tr> -->
+													</tbody>
+												</table>
+											</div>
+											<div class="clr"></div>
+										</div>
+										<!--<table>
+											<thead>
+												<tr>
+													<th scope="col">排名</th>
+													<th scope="col">股票代码</th>
+													<th scope="col">每股收益（元）</th>
+													<th scope="col">每股净资产（元）</th>
+													<th scope="col">每股现金流（元）</th>
+													<th scope="col">净利润（亿元）</th>
+													<th scope="col">营业收入（亿元）</th>
+													<th scope="col">总资产（亿元）</th>
+													<th scope="col">净资产收益率（%）</th>
+													<th scope="col">股东权益比率（%）</th>
+													<th scope="col">销售毛利率（%）</th>
+													<th scope="col">总股本（亿股）</th>
+												</tr>
+											</thead>
+											<tbody id="tradeListInfo">
+												<!-- <tr>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+													<td>123623</td>
+												</tr> -->
+										</tbody>
+										</table>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--暂无数据-->
+				<div class="yanjiu_wushuju" style="display: none;">
+					<div class="wushuj_tub">
+						<span>
+							<img src="/saasBeta/images/zwsj.png">
+						</span>
+						<p class="yanjiu_tb_zwsj">暂无数据</p>
+					</div>
+				</div>
+			</div>
+			<!--main  end-->
+			<!--footer  star-->
+			<div class="footer"></div>
+			<!--footer  end-->
+			<!--main  end-->
+
+			<!-- 弹框 -->
+			<div class="add_tc_box">
+				<input type="text" placeholder="请输入股票代码/企业名称" id="findStockList">
+				<a href="javascript:void(0);" id="gb_Ri">添加</a>
+			</div>
+			<div class="tcbackground"></div>
+			<!-- 弹框 -->
+		</div>
+		<!-- <script type="text/javascript" src="/saasBeta/newjs/comparis.js"></script> -->
+		<script type="text/javascript" src="/saasBeta/js/contrast/multidStockRankingAnalysis.js"></script>
+	</body>
+
+</html>

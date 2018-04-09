@@ -1,0 +1,146 @@
+@charset "utf-8";
+.container {
+	width: 400px;
+	margin: 20px auto 0 auto;
+	position: relative;
+	font-family: 微软雅黑;
+	font-size: 12px;
+}
+.container p {
+	line-height: 12px;
+	line-height: 0px;
+	height: 0px;
+	margin: 10px;
+	color: #bbb
+}
+.action {
+	width: 90%;
+	height: 30px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.cropped {
+	position: absolute;
+	right: 70px;
+	top: 0;
+	width: 90px;
+	height: 200px;
+	padding: 4px;
+	text-align: center;
+}
+.cropped img{border: 1px solid #e4e4e4; float: left;}
+.imageBox {
+	position: relative;
+	height: 200px;
+	width: 200px;
+	background: #999999;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	cursor: move;
+}
+.imageBox .thumbBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 118px;
+	height: 118px;
+	margin-top: -59px;
+	margin-left: -59px;
+	box-sizing: border-box;
+	border: 1px dashed #fff;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+	background: none repeat scroll 0% 0% transparent;
+}
+.imageBox .spinner {
+	position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  line-height: 400px;
+  color: #2F2A2A;
+  background: rgba(213, 211, 211, 0.7);
+}
+.Btnsty_peyton{ float: right;
+   width: 120px;
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin:0px 2px;
+  background-color: #5bc0de;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0px #fff solid;
+   margin-top: 30px;
+   margin-left:57px ;
+  }
+/*选择文件上传*/
+.new-contentarea {
+	width: 165px;
+	overflow:hidden;
+	margin: 0 auto;
+	position:relative;float:left;
+}
+.new-contentarea label {
+	width:100%;
+	height:100%;
+	display:block;
+	line-height: 30px;
+}
+.new-contentarea em{ display: block; text-align: left; width: 70px; height: 30px;  font-size:14px ; color: #666; float: left;}
+.new-contentarea input[type=file] {
+	width:60px;
+	height:30px;
+	background:none;
+	margin: 0 auto;
+	position:absolute;
+	right:50%;
+	margin-right:-60px;
+	top:0;
+	right/*\**/:0px\9;
+	margin-right/*\**/:0px\9;
+	width/*\**/:10px\9;
+	opacity:0;
+	filter:alpha(opacity=0);
+	z-index:2;
+}
+a.upload-img{
+	width:60px;
+	display: inline-block;
+	height:30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #FFFFFF;
+	background-color: #5bc0de;
+	border-radius: 3px;
+	text-decoration:none;
+	cursor:pointer;
+	border: 0px #5bc0de solid;
+}
+a.upload-img:hover{
+	background-color: #5bc0de;
+}
+.tc{text-align:center;}
+.upload_bbtn{ position: relative;float: left;}
+.up_tx_btn{ width: 90%; margin: 0 auto; border-top: 1px solid #e4e4e4; margin-top: 20px;}
+.up_colse{ position: absolute; width: 20px; height: 20px; right: 13px; top: 13px;}
+.up_touxiang_title{ width: 90%; margin: 0 auto; margin-top: 12px; height:40px ; line-height: 40px; border-bottom: 1px solid #e4e4e4;}
+.up_touxiang_title span{ font-size: 16px; color: #000; display: block; width: 100%; height: 40px; line-height: 40px; text-align: left;}
+.up_colse span { position: absolute; cursor: pointer; background: url(../images/upcolse.png) center center no-repeat; width: 20px; height: 20px; opacity: 1;}
+.up_colse span:hover{ background: url(../images/upcolsehover.png) center center no-repeat;}
+.btn_ssave{ float: left; width: 120px;}
+.up_tx_qux{ margin-top: 30px;}
+.up_tx_qux a{ font-size: 14px; line-height:40px;color: #666; display: inline-block; float: left; margin-left: 50px;}
+.co_btn_n{ width: 100%;}
+.row_list_dbox{ width: 365px; margin-left: 100px;}
+.row_list_p{ width: 100%; margin: 0 auto; box-sizing: border-box; padding: 15px 15px 0px 15px;}
+.row_list_p p{display: block; width: 100%; line-height:14px ; color: #b1b1b1; line-height: 30px;}
+.row_slt_img{ width:90px; padding: 0; margin-left: 28px;}
+.row_dslt_img{ width:200px; }
+.row_line{ width: 100%; border-bottom: 1px solid #e4e4e4; padding-bottom: 30px;}
+.uptouxia{ display: none; position: fixed; width:500px; top: 14%; left: 50%; margin-left: -250px; background: #fff; border: 1px solid #e4e4e4; box-shadow: 0px 0px 3px #e4e4e4; padding-bottom: 40px;}

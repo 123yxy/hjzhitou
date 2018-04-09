@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.scroll{
+				width: 500px;
+				max-height: 300px;
+				overflow-y: auto;
+				border: 1px solid #e4e4e4;
+				margin: 0 auto;
+				margin-top: 300px;
+			}
+			.scroll p{
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="scroll">
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+		</div>
+		<div class="scroll">
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+			<p>jijiojiojjjjjjjjjjjjjjjjjjjjjjjjjj</p>
+		</div>
+	</body>
+	<script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.nicescroll.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".scroll").niceScroll({
+				cursorcolor:"#36b8f4",
+				autohidemode:false,
+				cursorwidth: "6px", // 滚动条的宽度，单位：便素
+				cursorborderradius: "5px"// 滚动条圆角（像素）
+			});
+		})
+	</script>
+</html>

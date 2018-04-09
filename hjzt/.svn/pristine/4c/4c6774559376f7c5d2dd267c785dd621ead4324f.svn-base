@@ -1,0 +1,258 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+<style>
+	.container {
+		padding: 0;
+	}
+	.kaik-content h4{font-weight: 700;}
+</style>
+<div class="company-business">
+	<div class="container cwfxbgsjyj">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+
+				<div class="contents">
+					<div class="section" id="sjType">
+						 <!--<h2>2.6所处行业分析</h2>-->
+						<!--<div class="yewu-contents">
+							<h3>2.6.1行业简介</h3>
+							<p id="industryRemark"></p>
+						</div>
+
+						<div class="hy-charts" id="IndustryAnalysis">
+
+						</div>-->
+						<!--<div class="kaik-content">
+							<div class="time-list">
+								<span class="on">2017</span>
+								<span>2016</span>
+								<span>2015</span>
+								<span>2014</span>
+							</div>
+						</div>-->
+					</div>
+
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../js/echarts-all-3.js"></script>
+<script src="../js/common/util.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/commonJs.js"></script>
+<script src="../js/bus/section02.js"></script> -->
+
+<script type="text/javascript">
+	UTIL.nologin('cwfxbgsjyj');
+	var width = $(".yewu-contents").width();
+	$(".suochu-hy").css("width", width);
+
+
+	var acStockCode = UTIL.getPara("stockCode");
+	$(function () {
+		var windowHeight = $(window).height()
+		$(".yuce-fx .container").height(windowHeight - 195);
+		$(".contents").height(windowHeight - 290)
+		//点击时间切换
+		$("#sjType").on("click","span",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var timeData=$(this).text();
+			//console.log(timeData)
+			$(".sjyj-content li").each(function(index,item){
+				//console.log($(item))
+				if($(item).attr("data-time")==timeData){
+					$(item).show().siblings().hide();
+				}
+			})
+			var type=$("#sjType").find(".sjyj-content").eq(1).find("p");
+			$(type).each(function(index,item){
+				if($(item).attr("data-time")==timeData){
+					$(item).show().siblings().hide();
+				}
+			})
+			var shuoM=$("#sjType").find(".sjyj-content").eq(2).find("p");
+			//console.log(shuoM)
+			$(shuoM).each(function(index,item){
+				if($(item).attr("data-time")==timeData){
+					$(item).show().siblings().hide();
+				}
+			})
+		})
+		
+	})
+	//
+	init(function (_callback) {
+		UTIL.axs(UTIL.CONFIG.findAuditReport, { stockCode: acStockCode }, true, function (_data) {
+			//console.log(_data)
+			if (_data.retCode == '0000') {
+				if (_data.retData != null && _data.retData != "" && _data.retData != undefined) {
+					var retData = _data.retData;
+					for (i = 0; i < 3; i++) {
+						var h4Main = $("<h4>");
+						var pMain = $("<div class='sjyj-content'>");
+						$(".cwfxbgsjyj").find($(".kaik-content")).eq(0).append(pMain);
+						var _render="";
+						var _render1 = "审计类型：";
+						var _render2 = "说明：";
+						// var _renderTitle = retData[i].swotTitle;
+						if (i === 0) {
+							h4Main.append("1.会计师事务所及签字注册会计师");
+						}
+						else if (i === 1) {
+							h4Main.append("2.审计意见类型");
+						}else if(i === 2){
+							
+							h4Main.append("3.非标意见说明");
+						}
+						pMain.before(h4Main);
+					}
+					var timeDiv = $("<div class='time-list'>");
+					$("#sjType").find("h2").eq(0).after(timeDiv)
+					var span='';
+					var ul=$("<ul>");
+					var li='';
+					var pType='';
+					var pShuoM='';
+					$("#sjType").find(".kaik-content").eq(0).find(".sjyj-content").eq(0).append(ul);
+					$(retData).each(function(index,item){
+						//时间
+						span+='<span>'+ item.reportPeriod +'</span>';
+						//会计师
+						li+='<li data-time="'+ item.reportPeriod +'">';
+						if(item.SJDW != "" && item.SJDW != null && item.SJDW !=undefined){
+							li+='<p>'+ item.SJDW +'</p>';
+						}else{
+							li+='<p>无</p>';
+						}
+                        if(item.QZZCKJS != "" && item.QZZCKJS != null && item.QZZCKJS !=undefined){
+							li+='<p>'+ item.QZZCKJS +'</p>';
+						}else{
+							li+='<p>无</p>';
+						}
+                        li+='</li>';
+                        //审计类型
+                        if(item.auditOpinionsType != null && item.auditOpinionsType != "" && item.auditOpinionsType != undefined){
+                        	
+                        	pType+='<p data-time="'+ item.reportPeriod +'">'+ item.auditOpinionsType +'<p>';
+                        }else{
+                        	pType+='<p data-time="'+ item.reportPeriod +'">无<p>';
+                        }
+                      	
+                      	 //审计类型
+                        if(item.auditOpinionsDesc != null && item.auditOpinionsDesc != "" && item.auditOpinionsDesc != undefined){
+                        	var content=(item.auditOpinionsDesc).replace(/\s/g,'');
+                        	//pShuoM+='<p data-time="'+ item.reportPeriod +'">'+ item.auditOpinionsDesc +'<p>';
+                          	pShuoM+='<p data-time="'+ content +'">'+ content +'<p>';
+                        }else{
+                        	pShuoM+='<p data-time="'+ item.reportPeriod +'">无<p>';
+                        }
+                        
+					});
+					//时间
+					timeDiv.html(span).find("span").eq(0).addClass("on");
+					//会计师
+					ul.append(li);
+					$("#sjType").find("ul").find("li").eq(0).show();
+					//类型
+					$("#sjType").find(".sjyj-content").eq(1).append(pType);
+					$("#sjType").find(".sjyj-content").eq(1).find("p").hide();
+					$("#sjType").find(".sjyj-content").eq(1).find("p").eq(0).show();
+					//说明
+					$("#sjType").find(".sjyj-content").eq(2).append(pShuoM);
+					$("#sjType").find(".sjyj-content").eq(2).find("p").hide();
+					$("#sjType").find(".sjyj-content").eq(2).find("p").eq(0).show();
+//					$("#sjType .sjyj-content p").hide();
+					
+				}
+				else {
+					// div.addClass("noDatas-s1");
+					var div = '<div class="noDatas noDatas-s1">暂无数据</div>';
+					$(".cwfxbgsjyj").find(".kaik-content").eq(0).append(div)
+				}
+				// if(_data.retData!=null&&_data.retData!=""&&_data.retData!=undefined){
+				// 	var retData = _data.retData;
+				// 	for (i = 0; i < retData.length; i++) {
+				// 		var h4Main = $("<h4>");
+				// 		var pMain = $("<p>");
+				// 		$(".schyfx").find(".kaik-content").eq(2).append(pMain);
+				// 		// console.log($(".schyfx").html())
+				// 		pMain.before(h4Main);
+				// 		var _render = _data.retData[i].swotDesc;
+				// 		var _renderTitle = _data.retData[i].swotTitle;
+				// 		pMain.append(_render);
+				// 		h4Main.append(_renderTitle);
+				// 	}
+				// } else{
+				// 	var div='<div class="noDatas">暂无数据</div>';
+				// 	$(".schyfx").find(".kaik-content").eq(2).append(div)
+				// }
+			}
+		});
+		// findIndustryAnalysis();
+
+
+		// industryRemark();
+	});
+	
+	function init(_callback) {
+		// var a = [
+
+		// 	{ showData: "true", code: "gsxx", name: "公司信息", zjLevel: 2, levelcode: "1-1" },
+
+		// 	{ showData: "false", code: "jianjie", name: "简介", zjLevel: 3, levelcode: "1-1-1" },
+
+		// 	{ showData: "false", code: "gsxxT", name: "工商信息", zjLevel: 3, levelcode: "1-1-2" },
+
+		// 	{ showData: "false", code: "gaikuang", name: "概况", zjLevel: 1, levelcode: "1" }
+		// ]
+		// UTIL.searchsection._d
+		var section = $("<section>"), head1;
+		$.each(UTIL.searchsection._d, function (k, v) {
+			if (v.zjLevel === 1) {
+				// $(".contents").eq(0).prev().remove();
+				$(".top-line").remove();
+				var Arabia_To_SimplifiedChinese = UTIL.Arabia_To_SimplifiedChinese(v.levelcode);//20170926 shiqi 转阿拉伯 
+				var head = UTIL.oplugins._head({ text: Arabia_To_SimplifiedChinese + "、" + v.name, logo: "images/section-logo.png" });
+				$(head).insertBefore(".contents");
+				return true;
+			}
+			else if (v.zjLevel === 2) {
+				head1 = UTIL.oplugins._head1level(v.levelcode.replace("-", ".") + "" + v.name);
+				// if ($(".section").children().length)
+				section.prepend(head1);
+				var divcontent = $("<div>");
+				divcontent.addClass("kaik-content");
+				// var head1level = UTIL.oplugins._head2level(v.levelcode.replace("-", ".").replace("-", ".") + "" + v.name);
+				// divcontent.append(head1level);
+				section.append(divcontent);
+
+				return true;
+			}
+			// alert(v.zjLevel)
+			//三级标题内容
+			// var divcontent = $("<div>");
+			// divcontent.addClass("kaik-content");
+			// var head1level = UTIL.oplugins._head2level(v.levelcode.replace("-", ".").replace("-", ".") + "" + v.name);
+			// divcontent.append(head1level);
+			// section.append(divcontent);
+
+		})
+		if (section.html()) {
+			// alert(section.html())
+			$(".section").html(section.html());
+			// $(".cwfxbgsjyj .kaik-content").eq(0).append("<p id= \"industryRemark\"></p>");
+			// $(".cwfxbgsjyj .kaik-content").eq(1).append("<div class=\"hy-charts\" id=\"IndustryAnalysis\"></div>");
+		}
+		_callback();
+		// 历史沿革
+		// var _timeline = UTIL.oplugins._timeline;
+		// $(".contents").append(_timeline);
+		
+
+	};	
+	
+	
+	
+</script>

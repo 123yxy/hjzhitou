@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-中介机构</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />-->
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main c_right">
+			<!--main  star-->
+			<div class="main new_main">
+				<div class="xinsanban_waik">
+					<div class="banner gs_img">
+						<div class="gs_search">
+							<input type="text" id="organizationNameSeach" placeholder="机构名称" />
+							<span class="lanse" id="seach">搜索</span>
+							<div class="clr"></div>
+						</div>
+					</div>
+					
+					
+					<div class="page_center">
+						<div class="feature_select">
+							<!--筛选条件 star-->
+							<div class="shaix_public">
+								<div class="list list2 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>地区</p>
+											<ul id="diqu">
+												<!-- <li>
+												<a href="javascript:;">上海</a>
+											</li>
+											<li>
+												<a href="javascript:;">云南</a>
+											</li>
+											<li>
+												<a href="javascript:;">北京</a>
+											</li>
+											<li>
+												<a href="javascript:;">天津</a>
+											</li>
+											<li>
+												<a href="javascript:;">宁夏</a>
+											</li>
+											<li>
+												<a href="javascript:;">安徽</a>
+											</li> -->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list3 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>中介机构</p>
+											<ul id="jigouleixing">
+												<li data-value="1">
+													<a href="javascript:;">券商</a>
+												</li>
+												<li data-value="2">
+													<a href="javascript:;">律所</a>
+												</li>
+												<li data-value="3">
+													<a href="javascript:;">会计所</a>
+												</li>
+												<li data-value="4">
+													<a href="javascript:;">资产评估机构</a>
+												</li>
+												<!-- <li data-value="5">
+													<a href="javascript:;">证券登记结算机构</a>
+												</li>
+												 -->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list4 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>服务时间</p>
+											<ul id="fuwushijian">
+												<!-- <li data-value="">
+												<a href="javascript:;">投资时间</a>
+											</li> -->
+												<li data-value="近一周">
+													<a href="javascript:;">近一周</a>
+												</li>
+												<li data-value="近一月">
+													<a href="javascript:;">近一月</a>
+												</li>
+												<li data-value="近三月">
+													<a href="javascript:;">近三月</a>
+												</li>
+												<li data-value="近六月">
+													<a href="javascript:;">近六月</a>
+												</li>
+												<li data-value="近一年">
+													<a href="javascript:;">近一年</a>
+												</li>
+												<li data-value="2016年">
+													<a href="javascript:;">2016年</a>
+												</li>
+												<li data-value="2015年">
+													<a href="javascript:;">2015年</a>
+												</li>
+												<li data-value="2014年">
+													<a href="javascript:;">2014年</a>
+												</li>
+												<li data-value="2013年">
+													<a href="javascript:;">2013年</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list5 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>服务次数</p>
+											<ul id="fuwuchishu">
+												<!-- <li data-value="">
+												<a href="javascript:;">服务次数</a>
+											</li> -->
+												<li data-value="1">
+													<a href="javascript:;">1-50次</a>
+												</li>
+												<li data-value="2">
+													<a href="javascript:;">50-100次</a>
+												</li>
+												<li data-value="3">
+													<a href="javascript:;">100-200次</a>
+												</li>
+												<li data-value="4">
+													<a href="javascript:;">200次以上</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="yixuan_tiaojian" style="display:none;">
+								<span><em></em>清除检索条件</span>
+								<div class="fl tj_selected" id="jiansuotianjian">
+									<!-- <a href="javascript:;">北京<i></i></a>
+								<a href="javascript:;">电子设备<i></i></a>
+								<a href="javascript:;">2017年3月<i></i></a>
+								<a href="javascript:;">30万元<i></i></a>
+								<a href="javascript:;">做市<i></i></a> -->
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<!--筛选条件 end-->
+							<div class="types_total">
+								<span class="fl selection_totals">共<em class="shuzi" id="totalCount">0</em>条结果</span>
+								<span class="pay fl">导出数据</span>
+								<div class="clr"></div>
+							</div>
+							<div class="company_information">
+								<table>
+									<thead class="sanban_paixu">
+										<tr>
+											<th class="nsd_qx"><input type="checkbox" class="gs_qx" /></th>
+											<th>机构简称</th>
+											<th><span data-value="inListNum">推荐挂牌公司家数</span></th>
+											<th><span data-value="unInListNum">已被终止挂牌公司家数</span></th>
+											<th><span data-value="dzNum">推荐定增成功</span></th>
+											<th><span data-value="unDzNum">推荐定增失败</span></th>
+											<th><span data-value="maxTime" class="down">最新服务公司</span></th>
+											<th>操作</th>
+										</tr>
+									</thead>
+									<tbody class="gs_dx new_zjjg_td" id="allData">
+										<!-- <tr>
+										<td><input type="checkbox" /></td>
+										<td class="company_info">
+											<div class="compamy_logo fl">
+												<img src="/saasBeta/images/gs_logo.png" alt="" />
+											</div>
+											<div class="compamy_msg fl">
+												<a href="#" class="on">广州证券</a>
+												<span class="dq_company">广州>主办券商</span>
+											</div>
+										</td>
+										<td class="shuzi">296</td>
+										<td>1</td>
+										<td class="shuzi">155次</td>
+										<td class="shuzi">1次</td>
+										<td class="company_rz">
+											<em class="shuzi">2016-12-19</em>
+											<i class="shuzi">雷钰股份(834928)</i>
+											<b class="company_dz">定增</b>
+										</td>
+										<td>
+											<span class="gz_company on">关注</span>
+										</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td class="company_info">
+											<div class="compamy_logo fl">
+												<img src="/saasBeta/images/gs_logo.png" alt="" />
+											</div>
+											<div class="compamy_msg fl">
+												<a href="#" class="on">广州证券</a>
+												<span class="dq_company">广州>主办券商</span>
+											</div>
+										</td>
+										<td class="shuzi">296</td>
+										<td>1</td>
+										<td class="shuzi">155次</td>
+										<td class="shuzi">1次</td>
+										<td class="company_rz">
+											<em class="shuzi">2016-12-19</em>
+											<i class="shuzi">雷钰股份(834928)</i>
+											<b class="company_gp">挂牌</b>
+										</td>
+										<td>
+											<span class="gz_company on">关注</span>
+										</td>
+									</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<div class="page" id="page"></div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+		<!-- 导出的数据 -->
+		<table style="display: none" id="exportTable">
+			<thead>
+				<tr>
+					<th><span>机构简称</span></th>
+					<th><span>推荐挂牌公司家数</span></th>
+					<th><span>已被终止牌公司家数</span></th>
+					<th><span>推荐定增成功</span></th>
+					<th><span>推荐定增失败</span></th>
+					<th><span>最新服务公司</span></th>
+				</tr>
+			</thead>
+			<tbody id="exportTableHtml"></tbody>
+		</table>
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<!-- <script type="text/javascript" src="/saasBeta/newjs/threeLibrary/three_selected.js"></script> -->
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/agency.js"></script>
+	<!-- 是否登录，关注，对比 -->
+	<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+	<!-- 分页 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+
+</html>

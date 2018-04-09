@@ -1,0 +1,50 @@
+.covers{
+	margin-top: 106px;
+}
+.cover-img{
+	position: relative;
+}
+.cover-img>img{
+	display: block;
+	width: 100%;
+	height: auto;
+	box-shadow: 5px 8px 10px #a1a1a1;
+}
+.company-name{
+	position: absolute;
+	left: 100px;
+	bottom: 80px;
+}
+.companies-name{
+	font-size: 50px;
+	color: #fff;
+}
+.new-logo{
+	margin-bottom: 34px;
+}
+.chuping p{
+	font-size: 14px;
+	color: #fff;
+	margin-top: 60px;
+}
+.cover-ewm{
+	width: 107px;
+	height: 136px;
+	position: absolute;
+	top: 0px;
+	right: -105px;
+}
+.cover-ewm span{
+	display: block;
+	width: 107px;
+	height: 107px;
+}
+.cover-ewm span img{
+	display: block;
+	width: 100%;
+}
+.cover-ewm p{
+	font-size: 14px;
+	color: #666;
+	text-align: center;margin-top: 10px;
+}

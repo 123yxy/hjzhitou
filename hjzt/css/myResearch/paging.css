@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.page-box{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  height: 25px;
+  text-align: right;
+  margin-top: 25px;
+}
+.page-data{
+  position: absolute;
+  top: 0;
+  right: 340px;
+}
+.page-data>span{
+  color:#F5444B;
+}
+.box {
+  height: 25px;
+  line-height: 25px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.box button {
+  width:25px;
+  height:25px;
+  border:none;
+  background:#F3F6F9;
+  margin-right:10px;
+  cursor: pointer;
+  float: left;
+}
+.box .first-page>b{
+  display: inline-block;
+  height:9px;
+  width:8px;
+  background:url("../../images/Image/left-two.png")
+}
+.box .last-page>b{
+  display: inline-block;
+  height:9px;
+  width:8px;
+  background:url("../../images/Image/right-two.png")
+}
+#prePage>b{
+  display: inline-block;
+  height:9px;
+  width:5px;
+  background:url("../../images/Image/left-one.png")
+}
+#nextPage>b{
+  display: inline-block;
+  height:9px;
+  width:5px;
+  background:url("../../images/Image/right-one.png")
+}
+
+.box .pageWrap {
+  height: 40px;
+  float: left;
+  overflow: hidden;
+}
+.box .pageWrap ul {
+  width: 100000px;
+  height: 25px;
+  float: left;
+}
+.box .pageWrap ul li {
+  float: left;
+  height:25px;
+  width:25px;
+  line-height:25px;
+  background:#F3F6F9;
+  margin-right:10px;
+  text-align: center;
+  cursor: pointer;
+}
+.box .pageWrap ul .sel-page {
+  background-color: #1885E2;
+  color:#fff;
+}
+.box .jump-text {
+  width: 60px;
+  height: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0 5px;
+  float: left;
+}
+.box .jump-button {
+  margin: 0;
+  float: left;
+}
+.box .total-pages,
+.box .total-count {
+  margin-left: 10px;
+  float: left;
+  font-size: 14px;
+}

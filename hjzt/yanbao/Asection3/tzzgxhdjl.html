@@ -1,0 +1,87 @@
+
+<link rel="stylesheet" href="/saasBeta/yanbao/css/Agu.css" />
+<style>
+	.container { padding:0; }
+	.company-business .competion .caiwu-table .table td:nth-child(1), .company-business .competion .caiwu-table .table th:nth-child(1) { width:15%;}
+	#tzzGX{margin-top: 15px;}
+	.gsxx-list1 li{padding: 0 20px; box-sizing: border-box;}
+</style>
+		<div class="company-business">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>三、公司业务分析</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section zyjzds">
+									<h2>3.4投资者关系活动记录</h2>
+									<div class="hy-type" id="hy_type"></div>
+									 <div class="yewu-contents">
+										<!--<h3>3.4投资者关系活动记录</h3>-->
+										<p></p>
+									</div>
+									<ul class="kaik-content gsxx-list1" id="tzzgx">
+										<!--<li>
+											<em class='hsxtp'><img src="/saasBeta/yanbao/images/hsxtp.png" alt=""></em>
+											<em class='btzb'><a href=http://gonggao.159jh.com/gonggao/" + item.noticeUrl + " target=_blank>" +item.noticeTitle + "</a></em>
+											<span class='sjyb'>"+isStrKong(item.reportTime)+"</span>
+											<div class='clearfix'></div>
+										</li>-->
+									</ul>
+										<div class="gqbd" id="tzzGX">
+											<div class="pagination" id="pagesFlss"></div>
+										</div>
+									</div>
+									
+								</div>
+								
+													
+							</div>
+				</div>	
+			</div>
+		</div>
+
+	<script type="text/javascript">
+		//判断是否登录，没登录直接跳到登录页面
+		UTIL.Anologin('tzzgxhdjl');
+		// findJZDS();
+		// $(function(){
+		//     var windowHeight = $(window).height()
+		//     $(".yuce-fx .container").height(windowHeight-195);
+
+		//     $(".contents").height(windowHeight - 290);
+		//     $("#sicDNTBody").delegate(".duibiao","click",function(){
+		// 		var code=$(this).attr("data-code");
+		// 		var name=$(this).text();
+		// 		var userId = localStorage.getItem("userId");
+		// 		if (userId != null && userId != "" && userId != "undefined") {
+		// 			if(UTIL.getPara("stockCode") != code){
+		// 				window.open("./cover.html?stockCode=" + code + "&stockName=" + name);
+						
+		// 				//location.href = "./cover.html?stockCode=" + code + "&stockName=" + name;
+		// 				var urlName = "./cover.html?stockCode=" + code + "&stockName=" + name;
+		// 				localStorage.setItem("locaHref", urlName);
+		// 			}
+		// 		} else {
+		// 			if(UTIL.getPara("stockCode") != code){
+		// 				window.open("./cover.html?stockCode=" + code + "&stockName=" + name);
+		// 			}
+		// 			//location.href = "./login.html?stockCode=" + code + "&stockName=" + name;
+		// 		}
+		// 	})
+		// 	// UTIL.sjly("#zyjzdsly","zyjzds",".zyjzds","sjlyy");
+
+		// })
+		findTouZiZheGX(1,1);
+	</script>
+

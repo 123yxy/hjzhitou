@@ -1,0 +1,135 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style type="text/css">
+	.gudong-pay{position: relative;}
+	.gudong-pay .noPay{position: absolute;top: 0;right: 0;}
+	.tab-list{position: relative;}
+	.data-lists{position: absolute;top: 0;right: 0;width: 140px;height: 30px;border:1px solid #e4e4e4;box-sizing: border-box;}
+	.data-lists p{width: 100%;line-height: 30px;font-size: 14px;color: #444;padding-left: 14px;box-sizing: border-box;position: relative;cursor: pointer;}
+	.data-lists p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 10px;right: 10px;background: url(../images/zyyw.png)0 0 no-repeat;}
+	.data-lists p:hover:after{background: url(../images/zyyw.png)-13px 0 no-repeat;}
+	.data-lists p.on:after{transform: rotate(180deg);}
+	.data-lists ul{width: 100%;position: absolute;top:28px;left: 0;border:1px solid #e4e4e4;background-color: #fff;z-index: 5;}
+	.data-lists ul li{font-size: 14px;color: #555;line-height: 24px;padding-left: 14px;box-sizing: border-box;}
+	.data-lists ul li:hover{color: #fff;background-color: #1985e2;cursor: pointer;}
+	.data-lists ul li.on{color: #1985e2;}
+	.data-lists ul li.on:hover{color: #fff;background-color: #1985e2;}
+	.contents.sb-sdgd{position: relative;}
+	.guanxi-gap{position: absolute;bottom: 20px;left: 0;font-size: 14px;}
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>一、公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents sb-sdgd">
+					<div class="section">
+						<h2>1.3股权结构</h2>
+						<div class="kaik-content gudong-pay">
+							<h3>1.3.1十大股东情况</h3>
+							<div class="noPay">付费可以查看更多的数据</div>
+							<div class="gudong-num" id="sdgdWidth">
+								<div class="tab-list">
+									<span class="on">图表</span> <span>列表</span>
+									<div class="data-lists" id="reportList">
+										<p id="reportData"><!--2014--></p>
+										<ul id="gdList" style="display: none;">
+											<!--<li>2017</li>
+											<li>2016</li>
+											<li>2015</li>-->
+										</ul>
+									</div>
+								</div>
+								<!--十大股东的饼图-->
+								<div class="echarts-tb sdgd" id="gdqk-tb"></div>
+								<div class="caiwu-table sdgd" style="display: none;" id="gqjgList">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>股东</th>
+												<th class=shuzi>持股比例</th>
+												<th class=shuzi>持股数量(万股)</th>
+											</tr>
+										</thead>
+										<tbody id="tenShareholders">
+											<!-- 		<tr>
+															<td>欧阳建平</td>
+															<td class="shuzi">18.20%</td>
+															<td class="shuzi">938.00</td>
+														</tr> -->
+										</tbody>
+									</table>
+								</div>
+								<!--<div class="noPay">深度内容，开通查看权限</div>-->
+								
+							</div>
+						</div>
+						<!--<div class="kaik-content">
+							<h3>1.3.2控股股东</h3>
+							<div class="percen-infor" id="shareholder_2">
+								 
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h3>1.3.3实际控制人基本情况</h3>
+							<div class="percen-infor" id="actualcontroller_2">
+							 
+							</div>
+						</div>-->
+					</div>
+					<div class="guanxi-gap" id="relationDeclaration" style="display: none;"></div>
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- 企业基本信息js-凡国庆 -->
+<script>
+	sectionOne3();
+	$(function(){
+		
+		findshareholders(null);
+		findShareRelationShip();//十大股东关系说明
+		
+	    var windowHeight = $(window).height()
+	    $(".yuce-fx .container").height(windowHeight-195);
+    	$(".contents").height(windowHeight - 290);
+    	//用户是否是付费的状态
+		payOrNot();
+		if(payOrNot()==true){//已付费的情况
+			$(".gudong-pay .noPay").hide();
+			$("#relationDeclaration").show();
+		}else if(payOrNot()==false || payOrNot()==undefined){//未付费的时候
+			$("#reportList").hide();
+			$("#relationDeclaration").hide();
+			
+		}
+		//点击深度查看
+		deepLook();
+		$("#reportData").on("click",function(){
+			$("#gdList").toggle();
+		})
+//		
+	$("#gdList").on("click","li",function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var date=$(this).text();
+		//console.log(date)
+		$("#reportData").html(date);
+		$("#gdList").slideUp();
+		findshareholders(date);
+	})
+		
+		
+	})
+</script>

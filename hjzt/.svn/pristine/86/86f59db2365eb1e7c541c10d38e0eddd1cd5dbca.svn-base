@@ -1,0 +1,170 @@
+.guide-main{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.guide-top{
+	width: 100%;
+	height: 420px;
+	background: url(../images/guide.jpg)center center no-repeat;
+}
+.guide-top .pageCenter{
+	height: 466px;
+	position: relative;
+}
+.guide-pages1{
+	width: 520px;
+	height: 170px;
+	position: absolute;
+	left:108px;
+	bottom: 160px;
+}
+.guide-pages1 img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.guide-pages2{
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	bottom: 37px;
+	right: 140px;
+}
+.guide-pages2 img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.guide-content{
+	width: 100%;
+	padding-top: 34px;
+	padding-bottom: 64px;
+	box-sizing: border-box;
+}
+.name-list{
+	width: 20%;
+	padding-right: 26px;
+	box-sizing: border-box;
+}
+.name-list span{
+	display: inline-block;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+	cursor: pointer;
+	position: relative;
+	background-color: #f3f3f3;
+}
+.name-list span:after{
+	display: block;
+	content:'';
+	width: 22px;height: 22px;
+	position: absolute;
+	top: 13px;
+	left: 30px;	
+}
+.name-list .produce span:after{
+	background: url(../images/cpjs.jpg)center center no-repeat;
+}
+.name-list .method span:after{
+	background: url(../images/syff.jpg)center center no-repeat;
+}
+.name-list span.on{background-color: #dcd9d9;}
+.produce span{margin-bottom: 10px;}
+.guide-contents{
+	width: 79%;
+}
+.produce-content,.method-content{
+	width: 100%;
+	padding:20px 40px 40px 40px;
+	border:1px solid #ccc;
+	box-sizing: border-box;
+}
+.produce-title{
+	width: 100%;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.produce-title h1{
+	font-size: 20px;
+	line-height: 34px;
+	color: #333;
+}
+.produce-content p,.method-content p{font-size: 14px;line-height: 22px;}
+.produce-list h2{
+	margin-top: 14px;
+	font-size: 16px;
+	color: #333;
+	font-weight: 700;
+	line-height: 44px;
+}
+.method-list span{font-size: 14px;color: #333;}
+.hot-search{margin:22px 0 28px 0;}
+.method-list h2{
+	font-size: 16px;
+	font-weight: 700;
+	color: #333;
+	line-height: 40px;
+}
+.method-list li{padding-left: 16px;box-sizing: border-box;position: relative;}
+.method-list li:after{
+	display: inline-block;
+	content: "";
+	width: 6px;
+	height: 6px;
+	background-color: #999;
+	border-radius: 3px;
+	position: absolute;
+	top: 8px;
+	left: 0;
+}
+.lxfs{margin-top: 30px;}
+
+/*底部样式*/
+.footer_nav{width: 100%;height: 294px;background-color: #1985e2;}
+.foot-nav{width: 30%;margin: 0 auto;padding-top: 40px;box-sizing: border-box;}
+.foot-nav li{
+	float: left;
+	width: 33%;
+}
+.foot-nav li p{
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	cursor: pointer;
+}
+.foot-nav li p a{color: #fff;}
+.foot-nav li p.foot-title{
+	font-size: 20px;
+}
+.foot-nav li.foot-help p.foot-title{
+	margin-bottom: 20px;
+}
+.foot-nav li.foot-fuw p.foot-title{
+	margin-bottom: 8px;
+}
+.foot-nav li.foot-fuw p.erwm{
+	margin-top: 20px;
+	width: 130px;
+	height: 130px;
+}
+.foot-nav li.foot-fuw p.erwm img{
+	display: block;
+	width: 100%;
+	margin-left: 30px;
+}
+.foot-bg{width: 100%;height: 72px;background-color: #494949;}
+.foot-bg .pageCenter p{
+	width: 100%;
+	font-size: 14px;
+	color: #fff;
+	line-height: 72px;
+	text-align: center;
+}
+
+.guide-top .userHead-logo{margin-top: 16px;}

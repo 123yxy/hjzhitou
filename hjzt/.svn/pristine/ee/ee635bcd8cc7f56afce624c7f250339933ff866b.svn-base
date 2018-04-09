@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+.container {
+	padding: 0;
+}
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>一、公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section">
+						<h2>1.1公司信息</h2>
+						<div class="kaik-content">
+							<h3>1.1.1简介</h3>
+							<p id="companyIntroductionId">
+								<!-- 中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。 -->
+							</p>
+						</div>
+						<div class="kaik-content">
+							<h3>1.1.2工商信息</h3>
+							<ul class="gsxx-list">
+								<li><em>公司名称</em><span id="chiname"></span></li>
+								<li><em>公司法人</em><span id="legalperson"></span></li>
+								<li><em>注册资本</em><span id="regcapital"></span></li>
+								<li><em>所属行业</em><span id="industry"></span></li>
+								<li><em>注册地址</em><span id="registeredaddress" style="cursor: pointer"></span></li>
+								<li><em>办公地址</em><span id="businessaddress" style="cursor: pointer"></span></li>
+								<li><em>成立时间</em><span id="registrationDate"></span></li>
+								<li><em>办公电话</em><span id="phone"></span></li>
+								<li><em>公司传真</em><span id="fax"></span></li>
+								<li><em>公司网址</em><span id="weburl"></span></li>
+								<li><em>经营期限</em><span id="businessterm"></span></li>
+								<li><em>经营状态</em><span id="state"></span></li>
+								<li><em>登记机关</em><span id="reginstitute"></span></li>
+								<li><em>统一信用代码</em><span id="creditcode"></span></li>
+								<li><em>专利</em><span id="patentnum"></span></li>
+								<li><em>著作权</em><span id="copyrightnum"></span></li>
+								<li class="busniess-main"><em>经营范围</em><span
+									id="businessscope"></span>
+									<div class="clearfix"></div></li>
+								<div class="clearfix"></div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+
+<!--背景-->
+<!--<div class="marsk" style="display: none;"></div>-->
+
+<!-- 企业基本信息js-凡国庆 -->
+<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script> -->
+<!--加载第一章节js1-1 -->
+<script>
+	sectionOne1();
+	$(function(){
+	    var windowHeight = $(window).height()
+	    $(".yuce-fx .container").height(windowHeight-195);
+	    $(".contents").height(windowHeight - 290);
+//	    console.log($(".gsxx-list").width())
+//	    $("#businessscope").css("width",$(".busniess-main").width()-254);
+	    
+	})
+</script>

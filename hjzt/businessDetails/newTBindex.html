@@ -1,0 +1,799 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-概况</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css" />
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+
+	<body>
+
+		<!--股票提醒-->
+		<div class="backbj" style="display: none;"></div>
+		<!--主体 star-->
+		<div class="right_main new_TBmain_R new_r_main">			
+			<!--main  star-->
+					<div class="new_boar_main new_styles fl">
+						<div class="new_nav_postion">
+							<a href="/security/myPreferredStock.html">证券管理</a> >
+							<a id="stockNameShow" href="javascript:;">--</a>
+						</div>
+						<div class="boar_l new_boar_li">
+							<!--<div class="news_boar_ltop">
+								<h2>铭慧股份</h2>
+								<span>833822</span>
+								<div class="news_boar_gn">
+									<i class="news_boar_duibi"></i>
+									<i class="news_boar_tongzhi"></i>
+									<i class="news_boar_pk"></i>
+									<i class="news_boar_baogao"></i>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<ul>
+							<li class="n_gK hover"><span></span><a href="#">概况</a></li>
+			     			<li class="n_cwsJ"><span></span><a href="#">财务数据</a></li>
+			     			<li class="n_gxT"><span></span><a href="#">关系图</a></li>
+			     			<li class="n_yjjL"><span></span><a href="#">研究记录</a></li>
+			     			<li class="n_gG"><span></span><a href="#">公告</a></li>
+			     			<li class="n_xW"><span></span><a href="#">新闻</a></li>
+							<div class="clr"></div>
+							</ul>-->
+						</div>
+					</div>	
+						<div class="boar_r new_boar_lir new_r_styles fl">
+							<div class="bora_r_top">
+								<div class="ora_r_Box">
+									<div class="r_top_c fl">
+										<div class="r_top_price"> <span id="newPrice" class="new_price">--</span>
+											<div class="top_box up_gj">
+												<!--此处class:up_gj代表此股上涨  class:down代表此股下跌-->
+												<span id="changeAmount" class="zde_price">--</span> <span id="priceChangeRatio" class="zdf_bfb">--</span> </div>
+											<div class="clr"></div>
+										</div>
+										<div class="r_top_zd">
+											<p><span>涨停：</span><em id="limitUp" class="zt_pr">--</em></p>
+											<p><span>跌停：</span><em id="limitDown" class="dt_pr">--</em></p>
+										</div>
+										<div class="r_bot_time">
+											<p id="realTime">--</p>
+										</div>
+									</div>
+									<div class="r_top_r fl">
+										<ul>
+											<li><span>今开:</span>
+												<p id="openPrice" class="red">--</p>
+											</li>
+											<li><span>成交量:</span>
+												<p id="tradingVolume">--</p>
+											</li>
+											<li><span>振幅:</span>
+												<p id="amplitude">--</p>
+											</li>
+											<li><span>最高:</span>
+												<p id="highPrice" class="red">--</p>
+											</li>
+											<li><span>成交额:</span>
+												<p id="tradingAmount">-</p>
+											</li>
+											<li><span>换手:</span>
+												<p id="turnover">--</p>
+											</li>
+											<li><span>最低:</span>
+												<p id="lowPrice" class="green">--</p>
+											</li>
+											<li><span>总市值:</span>
+												<p id="totalMarketValue">--</p>
+											</li>
+											<li><span>市净率:</span>
+												<p id="netRatio">--</p>
+											</li>
+											<li><span>昨收:</span>
+												<p id="yclosePrice">--</p>
+											</li>
+											<li><span>流通市值:</span>
+												<p id="cmValue">--</p>
+											</li>
+											<!-- wtl 7.6 把动去掉 -->
+											<li><span>市盈率(静):</span>
+												<p id="priceEarningRatio">--</p>
+											</li>
+											<div class="clr"></div>
+										</ul>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+							<div class="new_gp_in_title gaik_tux">
+								<span class="fl on">日线图</span>
+								<span class="fl">分时图</span>
+								<span class="fl">市值</span>
+								<em class="fr tub_shouqi">收起</em>
+								<div class="clr"></div>
+							</div>
+							<div class="fen_echars">
+								<div class="newprice" id="newprice"></div>
+								<!--<div class="newnumber" id="newnumber"></div>-->
+							</div>
+							<div class="clr"></div>
+							<div class="new_gp_in_title">
+								<span class="n_gsgk">公司概况</span>
+							</div>
+							<div class="clr"></div>
+							<div class="n_gsgk_dbox">
+								<ul>
+									<li>
+										<span>公司信息</span>
+										<p id="companyMsg">--
+											<!-- 铭慧股份有限公司（430002），实际控制人：罗朝炜 ，主办券商:西南证券 ，总股本：3,000.00万股 -->
+										</p>
+										<a href="javascript:;" id="tc_gsxq">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>股本股东</span>
+										<p id="equityShareholders">--
+											<!-- 总股本: 6,000万股（限售:45%，流通55%），  股东人数：61  ，主要股东:罗朝炜(52.4%)、郑岷（11.52%） -->
+										</p>
+										<a href="javascript:;" id="tc_gbgd">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>高管</span>
+										<p id="director">--
+											<!-- 刘莉、周银江、罗朝东、郑岷 -->
+										</p>
+										<a href="javascript:;" id="tc_gaoguan">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>经营情况</span>
+										<p id="operation">--
+											<!-- 主要产品及收入占比：灌装设备 （66.02%）,圆杯贴管机设备 （13.83%），设备零配件 (13.37%),设备改造 （3.40%），加盖设备 （3.38%）
+主营业务：公司主营业务为液态食品包装机械和纸铝复合无菌材料的研发、生产与销售，具体是纸包无菌灌装机和相关辅助设备（包括贴管机、食具粘贴机、压盖机）专业研究、设计和制造，并提供
+液体食品无菌包装领域的全套解决方案。相应的公司装饮料的主要产品为液态食品灌装机、加盖机、贴管机，除此之外，公司也销售部分零配件和提供液体食品无菌包装领域的全套解决方案。 -->
+										</p>
+										<a href="javascript:;" id="tc_jyqk">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>所属行业</span>
+										<p id="industry">--
+											<!-- 制造业>专用设备制造业（132家），市盈率行业均值：86.92 ，排名：29 -->
+										</p>
+										<a href="javascript:;" class="tiaozhuan">行业分析</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>团队</span>
+										<p id="team">--
+											<!-- 员工（35人） ，管理人员（20%），财务人员（14%），营销人员（17%），技术人员（17%） -->
+										</p>
+										<a href="javascript:;" id="tc_tuandui">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>发行情况</span>
+										<p id="issuance">--
+											<!-- 累计增发 2 次，其中成功 2 次，失败 0 次，进行中 0 次，累计实际募资净额为 2.89 亿元。 -->
+										</p>
+										<a href="javascript:;" id="tc_fxqk">详情</a>
+										<div class="clr"></div>
+									</li>
+									<li>
+										<span>公司大事</span>
+										<p id="event">--
+											<!-- 重大事项：234件（定增事件：23 ， 对外投资：11 ， 收购：150，公司会议：22） -->
+										</p>
+										<a href="javascript:;" id="tc_gsds">详情</a>
+										<div class="clr"></div>
+									</li>
+								</ul>
+							</div>
+
+							<div class="clr"></div>
+				<!--main  end-->
+				<!--footer  star-->
+
+				<!--footer  end-->
+			</div>
+			<!--公司基本信息弹窗star-->
+			<div class="n_gsjbx" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司基本信息</b>
+				</div>
+				<div class="n_gsjbx_dbox">
+					<!--<div class="n_gs_title">
+				<span>公司基本信息</span>
+			</div>
+			<div class="clr"></div>-->
+					<div class="n_gs_dbox">
+						<ul>
+							<li>
+								<span>公司名称</span>
+								<p id="companyForShort">--
+									<!-- 铭慧股份 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<span>法人代表</span>
+								<p id="legalPerson">--
+									<!-- 张三 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>注册时间</span>
+								<p id="registrationDate">--
+									<!-- 2009-12-22 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>注册资本(万元)</span>
+								<p id="registeredCapital">--</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>挂牌时间</span>
+								<p id="stockDate">--
+									<!-- 2012-09-10 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>主办券商</span>
+								<p id="sponsoredBroker">--
+									<!-- 招商证券 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>转让方式</span>
+								<p id="dealType">--
+									<!-- 协议转让 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>总股本(万股)</span>
+								<p id="generalCapital">--
+									<!-- 60000.00 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>实际控股人</span>
+								<p id="actualController">--
+									<!-- 罗超威 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>董秘</span>
+								<p id="secretary">--
+									<!-- 苏妲己 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>所属行业</span>
+								<p id="industryName">--
+									<!-- 机械设备--专用设备 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>所属区域</span>
+								<p id="state">--
+									<!-- 广东-广州 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>电话</span>
+								<p id="phone">--
+									<!-- +86-20-84554400 -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>传真</span>
+								<p id="fax">--</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>公司网址</span>
+								<p id="companyUrl">--
+									<!-- www.baidu.com -->
+								</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>联系地址</span>
+								<p id="businessAddress">--
+									<!-- 广东省广州市番禺区大龙街汉基大道22 -->号</p>
+								<div class="clr"></div>
+
+							</li>
+							<li>
+								<span>公司简介</span>
+								<p id="enterpriseIntroduction">--
+									<!-- 广州市铭慧包装机械有限公司（以下简供液体食品无菌包装领域的全套解决方蛋白饮料等等行业。 自成立以来，铭完美的
+液体食品无菌包装解决方案。凭称“铭慧包装”）专业研究、设计制造案。铭慧包装的产品已经成功应用于茶慧包装以其
+优良的品质，先进的技术，借稳定可靠的产品性能，人性化的环保体食品无菌包装设备及辅助设备，并提饮料、果汁、纯
+牛奶、含乳饮料、植物无与伦比的客户服务 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<li class="last">
+								<span>商业模式</span>
+								<p id="businessModel">--
+									<!-- 公司主营业务为纸包装饮料无菌灌的全套解决方案。主要产品包括灌机、装机和相关辅助设备的专业研究、设计贴管机、
+压盖机及配备零部件。根据中和制造，并提供液体食品无菌包装领域国证监会发布的《上市公司行业分类指 -->
+								</p>
+								<div class="clr"></div>
+							</li>
+							<div class="clr"></div>
+						</ul>
+						<div class="clr"></div>
+					</div>
+					<div class="n_gs_time">
+						<span id="enterpriseUpTime">--<!-- 更新时间:2017-05-03 --></span>
+					</div>
+					<div class="clr"></div>
+				</div>
+
+			</div>
+			<!--公司基本信息弹窗end-->
+			<!--十大股东弹窗star-->
+			<div class="n_ten_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>十大股东</b>
+				</div>
+				<!--<div class="n_ten_title">
+				<span></span>
+			</div>-->
+				<div class="clr"></div>
+				<div class="n_ten_table">
+					<div class="gd_content">
+						<table>
+							<thead>
+								<tr>
+									<th class="gd_paixu">排序</th>
+									<th>股东</th>
+									<th>持股数量<em>(万股)</em></th>
+									<th>有限售持股<em>(万股)</em></th>
+									<th>无限售持股<em>(万股)</em></th>
+									<th>总股本占比</th>
+									<th>持股变化</th>
+								</tr>
+							</thead>
+							<tbody id="tenHolder">
+								<!-- <tr>
+						<td>1</td>
+						<td>罗朝伟</td>
+						<td>3,144.00</td>
+						<td>2358.00</td>
+						<td>786.00</td>
+						<td>52.4</td>
+						<td>10.05</td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gs_time">
+					<span id="holderUpTime">更新时间:--</span>
+				</div>
+			</div>
+			<!--十大股东弹窗end-->
+			<!--高管弹窗star-->
+			<div class="n_gsgguan_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司高管</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gsgguan_table">
+					<div class="xq_gaog">
+						<table id="ngsgg_tb">
+							<thead>
+								<tr>
+									<th class="gsgg_xuhao">序号</th>
+									<th class="gsgg_xm">姓名</th>
+									<th class="gsgg_zw">职务</th>
+									<th class="gsgg_sj">任职时间</th>
+									<th class="gsgg_cg">持股（万股）</th>
+									<th class="gsgg_cgbh">持股变化(%)</th>
+									<th class="gsgg_jl">简历</th>
+								</tr>
+							</thead>
+							<tbody id="dignitaryTbody">
+								<!-- 					  <tr> -->
+								<!-- 						<td>1</td> -->
+								<!-- 						<td>罗朝伟</td> -->
+								<!-- 						<td>董事长</td> -->
+								<!-- 						<td>2358.00</td> -->
+								<!-- 						<td>786.00</td> -->
+								<!-- 						<td>52.4</td> -->
+								<!-- 						<td><a href="javascript:;">查看</a></td> -->
+								<!-- 					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gs_time">
+					<span id="dignUpTime">更新时间:--</span>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gg_tc_tc">
+					<div class="gg_gr_xinx">
+						<div class="n_g_t_tc_btn" id="n_g_t_tc_colse">
+							收起
+						</div>
+						<div class="n_gg_dbox">
+							<div class="n_gg_scroll">
+								<div class="n_gg_jbxx">
+									<div class="n_gg_span">
+										<span>基本信息</span>
+									</div>
+									<div class="n_gg_info">
+										<ul>
+											<li><span>姓名:</span>
+												<p id="dignitaryName">--
+													<!-- 罗密欧 -->
+												</p>
+											</li>
+											<li><span>性别:</span>
+												<p id="sex">--</p>
+											</li>
+											<li><span>出生年月:</span>
+												<p id="bornDate">--
+													<!-- 1970-04 -->
+												</p>
+											</li>
+											<li><span>国籍:</span>
+												<p id="nationality">--
+													<!-- 中国 -->
+												</p>
+											</li>
+											<li><span>现居地:</span>
+												<p id="livingPlace">--
+													<!-- 中国香港居留权 -->
+												</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+								<div class="n_gg_jyjl">
+									<div class="n_jy_span">
+										<span>教育经历</span>
+									</div>
+									<div class="n_gg_jyjlul">
+										<ul>
+											<!-- <li>
+											<p>1993-07毕业与华南理工大学化工机械系，获得本科学位。</p>
+											<div class="clr"></div>
+										</li> -->
+										</ul>
+									</div>
+
+								</div>
+								<div class="clr"></div>
+								<div class="n_gg_zyjl">
+									<div class="n_zy_span">
+										<span>任职经历</span>
+									</div>
+									<div class="n_gg_zyjlul">
+										<ul>
+											<!-- 										<li><p>毕业与华南理工大学化工机械系，获得本科学位。</p></li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--高管弹窗end-->
+			<!--公司大事弹窗star-->
+			<div class="n_big_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>公司大事</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_big_table gongsi_dashi">
+					<div class="xq_gs_ds">
+						<table class="gs_big_tc">
+							<thead>
+								<tr>
+									<th class="n_big_time">时间</th>
+									<th class='n_big_type'>类型</th>
+									<th>公告名称</th>
+								</tr>
+							</thead>
+							<tbody id="eventTbody">
+								<!-- <tr>
+						<td>2017-05-13</td>
+						<td>公开转让说明书</td>
+						<td>公告名称</td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="npages" id="page" style="display: none;">
+					<a href="javascript:;">首页</a>
+					<a href="javascript:;">上一页</a>
+					<a href="javascript:;">下一页</a>
+				</div>
+			</div>
+			<!--公司大事弹窗end-->
+
+			<!--经营情况弹窗star-->
+			<div class="n_jyqk_dbox" style="display: none;">
+				<div class="n_gs_close">
+					
+					<span></span>
+					<b>业务收入</b>
+				</div>
+				
+				<div class="n_jyqk_scorr">
+					
+					<div class="clr"></div>
+					<div class="jyqk_tc">
+					<div class="n_jyqk_ywsr_table">
+						<table id="mainBusinessTablde">
+							<thead>
+								<tr id="mainBusinessHead">
+									<th rowspan="2" scope="col" class="cp_title" class="jiny_mc">产品</th>
+									<!-- 							<th colspan="2" scope="col">2015年1-3月</th> -->
+									<!-- 							<th colspan="2" scope="col">2014年度</th> -->
+									<!-- 							<th colspan="2" scope="col">2013年度</th> -->
+								</tr>
+								<tr id="mainBusinessCenter">
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+									<!-- 							<th>金额(万元)</th> -->
+									<!-- 							<th>占比(%)</th> -->
+								</tr>
+							</thead>
+							<tbody id="mainBusinessTBody">
+								<!-- 						<tr> -->
+								<!-- 								<td>灌装机</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 								<td>210022357.66</td> -->
+								<!-- 								<td>88.66</td> -->
+								<!-- 						</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="clr"></div>
+					<div class="n_jyqk_title">
+						<span>主要客户</span>
+					</div>
+
+					<div class="clr"></div>
+					<div class="n_jyqk_table">
+						<table>
+							<thead>
+								<tr>
+									<th class="jiny_mc">客户名称</th>
+									<th class="jiny_jine">金额(万元)</th>
+									<th class="jine_zb">占比(%)</th>
+								</tr>
+							</thead>
+							<tbody id="ocTbody">
+								<!-- 					  <tr> -->
+								<!-- 						<td>灌装机</td> -->
+								<!-- 						<td>210000.00</td> -->
+								<!-- 						<td>88.46</td> -->
+								<!-- 					</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div class="clr"></div>
+					</div>
+					
+				</div>
+				<div class="n_gs_time">
+						<span id="opUpTime">更新时间:--</span>
+					</div>
+			</div>
+			<!--经营情况弹窗end-->
+			<!--发行情况弹窗star-->
+			<div class="n_fxqkd_dbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>历次发行</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_fxqkd_table">
+					<div class="xq_gs_ds">
+						<table id="nfxdx_tb">
+							<thead>
+								<tr>
+									<th>公告时间</th>
+									<th>最新价</th>
+									<th>发行价</th>
+									<th>溢价率</th>
+									<th>融资市盈率</th>
+									<th>募资金额(万元)</th>
+									<th>发行股数(万股)</th>
+									<th>最新进度</th>
+									<th>发行对象</th>
+								</tr>
+							</thead>
+							<tbody id="fxTbody">
+								<!-- <tr>
+						<td>2016-02-09</td>
+						<td>13.46</td>
+						<td>8.9</td>
+						<td>-36.88</td>
+						<td>188.03</td>
+						<td>786.00</td>
+						<td>2795</td>
+						<td>董事会通过</td>
+						<td><a href="javascript:;">查看</a></td>
+					</tr> -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<div class="n_gs_time">
+					<span id="fxUpTime">更新时间:--</span>
+				</div>
+				<div class="clr"></div>
+				<div class="n_fxqk_tc_tc">
+					<div class="gg_gr_xinx">
+						<div class="n_fxqk_t_tc_btn" id="n_fxdx_t_tc_colse">
+							<!--<img src="/saasBeta/images/n_shouqi.png"/>-->
+							收起
+						</div>
+						<div class="n_fxqk_dbox">
+							<div class="n_fxqk_scroll">
+								<div class="n_fxqk_dtable">
+									<table>
+										<thead>
+											<tr>
+												<th class="fax_xuhao">序号</th>
+												<th>投资人</th>
+												<th>类型</th>
+												<th>每股价格(元)</th>
+												<th>投资数量(万股)</th>
+												<th>融资金额(万元)</th>
+											</tr>
+										</thead>
+										<tbody id="fxdxTbody">
+											<!-- <tr>
+						<td>1</td>
+						<td>北京明宇投资管理有限公司</td>
+						<td>PE/VC</td>
+						<td>8.9</td>
+						<td>220</td>
+						<td>220</td>
+					</tr> -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="clr"></div>
+
+						</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+			<!--发行情况弹窗end-->
+			<!--团队弹窗star-->
+			<div class="n_teamdbox" style="display: none;">
+				<div class="n_gs_close">
+					<span></span>
+					<b>员工信息</b>
+				</div>
+				<div class="clr"></div>
+				<div class="n_fxtd_dbox">
+					<div class="n_fxqk_echars_dbox">
+						<div class="fxqk_echars_l fl">
+							<div class="fxqk_ec_title">
+								<span>员工组织结构</span>
+							</div>
+							<div class="fxqk_ec_info" id="ygzzjiegou">
+
+							</div>
+						</div>
+						<div class="fxqk_echars_r fr">
+							<div class="fxqk_ec_title">
+								<span>员工教育结构</span>
+							</div>
+							<div class="fxqk_ec_info" id="ygjyjiegou">
+
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="fxqk_ygbd_echars_dbox">
+						<div class="fxqk_ec_title">
+							<span>员工波动情况</span>
+						</div>
+						<div class="fxqk_bod_echar_info" id="fxqk_bod_echar_info">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--团队弹窗end-->
+			<!--设置提醒弹窗 star-->
+
+			<!--设置提醒弹窗end-->
+			<!--主体 end-->
+			<!-- 自动补全 -->
+			<script src="/saasBeta/js/jquery-ui.min.js"></script>
+			<script src="/saasBeta/js/jquery.validate.min.js"></script>
+			<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+			<script src="/saasBeta/js/common.js"></script>
+			<script src="https://cdn.bootcss.com/echarts/3.1.8/echarts.common.js"></script>
+			<!-- 自动补全 -->
+
+			<!-- 分页开始 -->
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+			<!-- 分页结束 -->
+			<script src="/saasBeta/js/businessDetails/GPleft.js"></script>
+			<script src="/saasBeta/js/businessDetails/newTBechars.js"></script>
+			<script src="/saasBeta/js/newdetails/newTBindex.js"></script>
+
+	</body>
+
+</html>

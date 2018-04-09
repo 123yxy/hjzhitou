@@ -1,0 +1,57 @@
+.report-title>div:first-child{
+    width:68px;
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+    margin-top:188px;
+    margin-bottom:88px;
+}
+.con-item>p{
+    font-size:15px;
+    line-height: 15px;
+}
+.con-item>p>span{
+        padding: 2px 5px;
+    color:#fff;
+    background:#feb535;
+    /*width:56px;
+    height:18px;*/
+    text-align: center;
+    line-height:18px;
+    font-size:12px;
+    font-weight: normal;
+    border-radius: 3px;
+    margin-right:6px;
+}
+.con-item>div>span {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 20px;
+    color:#777;
+}
+.select-box>ul>li{
+    /*width:100px;*/
+    padding:0;
+    /*text-align: center;*/
+}
+.select-box>ul>li.three{
+    /*width:90px;*/
+}
+.select-box>ul>li.two{
+    /*width:75px;*/
+}
+/*.select-box>ul>li:last-child{
+    border-right:none;
+    width:98px;
+}*/
+/*.select-box li>div>span{
+    display: inline-block;
+    width: 11px;
+    height: 6px;
+    background: url("../../../saasBeta/images/Image/pic.png") no-repeat -90px -30px;
+    margin-left: 7px;
+}*/
+.select-box li>div>span.active{
+    background:url("../../../saasBeta/images/Image/select-icon-top.png");
+}

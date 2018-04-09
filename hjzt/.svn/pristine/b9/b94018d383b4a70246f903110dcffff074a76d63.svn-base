@@ -1,0 +1,137 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+<style>
+	.container { padding:0; }
+	.company-business .competion .caiwu-table .table td:nth-child(1), .company-business .competion .caiwu-table .table th:nth-child(1) { width:15%;}
+</style>
+		<div class="company-business">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>二、公司业务</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section zyjzds">
+									<h2>2.5主要竞争对手</h2>
+									<div class="hy-type" id="hy_type"></div>
+									<!-- <div class="yewu-contents">
+										<h3>2.4.1行业情况</h3>
+										<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.4.2影响行业的因素</h3>
+										<div class="competion">
+											<h6>1.有利因素</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+										<div class="competion">
+											<h6>2.不利因素</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+									</div>	
+									<div class="yewu-contents">
+										<h3>2.4.3行业政策和事件</h3>
+										<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+									</div>
+									<div class="yewu-contents">
+										<h3>2.4.4同行业竞争</h3>
+										<div class="competion">
+											<h6>1.优势</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div>
+										<div class="competion">
+											<h6>2.劣势</h6>
+											<p>中科软科技股份有限公司是专门从事计算机软件研发、应用、服务的智能密集型高新技术企业，公司以大型行业应用软件开发和系统集成为核心，集自主开发的行业通用软件产品、大型网络应用软件组合平台、中间件软件产品及应用工具于一体，涵盖了系统软件、支撑软件、行业应用软件等各个层次，可为大型应用系统工程提供全方位支持。公司不断强化技术创新能力，注重精准把握各类客户的特殊需求，从而为保险、银行、政府、能源、公共卫生、军队等众多领域提供技术体系建设、行业解决方案及咨询服务等业务。</p>
+										</div> -->
+										<div class="competion">
+											<div class="caiwu-table">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>对标公司</th>
+														<th class="shuzi">营业收入（万元）</th>
+														<th class="shuzi">净利润（万元）</th>
+														<th class="shuzi">资产负债率（%）</th>
+														<th class="shuzi">ROE</th>
+														<!--<th>所属行业</th>-->
+													</tr>
+												</thead>
+												<tbody id="sicDNTBody" >
+													<!-- <tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td class="shuzi">2017-10-10</td>
+													</tr>
+													<tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td class="shuzi">2017-10-10</td>
+													</tr>
+													<tr>
+														<td>北京雅道星空广告有限公司</td>
+														<td>成从无</td>
+														<td class="shuzi">5732</td>
+														<td class="shuzi">45</td>
+														<td class="shuzi">10.26</td>
+														<td>续存</td>
+													</tr> -->
+												</tbody>
+											</table>
+											</div>
+										</div>
+									
+								</div>
+														
+							</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>	
+			</div>
+		</div>	
+	<!-- <script src="/saasBeta/yanbao/js/bus/section02.js"></script> -->
+	<script type="text/javascript">
+		findJZDS();
+		$(function(){
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+
+		    $(".contents").height(windowHeight - 290);
+		    $("#sicDNTBody").delegate(".duibiao","click",function(){
+				var code=$(this).attr("data-code");
+				var name=$(this).text();
+				var userId = localStorage.getItem("userId");
+				if (userId != null && userId != "" && userId != "undefined") {
+					if(UTIL.getPara("stockCode") != code){
+						window.open("./cover.html?stockCode=" + code + "&stockName=" + name);
+						
+						//location.href = "./cover.html?stockCode=" + code + "&stockName=" + name;
+						var urlName = "./cover.html?stockCode=" + code + "&stockName=" + name;
+						localStorage.setItem("locaHref", urlName);
+					}
+				} else {
+					if(UTIL.getPara("stockCode") != code){
+						window.open("./cover.html?stockCode=" + code + "&stockName=" + name);
+					}
+					//location.href = "./login.html?stockCode=" + code + "&stockName=" + name;
+				}
+			})
+			// UTIL.sjly("#zyjzdsly","zyjzds",".zyjzds","sjlyy");
+
+		})
+	</script>
+

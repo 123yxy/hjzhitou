@@ -1,0 +1,15 @@
+@font-face {
+	font-family:"fa";
+	src: 
+	url('../font/fontawesome-webfont.ttf'),;
+	url('../font/fontawesome-webfont.svg'),
+}
+
+.fa {
+  font-family:"fa" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

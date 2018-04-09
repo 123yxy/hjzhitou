@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="edge" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="renderer" content="webkit" />
+		<title>会员权益</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="/saasBeta/yanbao/css/jquery-ui.min.css">
+    	<link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    	<link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/cover.css" />
+		<style>
+			body,html{background: url(images/vip.png);}
+			.vip-details{
+				width: 100%;
+				padding:90px 0 280px 0;
+			}
+			.vip-details img{display: block;width: 100%;height: auto;}
+		</style>
+	</head>
+	<body>
+		<div class="userHead">
+	        <div class="cotainer">
+	            <div class="row indexTop-main">
+	                <div class="col-lg-3 col-md-3 col-sm-3 userHead-logo">
+	                    <img src="/saasBeta/yanbao/images/logo.png">
+	                </div>
+	                <!--<div class="col-lg-4 col-md-4 col-sm-4 indexTop-user"></div>-->
+	                <div class="indexTop-user"></div>
+	                <div class="col-lg-5 col-md-5 col-sm-5 top-search">
+	                	<input type="text" placeholder="输入股票名称/代码" class="top-searched" id="topSearch" />
+	                </div>
+	                <div class="clearfix"></div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="vip-record">
+	    	<div class="cotainer">
+	    		<div class="row">
+	    			<div class="col-lg-12 col-md-12 col-sm-12">
+	    				<div class="vip-details">
+	    					<img src="/saasBeta/yanbao/images/vip-wz2.png" alt="" />
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    </div>
+	</body>
+	<script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jquery-ui.min.js"></script> 
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/userCenter.js"></script>
+</html>

@@ -1,0 +1,152 @@
+
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section03.css" />
+	<style type="text/css">
+		.cwfxTable{width: 100%;position: relative;}
+		.select-time{position: absolute;width: 150px;top: -3px;right: 0;border: 1px solid #e4e4e4;}
+		.select-time p{width: 100%;height: 26px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;line-height: 26px;}
+		.cw-reportDate{width: 100%;position: absolute;top: 26px;left: 0;border:1px solid #e4e4e4;z-index: 5;background-color: #fff;}
+		.cw-reportDate li{width: 100%;line-height: 24px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;}
+		.cw-reportDate li:hover{color: #fff;background-color: #1985e2;}
+		.cw-reportDate li.on{color: #fff;background-color: #1985e2;}
+		.select-time p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 8px;right: 10px;background: url(images/zyyw.png)0 0 no-repeat;cursor: pointer;}
+		.select-time p:hover:after{background: url(images/zyyw.png)-13px 0 no-repeat;}
+
+		.xsddd{display: block;width:200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+		.AguTable .table tr th:nth-last-child(1){padding-right:20px; box-sizing: border-box;}
+		#zdSJ{min-width: 758px;}
+	</style>
+		<div class="company-analysis">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 company-background">
+					<div class="company-content">					
+						<div class="top-tiltes">
+							<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>四、财务分析</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+										<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="company-main">
+							<div class="section">
+								<h2>4.2公司财务分析</h2>
+								<div class="echarts-xq cw1">
+									<div class="cwfxTable">
+										<h3>4.2.1公司盈利情况</h3>
+										<div class="select-time" id="cwTime">
+											<p class="cw-selectedTime"></p>
+											<ul id="cw-list" class="cw-reportDate" style="display: none;">
+												<!--<li>2015-56-78</li>-->
+											</ul>
+										</div>
+									</div>
+									
+									
+									<div class="echarts-tb" id="companyProfit"></div>
+									<div class="tu-explain" id="companyProfitShuoMing">
+										<!-- <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> -->
+									</div>
+								</div>
+								<div class="echarts-xq">
+									<h3>4.2.2公司成长情况</h3>
+									<div class="echarts-tb" id="companyGrowUp"></div>
+									<div class="tu-explain" id="companyGrowUpShuoming">
+										<!-- <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> -->
+									</div>
+								</div>
+								<div class="echarts-xq">
+									<h3>4.2.3公司偿债能力情况</h3>
+									<div class="echarts-tb" id="companySinking"></div>
+									<div class="tu-explain" id="companySinkingShuoming">
+										<!-- <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> -->
+									</div>
+								</div>
+								<div class="echarts-xq cw2">
+									<h3>4.2.4公司运营能力情况</h3>
+									<div class="echarts-tb" id="companyOperate"></div>
+									<div class="tu-explain" id="companyOperateShuoming">
+										<!-- <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> -->
+									</div>
+								</div>
+								<!--<div class="echarts-xq cw3" id="shenduFx">
+									<h3>3.3.5财务深度分析</h3>
+									<div class="echarts-tb" id="companyFinancialDepth1"></div>
+									<div class="echarts-tb" id="companyFinancialDepth2"></div>
+									<div class="tu-explain" id="companyFinancialDepthShuoming">
+										 <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> 
+									</div>
+								</div>-->
+							</div>
+						</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+				
+			</div>
+		</div>
+
+	<script>
+		//判断是否登录
+		UTIL.Anologin('gscwfx');
+		//公司盈利更新时间
+		AfindProfitData(null);
+		//查询报告期
+		findreportPeriod(null);
+		//公司成长情况
+		AfindGroupData();
+		//偿债能力
+		AfindPayData();
+		//运营情况
+		AfindOperationData();
+		//财务深度分析
+		//AfindFinanceDepthData();
+		$(function(){
+			payOrNot();
+			deepLook();
+			if(payOrNot()==true){//说明已付费
+				$(".noPay").hide();
+			}else if(payOrNot()==false || payOrNot()==undefined){
+				$("#companyFinancialDepth1").hide();
+				$("#companyFinancialDepth2").hide();
+				$("#companyFinancialDepthShuoming").hide();
+				var div="<div class='noPay'>深度内容，开通查看权限</div>";
+				$("#shenduFx").append(div);
+			}
+			
+		    var windowHeight = $(".page").height()
+		    $(".company-analysis .container").height(windowHeight);
+			$(".company-main").height(windowHeight -75)
+			$("#cw-list").on("click","li",function(){
+				$(this).addClass("on").siblings().removeClass("on");
+				var reportPeriod=$(this).text();
+				$("#cwTime .cw-selectedTime").html(reportPeriod);
+				$(this).parent().slideUp();
+				AfindProfitData(reportPeriod);
+			})
+			$(".cw-selectedTime").on("click",function(){
+				if($("#cw-list").css("display")=="block"){
+					$("#cw-list").slideUp()
+				}else{
+					$("#cw-list").slideDown()
+				}
+			})
+		})
+		$(document).on("click",function(e){
+			var e=e || window.event;
+			var elem=e.target || e.srcElement;
+			var target = $("#cwTime");
+			while(elem!=null && elem.id!="cwTime"){
+				elem = elem.parentElement;
+				if(elem == target[0]){
+					return;
+				}else{
+					$("#cw-list").slideUp();
+				}
+			}
+		})
+	</script>
+

@@ -1,0 +1,22 @@
+{
+    "retCode": "0000",
+    "retMsg": "成功",
+    "retData": {
+        "XiaoShouMaoLiLv": [
+            "19.99",
+            "21.51"
+        ],
+        "XiaoShouJingLiRunLv_unit": "%",
+        "portTime": [
+            "2015-12-31",
+            "2016-12-31"
+        ],
+        "XiaoShouMaoLiLv_unit": "%",
+        "XiaoShouJingLiRunLv": [
+            "4.69",
+            "4.91"
+        ],
+        "XiaoShouMaoLiLv_showName": "销售毛利率",
+        "XiaoShouJingLiRunLv_showName": "销售净利率"
+    }
+}

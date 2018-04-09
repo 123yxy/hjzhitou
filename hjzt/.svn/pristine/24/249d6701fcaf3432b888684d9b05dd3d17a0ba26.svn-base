@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-编辑图表</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--主体 star-->
+		<div class="yulan_titles">	
+			<div class="fl">
+				<a href="javascript:;">天阳科技></a>
+				<a href="javascript:;">图表分析></a>
+				<a href="javascript:;" class="com_now">天阳科技净利润分析</a>
+			</div>
+			<div class="fr tubiao_btn">
+				<span>保存</span>
+				<em>取消</em>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="right_main tubiao_bianji">
+			<!--main  star-->
+			<div class="main">
+				<div class="bianji_times">
+					<div class="fl time_list">
+						<a href="javascript:;" class="on">周</a>
+						<a href="javascript:;">天</a>
+						<a href="javascript:;">季</a>
+						<a href="javascript:;">半年</a>
+						<a href="javascript:;">1年</a>
+						<a href="javascript:;">2年</a>
+						<a href="javascript:;">3年</a>
+						<a href="javascript:;">全部</a>
+					</div>
+					<div class="fl data_times">
+						从<input type="text" />到
+						<input type="text" />
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--左边的折线图<-->
+				<div class="bianji_content">
+					<div class="fl zhibiao_datas">
+						<div class="bianji_tb" id="bj_tub"></div>
+						<div class="information">
+							<table>
+								<thead>
+									<tr>
+										<th>指标名称</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+										<th>2017—05</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>净利润</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+										<td>1662.03</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!--右边的指标-->
+					<div class="fr zhibaio_types">
+						<div class="zb_titles">
+							<span class="tb_shezhi">
+								<i></i><em>图表设置</em>
+								<div class="clr"></div>
+							</span>
+							<span class="zb_shezhi on">
+								<i></i><em>指标设置</em>
+								<div class="clr"></div>
+							</span>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="zhibiao_types">
+					<div class=""></div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>	
+		<script src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+		
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<script src="/saasBeta/js/echarts-all-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/myResearch/chartPreview.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-研究记录</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css" />
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+
+	<body>
+		<div class="tub_tc" style="display: none;"></div>
+		<div class="tips_shanchu" style="display: none;">
+			<b class="tc_shanchu"></b>
+			<h2>删除提示</h2>
+			<p>是否确认删除？</p>
+			<div class="shanchu_btn">
+				<span class="shanc_btn" id="shanchu_tubiao">删除</span>
+				<span class="shanc_qux">取消</span>
+			</div>
+		</div>
+		<!--主体 star-->
+		<div class="right_main new_TBmain_R new_r_main">
+
+			<!--main  star-->
+			<div class="new_boar_main new_styles fl">
+				<div class="new_nav_postion">
+					<a href="/security/myPreferredStock.html">证券管理</a> >
+					<a id="stockNameShow" href="javascript:;">--</a>
+				</div>
+				<div class="boar_l new_boar_li">
+					<!--<div class="news_boar_ltop">
+						<h2>铭慧股份</h2>
+						<span>833822</span>
+						<div class="news_boar_gn">
+							<i class="news_boar_duibi"></i>
+							<i class="news_boar_tongzhi"></i>
+							<i class="news_boar_pk"></i>
+							<i class="news_boar_baogao"></i>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<ul>
+					<li class="n_gK hover"><span></span><a href="#">概况</a></li>
+	     			<li class="n_cwsJ"><span></span><a href="#">财务数据</a></li>
+	     			<li class="n_gxT"><span></span><a href="#">关系图</a></li>
+	     			<li class="n_yjjL"><span></span><a href="#">研究记录</a></li>
+	     			<li class="n_gG"><span></span><a href="#">公告</a></li>
+	     			<li class="n_xW"><span></span><a href="#">新闻</a></li>
+					<div class="clr"></div>
+					</ul>-->
+				</div>
+			</div>
+			<div class="boar_r new_boar_lir new_r_styles fl">
+				<div class="bora_r_top">
+					<div class="gp_tab gpxq_qiehuan">
+						<a href="javascript:;" class="on">研究图表</a>
+						<a href="javascript:;">我的研报</a>
+						<a href="javascript:;">券商研报</a>
+						<div class="clr"></div>
+					</div>
+				</div>
+				<!--研究图表-->
+				<div class="jilu_content">
+					<div class="tub_jilu" id="studyChartList">
+						<!--图表集-->
+						<!--<div class="tubiao_public fl">
+							<div class="tb_titles">
+								<span>聚利科技做市成份股交易分析图</span>
+								<i title="预览" class="yulan"></i>
+								<em title="删除" class="shanchu"></em>
+								<b title="编辑" class="shanchu"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fenxi_tub">
+								<a href="javascript:;">
+									<img src="/saasBeta/images/jiaoyifenxi00.jpg"/>
+								</a>
+							</div>
+						</div>
+						<div class="tubiao_public fl">
+							<div class="tb_titles">
+								<span>聚利科技做市成份股交易分析图</span>
+								<i title="预览" class="yulan"></i>
+								<em title="删除" class="shanchu"></em>
+								<b title="编辑" class="shanchu"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fenxi_tub">
+								<a href="javascript:;">
+									<img src="/saasBeta/images/jiaoyifenxi02.jpg"/>
+								</a>
+							</div>
+						</div>
+						<div class="tubiao_public fl">
+							<div class="tb_titles">
+								<span>聚利科技做市成份股交易分析图</span>
+								<i title="预览" class="yulan"></i>
+								<em title="删除" class="shanchu"></em>
+								<b title="编辑" class="shanchu"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fenxi_tub" >
+								<a href="javascript:;">
+									<img src="/saasBeta/images/jiaoyifenxi03.jpg"/>
+								</a>
+							</div>
+						</div>-->
+
+					</div>
+				</div>
+				<!--我的研报-->
+				<div class="my_yanbao" style="display: none;">
+					<ul id="studyReportList" style="cursor: pointer;">
+						<!--<div class="importer fl">
+								<span>重要度：</span>
+								1颗星时div.huang_xingx 的宽是18%
+								1颗半是37%-2颗半是45%-3颗半是64%-4颗半是82%
+								<div class="xingx fl">
+									<div class="hui_xingx"></div>
+									<div class="huang_xingx" style="width: 40%;"></div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="yanjiu_chjianren fl">
+								<em>创建人：<b>韩梅梅</b></em>
+							</div>--->
+					<!-- <li>
+							<div class="gongs_name fl">
+								<span class="fl biaoshi">持有</span>
+								<div class="com_name fl">
+									<span class="yanb_mc">聚利科技</span>
+									<p><em class="yjbg_cjr">韩梅梅</em><b class="yjbg_shij">2017-03-15 17:37</b></p>
+									<div class="yanbao_zyd">
+										<span class="zhyd">重要度：</span>
+										<div class="yb_xx fl">
+											<b class="bg_hui"></b>
+											<em class="ynb_pj"></em>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="gongsi_caiwu fl">
+								<ul class="gongs_list">
+									<li>
+										<i></i>
+										<span class="company_mc">天阳科技（<b>876433</b>）</span>
+										<p>当前市值：<em>765</em>亿</p>
+										<p>当前市值：<em>987</em>亿</p>
+									</li>
+									<li>
+										<i></i>
+										<span class="company_mc">天阳科技（<b>876433</b>）</span>
+										<p>当前市值：<em>765</em>亿</p>
+										<p>当前市值：<em>987</em>亿</p>
+									</li>
+									<li>
+										<i></i>
+										<span class="company_mc">天阳科技（<b>876433</b>）</span>
+										<p>当前市值：<em>765</em>亿</p>
+										<p>当前市值：<em>987</em>亿</p>
+									</li>
+									<div class="clr"></div>
+								</ul>
+							</div>
+							<div class="clr"></div>
+						</li> -->
+					</ul>
+				</div>
+				<!--券商研报-->
+				<div class="quans_yanbao" style="display: none;">
+					<div class="quans_content">
+						<ul id="newsList">
+							<!--<li>
+								<div class="fl quans_leib">
+									//span的类是qiangtui时内容是强推，对应的维持，减持的类是拼音
+									<span class="qiangtui">强推</span>
+								</div>
+								<div class="fl quans_name">
+									<span class="quans_titles">专注研发的ITO导电膜供应商</span>
+									<div class="quans_produce">
+										<span>2017-3-14</span>
+										<em>王越</em>
+										<i>计算机</i>
+										<b>公司评级</b>
+										<div class="clr"></div>
+									</div>
+									<div class="com_produce">
+										<span>【摘要】</span>
+										<div class="fl compan_pro">
+											<p>触摸屏终端市场的稳定发展给公司的快速发展带来了契机</p>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+
+				<div class="clr"></div>
+
+			</div>
+			<!--main  end-->
+			<!--footer  star-->
+
+			<!--footer  end-->
+		</div>
+		<!--主体 end-->
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/businessDetails/researchRecord.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/businessDetails/GPleft.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,653 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-公司</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main c_right">
+			<!--main  star-->
+			<div class="main new_main">
+				<div class="xinsanban_waik">
+					<div class="banner gs_img">
+						<div class="gs_search">
+							<input type="text" id="inpVal" placeholder="公司简称/股票代码" />
+							<span class="lanse">搜索</span>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="page_center">
+						<div class="feature_select">
+							<!--筛选条件 star-->
+							<div class="shaix_public">
+								<div class="list list1 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>行业</p>
+											<ul id="hy">
+												<!-- 											<li> -->
+												<!-- 												<a href="javascript:;">挂牌家数</a> -->
+												<!-- 											</li> -->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list2 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>地区</p>
+											<ul id="dq">
+												<!-- <li>
+												<a href="javascript:;">挂牌家数</a>
+											</li> -->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="list list3 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>挂牌状态</p>
+										<ul id="status" >
+											<li data-value="1" >
+												<a href="javascript:;">拟挂牌</a>
+											</li>
+											<li data-value="2" >
+												<a href="javascript:;">新股挂牌</a>
+											</li>
+											<li data-value="3" >
+												<a href="javascript:;">终止移除挂牌</a>
+											</li>
+											<li data-value="4" >
+												<a href="javascript:;">已挂牌</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div> -->
+								<div class="list list4 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>交易状态</p>
+											<ul id="dealType">
+												<li data-value="做市">
+													<a href="javascript:;">做市</a>
+												</li>
+												<li data-value="协议">
+													<a href="javascript:;">协议</a>
+												</li>
+												<li data-value="暂停转让">
+													<a href="javascript:;">暂停转让</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list5 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>所属板块</p>
+											<ul id="block">
+												<li data-value="创新层">
+													<a href="javascript:;">创新层</a>
+												</li>
+												<li data-value="基础层">
+													<a href="javascript:;">基础层</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list6 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>主办券商</p>
+											<ul id="zbqs">
+												<!-- 											<li> -->
+												<!-- 												<a href="javascript:;">挂牌家数</a> -->
+												<!-- 											</li> -->
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list7 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>营业收入</p>
+											<ul id="yysr">
+												<li data-value="200000000.00,">
+													<a href="javascript:;">2亿以上</a>
+												</li>
+												<li data-value="100000000.00,200000000.00">
+													<a href="javascript:;">1-2亿</a>
+												</li>
+												<li data-value="50000000.00,100000000.00">
+													<a href="javascript:;">0.5-1亿</a>
+												</li>
+												<li data-value="30000000.00,50000000.00">
+													<a href="javascript:;">0.3-0.5亿</a>
+												</li>
+												<li data-value=",30000000.00">
+													<a href="javascript:;">0.3亿以下</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list8 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>总市值</p>
+											<ul id="zsz">
+												<li data-value=",100000000.00">
+													<a href="javascript:;">1亿以下</a>
+												</li>
+												<li data-value="100000000.00,500000000.00">
+													<a href="javascript:;">1-5亿</a>
+												</li>
+												<li data-value="500000000.00,1000000000.00">
+													<a href="javascript:;">5-10亿</a>
+												</li>
+												<li data-value="1000000000.00,3000000000.00">
+													<a href="javascript:;">10-30亿</a>
+												</li>
+												<li data-value="3000000000.00,5000000000.00">
+													<a href="javascript:;">30-50亿</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="list list9 fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p>净利润</p>
+											<ul id="jlr">
+												<li data-value="50000000.00,">
+													<a href="javascript:;">5000万以上</a>
+												</li>
+												<li data-value="30000000.00,50000000.00">
+													<a href="javascript:;">3000-5000万</a>
+												</li>
+												<li data-value="10000000.00,30000000.00">
+													<a href="javascript:;">1000-3000万</a>
+												</li>
+												<li data-value="5000000.00,10000000.00">
+													<a href="javascript:;">500-1000万</a>
+												</li>
+												<li data-value="0.00,5000000.00">
+													<a href="javascript:;">0-500万</a>
+												</li>
+												<li data-value=",0.00">
+													<a href="javascript:;">负利润</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- <div class="list list10 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>成立时间全部</p>
+										<ul id="esTime" >
+											<li data-value=",50000000">
+												<a href="javascript:;">5000万以上</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list11 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>挂牌时间全部</p>
+										<ul id="stockDate">
+											<li data-value="2011"><a href="javascript:;">2011年</a></li>
+											<li data-value="2012"><a href="javascript:;">2012年</a></li>
+											<li data-value="2013"><a href="javascript:;">2013年</a></li>
+											<li data-value="2014"><a href="javascript:;">2014年</a></li>
+											<li data-value="2015"><a href="javascript:;">2015年</a></li>
+											<li data-value="2016"><a href="javascript:;">2016年</a></li>
+											<li data-value="2017"><a href="javascript:;">2017年</a></li>
+										</ul>
+									</div>
+								</div>
+							</div> -->
+								<div class="clr"></div>
+							</div>
+							<div class="yixuan_tiaojian" style="display: none;">
+								<span class="qingchu"><em></em>清除检索条件</span>
+								<div class="fl tj_selected">
+									<!-- 								<a href="javascript:;">北京<i></i></a> -->
+									<!-- 								<a href="javascript:;">电子设备<i></i></a> -->
+									<!-- 								<a href="javascript:;">2017年3月<i></i></a> -->
+									<!-- 								<a href="javascript:;">30万元<i></i></a> -->
+									<!-- 								<a href="javascript:;">做市<i></i></a> -->
+									<div id="selectedDiv" class="clr"></div>
+								</div>
+								<div class="clr"></div>
+							</div>
+
+							<!--筛选条件 end-->
+							<div class="types_total">
+								<span class="fl selection_totals">共<em class="shuzi" id="total" >0</em>条结果</span>
+								<span id="outData" class="pay fl">导出数据</span>
+								<div class="clr"></div>
+							</div>
+							<div class="company_information gs_zb nnews_gs_zb">
+								<div class="compan_new_table">
+									<table>
+										<thead>
+											<tr name="companyTr">
+												<!--此处排序样式 默认th 下的 span无class  升序用class="up" 降序用class="down"-->
+												<th class="nsd_qx"><input type="checkbox" class="gs_qx" /></th>
+												<th class="bbs_gongsi">公司</th>
+												<th class="gp_cl_time">
+													<span data-value="establishTime" class="">成立时间</span>
+													<span data-value="stockDate">挂牌时间</span>
+												</th>
+												<th class="bbs_diqu">地区</th>
+												<th class="bbs_rongzi"><span data-value="financingNewTime" class="down">最新融资情况</span></th>
+												<th class="changeTd" name="yysr"><span data-value="operatingIncome" class="">营业收入</span></th>
+												<th class="changeTd" name="jlr"><span data-value="netProfit" class="">净利润</span></th>
+												<th class="changeTd" name="zsz"><span data-value="totalMarketValue" class="">总市值</span></th>
+												<th class="changeTd" name="zdf"><span data-value="priceChangeRatio" class="">涨跌幅</span></th>
+												<th class="changeTd" name="zxj"><span data-value="newPrice" class="">最新价</span></th>
+
+												<th class="changeTd" name="zzc"><span data-value="totalAssets" class="">总资产</span></th>
+												<th class="changeTd" name="jzc"><span data-value="netAssets" class="">净资产</span></th>
+												<th class="changeTd" name="jzcl"><span data-value="returnEquity" class="">净资产收益率</span></th>
+												<th class="changeTd" name="syl"><span data-value="priceEarningRatio" class="">市盈率</span></th>
+												<th class="changeTd" name="sjl"><span data-value="marketRate" class="">市净率</span></th>
+												<th class="changeTd" name="sxl"><span data-value="sellingRate" class="">市销率</span></th>
+												<th class="changeTd" name="cjl"><span data-value="tradingVolume" class="">成交量</span></th>
+											</tr>
+										</thead>
+										<tbody id="companyTBody" class="gs_dx">
+											<!-- <tr>
+											<td><input type="checkbox"/></td>
+											<td class="company_info gs_infor">
+												<div>
+													<div class="compamy_logo fl">
+														<img src="/saasBeta/images/gs_logo.png" alt="" />
+													</div>
+													<div class="compamy_msg fl">
+														<a href="#" class="on shuzi">大地生物(833662)</a>
+														<span>汽车交通>汽车后服务</span>
+
+														<div class="gongju">
+															<span class="gz_company on fl">关注</span>
+															<span class="duib_company fl">对比</span>
+															<div class="clr"></div>
+														</div>
+													</div>
+													<div class="clr"></div>
+												</div>
+													</div>
+
+													
+													<div class="clr"></div>
+												</div>
+
+											</td>
+											<td class="cl_times">
+												<span>
+										<em>成立</em>
+										<i class="shuzi">2011.12</i>
+									</span>
+												<span>
+										<em>挂牌</em>
+										<i class="shuzi">2013.8</i>
+									</span>
+											</td>
+											<td>上海</td>
+											<td class="company_rz">
+												<em class="shuzi">2016-12-19</em>
+												<i class="shuzi">300万</i>
+												<span>1.5元/股</span>
+											</td>
+											<td class="shuzi">3157.26万</td>
+											<td class="shuzi">143.92万</td>
+
+											<td class="shuzi">
+												10.4元
+											</td>
+											<td class="shuzi">10%</td>
+											<td class="shuzi">10.4元</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox"/></td>
+											<td class="company_info gs_infor">
+												<div>
+													<div class="compamy_logo fl">
+														<img src="/saasBeta/images/gs_logo.png" alt="" />
+													</div>
+													<div class="compamy_msg fl">
+														<a href="#" class="on shuzi">大地生物(833662)</a>
+														<span>汽车交通>汽车后服务</span>
+
+														<div class="gongju">
+															<span class="gz_company on fl">关注</span>
+															<span class="duib_company fl">对比</span>
+															<div class="clr"></div>
+														</div>
+													</div>
+													<div class="clr"></div>
+												</div>
+
+												</div>
+													
+													<div class="clr"></div>
+												</div>
+												
+											</td>
+											<td class="cl_times">
+												<span>
+										<em>成立</em>
+										<i class="shuzi">2011.12</i>
+									</span>
+												<span>
+										<em>挂牌</em>
+										<i class="shuzi">2013.8</i>
+									</span>
+											</td>
+											<td>上海</td>
+											<td class="company_rz">
+												<em class="shuzi">2016-12-19</em>
+												<i class="shuzi">300万</i>
+												<span>1.5元/股</span>
+											</td>
+											<td class="shuzi">3157.26万</td>
+											<td class="shuzi">143.92万</td>
+
+											<td class="shuzi">
+												10.4元
+											</td>
+											<td class="shuzi">10%</td>
+											<td class="shuzi">10.4元</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="company_info gs_infor">
+												<div>
+													<div class="compamy_logo fl">
+														<img src="/saasBeta/images/gs_logo.png" alt="" />
+													</div>
+													<div class="compamy_msg fl">
+														<a href="#" class="on shuzi">大地生物(833662)</a>
+														<span>汽车交通>汽车后服务</span>
+														<div class="gongju">
+															<span class="gz_company on fl">关注</span>
+															<span class="duib_company fl">对比</span>
+															<div class="clr"></div>
+														</div>
+													</div>
+													<div class="clr"></div>
+												</div>
+
+													</div>
+													<div class="clr"></div>
+												</div>
+												
+											</td>
+											<td class="cl_times">
+												<span>
+										<em>成立</em>
+										<i class="shuzi">2011.12</i>
+									</span>
+												<span>
+										<em>挂牌</em>
+										<i class="shuzi">2013.8</i>
+									</span>
+											</td>
+											<td>上海</td>
+											<td class="company_rz">
+												<em class="shuzi">2016-12-19</em>
+												<i class="shuzi">300万</i>
+												<span>1.5元/股</span>
+											</td>
+											<td class="shuzi">3157.26万</td>
+											<td class="shuzi">143.92万</td>
+
+											<td class="shuzi">
+												10.4元
+											</td>
+											<td class="shuzi">10%</td>
+											<td class="shuzi">10.4元</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" /></td>
+											<td class="company_info gs_infor">
+												<div>
+													<div class="compamy_logo fl">
+														<img src="/saasBeta/images/gs_logo.png" alt="" />
+													</div>
+													<div class="compamy_msg fl">
+														<a href="#" class="on shuzi">大地生物(833662)</a>
+														<span>汽车交通>汽车后服务</span>
+
+														<div class="gongju">
+															<span class="gz_company on fl">关注</span>
+															<span class="duib_company fl">对比</span>
+															<div class="clr"></div>
+														</div>
+													</div>
+													<div class="clr"></div>
+												</div>
+
+													</div>
+													<div class="clr"></div>
+												</div>
+												
+											</td>
+											<td class="cl_times">
+												<span>
+										<em>成立</em>
+										<i class="shuzi">2011.12</i>
+									</span>
+												<span>
+										<em>挂牌</em>
+										<i class="shuzi">2013.8</i>
+									</span>
+											</td>
+											<td>上海</td>
+											<td class="company_rz">
+												<em class="shuzi">2016-12-19</em>
+												<i class="shuzi">300万</i>
+												<span>1.5元/股</span>
+											</td>
+											<td class="shuzi">3157.26万</td>
+											<td class="shuzi">143.92万</td>
+
+											<td class="shuzi">
+												10.4元
+											</td>
+											<td class="shuzi">10%</td>
+											<td class="shuzi">10.4元</td>
+										</tr> -->
+										</tbody>
+									</table>
+								</div>
+
+								<div class="gd_zb">
+									<div style="position: relative;">
+										<span class="more_zb">更多</span>
+										<div class="gd_xzzb">
+											<div class="fl gs_shous">
+												<span>收起</span>
+											</div>
+											<div class="fl kexuan_zb">
+												<h3>选择显示指标</h3>
+												<div class="caiwu_zb">
+													<span class="cwgz">财务估值</span>
+													<ul class="calwu_zb">
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="yysr" class="checkbox on"></label>
+																<label class="checkboxWord">营业收入</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="zzc" class="checkbox"></label>
+																<label class="checkboxWord">总资产</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="jzc" class="checkbox"></label>
+																<label class="checkboxWord">净资产</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="jzcl" class="checkbox"></label>
+																<label class="checkboxWord">净资产收益率</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="jlr" class="checkbox"></label>
+																<label class="checkboxWord">净利润</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="syl" class="checkbox"></label>
+																<label class="checkboxWord">市盈率</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="sjl" class="checkbox"></label>
+																<label class="checkboxWord">市净率</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="sxl" class="checkbox"></label>
+																<label class="checkboxWord">市销率</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+												<div class="jiaoyi_qk">
+													<span class="jyqk">交易情况</span>
+													<ul class="jiaoyi_zb">
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="zsz" class="checkbox"></label>
+																<label class="checkboxWord">总市值</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="zxj" class="checkbox"></label>
+																<label class="checkboxWord">最新价</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="zdf" class="checkbox"></label>
+																<label class="checkboxWord">涨跌幅</label>
+															</div>
+														</li>
+														<li>
+															<div class="data-checkbox">
+																<input type="checkbox" />
+																<label data-value="cjl" class="checkbox"></label>
+																<label class="checkboxWord">成交量</label>
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div id="page" class="pages pagination " style="display: none;"></div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<table id="outTable" style="display: none;">
+						<tr name="outTrTitle">
+							<!--此处排序样式 默认th 下的 span无class  升序用class="up" 降序用class="down"-->
+							<th>公司</th>
+							<th class="gp_cl_time">
+								<span data-value="establishTime" class="">成立时间</span>
+								<span data-value="stockDate">挂牌时间</span>
+							</th>
+							<th>地区</th>
+							<th><span data-value="financingNewTime" class="down">最新融资情况</span></th>
+						</tr>
+					</table>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		<script>
+			$(function() {
+				$(".gs_shous").css("height", 360);
+				$(".gs_shous").css("padding-top", "49%");
+			})
+		</script>
+
+	</body>
+
+	<!-- 分页开始 -->
+	<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<!-- 分页结束 -->
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/three_shaixuan.js"></script>
+	<!-- 是否登录，关注，对比 -->
+	<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/discoveryCompany.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</html>

@@ -1,0 +1,700 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="utf-8">
+	<title>融资分析-融资分析工具-融资分析</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+	
+	<link rel="stylesheet" href="/saasBeta/newcss/companyMap.css" />
+	<link rel="stylesheet" href="/saasBeta/newcss/newSassStyle.css" />
+	<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+	<link type="text/css" rel="stylesheet" href="/saasBeta/newcss/new_g_style.css">
+	<!--新模型的改版js-->
+	<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+	<script src="/saasBeta/js/jquery.min.js"></script>
+	<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/echarts/3.2.0/echarts.min.js"></script>
+	<!-- 分页开始 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<!-- 分页结束 -->
+	<!-- 是否登录，关注，对比 -->
+	<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+	<script type="text/ecmascript" src="/saasBeta/newjs/dataAnalysis/financingAnalysis.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+
+	<style>
+		.list {
+			width: 80px !important;
+		}
+
+		.list.list7 {
+			width: 180px !important;
+		}
+
+		.rz_time a {
+			float: initial;
+			color:#666;
+		}
+
+		.listt {
+			/* background-color: #fff; */
+			/* position: absolute; */
+			/* padding: 5px 0 5px 15px; */
+			/* text-align: center; */
+			/* width: 50px; */
+			/* overflow: auto; */
+			/* height: 105px; */
+			/* top: 40px; */
+			margin-left: -20px;
+		}
+
+		.listt ul {
+
+			display: block;
+			/* width: 100%; */
+			border: 1px solid #e4e4e4;
+			border-top: 0;
+			position: absolute;
+			z-index: 99;
+			top: 40px;
+			/* left: -1px; */
+			background-color: #fff;
+
+			max-height: 150px;
+			overflow-y: auto;
+		}
+
+		.listt ul li:hover {
+			background-color: #0E87E0;
+			color: #666;
+		}
+		.list9,.list10,.list8{
+			position: relative;
+		}
+		#month,#quarter,#week{
+			width: 75px;
+			left:-53px;
+		}
+		.list6 .selectBox1 i{
+			right:16px;
+			top:7px;
+			position: absolute;
+		}
+		.list7 .selectBox1 i{
+			right:-120px;
+		}
+		.list11 .selectBox1 .jdp{
+			text-align: center;
+			width: 30px;
+		}
+		.list11 .selectBox1{
+			left:-13px;
+		}
+		.rz_time li:hover{
+			background-color: #0E87E0;
+			
+		}
+		.rz_time li:hover a{
+			color:#fff;
+		}
+		/* .selectBox1 {
+			border-right: 0;
+			border-top: 0;
+			border-bottom: 0;
+			width: 60px;
+
+		} */
+
+		/* .selectBox1:hover {
+			border: initial;
+			border-left: 1px solid #e4e4e4
+		} */
+
+		/* .selectBox3:hover {
+			border: initial;
+			border-right: 1px solid #e4e4e4
+		} */
+		.listt ul{
+			border-radius: 6px;
+		}
+		#year {
+			height: 200px;
+			width: 75px;
+			
+		}
+
+		.selectBox1 {
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			cursor: pointer;
+			/* width: 100%; */
+			height: 28px;
+			line-height: 28px;
+			top: 5px;
+			box-sizing: border-box;
+			/* border-right: 0;
+			border-top: 0;
+			border-bottom: 0; */
+			width: 60px;
+			border: 1px solid #e4e4e4;
+			border-right: 0;
+		}
+
+		/* .selectBox1:hover {
+			border: 1px solid #36b8f4;
+		} */
+
+		.selectBox1 p {
+			position: relative;
+			vertical-align: top;
+			height: 28px;
+			line-height: 28px;
+			box-sizing: border-box;
+			padding-left: 5px;
+			/* background-size: 11px 11px; */
+			border: none;
+			border-radius: 5px;
+			/* padding: 0 25px 0 15px; */
+			padding: 0;
+			color: #333;
+			display: block;
+			overflow: hidden;
+			float: left;
+			left: 5px;
+			/* width: 50px; */
+		}
+
+		/* .selectBox p:after {
+			content: "";
+			position: absolute;
+			right: 3px;
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			background: url(../images/icon/newsselect.png) center center no-repeat;
+			top: 4px;
+		} */
+
+		/* .selectBox:hover p:after {
+			background: url(../images/icon/selecthover.png) center center no-repeat;
+		} */
+
+		.selectBox1 ul {
+			width: 100%;
+			/* border: 1px solid #e4e4e4; */
+			border-top: 0;
+			position: absolute;
+			z-index: 99;
+			top: 31px;
+			left: -1px;
+			background-color: #fff;
+			display: none;
+			max-height: 150px;
+			overflow-y: auto;
+			border-radius: 6px;
+		}
+
+		/* .selectBox1 ul li {
+			width: 100%;
+			text-align: center;
+		} */
+
+		.selectBox1 ul li {
+			height: 30px;
+			line-height: 30px;
+			width: 100%;
+			color: #333;
+			border-top: 1px solid #f2f2f2;
+			text-align: left;
+			box-sizing: border-box;
+			padding-left: 15px;
+		}
+
+		.selectBox3 {
+			border-left: 0;
+			position:relative;
+			width: 150px;
+			margin-left: -50px;
+			border-right: 1px solid #e4e4e4;
+		}
+
+		.fa {
+			height: 17px;
+			line-height: 13px;
+			top: -4px;
+			position: relative;
+			margin-left: 10px;
+			font-size: 14px;
+			color:#9A9A9A;
+
+		}
+		.list11 .select_box .selectBox1 i{
+			border-right: 1px solid #ccc;
+			padding-right: 10px;
+		}
+
+		.list7 .selectBox1 {
+			width: 180px;
+			border-right: 1px solid #e4e4e4
+		}
+
+		/* .list6 ul li {
+			width: 40px;
+		} */
+
+		/* .selectBox ul li:hover {
+			background-color: #eee;
+			color: #666;
+		} */
+		.rzph .selectBox1 ul{background-color: #fff;border: 1px solid #e4e4e4;}
+		.rzph .fa{top: -1px;}
+	</style>
+</head>
+
+<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+
+	<!--侧导航 end-->
+	<!--主体 star-->
+
+	<div class="right_main">
+		<div class="rzfx_top_nav">
+			<span>
+				<a href="/dataAnalysis/financingAnalysis.html">数据分析</a>>融资分析</span>
+		</div>
+		<!--main  star-->
+		<div class="main rz_main">
+			<div class="rz_hy_type">
+				<ul class="dingzeng">
+					<li>
+						<div class="fl hangye">
+							<span>所有行业</span>
+							<div class="news_change_hy" style="display:none ;">
+								<div class="changge_top">
+									<input type="checkbox" id="allcheck" />
+									<i>全部行业</i>
+									<p>已选(
+										<em id="checnknumber">0</em>)</p>
+									<div class="clr"></div>
+								</div>
+								<div class="changge_dlis_inf">
+									<ul id="changgelist">
+										<!--<li>
+												<input type="checkbox" name="check"/>
+												<a href="javascript:;" name="checkname">运输</a>
+												<div class="clr"></div>
+											</li>-->
+
+									</ul>
+								</div>
+								<div class="chagenge_btn">
+									<a href="javascript:;" class="chagege_true">确定</a>
+									<a href="javascript:;" class="chagege_false">取消</a>
+								</div>
+							</div>
+
+
+							<div class="kx_hy_tc rz_hy_tc" style="display: none;">
+								<i class="hy_xla"></i>
+								<div class="s_hy_tc">
+									<div class="s_hy_types">
+										<div class="indexhy_tc">
+											<!-- 												<div class="hy_public fl shangyehezhuanyefuwu"> -->
+											<!-- 													<div class="hy_icons"> -->
+											<!-- 														<i></i> -->
+											<!-- 													</div> -->
+											<!-- 													<span>商业和专业服务</span> -->
+											<!-- 													<em></em> -->
+											<!-- 												</div> -->
+										</div>
+									</div>
+								</div>
+								<div class="hy_shure">
+									<span>确 定</span>
+								</div>
+							</div>
+						</div>
+						<div class="fr hangy_qk">
+							<span class="fl" style="display: inline-block; margin-right: 10px;">融资类型:</span>
+							<!--<div class="fl data-checkbox on">
+									<input type="checkbox" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">全部</label>
+								</div>-->
+							<div class="fl data-checkbox on" data-value="1">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">定增</label>
+							</div>
+							<!-- <div class="fl data-checkbox on" data-value="6,2">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">债券</label>
+							</div> -->
+							<!-- 								<div class="fl data-checkbox on" data-value="2" > -->
+							<!-- 									<input type="checkbox" /> -->
+							<!-- 									<label class="checkbox"></label> -->
+							<!-- 									<label class="checkboxWord">私募债</label> -->
+							<!-- 								</div> -->
+							<div class="fl data-checkbox on" data-value="3">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">优先股</label>
+							</div>
+							<!-- 								<div class="fl data-checkbox on" data-value="4" > -->
+							<!-- 									<input type="checkbox" /> -->
+							<!-- 									<label class="checkbox"></label> -->
+							<!-- 									<label class="checkboxWord">贷款</label> -->
+							<!-- 								</div> -->
+							<!-- <div class="fl data-checkbox on" data-value="4,5">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">借款</label>
+							</div> -->
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+					</li>
+					<li class="hy_shaixuan">
+						<b>当前筛选条件：</b>
+						<a href="javascript:void(0);" class="qingc_tj">清除检索条件</a>
+						<!--<a href="javascript:void(0)">某行业<i></i></a>
+							<a href="javascript:void(0)">地区<i></i></a>
+							<a href="javascript:void(0)">区域<i></i></a>-->
+						<div class="fl xuanze_zhib_leix"></div>
+						<div class="clr"></div>
+					</li>
+					<div class='clr'></div>
+				</ul>
+			</div>
+			<div class="rz_qk">
+				<div class="rz_qk_title">
+					<span name="timeRange" class="shuzi" id="rz_qk1">--</span>
+					<b>融资情况</b>
+					<div class="fr rz_time">
+						<!--有类是on的是显示背景颜色-->
+						<!-- <a href="javascript:void(0);">周</a>
+						<a href="javascript:void(0);" class="on">月</a>
+						<a href="javascript:void(0);">季</a>
+						<a href="javascript:void(0);">年</a> -->
+						<!-- <div class="list list7 fr">
+						<!--<div class="list list7 fr">
+							<div class="select_box">
+								<div class="selectBox1">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">区域</p>
+									<ul id="qy">
+
+									</ul>
+								</div>
+							</div>
+						</div> 
+						</div>-->
+						<div class="list12 fr" id="childcon">
+
+							<div class="list10 listt" style="display:none;">
+								<!-- <div class="select_box">
+									<div class="selectBox"> -->
+								<!-- <p class="qyp">第1周</p> -->
+								<ul id="week">
+
+								</ul>
+								<!-- </div>
+								</div> -->
+							</div>
+							<div class="list9 listt" style="display:none;">
+								<!-- <div class="select_box"> -->
+								<!-- <div class="selectBox"> -->
+								<!-- <p class="qyp">1月</p> -->
+								<ul id="month">
+
+								</ul>
+								<!-- </div> -->
+								<!-- </div> -->
+							</div>
+							<div class="list8 listt" style="display:none;">
+								<!-- <div class="select_box">
+									<div class="selectBox"> -->
+								<!-- <p class="qyp">第一季</p> -->
+								<ul id="quarter">
+									<li data-value="1">
+										<a href="javascript:;">第一季</a>
+									</li>
+									<li data-value="2">
+										<a href="javascript:;">第二季</a>
+									</li>
+									<li data-value="3">
+										<a href="javascript:;">第三季</a>
+									</li>
+									<li data-value="4">
+										<a href="javascript:;">第四季</a>
+									</li>
+								</ul>
+								<!-- </div>
+								</div> -->
+							</div>
+
+						</div>
+						<div class="list list6 fr">
+							<div class="select_box">
+								<div class="selectBox1 selectBox3">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">年份</p>
+									<ul id="year">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="list list11 fr">
+							<div class="select_box">
+
+								<div class="selectBox1">
+									<i class="fa fa-sort-desc" aria-hidden="true"></i>
+									<p class="qyp jdp">月</p>
+									<ul id="datetype">
+										<li data-value="1">
+											<a href="javascript:;">周</a>
+										</li>
+										<li data-value="2">
+											<a href="javascript:;">月</a>
+										</li>
+										<li data-value="3">
+											<a href="javascript:;">季</a>
+										</li>
+										<li data-value="4">
+											<a href="javascript:;">年</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="rz_leix_qk">
+					<ul>
+						<li>
+							<span>融资金额(亿元)</span>
+							<h2 id="financingAmount">--</h2>
+						</li>
+						<li>
+							<span>金额同比增长率</span>
+							<h2 id="AQQGR">--</h2>
+						</li>
+						<li>
+							<span>融资事件次数</span>
+							<h2 id="timesTotal">--</h2>
+						</li>
+						<li>
+							<span>笔数同比增长率</span>
+							<h2 id="PNGR">--</h2>
+						</li>
+						<div class="clr"></div>
+					</ul>
+				</div>
+
+				<div class="rz_jebi">
+					<div>
+						<div class="fl rz_number" style="opacity: 0;">
+							<div class="fl data-checkbox on" data-value="sumAmount">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">融资金额</label>
+							</div>
+							<div class="fl data-checkbox on" data-value="AQQGR">
+								<input type="checkbox" />
+								<label class="checkbox"></label>
+								<label class="checkboxWord">融资金额同比增长率</label>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="fr rz_shezhi">
+							<span>设置</span>
+							<div class="rz_shezhi_zb" style="display: none;">
+								<div class="top">
+									<span>设置显示指标</span>
+									<em>（可选择2项指标）</em>
+								</div>
+								<ul>
+									<li>
+										<div class="data-checkbox on" data-value="sumAmount">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">融资金额</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox" data-value="count">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">融资笔数</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox on" data-value="AQQGR">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">融资金额同比增长率</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox" data-value="PNGR">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">融资笔数同比增长率</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox" data-value="maxAmount">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">最高单笔融资金额</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox" data-value="avgAmount">
+											<input type="checkbox" />
+											<label class="checkbox"></label>
+											<label class="checkboxWord">平均融资金额</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!--融资情况柱状图-->
+					<div class="rz_jine_qk" id="rz_jine_qk"></div>
+				</div>
+			</div>
+			<div class="rz_qk">
+				<div class="rz_qk_title">
+					<span name="timeRange" class="shuzi"  id="rz_qk2">--</span>
+					<b>融资排行</b>
+					<div class="fr rz_time">
+						<!--有类是on的是显示背景颜色-->
+						<!-- <a href="javascript:void(0);">周</a>
+						<a href="javascript:void(0);" class="on">月</a>
+						<a href="javascript:void(0);">季</a>
+						<a href="javascript:void(0);">年</a> -->
+						<!--<div class="list list7 fr">
+							<div class="select_box">
+								<div class="selectBox1">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">行业</p>
+									<ul id="qy">
+
+									</ul>
+								</div>
+							</div>
+						</div>-->
+						<div class="list list7 fr rzph">
+							<div class="select_box">
+								<div class="selectBox1">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">地区</p>
+									<ul id="qy">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="clr"></div>
+					</div>
+				</div>
+				<!--融资排行图-->
+				<div class="rz_paihang" id="rz_paihang"></div>
+				<div class="guapai_table">
+					<table>
+						<thead>
+							<tr>
+								<th>排名</th>
+								<th>公司简介</th>
+								<th>累计融资金额（亿）</th>
+								<th>最大融资金额（万元）</th>
+								<th>最近融资时间</th>
+								<th>挂牌时间</th>
+								<th>最新价</th>
+								<th>涨跌幅（%）</th>
+								<th>成交量（万股）</th>
+								<th>总市值（亿）</th>
+								<th>市盈率</th>
+							</tr>
+						</thead>
+						<tbody id="rankTbody">
+							<!-- <tr>
+									<td class="shuzi">1</td>
+									<td class="shuzi">八达股份（83936）</td>
+									<td class="shuzi">1.9,652</td>
+									<td class="shuzi">1,500</td>
+									<td class="shuzi">2016-12-31</td>
+									<td class="shuzi">2015-4</td>
+									<td class="shuzi">1000.00</td>
+									<td class="shuzi">-2.37</td>
+									<td class="shuzi">12.42</td>
+									<td class="shuzi">12.42</td>
+								</tr> -->
+						</tbody>
+					</table>
+				</div>
+				<div id="page" class="pages pagination " style="display: none;"></div>
+				<div class="clr"></div>
+			</div>
+			<div class="rz_qk">
+				<div class="rz_qk_title">
+					<span name="timeRange" class="shuzi"  id="rz_qk3">--</span>
+					<b>融资分布</b>
+					<div class="fr rz_time">
+						<!--<div class="list list7 fr">
+							<div class="select_box">
+								<div class="selectBox1">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">行业</p>
+									<ul id="qy">
+
+									</ul>
+								</div>
+							</div>
+						</div>-->
+						<div class="list list7 fr rzph">
+							<div class="select_box">
+								<div class="selectBox1">
+									<i class="fa fa-angle-down" aria-hidden="true"></i>
+									<p class="qyp">地区</p>
+									<ul id="rzfbQY">
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						<div class="clr"></div>
+					</div>
+				</div>
+				<!--融资分布图-->
+				<div class="rz_fenbu" id="rz_fenbu"></div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+
+</html>

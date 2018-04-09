@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>融资分析-融资分析工具-融资关系分析</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/newcss/companyMap.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/newSassStyle.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<style type="text/css">
+			.gxt-zwsj{width: 125px;height: 180px;margin: 0 auto;margin-top: 300px;}
+			.bg_zwsj_tup{width:125px;height: 125px;}
+			.bg_zwsj_tup span{display: block;width: 100%;height: 100%;background: url(/saasBeta//images/zwsj.png)center center no-repeat;}
+			.gxt-zwsj p{text-align: left;font-size: 14px;color: #333;padding-left: 18px;box-sizing: border-box;margin-top: 18px;}
+		</style>
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->	
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+
+		<div class="right_main">
+			<div class="rzfx_top_nav">
+				<span><a href="/dataAnalysis/financingAnalysis.html">数据分析</a>>投融关系分析</span>
+			</div>
+			<!--main  star-->
+			<div class="main rz_mainnew">
+				<div class="rz_hy_type rz_hy_typenews">
+					<ul class="dingzeng">
+						<li>
+							<div class="rzfx_search fl">
+									<input type="text" id="searchStr"  placeholder="公司简称/股票代码/投资机构名称，看投融关系"/>
+									<a href="javascript:;" >查询</a>
+							</div>
+							<div class="clr"></div>
+							<div class="fl hangye newshangyey">
+								<span class="new_hy_selec">所有行业</span>
+								<div class="news_change_hy" style="display:none ;">
+									<div class="changge_top">
+										<input type="checkbox" id="allcheck" />
+										<i>全部行业</i>
+										<p>已选(<em id="checnknumber">0</em>)</p>
+										<div class="clr"></div>
+									</div>
+									<div class="changge_dlis_inf">
+										<ul id="changgelist">
+											<!--<li>
+												<input type="checkbox" name="check"/>
+												<a href="javascript:;" name="checkname">运输</a>
+												<div class="clr"></div>
+											</li>-->
+											
+										</ul>
+									</div>
+									<div class="chagenge_btn">
+										<a href="javascript:;" class="chagege_true">确定</a>
+										<a href="javascript:;" class="chagege_false">取消</a>
+									</div>
+								</div>
+								<script type="text/javascript">
+		</script>
+								<div class="kx_hy_tc rz_hy_tc" style="display: none;">
+									<i class="hy_xla"></i>
+									<div class="s_hy_tc">
+										<div class="s_hy_types">
+											<div class="indexhy_tc">
+<!-- 												<div class="hy_public fl shangyehezhuanyefuwu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>商业和专业服务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl qicheyuqichelingbujian"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>汽车与汽车零部件</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl naiyongxiaofeipinyufuzhuang"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>耐用消费品与服装</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl shipinyuzhuyaoyongpinlingshou"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>食品与主要用品零售</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl shipinyinliaoyuyancao"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>食品饮料与烟草</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl jiatingyugerenyongpin"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>家庭与个人用品</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl zhiyaoshengwukejiheshengmingkexue"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>制药、生物科技和生命科学</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl jishuyingjianyushebei"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>技术硬件与设备</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl bandaotichanpinyushebei"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>半导体产品与设备</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl tongxinshebeijifuwu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>通信设备及服务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl guangboyouxianheweixingdianshi"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>广播、有线和卫星电视</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl xiaofeizhefuwu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>消费者服务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl yuancailiao"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>原材料</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl nengyuan"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>能源</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl zibenpin"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>资本品</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl yunshu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>运输</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl yiliaobaojianshebeiyufuwu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>医疗保健设备与服务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl meiti"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>媒体</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl fangdichan"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>房地产</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl lingshouye"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>零售业</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl qitajinrong"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>其他金融</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl ruanjianyufuwu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>软件与服务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl dianxinyewu"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>电信业务</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl yinhangye"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>银行业</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl zhengquanjihuoye"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>证劵期货业</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl baoxianye"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>保险业</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="hy_public fl gongyongshiye"> -->
+<!-- 													<div class="hy_icons"> -->
+<!-- 														<i></i> -->
+<!-- 													</div> -->
+<!-- 													<span>公用事业</span> -->
+<!-- 													<em></em> -->
+<!-- 												</div> -->
+<!-- 												<div class="clr"></div> -->
+											</div>
+										</div>
+									</div>
+									<div class="hy_shure">
+										<span>确 定</span>
+									</div>
+								</div>
+							</div>
+							<div class="fl hangy_qk hangy_qknews">
+								<span class="fl">投资人:</span>
+								<!--<div class="fl data-checkbox on">
+									<input type="checkbox" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">全部</label>
+								</div>-->
+								<div class="fl data-checkbox on" data-value="1" >
+									<input type="checkbox" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">机构投资者</label>
+								</div>
+								<div class="fl data-checkbox on" data-value="0">
+									<input type="checkbox" />
+									<label class="checkbox"></label>
+									<label class="checkboxWord">个人投资者</label>
+								</div>
+								
+								<div class="clr"></div>
+							</div>
+							
+							<div class="clr"></div>
+						</li>
+						<li class="hy_shaixuan hy_shaixuannews">
+							<b>筛选条件：</b>
+							<a href="javascript:void(0);" class="qingc_tj">清除检索条件</a>
+							<!--<a href="javascript:void(0)">某行业<i></i></a>
+							<a href="javascript:void(0)">地区<i></i></a>
+							<a href="javascript:void(0)">区域<i></i></a>-->
+							<div class="fl xuanze_zhib_leix"></div>
+							<div class="clr"></div>
+						</li>
+						<div class="clr"></div>
+					</ul>
+				</div>
+				<div class="rz_qk">
+					<div class="rz_qk_title">
+						<span class="shuzi" id="timeRange" >--</span>
+						<b>投融关系统计</b>
+						<div class="fr rz_time">
+							<!--有类是on的是显示背景颜色-->
+							<a href="javascript:void(0);">周</a>
+							<a href="javascript:void(0);" class="on">月</a>
+							<a href="javascript:void(0);">季</a>
+							<a href="javascript:void(0);">年</a>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="rz_leix_qk">
+						<ul>
+							<li>
+								<span>投资人</span>
+								<h2 id="investorNum" >--</h2>
+							</li>
+							<li>
+								<span>融资公司</span>
+								<h2 id="companyNum">--</h2>
+							</li>
+							<li>
+								<span>投融关系数量</span>
+								<h2 id="amountNum" >--</h2>
+							</li>
+							<li>
+								<span>投融关系增长率</span>
+								<h2 id="amountAddNet" >--</h2>
+							</li>
+							<div class="clr"></div>
+						</ul>
+					</div>
+					
+				</div>
+				<div class="tygxtu_dobox">
+					<div class="ty_ships">
+						<div class="rz_qk_title">
+						<b>投融关系图</b>
+						<div class="clr"></div>
+					</div>
+						<!--<div class="tourong_leix">
+							<div class="fl tygx">
+								<b>投融关系图</b>
+							</div>
+							
+							<div class="clr"></div>
+						</div>-->
+						<div class="ty_gx_dqp">
+							<div class="ty_time_qp">
+								<div class="fl ty_leix">
+								<a href="javascript:void(0);">月</a>
+								<a href="javascript:void(0);" class="on">周</a>
+								<div class="clr"></div>
+							</div>
+							<div class="ty_qp fr">
+								<a href="javascript:;" id="quanping">
+									<img src="/saasBeta/images/ty_qp.png"/>
+								</a>
+							</div>
+							<div class="clr"></div>
+							</div>
+							<div class="ty_guanxit_more">
+							<a href="javascript:;" id="moreMsg" >加载更多</a>
+						</div>
+						</div>
+						<!--投研关系图-->
+<!-- 						<div class="ty_guanxt" id="ty_guanxt1"></div> -->
+						
+				
+					</div>
+					<div class="guanxi_tc investorDiv" style="display: none;">
+						<i>隐藏</i>
+							<div class="gs_xq">
+								<div class="fl companys">
+									<!--<span class="com_logo">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</span>-->
+									<span id="investorName" >--</span>
+									<div class="clr"></div>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="investorFTNum" >0</em>
+									<b>投资笔数</b>
+								</div>
+								<div class="fl gs_jieshao">
+									<span id="investorMsg" >--</span>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="com_infors">
+								<table>
+									<thead>
+										<tr>
+											<th>投资项目</th>
+											<th>融资方式</th>
+											<th>融资金额(万元)</th>
+											<th>行业</th>
+											<th>投资机构</th>
+											<th>时间</th>
+										</tr>
+									</thead>
+									<tbody id="investorTBody" >
+										<!-- <tr>
+											<td>佳信捷</td>
+											<td>定增</td>
+											<td class="shuzi">1000</td>
+											<td>信息技术>计算机设备</td>
+											<td>中钰资本...</td>
+											<td class="shuzi">2017-3-20</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<div class="guanxi_tc erjiguanxitc" style="display: none;">
+						<i>隐藏</i>
+							<div class="gs_xq">
+								<div class="fl companys">
+									<!--<span class="com_logo">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</span>-->
+									<span><em id="stock" >--</em><em id="industryName" >-->--</em></span>
+									
+									<div class="clr"></div>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="companyFTNum" >0</em>
+									<b>投资笔数</b>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="ftNum" >--万</em>
+									<b>累计融资总额(万元)</b>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="com_infors">
+								<table>
+									<thead>
+										<tr>
+											<th>融资时间</th>
+											<th class="guanxi_rongz_types">融资方式</th>
+											<th class="guanxi_jine">融资金额(万元)</th>
+											<th class="guanxi_hangye">投资方</th>
+										</tr>
+									</thead>
+									<tbody id="companyTBody" >
+										<!-- <tr>
+											<td>佳信捷</td>
+											<td>定增</td>
+											<td class="shuzi">1000</td>
+											<td>信息技术>计算机设备</td>
+											<td>中钰资本...</td>
+											<td class="shuzi">已完成</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<!--<script src="/saasBeta/newjs/dataAnalysis/jquery.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="/saasBeta/newjs/dataAnalysis/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/ecmascript" src="/saasBeta/newjs/dataAnalysis/financingRelationship.js"></script>
+	<div class="backbj"></div>
+	<div class="tzf_center_tc" style="display: none;">
+		<div class="tzf_center_title">
+				<span id="name_code">--</span>
+				<i id="close_tzf_center"></i>
+			</div>
+			<div class="clr"></div>
+			<div class="tzf_center_table_box">
+				<div class="gd_content">
+						<table>
+							<thead>
+								<tr>
+									<th class="fxl_touzif">投资方</th>
+									<th class="fxl_touzije">投资金额(万元)</th>
+								</tr>
+							</thead>
+							<tbody id="fxdx_tablie_info">
+							<tr>
+								<td class="fxl_touzif"></td>
+								<td class="fxl_touzije"></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="pagedd" class="pages pagination " style="display: none;"></div>
+					<div class="clr"></div>
+			</div>
+	</div>
+	<div class="tzgx_qpdobx" style="display: none;">
+			<div class="qpwbox">
+		    <div class="qpwbox_gdt">
+		    	<div class="gxt-zwsj" style="display: none;">
+				    <div class="bg_zwsj_tup">
+				    	<span></span>
+				    </div>	
+				    <p>暂无数据</p>
+				</div>
+			<div class="ty_qp2 fr">
+								<a href="javascript:;" id="gbquanping">
+									<img src="/saasBeta/images/ty_qp.png"/>
+								</a>
+			</div>
+			<div class="gxt_echart" id="gxt_echart"></div>
+			
+			
+			<!-- 全屏列表star -->
+
+		
+			<div class="guanxi_tc investorDiv investorDiv01" style="display: none;">
+						<i>隐藏</i>
+							<div class="gs_xq">
+								<div class="fl companys">
+									<!--<span class="com_logo">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</span>-->
+									<span id="investorName01" >--</span>
+									<div class="clr"></div>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="investorFTNum01" >0</em>
+									<b>投资笔数</b>
+								</div>
+								<div class="fl gs_jieshao">
+									<span id="investorMsg01" >--</span>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="com_infors">
+								<table>
+									<thead>
+										<tr>
+											<th>投资项目</th>
+											<th>融资方式</th>
+											<th>融资金额(万元)</th>
+											<th>行业</th>
+											<th>投资机构</th>
+											<th>时间</th>
+										</tr>
+									</thead>
+									<tbody id="investorTBody01" >
+										<!-- <tr>
+											<td>佳信捷</td>
+											<td>定增</td>
+											<td class="shuzi">1000</td>
+											<td>信息技术>计算机设备</td>
+											<td>中钰资本...</td>
+											<td class="shuzi">2017-3-20</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<div class="guanxi_tc erjiguanxitc erjiguanxitc01" style="display: none;">
+						<i>隐藏</i>
+							<div class="gs_xq">
+								<div class="fl companys">
+									<!--<span class="com_logo">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</span>-->
+									<span><em id="stock01" >--</em><em id="industryName01" >-->--</em></span>
+									
+									<div class="clr"></div>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="companyFTNum01" >0</em>
+									<b>投资笔数</b>
+								</div>
+								<div class="fl touzi_num">
+									<em class="shuzi" id="ftNum01" >--万</em>
+									<b>累计融资总额(万元)</b>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="com_infors">
+								<table>
+									<thead>
+										<tr>
+											<th>融资时间</th>
+											<th class="guanxi_rongz_types">融资方式</th>
+											<th class="guanxi_jine">融资金额(万元)</th>
+											<th class="guanxi_hangye">投资方</th>
+										</tr>
+									</thead>
+									<tbody id="companyTBody01" >
+										<!-- <tr>
+											<td>佳信捷</td>
+											<td>定增</td>
+											<td class="shuzi">1000</td>
+											<td>信息技术>计算机设备</td>
+											<td>中钰资本...</td>
+											<td class="shuzi">已完成</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="clr"></div>
+		    </div>
+						
+							</div>
+						<!-- 全屏列表end -->
+			
+		
+	</div>
+	<div class="tmtc_new"></div>
+	</body>
+	
+</html>

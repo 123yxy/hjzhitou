@@ -1,0 +1,77 @@
+
+<link rel="stylesheet" href="/saasBeta/yanbao/css/Agu.css" />
+<style>
+	.container { padding:0; }
+	.xsddd{ width:190px; overflow: hidden;text-overflow: ellipsis;white-space: nowrap;line-height: 30px;}
+</style>
+		<div class="company-business">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>一、公司概况</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>1.4 大宗交易情况</h2>
+									<div class="yewu-contents">
+										<div class="AguTable zdjy-table">
+											<table class="table">
+												<thead>
+													<tr>
+														<th style="text-align: left;padding-left: 20px;box-sizing: border-box;">交易日期</th>
+														<th>成交价（元）</th>
+														<th>成交量（万股）</th>
+														<th>成交金额（万元）</th>
+														<th>买入营业部</th>
+														<th class="shuzi">卖出营业部</th>
+													</tr>
+												</thead>
+												<tbody class="no-color" id="tradeList">
+													<!--<tr>
+														<td>周交易量</td>
+														<td>5689.00</td>
+														<td>5689.00</td>													
+													</tr>
+													<tr>
+														<td>月交易量</td>
+														<td>5689.00</td>
+														<td>5689.00</td>														
+													</tr>
+													<tr>
+														<td>半年度交易量</td>
+														<td>5689.00</td>
+														<td>5689.00</td>														
+													</tr>
+													<tr>
+														<td>年度交易量</td>
+														<td>5689.00</td>
+														<td>5689.00</td>														
+													</tr>-->
+												</tbody>
+											</table>
+										</div>
+										
+										<div id="jy_noData" class="jy-wushuju" style="display: none;">暂无数据</div>
+									</div>
+								</div>
+														
+							</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>	
+			</div>
+		</div>
+
+	<script type="text/javascript">
+		findGsDzjyqk()
+	</script>

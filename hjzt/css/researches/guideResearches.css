@@ -1,0 +1,84 @@
+html{width:100%;height:100%;}  
+	*{margin:0;padding:0;}
+	body{width:100%;height:100%;position: relative;}  
+	.cover {  
+	    display: none;  
+	    position: absolute;  
+	    width: 0; height: 0;  
+	    left: 0; top: 0; right: 0; bottom: 0;  
+	    border: 0 solid #000;  
+	    opacity: .5;  
+	    filter: alpha(opacity=5);  
+	    z-index: 9;  
+	    /* 过渡效果 */  
+	    /*transition: all .25s;  */
+	    /* 边缘闪动问题fix */  
+	    box-shadow: 0 0 0 100px #000;  
+	    overflow: hidden;  
+	}  
+	.cover::before {  
+	    content: '';  
+	    width: 100%; height:100%;  
+	    border-radius: 50%;  
+	    border: 400px solid #000;  
+	    position: absolute;  
+	    left: -400px; top: -400px;  
+	    box-shadow: inset 0 0 5px 2px rgba(0,0,0,.5);  
+	}  
+	/* IE7, IE8 img */  
+	.cover > img {  
+	    width: 100%; height: 100%;      
+	}  
+
+
+	.middle_middle{
+		position: relative;
+	}
+	.middle_right{
+		position: fixed;
+		right: 0;
+		top: 195px;
+	}
+	.middle_left{
+		position: fixed;
+	}
+	#guide_catalog{
+		width:89%;position:absolute;top:-6%;left:0;height: 203px;border-radius:50%;
+	}
+	#guide_content{
+		width:82%;height: 258px;position: absolute;top:11%;left:9%;border-radius: 50%;
+	}
+	#guide_data{
+		width:119%;height:238px;position: absolute;top:-4%;left:-28%;border-radius: 50%;
+	}
+	#guide_market{
+		width:113.5%;height:287px;position: absolute;top:-3%;left:-13.5%;border-radius: 50%;
+	}
+	#guide_chart{
+		width:113.5%;height:287px;position: absolute;top:7%;left:-14%;border-radius: 50%;
+	}
+	#guide_upload{
+		width:113.5%;height:287px;position: absolute;top:83.5%;left:-14%;border-radius: 50%;
+	}
+
+    .guide_catalog{z-index:9999;color:#fff;position: absolute;top:218px;left:13.5%;transition: all 1s;display: block;}
+    .catalog_img{position: absolute;}
+    .left_img{position: relative; cursor: pointer;left: 39%;top: 148px;}
+
+    .guide_content{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:472px;left:36%;display:inline-block;display: none;}
+   	.content_img{position: absolute; cursor: pointer;right:11%;top: 155px;}
+
+
+    .guide_data{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:334px;right:1%;display:inline-block;display: none;}
+    .data_img{position: absolute; cursor: pointer;right:37%;top: 216px;}
+
+    
+   	.guide_market{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:357px;right:15%;display:inline-block;display: none;}
+   	.market_img{position: absolute; cursor: pointer;right:43%;top: 81px;}
+   	
+
+   	.guide_chart{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:383px;right:16%;display:inline-block;display: none;}
+   	.chart_img{position: absolute; cursor: pointer;right:40  %;top: 55px;}
+
+   	.guide_upload{z-index:9999;color:#fff;position: absolute;transition: all 1s;top:832px;right:15%;display:inline-block;display: none;}
+   	.upload_img{position: absolute; cursor: pointer;right:42%;top: 55px;}

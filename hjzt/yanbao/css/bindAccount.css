@@ -1,0 +1,258 @@
+body,html{
+	background-color: #f3f6f9;
+}
+.percenter-main{
+	width: 100%;
+	height: 100%;
+	background-color: #f3f6f9;
+	padding-top: 136px;
+}
+.content{
+	width: 340px;
+	margin:0 auto;
+}
+.logo-icon{
+	display: block;
+	width: 188px;
+	height: 66px;
+	margin: 0 auto;
+}
+.logo-icon img{
+	display: block;
+	width: 100%;
+}
+.content h2{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	line-height: 34px;
+	font-size: 16px;
+	color: #5c666e;	
+}
+.content>p{
+	display: inline-block;
+	text-align: center;
+	line-height: 44px;
+	width: 100%;
+	font-size: 18px;
+	color: #3d464d;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+.bind-phone li{
+	width: 100%;
+	height: 338px;
+	height: 34px;
+	border:1px solid #c8d1da;
+	border-radius: 5px;
+	background-color: #fff;
+	position: relative;
+}
+.bind-phone li input{
+	display: inline-block;
+	width: 100%;
+	border-style: none;
+	outline: none;
+	height: 33px;
+	line-height: 33px;
+	border-radius: 5px;
+}
+.bind-phone li.phone-num{
+	border-bottom: 0;
+	height: 36px;
+	position: relative;
+}
+.bind-phone li.phone-num input{
+	width: 240px;
+	height: 35px;
+	line-height: 35px;
+}
+.bind-phone li.phone-num span{
+	display: inline-block;
+	position: absolute;
+	font-size: 14px;
+	color: #5c666e;
+	width: 98px;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 14px;
+	box-sizing: border-box;
+	border-left: 1px solid #d7dde4;
+	top: 10px;
+	right: 0;
+	cursor: pointer;
+}
+.bind-phone .green-icon{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 7px;
+	right: 10px;
+	background: url(../images/binded-icon.png)center center no-repeat;
+}
+.bind-phone li.bind-next{
+	margin-top: 30px;
+	border:0;
+}
+.bind-phone li.bind-next span{
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 36px;
+	background-color: #1985e2;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.content .gz-us{
+	margin-top: 38px;
+	font-size: 18px;
+	color: #3d464d;
+	font-weight: normal;
+}
+.content .saoma{
+	font-size: 14px;
+	color: #5c666e;
+	font-weight: normal;
+}
+.erweima{
+	width: 200px;
+	height: 202px;
+	margin: 0 auto;
+}
+.erweima img{
+	display: block;
+	width: 100%;
+}
+
+
+.login-footer{
+	width: 100%;
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+}
+.login-footer p{
+	font-size: 14px;
+	color: #5c666e;
+	text-align: center;
+}
+.login-footer p.qiyehao{
+	font-size: 13px;
+}
+
+/*关注领域*/
+.attione-main .top{
+	width: 100%;
+	height: 70px;
+	background-color: #1e7bcd;
+}
+.company-logo{
+	display: inline-block;
+	width: 180px;
+	height: 70px;
+}
+.attione-content{
+	margin-top: 40px;
+}
+.hy-name{
+	background-color: #fff;
+	padding:40px 70px 76px 70px;
+	box-sizing: border-box;
+}
+.hy-name .titles{
+	width: 416px;
+	margin:0 auto;
+	margin-bottom:20px;
+	position: relative;
+}
+.gz-titles{
+	display:block;
+	width: 100px;
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+	color: #3d464d;
+	font-weight: bold;text-align: center;
+	margin: 0 auto;
+}
+.hy-name .titles em{
+	display: inline-block;
+	width: 159px;
+	height: 1px;
+	background-color: #dce2e8;
+	position: absolute;
+	top: 16px;
+}
+.hy-name .titles em.hx1{
+	left: 0;
+}
+.hy-name .titles em.hx2{
+	right: 0;
+}
+.hy-list{
+	width: 100%;
+	padding:0px 0 10px 90px;
+	box-sizing: border-box;
+	/*border-bottom: 1px solid #dce2e8;*/
+	overflow: hidden;/*nieshi 20170908*/
+	text-align:left;
+}
+.hy-name p{
+	font-size: 13px;
+	color: #5c666e;
+	text-align: center;
+	margin-top: 10px;
+}
+.hy-name p em{
+	display: inline-block;
+	color: #f4363e;
+}
+.hy-list span{
+	display: inline-block;
+	padding:0px 14px;/*20170929 shiqi*/
+	/* width: 160px; *//*20170929 shiqi 取消固定宽度,适应不同字数长度*/
+	height: 48px;
+	text-align: center;
+	line-height: 46px;
+	background-color: #f3f6f9;
+	border:1px solid #c8d1da;
+	color: #5c666e;
+	box-sizing: border-box;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	// display: inline-block;
+	// float: left;
+}
+.hy-list span.on{
+	color: #fff;
+	border: 1px solid #1985e2;
+	background-color: #1985e2;
+}
+.attention-btn{
+	width: 162px;
+	height: 40px;color: #fff;
+	line-height: 40px;text-align: center;
+	font-size: 16px;background-color: #1985e2;
+	border-radius: 5px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-top: 40px;
+}
+.agreenment-content{
+	margin-top: 20px;
+}
+.agreenment-content h2{
+	color: #3d464d;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.agreenment-content p{
+	text-align: left;
+}

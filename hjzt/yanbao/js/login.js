@@ -1,0 +1,2 @@
+logHead();
+logFoot();

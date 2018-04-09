@@ -1,0 +1,148 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+	.reyuan-table .table tr td, .reyuan-table .table tr th { position:relative; width:auto!important; }
+	.chakan-tc { z-index:9; }
+	.container { padding:0; }
+</style>
+		<div class="yuce-fx">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>一、公司概况</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+								</div>
+							</div>
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>1.7人员情况</h2>
+									<div class="kaik-content djg">
+										<h3>1.7.1董监高情况</h3>
+										<div class="reyuan-table dongjiangao">
+											<table class="table">
+												<thead>
+													<tr>
+														<th>姓名</th>
+														<th>职务</th>
+														<th>性别</th>
+														<th>年龄</th>
+														<th>学历</th>
+														<!--<th>任期</th>-->
+														<th class="shuzi">持股数(万股)</th>
+														<th>简历</th>
+													</tr>
+												</thead>
+												<tbody id="djgUL" >
+													<!--<tr>
+														<td>何英</td>
+														<td>监事会主席</td>
+														<td>男</td>
+														<td>45</td>
+														<td>本科</td>
+														<td>2017-10-15至2017-08-12</td>
+														<td>5213.10</td>-->
+														<!--<td class="zhuanli-ck-tc">
+															<span class="chakan">查看</span>-->
+															<!-- <div class="chakan-tc jl-tc">
+																<em class="jianli_sj"></em>
+																<div class="jianli_content">
+																	<div class="jiben_xinx infor_public">
+																		<ul>
+																			<b class="infor_yd"></b>
+																			<li class="jiben_titles"><span>基本信息</span></li>
+																			<li class="zw_list"><span>姓名：<em>李朋阁</em></span><span>性别：<em>男</em></span><span>年龄：<em>48</em></span><span>国籍：<em>中国籍</em></span><span>现居地：<em>--</em></span><div class="clearfix"></div></li>
+																		</ul>
+																	</div>
+																	<div class="jiaoyu_jl infor_public">
+																		<ul>
+																			<b class="infor_yd"></b>
+																			<li class="jiben_titles"><span>教育经历</span></li>
+																			<li><span>暂无</span></li>
+																		</ul>
+																	</div>
+																	<div class="cy_jl infor_public">
+																		<ul>
+																			<b class="infor_yd"></b>
+																			<li class="jiben_titles"><span>任职经历</span></li>
+																			<li><span>2011年至今</span><em>任宜阳海斯迪能源科技有限公司执行董事兼总经理,现任深圳海斯迪能源科技股份有限公司董事,任期三年。</em></li>
+																		</ul>
+																	</div>
+																	<div class="clearfix"></div>
+																</div>
+															</div> -->
+														<!--</td>
+													</tr>-->
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="kaik-content ygqk">
+										<h3>1.7.2员工情况</h3>
+										<div class="col-lg-6 col-xs-6 col-md-6 col-sm-6"  id="dataList1">
+											<div class="echarts-tb" id="educational"></div>
+											<div class="comparis" id="xlDBMsg" ></div>
+										</div>
+										<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6"  id="dataList2">
+											<div class="echarts-tb" id="employee"></div>
+											<div class="comparis" id="zwDBMsg" ></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</div>
+							</div>
+							
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+			</div>
+		</div>
+	<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script> -->
+
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			//判断用户是否是付费用户
+			payOrNot();//返回的true或者是false/true是已经付费的
+			deepLook();
+			if(payOrNot()==true){//说明是这个公司已经付费的
+				
+			}else if(payOrNot()==false || payOrNot()==undefined){
+				//guidePayFor();
+				$("#dataList1").hide();
+				$("#dataList2").hide();
+				$(".ygqk").find("div").eq(0).before("<div class='noPay noContent'>深度内容，开通查看权限</div>");
+			}
+			
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+		    $(".contents").height(windowHeight - 290);
+		    
+		    //加载高管信息
+			findDignForSurvey();
+			
+			
+			//加载员工信息
+			findStaffData();
+			
+			
+			// 查看董监高
+			$("#djgUL").delegate(".chakan","click",function(){
+				$(this).next().toggle();
+				$(this).parents("tr").siblings().children("td").children(".chakan-tc").hide();
+				if($(".chakan-tc").is(":visible")){
+					$(this).text("收起");
+					$(this).parents("tr").siblings().children("td").children(".chakan").text("查看");
+				} else{
+					$(this).text("查看")
+				}
+			})
+		})
+	</script>

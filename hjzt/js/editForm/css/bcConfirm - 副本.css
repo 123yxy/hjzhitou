@@ -1,0 +1,68 @@
+/*垂直居中*/
+.verticalAlign{ 
+	vertical-align:middle; display:inline-block; height:100%; margin-left:-1px;
+}
+
+.bcConfirm .bc_layer{
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #666666; opacity: 0.5; z-index: 999;
+}
+.bcConfirm .popBox{
+	position: fixed; left: 50%; top: 24%; background-color: #ffffff; z-index: 2147000001; width: 400px; height: 376px; 
+	margin-left: -200px; border-radius: 5px; font-weight: bold; color: #535e66;/*padding:0 33px;*/
+}
+.bcConfirm .popBox .ttBox{
+	height: 55px; line-height: 55px;border-bottom: solid 1px #eef0f1;margin:0 5%;margin-bottom: 5px;
+}
+.bcConfirm .popBox .ttBox .tt{
+	font-size: 16px; display: block; float: left; height: 55px; position: relative;color:#333333;
+}
+.bcConfirm .popBox .clsBtn{
+	display: block; cursor: pointer;position: absolute;z-index:9999;right:-20%;top:-40%;
+}
+.bcConfirm .popBox .txtBox{
+	height: 208px; overflow: hidden;margin:0 5%;padding-top:10px;
+}
+.bcConfirm .popBox .txtBox .editor{
+ 	margin-top:14px;margin-bottom: 20px;
+	width:358px;height:61px;border:1px solid #cccccc;
+}
+.bcConfirm .popBox .txtBox .editor .custom{
+	height:30px;/*background:red;*/
+}
+.bcConfirm .popBox .txtBox .editor .custom .family{
+	width:114px;height:30px;background: #fff;display: block;float: left;border:none;text-align: center;/*outline: none;*/
+}
+.bcConfirm .popBox .txtBox .editor .custom .family option{
+	text-align:center;
+}
+.bcConfirm .popBox .txtBox .editor .custom .size{
+	width:74px;height:30px;background: #fff;display: block;float: left;
+}
+.bcConfirm .popBox .txtBox .editor .custom .capital{
+	border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;margin-top:5px;
+}
+.bcConfirm .popBox .txtBox .editor .custom .weight{
+	/*border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;*/margin-top:5px;
+}
+.bcConfirm .popBox .txtBox .editor .custom .underline{
+	/*border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;*/margin-top:5px;
+}
+.bcConfirm .popBox .txtBox .editor .custom .italic{
+	/*border-left: 1px solid #cccccc;border-right: 1px solid #cccccc;*/margin-top:5px;
+}
+
+
+.bcConfirm .popBox .txtBox .btnArea{
+	height:32px;/*margin-top:75px;*/padding:0 108px;
+}
+
+.bcConfirm .popBox .sgBtn{
+	display: block; cursor: pointer; float: left; width: 100px; height: 32px; font-size:14px;line-height: 32px; text-align: center; color: #FFFFFF;
+	 border-radius: 5px;margin-left:0;margin-top: 0;
+}
+.bcConfirm .popBox .sgBtn.ok{
+	background-color: #1985e2; color: #FFFFFF;
+}
+.bcConfirm .popBox .sgBtn.cancel{
+	background-color: #fff; color: #1985e2;border:1px solid #1985e2;margin-left: 40px;height:30px;line-height: 30px;
+}

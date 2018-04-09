@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>财务分析</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css" /> -->
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section03.css" />
+	<!-- </head>
+	<body>
+		<div class="qxheader">
+			
+		</div> -->
+		<div class="company-analysis">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 company-background">
+					<div class="company-content">					
+						<div class="top-tiltes">
+							<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>四、财务分析</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+										<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="company-main">
+							<div class="section zhnlmxfx">
+								<h2>4.3综合能力模型分析</h2>
+								<div class="echarts-tb" id="companyModelAnalysis"></div>
+								<div class="tu-explain" id="companyModelAnalysisShuoming">
+									<!-- <p>截止最近一个会计年度，公司净利润为xx%，在行业内排**名，属于行业（前列，中游，垫底等）。</p> -->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+				
+			</div>
+		</div>
+	<!-- </body> -->
+	<!-- 公共js -->
+	<!-- <script src="../js/jquery.min.js"></script>
+	<script src="../js/echarts-all-3.js"></script> -->
+	<!-- 数据交互js -->
+<!-- 	<script src="../js/common/ajax.js"></script>
+	<script src="../js/common/util.js"></script>
+	<script src="../js/slideList.js"></script> -->
+	<!-- 业务js -->
+	<!-- <script src="/saasBeta/yanbao/js/bus/section03.js"></script> -->
+	<script>
+		//判断是否登录
+		UTIL.Anologin('zhnlmxfx');
+		//综合能力分析
+		AfindFinanceModelData();
+		$(function(){
+		    var windowHeight = $(".page").height()
+		    $(".company-analysis .container").height(windowHeight);
+			$(".company-main").height(windowHeight - 100);
+			$("#companyModelAnalysis").height($(".company-main")-80);	
+			// UTIL.sjly("#zhnlmxfxly","zhnlmxfx",".zhnlmxfx","sjlyy");
+		})
+	</script>
+<!-- </html> -->

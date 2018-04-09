@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-研究图表</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="tub_tc" style="display: none;"></div>
+		<div class="tub_tc2" style="display: none;"></div>
+		
+		<!--管理分类-->
+		<div class="guanli_tc" style="display: none;">
+			<div class="xinj_top">
+				<b class="tc_shanchu"></b>
+				<h3>图表分类管理</h3>
+			</div>
+			<!--<h3>图表分类管理</h3>-->
+			<div class="fenlei_shuj" style="display: block;">
+			<div class="fenlei_lx">
+				<div class="now_types">
+					<span>现有分类</span>
+					<a href="javascript:;" class="fr">新建</a>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="fenlei_lieb">
+			<ul id="categoryCountList">
+				<!--<li>
+					<i></i>
+					<span>默认分类(74)</span>
+					<em></em>
+					<div class="clr"></div>
+				</li>
+				<li>
+					<i></i>
+					<span>分组名称(23)</span>
+					<em></em>
+					<div class="clr"></div>
+				</li>
+				<li>
+					<i></i>
+					<span>分组名称(23)</span>
+					<em></em>
+					<div class="clr"></div>
+				</li>-->
+			</ul>
+			</div>
+			<p>注意：删除分类会将该分类下的图表同时删除</p>
+			<div class="fenlei_btn guanli_btn">
+				<span>确定</span>
+			</div>
+			</div>
+			<!--暂无数据-->
+			<div class="leixin_zwsj" style="display: none;">
+				<div class="zwu_shuju1">
+					<div class="wushuj_tub">
+						<span>
+							<img src="/saasBeta/images/zwsj.png" alt="">
+						</span>
+						<p class="xin_zwsj">暂无分组</p>
+						<div class="xinj_anniu">
+							<a href="javascript:;"><i class="jiahao"></i>新建</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--新建分类-->
+		<div class="xinjian_tc" style="display: none;">
+			<div class="xinj_top">
+				<b class="tc_shanchu"></b>	
+				<h3>新建图表分类</h3>
+			</div>
+			<!--<h3>新建图表分类</h3>-->
+			<div class="new_search">
+				<input type="text" id="categoryName" placeholder="图表分类名称" maxlength="15" />
+				<em class="search_tips">请添加分类信息!</em>
+			</div>
+			<div class="fenlei_btn xinjian_btn">
+				<span class="fenlei_qd">添加</span>
+				<span class="fenlei_qx">取消</span>
+			</div>
+		</div>
+		<!--提示删除的弹窗-->
+		<div class="tips_shanchu" style="display: none;">
+			<b class="tc_shanchu"></b>
+			<h2>删除提示</h2>
+			<p>确定删除吗？</p>
+			<div class="shanchu_btn">
+				<span class="shanc_btn">删除</span>
+				<span class="shanc_qux">取消</span>
+			</div>
+		</div>
+		<!--分类的弹窗-->
+		<div class="fenlei_tc" style="display:none">
+			<b class="tc_shanchu"></b>
+			<p>保存图表</p>
+			<div class="fenlei_search">
+				<div class="list">
+					<div class="select_box screen">
+						<div class="selectBox">
+							<p>全部分类</p>
+							<ul id="categoryList2">
+								<!-- <li>
+									<a href="javascript:;">默认分类</a>
+								</li> 			
+								<li>
+									<a href="javascript:;">新建分类</a>
+								</li> --> 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="saves">
+				<span class="baoc_qd">确定</span>
+				<span class="baoc_qx">取消</span>
+			</div>
+		</div>
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main">
+				<div class="newgup_nav p_b_10">
+				<a href="/myResearch/researchReport.html">我的研究</a>&gt;<a href="javascript:;">研究图表</a>
+			</div>
+				<div class="baogao_main yanjiu_tub">
+					<div class="baogao_titles yj_tub new_tubiao">
+						<div class="fl yjtb_search">
+							<input type="text" id="searchVal" placeholder="图表标题，关联个股"/>
+							<a href="javascript:;" id="searchNewTubiao">搜索</a>
+						</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+				<div class="tub_fenlei">
+					<div class="fl qb_fenlei">
+						<div class="list">
+							<div class="select_box screen">
+								<div class="selectBox">
+									<p>全部分类</p>
+									<ul id="categoryList">
+										<li>
+											<a href="javascript:;">全部分类</a>
+										</li> 
+										<!-- <li>
+											<a href="javascript:;">默认分类</a>
+										</li> 
+										<li>
+											<a href="javascript:;">分类名称1</a>
+										</li> 
+										<li>
+											<a href="javascript:;">分类名称2</a>
+										</li>  -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<a href="/myResearch/newsindexLibrary.html" class="fr mew_tubiao" target="_blank">新建分析图表</a>
+					<span class="guanl_fenlei fr">管理分类</span>						
+					<span class="xinj_fenlei fr">新建分类</span>
+					<div class="clr"></div>
+				</div>
+				<div class="tubiao_list" >
+					<div id="studyChartList">
+						<!--<div class="fl echarts_public">
+						<div class="top">
+							<span>互联网三板做市成份股交易分析图</span>
+							<div class="fr echart_icons" style="display: none;">
+								<a href="javascript:;" title="编辑"></a>
+								<em title="删除"></em>
+								<i title="预览"></i>
+								<b title="分类"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fr moren_icon">
+								<em></em>
+							</div>
+							<div class="clr"></div>
+						</div>	
+						<div class="draw_echarts" id="draw_echarts1">
+							<img src="/saasBeta/images/index_01.jpg" alt="" />
+						</div>
+					</div>
+					<div class="fl echarts_public">
+						<div class="top">
+							<span>互联网三板做市成份股交易分析图</span>
+							<div class="fr echart_icons" style="display: none;">
+								<a href="javascript:;" title="编辑"></a>
+								<em title="删除"></em>
+								<i title="预览"></i>
+								<b title="分类"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fr moren_icon">
+								<em></em>
+							</div>
+							<div class="clr"></div>
+						</div>	
+						
+						<div class="draw_echarts" id="draw_echarts2">
+							<img src="/saasBeta/images/index_01.jpg" alt="" />
+						</div>
+					</div>
+					<div class="fl echarts_public">
+						<div class="top">
+							<span>互联网三板做市成份股交易分析图</span>
+							<div class="fr echart_icons" style="display: none;">
+								<a href="/myResearch/editChart.html" title="编辑"></a>
+								<em title="删除"></em>
+								<i title="预览"></i>
+								<b title="分类"></b>
+								<div class="clr"></div>
+							</div>
+							<div class="fr moren_icon">
+								<em></em>
+							</div>
+							<div class="clr"></div>
+						</div>	
+						
+						<div class="draw_echarts" id="draw_echarts3">
+							<img src="/saasBeta/images/index_01.jpg" alt="" />
+						</div>
+					</div>-->
+					<div class="clr"></div>
+					</div>
+					<div class="baogao_zwsj" style="display: none;">
+							<div class="bg_zwsj_tup">
+								<span></span>
+							</div>
+							<p style="padding-left: 0; margin-left:-14px ;">您还没有创建过研究图表</p>
+							<a href="/myResearch/newsindexLibrary.html" class="zwsj_qcj" target="_blank">去创建</a>
+						</div>
+					
+					<!--暂无数据-->
+				</div>
+				
+				<!--加载动画-->
+					<!--<div class="loadEffect">
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					        <span></span>
+					</div>-->
+				<div class="addmore">
+						<a href="javascript:;" id="loadMore" onclick="findBtUserStudyChart(1)">加载更多</a>
+				</div>
+			</div>
+			
+		</div>
+	
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/newjs/left.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>	
+		<!-- 自动补全 -->
+		
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+
+		<script src="/saasBeta/newjs/myResearch/researchChart.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+</html>

@@ -1,0 +1,364 @@
+<!-- <!DOCTYPE html>
+<html>
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>财务分析</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/common.css" /> -->
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section03.css" />
+		<style type="text/css">
+			.dbfx2{width: 976px;overflow-x: auto;padding-left: 20px;box-sizing: border-box;}
+			.bont-content ul li{position: relative;}
+			.bont-content ul li div{position: absolute;}
+			.bont-content ul li span{display: table-cell;padding:2px 4px;background-color: #1985e2;color: #fff;font-size: 12px;border-radius: 5px;}
+			.dbzb-list{height: 36px;}
+			.jsfh{font-size: 14px;color: #f4363e;position: absolute;}
+			.dbzb-list em{display: block;width: 100%;text-align: center;font-size: 12px;}
+			.db-line{height: 24px;}
+			.db-line i{position: absolute;top: 0;}
+			.dbzb1{left: 50%;}
+			.dbzb2{left: 41%;}
+			.gsxx-list1{left: 54%;}
+			.dbzb3{left:64%;}
+			.dbzb4{left: 34%;}
+			.dbzb5{left: 66%;}
+			.gsxx-list2{left: 51%;}
+			.dbzb6{left: 25.5%;}
+			.dbzb7{left: 42%;}
+			.gsxx-list3{left:36.5%;}
+			.dbzb8{left: 60%;}
+			.dbzb9{left: 76.5%;}
+			.gsxx-list4{left:70.5%;}
+			.dbzb10{left: 0%;}
+			.dbzb11{left: 7.5%;}
+			.dbzb12{left: 16%;}
+			.dbzb13{left: 24%;}
+			.dbzb14{left: 36.5%;}
+			.dbzb15{left: 49%;}
+			.dbzb16{left: 61%;}
+			.dbzb17{left: 80%;}
+			.gsxx-list5{left:6.5%;}
+			.gsxx-list6{left:14%;}
+			.gsxx-list7{left:22.5%;}
+			.gsxx-list8{left:35%;}
+			.gsxx-list9{left:47%;}
+			.gsxx-list10{left:73%;}
+			.gsxx-list11{left:78%;}
+
+			.line1{display: inline-block;width: 230px;height: 18px;background: url(images/db-icon1.png)center center no-repeat;left: 44%;}
+			.line2{display: inline-block;width: 330px;height: 18px;background: url(images/db-icon4.png)center center no-repeat;left: 36%;}
+			.line3{display: inline-block;width: 180px;height: 18px;background: url(images/db-icon2.png)center center no-repeat;left: 27%;}
+			.line4{display: inline-block;width: 170px;height: 18px;background: url(images/db-icon3.png)center center no-repeat;left: 62%;}
+			.line5{display: inline-block;width: 496px;height: 18px;background: url(images/db-icon5.png)center center no-repeat;left: 2%;}
+			.line6{display: inline-block;width: 202px;height: 18px;background: url(images/db-icon6.png)center center no-repeat;left: 63%;}
+			
+			
+			li.li-public{height: 190px;}
+			.cbfy{width: 210px;height: 190px;left: 0;}
+			.cbfy-zb1{width: 100%;height: 190px;}
+			.dbzb18{left: 32%;top: 10%;}
+			.cbfy-zb2{width: 18px;height: 190px;left: 45%;}
+			.cbfy-zb2 i{width: 18px;height: 190px;display: block; background: url(images/db-icon7.png)top center no-repeat;}
+			.cbfy-zb1{width: 96px;left: 0%;}
+			.cbfy-zb3{width: 96px;left:57%;}
+			li .cbfy-zb3 div{left: 0;}
+			.jsfs1{top: 31%;left: 60%;}
+			.jsfs2{top: 65%;left: 58%;}
+			
+			.dbzb19{top:43%;left: 33%;}
+			.dbzb20{top:78%;}
+			
+			.cbfy-zb3{height: 190px;}
+			.dbzb21{top: 10%;}
+			.dbzb22{top: 42%;}
+			.dbzb23{top: 78%;}
+			li .cbfy-zb3 div.jsfs3{top: 31%;left: 27%;}
+			li .cbfy-zb3 div.jsfs4{top: 65%;left: 27%;}
+			
+			
+			
+			.ldzc{width: 170px;height: 190px;left: 56%;}
+			.ldzc-zb1{width: 66px;height: 190px;left: 0;}
+			.ldzc-line{width: 20px;height: 190px;left: 36%;}
+			.ldzc-line i{display: block; width: 20px;height: 190px;background: url(images/db-icon8.png)top center no-repeat;}
+			.ldzc-zb2{width: 120px;height: 190px;left: 53%;}
+			.dbzb24{top: 8%;}
+			.dbzb25{top: 46%;}
+			.jsfs5{top: 31%;left: 40%;}
+			.dbzb26{top:8%}
+			.dbzb27{top:46%}
+			.dbzb28{top:78%}
+			.jsfs6{top: 31%;left: 18%;}
+			.jsfs7{top: 67%;left: 18%;}
+			
+			
+			.fldzc{width: 190px;height: 190px;left: 75%;}
+			.fldzc-zb1{width: 88px;height: 190px;}
+			.fldzc-line{width: 18px;height: 190px;left: 43%;}
+			.fldzc-line i{display: block;width: 18px;height: 190px;background: url(images/db-icon9.png)top center no-repeat;}
+			.fldzc-zb2{width: 108px;height: 190px;left:54%;}
+			.dbzb31,.dbzb29{top: 8%;}
+			.dbzb29{left: 23%;}
+			.dbzb30,.dbzb32{top: 43%;}
+			.jsfs8{top: 31%;left: 40%;}
+			.jsfs9{top: 31%;left: 25%;}
+
+		</style>
+	<!-- </head>
+	<body>
+		<div class="qxheader">
+			
+		</div> -->
+		<div class="company-analysis">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 company-background">
+					<div class="company-content dbfxf">					
+						<div class="top-tiltes">
+							<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>三、财务分析</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+										<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="company-main ">
+							<div class="section">
+								<h2>3.5杜邦分析法</h2>
+							</div>
+							<div class="bont-content dbfx2">
+								<ul>
+									<li class="dbzb-list">
+										<div class="dbzb1">
+											<span>净资产收益率ROE</span>
+											<em id="JingZiChanShouYiLv_dubang">--</em>
+										</div>
+									</li>
+									<li class="db-line"><i class="line1"></i></li>
+									<li class="dbzb-list">
+										<div class="dbzb2">
+											<span>总资产收益率</span>
+											<em id="ZongZiChanShouYiLv_dubang">--</em>
+										</div>
+										<div class="gsxx-list1 jsfh">x</div>
+										<div class="dbzb3">
+											<span>权益乘数</span>
+											<em id="QuanYiChengShu_dubang">--</em>
+										</div>
+									</li>
+									<li class="db-line"><i class="line2"></i></li>
+									<li class="dbzb-list">
+										<div class="dbzb4">
+											<span>营收利润率</span>
+											<em id="XiaoShouJingLiRunLv_dubang">--</em>
+										</div>
+										<div class="gsxx-list2 jsfh">x</div>
+										<div class="dbzb5">
+											<span>总资产周转率</span>
+											<em id="ZongZiChanZhouZhuanLv_dubang">--</em>
+										</div>
+									</li>
+									<li class="db-line">
+										<i class="line3"></i>
+										<i class="line4"></i>
+									</li>
+									<li class="dbzb-list">
+										<div class="dbzb6">
+											<span>净利润</span>
+											<em id="f2JLR_dubang">--</em>
+										</div>
+										<div class="gsxx-list3 jsfh">÷</div>
+										<div class="dbzb7">
+											<span>营业收入</span>
+											<em id="f2YYZSR_dubang_1">--</em>
+										</div>
+										<div class="dbzb8">
+											<span>营业收入</span>
+											<em id="f2YYZSR_dubang_2">--</em>
+										</div>
+										<div class="gsxx-list4 jsfh">÷</div>
+										<div class="dbzb9">
+											<span>总资产</span>
+											<em id="f1ZCZJ_dubang">--</em>
+										</div>
+									</li>
+									<li class="db-line yincang_1">
+										<i class="line5"></i>
+										<i class="line6"></i>
+									</li>
+									<li class="dbzb-list yincang_1">
+										<div class="dbzb10">
+											<span>营业收入</span>
+											<em id="f2YYZSR_dubang_3">--</em>
+										</div>
+										<div class="gsxx-list5 jsfh">-</div>
+										<div class="dbzb11">
+											<span>成本费用</span>
+											<em id="f2CBFY_dubang">--</em>
+										</div>
+										<div class="gsxx-list6 jsfh">+</div>
+										<div class="dbzb12">
+											<span>投资收益</span>
+											<em id="f2TZSY_dubang">--</em>
+										</div>
+										<div class="gsxx-list7 jsfh">+</div>
+										<div class="dbzb13">
+											<span>公允价值变动损益</span>
+											<em id="f2JGYJZBDSY_dubang">--</em>
+										</div>
+										<div class="gsxx-list8 jsfh">+</div>
+										<div class="dbzb14">
+											<span>业务外收支净额</span>
+											<em id="f2YWWSZJE_dubang">--</em>
+										</div>
+										<div class="gsxx-list9 jsfh">-</div>
+										<div class="dbzb15">
+											<span>所得税费用</span>
+											<em id="f2JSDSFY_dubang">--</em>
+										</div>
+										<div class="dbzb16">
+											<span>流动资产</span>
+											<em id="f1LDZCHJ_dubang">--</em>
+										</div>
+										<div class="gsxx-list10 jsfh">+</div>
+										<div class="dbzb17">
+											<span>非流动资产</span>
+											<em id="f1FLDZCHJ_dubang">--</em>
+										</div>
+									</li>
+									<li class="dbzb-list li-public yincang_1">
+										<div class="cbfy">
+											<div class="cbfy-zb1">
+												<div class="dbzb18">
+													<span>营业成本</span>
+													<em id="f2QZYYCB_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs1">+</div>
+												<div class="dbzb19">
+													<span>管理费用</span>
+													<em id="f2GLFY_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs2">+</div>
+												<div class="dbzb20">
+													<span>营业税金及附加</span>
+													<em id="f2YYSJJFJ_dubang">--</em>
+												</div>
+											</div>
+											<div class="cbfy-zb2"><i></i></div>
+											<div class="cbfy-zb3">
+												<div class="dbzb21">
+													<span>销售费用</span>
+													<em id="f2XSFY_dubang_3">--</em>
+												</div>
+												<div class="jsfh jsfs3">+</div>
+												<div class="dbzb22">
+													<span>财务费用</span>
+													<em id="f2CWFY_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs4">+</div>
+												<div class="dbzb23">
+													<span>资产减值损失</span>
+													<em id="f2ZCJZSS_dubang">--</em>
+												</div>
+											</div>
+										</div>
+										<div class="ldzc">
+											<div class="ldzc-zb1">
+												<div class="dbzb24">
+													<span>货币资金</span>
+													<em id="f1HBZJ_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs5">+</div>
+												<div class="dbzb25">
+													<span>应收账款</span>
+													<em id="f1YSZK_dubang">--</em>
+												</div>
+											</div>
+											<div class="ldzc-line"><i></i></div>
+											<div class="ldzc-zb2">
+												<div class="dbzb26">
+													<span>预付款项</span>
+													<em id="f1YFKX_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs6">+</div>
+												<div class="dbzb27">
+													<span>存货</span>
+													<em id="f1CH_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs7">+</div>
+												<div class="dbzb28">
+													<span>其他流动资产</span>
+													<em id="f1QTLDZC_dubang">--</em>
+												</div>
+											</div>
+										</div>
+										<div class="fldzc">
+											<div class="fldzc-zb1">
+												<div class="dbzb29">
+													<span>固定资产</span>
+													<em id="f1GDZC_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs8">+</div>
+												<div class="dbzb30">
+													<span>长期期权投资</span>
+													<em id="f1CQGQTZ_dubang">--</em>
+												</div>
+											</div>
+											<div class="fldzc-line"><i></i></div>
+											<div class="fldzc-zb2">
+												<div class="dbzb31">
+													<span>无形资产</span>
+													<em id="f1WXZC_dubang">--</em>
+												</div>
+												<div class="jsfh jsfs9">+</div>
+												<div class="dbzb32">
+													<span>其他非流动资产</span>
+													<em id="f1QTFLDZC_dubang">--</em>
+												</div>
+											</div>
+										</div>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="yuce-tips" style="margin-top: -42px;"><em>*</em>说明：总资产、流动资产、非流动资产、固定资产、无形资产、长期股权投资 、货币资金、预付款项、应收账款、存货、净资产收益率、总资产收益率、总资产周转率、权益乘数均采用财务报表中期末值或根据期末值计算得出
+						</div>	
+						<div class="yuce-tips" style="margin-top: 2px;"><em>*</em>单位说明：净资产收益率、总资产收益率、权益乘数、应收利润率、总资产周转率之外其余指标单位均为：万元
+						</div>	
+					</div>
+					
+				</div>
+				<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">
+											
+					</div> -->
+			</div>
+		</div>
+	<!-- </body> -->
+	<!-- 公共js -->
+	<!-- <script src="../js/jquery.min.js"></script> -->
+	<!-- 数据交互js -->
+	<!-- <script src="../js/common/ajax.js"></script>
+	<script src="../js/common/util.js"></script>
+	<script src="../js/slideList.js"></script> -->
+	<!-- 业务js -->
+	<!-- <script src="/saasBeta/yanbao/js/bus/section03.js"></script> -->
+	<script>
+		//判断是否登录
+		UTIL.nologin('dbfxf');
+		//杜邦分析
+		findDubangData();
+		$(function(){
+		    var windowHeight = $(window).height()
+		    $(".company-analysis .container").height(windowHeight-195);
+			$(".company-main").height(windowHeight - 260)
+			$(".dbfx2").height(windowHeight - 260-90)
+			// UTIL.sjly("#dbfxfly","dbfxf",".dbfxf","sjlyy");
+		})
+	</script>
+<!-- </html> -->

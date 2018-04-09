@@ -1,0 +1,621 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-三板市场-挂牌</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/companyMap.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+	</head>
+	<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+	<!--侧导航 end-->
+	<!--主体 star-->
+	<div class="right_main">
+		<!--main  star-->
+		<div class="main">
+			<div class="newgup_nav">
+				<a href="stockQuotes.html">资讯数据</a>><a href="stockQuotes.html">三板市场</a>><a>挂牌</a>
+			</div>
+			<div class="clr"></div>
+			<div class="l_main l_main_none nL_main sb-t-main">
+			</div>
+			<div class="clr"></div>
+			<div class="newgup">
+				<div class="newgp_title">
+					<ul>
+						<li>挂牌企业</li>
+						<li>拟挂牌企业</li>
+						<div class="clr"></div>
+						<div class="hr"></div>
+					</ul>
+				</div>
+				<div class="newgp_dbox">
+					<div class="newgp_llist">
+						<div class="guapai_top" id="count-number">
+							<div class="gp_l fl">
+								<div class="gp_info_l fl" id="listingAll">
+									<!-- <div class="gp_info_l_top">
+										<span>挂牌企业总数</span>
+										<h2 class="timer" data-to="9480" data-speed="1500">9480<em>家</em></h2>
+									</div>
+									<div class="gp_info_l_btn">
+										<ul>
+											<li class="gp_zs">
+												<span></span>
+												<em>做市</em>
+												<h2>1644</h2>
+											</li>
+											<li class="gp_xy">
+												<span></span>
+												<em>协议</em>
+												<h2>7902</h2>
+											</li>
+										</ul>
+										<div class="clr"></div>
+									</div> -->
+								</div>
+								<div class="gp_info_r fr" id="gp_info_r">
+									
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="gp_r fr">
+								<div class="gp_info_l fl" id="listingNew">
+									<!-- <div class="gp_info_l_top">
+										<span>今日新增挂牌 <i>2016-11-11</i></span>
+										<h2 class="timer" data-to="9485" data-speed="1500">9485<em>家</em></h2>
+									</div>
+									<div class="gp_info_l_btn">
+										<ul>
+											<li class="xzgp_zs">
+												<span></span>
+												<em>做市</em>
+												<h2>1644</h2>
+											</li>
+											<li class="xzgp_xy">
+												<span></span>
+												<em>协议</em>
+												<h2>7902</h2>
+											</li>
+										</ul>
+										<div class="clr"></div>
+									</div> -->
+								</div>
+								<div class="gp_info_r fr" id="xzgp_info_r">
+									
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+				
+			</div>
+			<div class="clr"></div>
+		<div class="main_box guanpai_title">
+			<div class="yjy_title bor_btn">
+			<span class="fl">挂牌数量走势图</span>
+			<div class="clr"></div>
+			</div>
+			<div class="guapai_zst">
+				<div class="gp_zst_tab">
+					<ul id="listCount">
+						<li class="on" style="cursor:pointer" data-value="1">近一年</li>
+						<li style="cursor:pointer" data-value="0">近一个月</li>
+					</ul>
+				</div>
+				<div class="clr"></div>
+				<div class="gp_zst_sjmap" id="newgp_zst_sjmap">
+					
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+			<div class="guapai_zst">
+				<div class="gp_zst_tab gpCompany">
+					<ul id="listCountN">
+						<li class="on" style="cursor:pointer" data-value="1">近一年</li>					
+						<li style="cursor:pointer" data-value="0">近一个月</li>
+					</ul>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+				<div class="gp_zst_sjmap" id="newxzgp_zst_sjmap">
+					
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+			</div>
+			<div class="guapai_table_box">
+				<div class="yjy_title ">
+				<span class="fl">今日新增挂牌</span>
+				<div class="title_page fr">
+					<b id="noWTime">2016-10-10</b>
+					<!--<p class="num">共<em id="listNewCount">15</em>家</p>-->
+				</div>
+				<div class="clr"></div>
+				</div>	
+				<div class="guapai_table">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">股票名称</th>
+								<th scope="col">交易方式</th>
+								<th scope="col">所属行业</th>
+								<th scope="col">地区</th>
+								<th scope="col">主办券商</th>
+								<th scope="col">最新价 </th>
+								<th scope="col">涨跌幅</th>
+								<th scope="col">成交量(万股)</th>
+								<th scope="col">成交金额（万元）</th>
+									
+							</tr>
+						</thead>
+						<tbody id="findListNew">
+						<!--<tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr> 
+							<tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr> 
+							<tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr>  -->
+						</tbody>	
+						</table>
+				</div>
+				
+					<div id="newpage_1" class="pages pagination pagesPright0" style="display: none;margin-top: 20px;"></div>
+				<div class="clr"></div>
+				<div class="yjy_title">
+				<span class="fl">全部挂牌企业</span>
+				
+				<div class="clr"></div>
+				</div>	
+				<div class="qb_gp_dbox" id="listNum">
+					<ul>
+						<li class="qb_zgb">
+							<span></span>
+							<h2>总股本(亿股)</h2>
+							<p id="totalShareVapital">9485.66</p>
+						</li>
+						<li class="qb_ltgb">
+							<span></span>
+							<h2>流通股本(亿股)</h2>
+							<p id="flowOfEquity">9485.66</p>
+						</li>
+						<li class="qb_cjsl">
+							<span></span>
+							<h2>成交数量 (万股)</h2>
+							<p id="turnoverQuantity">9485.66</p>
+						</li>
+						<li class="qb_cjje">
+							<span></span>
+							<h2>成交金额 (万元)</h2>
+							<p id="turnoverAmount">9485.66</p>
+						</li> 
+					</ul>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+				<div class="qb_title_table">
+					<div class="qb_title">
+						<div class="select_qb fl">
+						<div class="selectBox">
+							<p>交易方式</p>
+							<ul id="transferType">
+								<li value="0"><a href="javascript:void(0)">全部</a></li>
+								<li value="1"><a href="javascript:void(0)">协议</a></li>
+								<li value="2"><a href="javascript:void(0)">做市</a></li>
+							</ul>
+							</div>
+						</div>
+						<div class="select_qb fl guapai_hangye">
+						<div class="selectBox">
+							<p>所属行业</p>
+							<ul id="newsecondLevelTrade">
+								<!-- <li value="1"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+						</div>
+						<div class="select_qb fl">
+						<div class="selectBox">
+							<p>地区</p>
+							<ul id="newfirstLevelArea">
+								<!-- <li value="1"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+						</div>
+						<div class="select_qb fl">
+						<div class="selectBox">
+							<p>主办券商</p>
+							<ul id='newhostBrokerage'>
+								<!-- <li value="0"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+						</div>
+						<div class="input_qb fl">
+						<input type="text" placeholder="输入股票代码/简称" id="stockCodeParam"/>
+						</div>
+						<div class="qbgp_submit fl">
+							<button onclick="findAllList()">查询</button>
+						</div>
+						<div class="title_page fr">
+						<!--<p class="num">共<em id="listAllCount">15</em>家</p>-->
+
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="guapai_table m_t20">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">股票名称</th>
+								<th scope="col">交易方式</th>
+								<th scope="col">所属行业</th>
+								<th scope="col">地区</th>
+								<th scope="col">主办券商</th>
+								<th scope="col">最新价 </th>
+								<th scope="col">涨跌幅</th>
+								<th scope="col">成交量(万股)</th>
+								<th scope="col">成交金额（万元）</th>
+									
+							</tr>
+						</thead>
+						<tbody id="listAll">
+							 <!--  <tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr> 
+							<tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr> 
+							<tr>
+								<td><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="red">8.22</td>
+								<td class="red">55.22%</td>
+								<td>12.42</td>
+								<td>12.42</td>
+							</tr> 
+							 <tr>
+								<td class="shuzi"><a href="#">83936</a></td>
+								<td><a href="#">八达股份</a></td>
+								<td>做市</td>
+								<td>印刷包装设备</td>
+								<td>北京市</td>
+								<td>中泰证券</td>
+								<td class="lvse">-8.22</td>
+								<td class="lvse">-55.22%</td>
+								<td class="shuzi">12.42</td>
+								<td class="shuzi">12.42</td>
+							</tr>  -->
+						</tbody>	
+						</table>
+				</div>
+						<div id="page_2" class="pages pagination pagesPright0" style="display: none; margin-top: 20px;"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+					</div>
+					<div class="newgp_llist">
+						<div class="nigp_tongji">
+				<div class="nigp_l fl l_ngp">
+					<span>拟挂牌企业总数</span>
+					<h2 id="inListedCompaniesTotal">0</h2>
+				</div>
+				<div class="nigp_r fr">
+				<h2>审查进度</h2>
+				<ul>
+					<li><i></i><p>待出具反馈意见</p><span id="schedule_1">0</span></li>
+					<li><i></i><p>反馈意见回复审查</p><span id="schedule_2">0</span></li>
+					<li><span id="schedule_3">0</span><p>落实反馈意见中</p><i></i></li>
+				</ul>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+		<div class="main_box guanpai_title">
+			
+			<div class="yjy_title bor_btn">
+			<span class="fl">拟挂牌数量走势图</span>
+			<div class="clr"></div>
+			</div>
+			<div class="guapai_zst">
+				<div class="gp_zst_tab">
+					<ul>
+						<li style="cursor:pointer"class="on" id="allYear" onclick="findInListedCompaniesOneYear()">近一年</li>
+						<li style="cursor:pointer" id="allMouth" onclick="findInListedCompaniesOneMouth()">近一个月</li>
+					</ul>
+				</div>
+				<div class="clr"></div>
+				<div class="gp_zst_sjmap" id="gp_zst_sjmap">
+					
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+			<div class="guapai_zst">
+				<div class="gp_zst_tab">
+					<ul>
+						<li style="cursor:pointer" class="on" id="addYear" onclick="findInListedCompaniesAddOneYear()">近一年</li>
+						<li style="cursor:pointer" id="addMouth" onclick="findInListedCompaniesAddOneMouth()">近一个月</li>
+					</ul>
+				</div>
+				<div class="clr"></div>
+				<div class="gp_zst_sjmap" id="xzgp_zst_sjmap">
+					
+				</div>
+			</div>
+			<div class="clr"></div>
+			
+			</div>
+			<div class="guapai_table_box">
+				<div class="yjy_title ">
+				<span class="fl">新增拟挂牌</span>
+				<div class="title_page fr">
+					<b id="newDate">2016-10-10</b>
+					<!--<p>共<em id="inListedCompaniesAddTotal">0</em>家</p>-->
+					
+				</div>
+				<div class="clr"></div>
+				</div>	
+				<div class="guapai_table">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">公司名称</th>
+								<th scope="col">所在地 </th>
+								<th scope="col">主办劵商 </th>
+								<th scope="col">行业 </th>
+								<th scope="col">受理日期</th>
+								<th scope="col">当前进度 </th>
+							</tr>
+						</thead>
+						<tbody id="inListedCompaniesAdd">
+							 <!--  <tr>
+								<td>山东乾云启创信息科技公司</td>
+								<td>山东</td>
+								<td>招商证券</td>
+								<td>零售业</td>
+								<td>2016-10-11</td>
+								<td>待出具反馈意见</td>
+							</tr>  -->
+						</tbody>	
+						</table>
+				</div>
+				<div id="page_1" class="pages pagination pagesPright0" style="display: none;margin-top: 20px;"></div>
+				<div class="clr"></div>
+				<div class="yjy_title m_top_28">
+					<div class="gp_title2">
+						<span class="fl m_r_20">全部拟挂牌企业</span>
+						<div class="clr"></div>
+					</div>
+				
+				</div>	
+				
+				<div class="clr"></div>
+				<div class="qb_title_table">
+					<div class="tiaojian new_tiaojian">
+					<div class="select_qb fl">
+						<div class="selectBox">
+							<p>所在地</p>
+							<ul id="firstLevelArea">
+								<!-- <li value="1"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+				</div>
+				<div class="select_qb fl">
+						<div class="selectBox">
+							<p>主办券商</p>
+							<ul id="hostBrokerage">
+								<!-- <li value="1"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+				</div>
+				<div class="select_qb fl guapai_hangye">
+						<div class="selectBox">
+							<p>所属行业</p>
+							<ul id="secondLevelTrade">
+								<!-- <li value="1"><a href="javascript:void(0)">全部</a></li>
+								<li value="2"><a href="javascript:void(0)">拉斯款离开</a></li>
+								<li value="3"><a href="javascript:void(0)">接收到</a></li> -->
+							</ul>
+							</div>
+				</div>
+				<div class="input_qb fl niguapai">
+						<input type="text" placeholder="输入公司名称" id="companyName"/>
+						</div>
+						<div class="qbgp_submit fl">
+							<button onclick="findInListedCompanies()">查询</button>
+						</div>
+						<!--<div class="title_page fr">
+						<p>共<em id="inListedCompaniesTotalValue">0</em>家</p>
+
+						</div>-->
+				<div class="clr"></div>
+				</div>
+					<div class="guapai_table m_t20">
+					<table>
+						<thead>
+							<tr>
+								<th scope="col">公司名称</th>
+								<th scope="col">所在地 </th>
+								<th scope="col">主办劵商 </th>
+								<th scope="col">行业 </th>
+								<th scope="col">受理日期</th>
+								<th scope="col">当前进度 </th>
+								
+									
+							</tr>
+						</thead>
+						<tbody id="inListedCompanies">
+							<!-- <tr>
+								<td>山东乾云启创信息科技公司</td>
+								<td>山东</td>
+								<td>招商证券</td>
+								<td>零售业</td>
+								<td>2016-10-11</td>
+								<td>待出具反馈意见</td>
+							</tr>  -->
+						</tbody>	
+						</table>
+				</div>
+				<div id="page_3" class="pages pagination pagesPright0" style="display: none;margin-top: 20px;"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+					</div>
+					
+					<div class="clr"></div>
+				</div>
+					<div class="clr"></div>
+			</div>
+			
+		</div>
+		<!--main  end-->
+	</div>
+	
+	<!--主体 end-->
+		<script src="/saasBeta/js/jquery.min.js"></script>	
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/listedCompaniesToListed.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/listedCompanies.js"></script>
+	<!-- 分页 -->
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+	
+	</html>

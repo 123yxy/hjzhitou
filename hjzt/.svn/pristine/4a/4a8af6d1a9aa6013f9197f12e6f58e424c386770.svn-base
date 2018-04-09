@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票专辑-专辑详情| 汇金智投：投融资大数据服务云平台</title>
+		<meta name="keywords" content="新三板，SaaS投研，金融分析工具，大数据，大数据分析，金融大数据，新三板创新层，新三板基础层，做市指数，协议成交指数查询，
+新三板挂牌，新三板市场，新三板行情，新三板研究，新三板股票，新三板交易，新三板定增，新三板券商，新三板做市，新三板协议">
+		<meta name="description" content="汇金智投以“数字科学，创造财富”为主旨，围绕金融数据价值挖掘、数据推动决策、数据提升运营效率搭建业务运营体系，为用户提供以资源精准匹配为基础的应用服务。">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/new_g_style.css" />	
+		<!-- 自动补全 -->
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+		<!--<link rel="stylesheet" type="text/css" href="/www/css/zmAlert.css">-->	
+			
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>	
+			
+		<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--验证登录表单-->
+		<script type="text/javascript" src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<!-- 是否登录，关注，对比 -->
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/security/albumBetails.js"></script>
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+
+	<body>	
+		<!--<div class="res_top zhuanj_top">
+				<a href="/index.html" class="n_logo"><img src="/saasBeta/images/reg_logo.png"/></a>
+				<a href="javascript:;" class="n_index">首页</a>
+				<a href="javascript:;">资讯数据</a>
+				<a href="javascript:;">证券管理</a>
+				<a href="javascript:;">我的研究</a>
+				<a href="javascript:;">数据分析</a>
+				<div class="clr"></div>
+		</div>
+		-->
+		
+		<div class="three_Nav">
+			<div class="yindao_titles">
+				<a href="/security/myPreferredStock.html">证卷管理>
+				</a><a href="/security/stockAlbum.html">股票专辑>
+				</a><a href="javascript:location.reload()" class="dangq"></a>
+			</div>
+			<div class="zhuanji_content">
+			<div class="t_album">
+				<div class="fl album_img">
+					<img src="/www/images/zhuanji.png" alt="" id="picUrl"/>
+				</div>
+				<div class="c_album">
+					<h3 id="name"></h3><!-- (<em class="shuzi" id="eventNum">264</em>) -->
+					<span class="creat_t">创建时间<em class="shuzi" id="createTime"></em></span>
+					<div class="gz_album">
+						<span class="liulan">浏览(<em id="pageViews">0</em>)</span>
+						<!--当点击关注后给关注添加类on-->
+						<!--  onclick="updateFollow(this,'speciality')" style="cursor: pointer;" -->
+						<span class="gz" style="cursor: pointer;">关注(<em id="followNum">0</em>)</span>						
+						<div class="clr"></div>
+					</div>
+					<a href="javascript:void(0);" onclick="exportAbumBetails()">导  出</a><!-- method5('exportTable') -->
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="feature_select">
+				<div class="collection">
+					<!--当收藏的公司是0家时em的字体是灰色，当数字不为0时给em添加类on-->
+					<span>收藏公司(<em class="shuzi on" id="totalNum">0</em>)</span>
+				</div>
+				<div class="company_information gp_details">
+					<table id="exportTable">
+						<thead>
+							<tr>
+								<th style="min-width: 350px;width: 350px;">公司</th>
+								<th style="min-width: 340px;width: 340px;">主营业务</th>
+								<th >营业收入(亿元)</th>
+								<th >收入增幅(%)</th>
+								<th >净利润(万元)</th>
+								<th >工具</th>
+							</tr>
+						</thead>
+						<tbody id="allData">
+							 <!--<tr>
+								<td class="company_info">
+									<div class="compamy_logo fl">
+										<img src="/www/images/gs_logo.png" alt="" />
+									</div>
+									<div class="compamy_msg fl">
+										<a href="#" class="on shuzi">大地生物(833662)</a>
+										<span>汽车交通>汽车后服务</span>
+									</div>
+								</td>
+								data_red是红色，data_green是绿色
+								<td>开发、测试、软件销售</td>
+								<td class="shuzi">3157.26</td>
+								<td class="shuzi data_red">3157.26</td>								
+								<td class="shuzi data_green">-0.25</td>
+								<td>
+									<span class="gz_company on">关注</span>
+									<a href="../companyComparison.html" class="duib_company">对比</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="company_info">
+									<div class="compamy_logo fl">
+										<img src="/www/images/gs_logo.png" alt="" />
+									</div>
+									<div class="compamy_msg fl">
+										<a href="#" class="on shuzi">大地生物(833662)</a>
+										<span>汽车交通>汽车后服务</span>
+									</div>
+								</td>
+								
+								<td>开发、测试、软件销售</td>
+								<td class="shuzi">3157.26</td>
+								<td class="shuzi c_red">3157.26</td>								
+								<td class="shuzi">-0.25</td>
+								<td>
+									<span class="gz_company on">关注</span>
+									<a href="../companyComparison.html" class="duib_company">对比</a>
+								</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="clr"></div>
+			<div class="pages" id="page" style="display: none;">
+				
+			</div>
+			<div class="clr"></div>
+		</div>
+		<!--已选对比的公司的弹窗-->
+		<!--<div class="db_tips">
+			<div class="db_qiye">
+				<span class="yx_qiye">对标企业</span>
+				<div class="duibiao" style="display: none;">
+				<h3>对比( <em class="shuzi" id="shuzi_num">0</em> / <i class="shuzi">4</i> )</h3>
+				<ul class="m_select">-->
+					<!-- <li>
+						<a href="#">天阳科技(835713)</a>
+						<i></i>
+						<div class="clr"></div>
+					</li>
+					<li>
+						<a href="#">天阳科技(835713)</a>
+						<i></i>
+						<div class="clr"></div>
+					</li> -->
+				<!--</ul>
+				<span onclick="duibiHtml('特色推荐')">对 比</span>
+			</div>
+			</div>-->
+			</div>
+		</div>
+	<div class='footer zhuanji_foot'><p>版权所有：北京金衡和科技有限公司</p><a href='#' id='back_top'><img src='/saasBeta/images/icon/back_top.png' alt='返回顶部'  /></a></div>
+	</body>
+	<script>
+//		//对标企业的显示位置
+//		var screenWidth=$(document).width();
+//		var duibiaoLeft=1230+(screenWidth-1220)/2;
+//		$(".db_tips").css("left",duibiaoLeft);
+	</script>
+</html>

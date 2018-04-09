@@ -1,0 +1,193 @@
+
+@media screen and (min-width: 320px) and (max-width: 800px){
+	html body{
+		font-size: 12px !important;
+		/*min-width: 0px;*/
+	}
+	.header_box{
+		padding-left: 17px;
+		box-sizing: border-box;
+	}
+	.newSass_box{
+		width:64%;
+	}
+	.fr{
+		margin-left: 10px;
+	}
+	.newSassHeader,.header{
+		height: 40px;
+		line-height: 40px;
+	}
+	.header_center a{
+		line-height: 40px;
+		font-size: 12px;
+		padding: 0 5px;
+	}
+	.newlogo{
+		padding-top: 5px;
+		height: 40px;
+	}
+	.newlogo img{ 
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		}
+	.newSassHeader{
+		padding-left: 2px;
+	}
+	.header_r, .email_icon, .pifu_icon, .search_icon{
+		height: 40px;
+		line-height: 40px;
+		padding-top: 0;
+	}
+	.search_icon input:focus{
+		width: 100px;
+	}
+	.zhishu_tab ul li p em{font-size: 12px;}
+	.user_down{
+		top:39px;
+	}
+	.newSassMain .main{
+		margin: 0px;
+		min-width: 0px;	
+	}
+	.main_box_t .newSass_box_r{
+		float: left;
+	}
+	.zhishu_tab ul li h2{
+		font-size: 12px;
+	}
+	.infon_r{
+		width: 57%;
+	}
+	.infon_l {
+		width: 40%;
+	}
+	.infon_l ul li{
+		width: 30%;
+		height: 70px;
+		padding-top: 4px;
+		box-sizing: border-box;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		padding-top:10px;
+	}
+	.infon_l ul li h2{
+		font-size: 12px;
+		line-height: 24px;
+		height: 24px;
+	}
+	.infon_l ul li span{
+		font-size: 12px;
+		line-height: 22px;
+		
+	}
+	.user_down{
+		width: 160px;
+	}
+	.yjy_title{
+		height: 30px;
+		line-height: 30px;
+	}
+	.yjy_title i{
+		margin-top: 3px;
+	}
+	.yjy_title span{
+		height: 30px;
+		line-height: 30px;
+	}
+	.rz_icon>i{
+		margin-top: 7px;
+	}
+	.yjy_title span{
+		font-size: 12px;
+	}
+	.yjy_title>a{
+		line-height: 30px;
+		font-size: 12px;
+	}
+	.rz_leixing span{
+		font-size:12px;
+		min-width: 100px;
+	}
+	.rz_tiaojian p{
+		font-size: 12px;
+		min-width: 100px;
+	}
+	.event_time span{
+		font-size: 12px;
+	}
+	.event_time em{
+		font-size: 12px;
+	}
+	.gs_qk>a, .gs_qk>span{
+		font-size: 12px;
+	}
+	.changeMain i, em{
+		font-size: 12px;
+	}
+	.rongzi_leix>i.yipizhun{
+		font-size: 12px;
+	}
+	.gs_gonggao span{
+		font-size: 12px;
+	}
+	.hy_gong{
+		font-size: 12px;
+	}
+	.rz_zhuzt{
+		width: 77%;
+		height: 250px;
+	}
+	.gs_gonggao{
+		height: 155px;
+	}
+	.gonggao{
+		height: 30px;
+	}
+	.gonggao span, .gonggao em{
+		line-height: 30px;
+		font-size: 12px;
+	}
+	.gonggao em{
+		margin-right: 10px;
+	}
+	.events {
+		height: 537px;
+	}
+	.rongzi_qk{
+		height: 460px;
+	}
+	.event_types>p{
+		font-size: 12px;
+	}
+	.guapai_table table th{
+		font-size: 12px;
+	}
+	.guapai_table table td{
+		font-size: 12px;
+	}
+	.newSassFoot P{
+		font-size: 12px;
+	}
+	.yjy_title em{
+		font-size: 12px;
+		line-height: 30px;
+	}
+	.gz_hy .hy_public{
+		width: 37%;
+		margin-right: 17px;
+	}
+	.hy_public span{
+		font-size: 12px;
+	}
+	.pages table tr td span{
+		font-size: 12px;
+		height: 14px;
+		line-height: 18px;
+	}
+	.pages a.l-btn-plain{
+		font-size: 12px;
+	}
+	
+}

@@ -1,0 +1,189 @@
+@charset "utf-8";
+/*body,html{
+	background: url(../images/body-bd.jpg)repeat-y;
+}*/
+/* // .company-business{
+// 	margin-top: 36px;
+// } */
+.yuce-bg{
+	width: 100%;
+	/*height: 720px;*/
+	/* // background: url(../images/company-bg.png)left top no-repeat; */
+}
+
+.section h2{
+	color: #555;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.jyqk-tb{height: 260px;}
+
+.section h2{
+	color: #555;
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.yewu-contents h3{
+	font-size: 15px;
+	color: #1985e2;
+	font-weight: bold;
+	margin-bottom: 14px;
+}
+.yewu-contents{margin-bottom: 20px;}
+.jyqkyw .yewu-contents{margin-bottom: 0;}
+.yewu-contents p{
+	font-size: 14px;
+	color: #555;
+	line-height: 24px;
+	margin-bottom: 20px;
+}
+.yewu-contents li span{
+	font-size: 14px;
+	line-height: 24px;
+	color: #555;
+}
+.tab-list span{
+	display: inline-block;
+	font-size: 14px;
+	color: #444;
+	width: 48px;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+}
+.duibiao{display: inline-block;height: 100%;cursor: pointer;color: #1985e2;}
+.duibiao.now-company{color: #666;}
+.tab-list span.on{
+	background-color: #2e8bdc;
+	color: #fff;
+	border-radius: 5px;
+}
+.gx-table h5{
+	font-size: 15px;
+	color: #333;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+.gx-tb{
+	width: 100%;
+	height: 400px;
+}
+.competion h6{
+	font-size: 14px;
+	color: #333;
+	font-weight: 700;
+	line-height: 26px;
+}
+
+/*表格样式*/
+.caiwu-table .table{
+	margin-bottom: 0;
+}
+.caiwu-table .table thead tr{
+	background-color: #559cd9;
+	color: #fff;
+	font-size: 14px;
+}
+.caiwu-table .table tr td{
+	font-size: 14px;
+	color: #333;	
+}
+.caiwu-table .table td.shuzi{font-family: arial;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{border-top: 0;border-bottom: 0;padding:0px;height: 30px;line-height: 30px;}
+.caiwu-table .table tr td,.caiwu-table .table tr th{width: 15%;}
+.caiwu-table .table tr td:nth-child(1),.caiwu-table .table tr th:nth-child(1){padding-left: 20px;box-sizing: border-box;width: 35%;}
+.caiwu-table .table tr:nth-child(even){background-color: #f5f7f9;}
+.caiwu-table .table tr td.shuzi{font-family: arial;}
+/*.caiwu-table .table tr .dyth{width:17%;}*/
+
+.caiwu-table.zyye-bg .table tr td,.caiwu-table.zyye-bg .table tr th{text-align: center;}
+.caiwu-table.zyye-bg .table tr td:nth-child(1),.caiwu-table.zyye-bg .table tr th:nth-child(1){padding-left: 20px;width: 20%;text-align: left;}
+.caiwu-table.zyye-bg .table tr td:nth-child(1) span{color: #1985e2;cursor: pointer;height: 100%;display: inline-block;}
+
+.db-list{width: 100%;height: 300px;}
+/*#MainBusiness{height: 300px;}*/
+
+.caiwu-table.yjqk .table tr td{text-align: center;}
+.caiwu-table.yjqk .table tr td:nth-child(1){text-align: left;}
+.competion .caiwu-table .table tr td:nth-child(1){text-align: left;}
+
+.competion .caiwu-table .table td,.competion .caiwu-table .table th{
+	width: 13%;
+}
+.competion .caiwu-table .table td:nth-child(1),.competion .caiwu-table .table th:nth-child(1){
+	width:28%;
+}
+.competion .caiwu-table .table tr td:nth-child(1){padding-left: 20px;box-sizing: border-box;}
+
+.competion .caiwu-table .table td:nth-child(6),.competion .caiwu-table .table th:nth-child(6){
+	width: 18%;
+}
+.competion .caiwu-table .table td:nth-child(5),.competion .caiwu-table .table th:nth-child(5){
+	width: 10%;
+}
+
+.company-business .slide-nav{
+	top: 1px;
+}
+
+.section.hy-content .kaik-content p{margin-bottom: 14px;}
+.section.hy-content .kaik-content h3{margin-bottom: 10px;}
+.sjyj-content{margin-top: 8px;}
+/*表格*/
+#sxyGYSTBody p{text-align: center;}
+.suochu-hy{width:100%; height: 300px; margin-bottom: 10px; }
+.tu-explain{width: 100%;background-color: #f5f7f9;}
+.tu-explain p{line-height: 44px;font-size: 14px;color: #5c666e;padding-left: 20px;box-sizing: border-box;}
+
+.tub-noData p{font-size: 14px;text-align: center;}
+.caiwu-table .table-border { border-collapse:collapse;}
+.caiwu-table .table-border th { border:1px solid #559cd9!important; text-align:center;}
+.caiwu-table .table-border td { border:1px solid #dce2e8!important; text-align:center; vertical-align:middle;}
+
+.hy-type{font-size: 14px;margin-bottom: 5px;}
+.chartH4 { font-size:14px; color:#333; text-align:center;font-weight: bold;margin-bottom: 4px;}
+.sxyfx{padding-bottom: 20px;box-sizing: border-box;}
+
+
+/*通用表格*/
+.table-common { width:100%; font-size:14px; font-weight:normal;}
+.table-common th { background:#559cd9; color:#fff; line-height:30px; text-align:center; }
+
+
+.yewu-contents.new-yjqk .caiwu-table .table tr:nth-child(even){background-color: #fff!important;}
+.caiwu-table.company-yjqk .table tr td,.caiwu-table.hy-yjqk .table tr td{border-bottom: 1px solid #dce2e8;}
+.caiwu-table.company-yjqk .table tr td:nth-child(2),
+.caiwu-table.company-yjqk .table tr td:nth-child(3){text-align: right;padding-right: 13%;}
+.caiwu-table.company-yjqk .table{border-left: 1px solid #dce2e8;}
+.caiwu-table.company-yjqk .table tr td:nth-child(1){text-align: left;}
+.yewu-contents.new-yjqk{position: relative;box-sizing: border-box;}
+.caiwu-table.company-yjqk{position: absolute;left: 0;width: 60%;box-sizing: border-box;}
+.caiwu-table.hy-yjqk{width: 40%;position: absolute;left: 60%;box-sizing: border-box;}
+.caiwu-table.hy-yjqk .table{border-right: 1px solid #dce2e8;}
+.caiwu-table.hy-yjqk .table tr td:nth-child(1){border-left: 1px solid #dce2e8;}
+.caiwu-table.hy-yjqk .table tr td:nth-child(1),
+.caiwu-table.hy-yjqk .table tr td:nth-child(2){text-align: right;padding-right: 15%;}
+.new-yjqk .table tr th{text-align: center;}
+.caiwu-table.company-yjqk .table tr th:nth-child(1),.caiwu-table.company-yjqk .table tr td:nth-child(1){text-align: left;width: 25%;}
+.caiwu-table.company-yjqk .table tr td:nth-child(1){border-right: 1px solid #dce2e8;}
+.jy-wushuju{position: absolute;top: 30px;left: 0;text-align: center;font-size: 14px;color: #333;width: 100%;}
+.time-list span{display: inline-block;font-size: 14px;color: #666;cursor: pointer;padding:0 8px;border-radius: 5px;height: 28px;line-height: 28px;margin-right: 5px;}
+.time-list span.on{color: #fff;background-color: #2487df;}
+.time-list{margin-bottom: 10px;}
+#sjType .sjyj-content ul li{display: none;}
+.zhongd-sj{width: 100%;}
+.zhongd-sj .echarts-tb{width: 50%;float: left;}
+.caiwu-table.zyye-bg .table tr:nth-last-child(1) td{color: #333;font-weight: 700;}
+
+.gx-table .caiwu-table .table tr td:nth-child(1){text-align: left;}
+
+.data-list p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 10px;right: 10px;background: url(../images/zyyw.png)0 0 no-repeat;}
+.data-list p:hover:after{background: url(../images/zyyw.png)-13px 0 no-repeat;}
+
+.caiwu-table.zyye-bg .table tr td:nth-last-child(1),.caiwu-table.zyye-bg .table tr th:nth-last-child(1){text-align: right;}
+
+.caiwu-table.zyye-bg .table tr td{width: 20%;}

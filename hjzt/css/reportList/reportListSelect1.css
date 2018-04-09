@@ -1,0 +1,97 @@
+.hide{
+    display: none;
+}
+.select{
+    position:relative;
+}
+.select div.title{
+    white-space:nowrap;text-overflow:ellipsis;overflow:hidden;position:relative;z-index:99;}
+/*.select div.title:hover,.select div.cur{border:1px solid #409DFE;box-shadow:0 0 3px #409DFE;}*/
+.select>div:first-child.cur{
+    background:#fff;
+}
+.select-box .select .s-content{
+    text-align: center;
+    box-shadow: 2px 2px 12px #BBCCDB;
+    padding:18px 0;
+    box-sizing: border-box;
+    /*border-top-left-radius:8px;*/
+    /*border-bottom-left-radius: 8px;*/
+    border-radius: 8px;
+    min-height:100px;
+}
+.select .s-content{
+    width: 100%;
+    position: absolute;
+    left: -1px;
+    top: 25px;
+    border: 1px solid #E4E4E4;
+    background: #fff;
+    display: none;
+    z-index: 99;
+}
+.select .s-content>ul.content-box{
+    width: 100%;
+    /*height:140px;*/
+}
+.select .big-box>ul.content-box{
+    width:100px;
+}
+.select .s-content ul li a{
+    width: 75px;
+    height:28px;
+    line-height:28px;
+    display: block;
+    margin-left: 12%;
+}
+.select .s-content ul li a.hover,.select .s-content ul li a:hover{
+    background:url("../../../saasBeta/images/Image/a-bg.png");
+    color: #fff;
+    border-radius: 5px;
+}
+
+.item-content{
+    width: 1040px;
+    /*height: 162px;*/
+    height:100%;
+    border-left: 1px solid #E4E4E4;
+    position: absolute;
+    top: -1PX;
+    left: 93px;
+    background: #fff;
+    /*box-shadow: 2px 2px 12px #BBCCDB;*/
+    box-sizing: border-box;
+    padding:14px;
+    /*border-left:0;*/
+    /*border-top-right-radius:8px;*/
+    border-top: 1px solid #e4e4e4;
+    border-bottom-right-radius: 8px;
+}
+.item-content>ul>li{
+    float: left;
+    padding:10px;
+    border-radius: 3px;
+    color:#333;
+}
+.item-content>ul>li:hover{
+    background:#1885E2;
+    color:#fff;
+}
+
+.select .big-box{
+    width:100px;
+}
+.select-box .select .width{
+    width:1140px;
+    box-shadow: -2px 2px 8px #BBCCDB;
+}
+.select-box .select .none{
+    padding:0;
+    border:0;
+    box-shadow: none;
+}
+@media (max-width: 1450px)  {
+    .select .s-date{
+        left:-240px;
+    }
+}

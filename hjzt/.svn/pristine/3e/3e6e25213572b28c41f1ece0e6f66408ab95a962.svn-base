@@ -1,0 +1,22 @@
+{
+    "retCode": "0000",
+    "retMsg": "成功",
+    "retData": {
+        "f2JLR": [
+            "167.94",
+            "191.72"
+        ],
+        "JingLiRunZengZhangLv_unit": "%",
+        "portTime": [
+            "2015-12-31",
+            "2016-12-31"
+        ],
+        "JingLiRunZengZhangLv_showName": "净利润同比增长率",
+        "JingLiRunZengZhangLv": [
+            "13.16",
+            "14.15"
+        ],
+        "f2JLR_showName": "净利润",
+        "f2JLR_unit": "万元"
+    }
+}

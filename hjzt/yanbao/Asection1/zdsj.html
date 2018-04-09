@@ -1,0 +1,490 @@
+
+<link rel="stylesheet" href="/saasBeta/yanbao/css/Agu.css" />
+
+<style>
+    .container {
+        padding: 0;
+    }
+	
+	/*#BZGG{display:block;}
+	#MJGG{display:none;}
+	#JGGG{display:none;}
+	#QTGG{display:none;}*/
+    .fl .tab-list span {
+        display: inline-block;
+        font-size: 16px;
+        font-stretch: 100;
+        color: #444;
+         width: 148px; 
+        height: 28px;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    .fl .tab-list span:hover,
+    .fl .tab-list span:focus,
+    .fl .tab-list span.on {
+        border-bottom: 2px solid #6d8adb
+    }
+
+    .list-name {
+        margin-bottom: 10px;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+
+    .gsxx-list li {
+        /*border-bottom: 1px dashed #333;*/
+        padding: 10px 0
+    }
+
+    .gsxx-list li>em {
+        display: inline-block;
+        font-size: 14px;
+        color: #7a7a7a;
+        width: 60%;
+        /* width: 30%; */
+        padding-left: 10px;
+        box-sizing: border-box;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .gsxx-list li>span:not(.spanimg) {
+        display: inline-block;
+        font-size: 14px;
+        color: #333;
+        width: 20%;
+        vertical-align: middle;
+        text-align: right;
+    }
+
+    .gsxx-list li .spanimg {
+        /* width:10%; */
+        position: absolute;
+        height: 24px;
+        width: 22px;
+        background: url(../images/nianbao.png) center center no-repeat;
+    }
+	/*.pagination li{
+		display:block;
+		width: 20px;
+		height: 10px;
+		float: left;
+		margin: 0 5px;
+	}*/
+	.dwtznr{
+		width:952px;
+		overflow-x:auto;
+	}
+	.dwtz{height: 400px;}
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section zdsj">
+						<h2>1.6重大事件</h2>
+						<!--<div class="tab-list">
+							<span class="on">图表</span>
+							<span>列表</span>
+						</div>-->
+						<!--重大事件柱状图-->
+						<!--<div class="zdsj" id="zdsjTB">
+							<div class="echarts-tb" id="importantEvent"></div>
+							<div class="sj-type" id="eventNum">
+								 <span>重大事件：152件</span>(定增事件:6,对外投资:12,收购:0) 
+							</div>
+						</div>-->
+
+						<div class="kaik-content">
+							<h4>1.6.1并购及重大资产重组</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">披露日期</th>
+											<th>最新公告日</th>
+											<th>最新进度</th>
+											
+											<th class="shuzi">交易金额（万元）</th>
+											<th>币种</th>
+											<th class="shuzi">股权转比例（%）</th>
+											<th class="ybdq">详情</th>
+										</tr>
+									</thead>
+									<tbody id="eventListBG">
+										 <!--<tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+								
+							</div>
+							<div class="gqbd" id="gqbdBG">
+								<div class="pagination" id="pagesBG"  style="position:unset; margin:0;" ></div>
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.2增发</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">增发时间</th>
+											<th class="shuzi">增发数量（万股）</th>
+											<th class="shuzi">募集净额（万元）</th>
+											<th class="shuzi">增发价格（元）</th>
+											<th>发行方式</th>
+											<th>股权登记日</th>
+											<th>增发上市日</th>
+											<th class="ybdq">资金到账日</th>
+											
+										</tr>
+									</thead>
+									<tbody id="eventListZF">
+										 <!--<tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+								
+							</div>
+							<div class="gqbd" id="gqbdZF">
+								<div class="pagination" id="pagesZF"  style="position:unset; margin:0;"></div>
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.3配股</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">配股公告日</th>
+											<th class="shuzi">配股价格（元）</th>
+											<th class="shuzi">实际配股数量（万股）</th>
+											<th class="shuzi">实际募资总额（万元）</th>
+											<th>股权登记日</th>
+											<th>除权基准日</th>
+											<th class="ybdq">配股比例</th>
+											
+										</tr>
+									</thead>
+									<tbody id="eventListPG">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+								
+							</div>
+							<div class="gqbd" id="gqbdPG">
+								<div class="pagination" id="pagesPG" style="position:unset; margin:0;"></div>
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.4分红</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">公告日期</th>
+											<th>分红方案</th>
+											<th>股权登记日</th>
+											<th>除权除息日</th>
+											<th>派息日</th>
+											<th class="ybdq">方案进度</th>										
+										</tr>
+									</thead>
+									<tbody id="eventListFH">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+								
+							</div>
+							<div class="gqbd" id="gqbdFH">
+								<div class="pagination" id="pagesFH" style="position:unset; margin:0;"></div>
+							</div>	
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.5董监高股权变动公告</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">姓名</th>
+											<th class="ybdq">增持/减持(股)</th>
+											<th class="ybdq">变动后持股(股)</th>
+											<th class=>时间</th>
+											<th>变动人名称</th>
+											<th class="ybdq">与董监高关系</th>
+																				
+										</tr>
+									</thead>
+									<tbody id="eventListDJG">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<div class="gqbd" id='gqbdDJ'>
+								<div class="pagination" id="pages"></div>
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.6停复牌</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">停牌原因</th>
+											<th>停牌起始日期</th>
+											<th class="ybdq">停牌截止日期</th>
+														
+										</tr>
+									</thead>
+									<tbody id="eventListTFP">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+							</div>	
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.7员工持股计划完成公告</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">最新公告日</th>
+											<th class="shuzi">购买总金额（万元）</th>
+											<th class="shuzi">购买均价(前复权)(元/股)</th>
+											<th class="shuzi">实际持股数（万股）</th>
+											<th class="shuzi">实际持股比例（%）</th>
+														
+										</tr>
+									</thead>
+									<tbody id="eventListYGCG">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+							</div>	
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.8债券发行公告</h4>
+								<div class="tab-list gglist-name">
+									<span class="on" id="bz">核准公告</span>
+									<span id="mj">募集公告</span>
+									<span id="jg">结果公告</span>
+									<span id="qt">其他公告</span>
+								</div>
+								<ul class="gsxx-list1 zdsj-list" id="BZGG">
+									<!--<li>
+										<em>挂牌时间</em>
+										<span>2016-04-08</span>
+										<div class="clearfix"></div>
+									</li>-->
+									<div class='gqbd' id='gqbdHZ'>
+										<div class="pagination" id="pagesBZGG"></div>
+									</div>
+								</ul>
+								<ul class="gsxx-list1 zdsj-list" id="MJGG">
+									 <!--<li>
+										<em>挂牌时间</em>
+										<span>2016-04-08</span>
+										<div class="clearfix"></div>
+									</li> -->
+									<div class='gqbd' id='gqbdMJGG'>
+										<div class="pagination" id="pagesMJGG"></div>
+									</div>
+								</ul>
+								<ul class="gsxx-list1 zdsj-list" id="JGGG">
+									 <!--<li>
+										<em>挂牌时间</em>
+										<span>2016-04-08</span>
+										<div class="clearfix"></div>
+									</li>-->
+									<div class='gqbd' id='gqbdJGGG'>
+										<div class="pagination" id="pagesJGGG"></div>
+									</div>
+								</ul>
+								<ul class="gsxx-list1 zdsj-list" id="QTGG">
+									 <!--<li>
+										<em>挂牌时间</em>
+										<span>2016-04-08</span>
+										<div class="clearfix"></div>
+									</li>-->
+									<div class='gqbd' id='gqbdQTGG'>
+										<div class="pagination" id="pagesQTGG"></div>
+									</div>
+								</ul>
+								
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.9特别处理</h4>
+							<ul class="gsxx-list1 zdsj-list" id='tbcl'>
+								<!--<li></li>-->
+								<div class="gqbd" id="gqbdTB">
+									<div class="pagination" id="pagesTBCL"></div>
+								</div>
+							</ul>
+							
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.10监管问询及处罚</h4>
+							<ul  class="gsxx-list1 zdsj-list" id='jgwx'>
+								<!--<li></li>-->
+								<div class="gqbd" id="gqbdJG">
+									<div class="pagination" id="pagesJGWX"></div>
+								</div>
+							</ul>
+							
+						</div>
+						<div class="kaik-content" >
+							<h4>1.6.11对外投资</h4>
+							<div class="AguTable dwtznr">
+								<table class="table" style="width:1000px">
+									<thead>
+										<tr>
+											<th class="zbdqbj">被投资企业名称</th>
+											<th>被投资企业法人</th>
+											<th class="shuzi">注册资本（万元）</th>
+											<th class="shuzi">投资金额（万元）</th>
+											<th class="shuzi">投资占比（%）</th>
+											<th>注册时间</th>
+											<th>状态</th>
+														
+										</tr>
+									</thead>
+									<tbody id="eventListDWTZ">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+								<div class="gqbd" id='gqbdDW'>
+									<div class="pagination" id="pagesDWTZ"></div>
+								</div>
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h4>1.6.12解禁预告</h4>
+							<div class="AguTable">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="zbdqbj">解禁时间</th>
+											<th  class="shuzi">解禁数量（万股）</th>
+											<th  class="shuzi">总股本占比（%）</th>
+											<!--<th>股票类型</th>-->
+											<th class="ybdq">解禁股东</th>
+														
+										</tr>
+									</thead>
+									<tbody id="eventListJJYG">
+										<!-- <tr>
+														<td>重大资产重组</td>
+														<td class="shuzi">2016-12-20</td>
+														<td>第六届懂事会第九次决议公告</td>
+														<td><span class="chakan">查看</span></td>
+													</tr> -->
+									</tbody>
+								</table>
+							</div>	
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<script  type="text/javascript">
+
+		
+   		var windowHeight = $(window).height()
+   		$(".yuce-fx .container").height(windowHeight - 195);
+   		$(".contents").height(windowHeight - 195-30)
+		// UTIL.sjly("#zdsjly","zdsj",".zdsj","sjlyy");
+	$(".gglist-name span").on("click", function () {
+		$(this).addClass('on').siblings().removeClass("on");
+		
+    })	
+	//点击并购重组的查看按钮
+	$("#eventListBG").on("click",".chakan",function(){
+		$("#MajorEventsAndMergers").show();
+		$(".marsk").show();
+		var sigin=$(this).attr("data-type");
+		findBGDetails(sigin);
+	})
+	findPeiGu();//配股
+	findBingGou();//并购
+	findZengFa();//增发
+	findFenHong();	//分红
+	findGuQuanBianDong(10,1,1);//股权变动
+	findTingFuPai();//停复牌
+	findYuanGongChiGu();//员工持股
+	findZhaiJuanFaXingBZ();//标准公告
+	TabQieHuan();//Tab切换
+	findZhaiJuanFaXingTB()//特别处理
+	findZhaiJuanFaXingJGWX();//监管问询
+	findDuiWaiTouZi();//对外投资
+	findJieJinYuGao();//解禁预告
+
+$("#eventListJJYG").on("click",".chakan",function(){
+	$("#jjgdMX").show();
+	$(".marsk").show();
+	var id=$(this).attr("data-id");
+	AfindDetailbyId(id);
+})
+	
+</script>

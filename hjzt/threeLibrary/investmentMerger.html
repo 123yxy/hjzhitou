@@ -1,0 +1,459 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-投融资事件-并购</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/three_shaixuan.js"></script>
+		<!-- <script type="text/javascript" src="/saasBeta/newjs/threeLibrary/three_selected.js"></script> -->
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main c_right">
+			<!--main  star-->
+			<div class="main new_main">
+				<div class="xinsanban_waik tourz_new_top">
+					<div class="toub_tab">
+						<a class="rz_top" href="/threeLibrary/investmentExpress.html">融资</a>
+						<a class="rz_top on" href="/threeLibrary/investmentMerger.html">并购</a>
+						<a class="rz_top" href="/threeLibrary/signOut.html">退出</a>
+						<div class="clr"></div>
+					</div>
+					<div class="banner gs_img">
+						<div class="gs_search">
+							<input type="text" id="inpVal" placeholder="持股公司简称/股票代码/标的" class="ui-autocomplete-input" autocomplete="off">
+							<span class="lanse" id="seach">搜索</span>
+							<div class="clr"></div>
+						</div>
+					</div>
+				<div class="page_center">
+					<div class="feature_select">
+						<!--筛选条件 star-->
+						<div class="shaix_public">
+							<div class="list list1 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>投资领域</p>
+										<ul id="hy" >
+<!-- 											<li> -->
+<!-- 												<a href="javascript:;">零售</a> -->
+<!-- 											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list2 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>地区</p>
+										<ul id="dq" >
+<!-- 											<li> -->
+<!-- 												<a href="javascript:;">上海</a> -->
+<!-- 											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list3 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>主办券商</p>
+										<ul id="zbqs" >
+<!-- 											<li> -->
+<!-- 												<a href="javascript:;">申万宏源</a> -->
+<!-- 											</li> -->
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list4 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>交易金额</p>
+										<ul id="jyje" >
+											<li data-value="20000," >
+												<a href="javascript:;">2亿以上</a>
+											</li>
+											<li data-value="10000,20000" >
+												<a href="javascript:;">1-2亿</a>
+											</li>
+											<li data-value="5000,10000" >
+												<a href="javascript:;">5000万-1亿</a>
+											</li>
+											<li data-value=",5000" >
+												<a href="javascript:;">5000万以下</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list5 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>股权占比</p>
+										<ul id="gqzb" >
+											<li data-value="<,30" >
+												<a href="javascript:;">30%以下</a>
+											</li>
+											<li data-value="<,50" >
+												<a href="javascript:;">50%以下</a>
+											</li>
+											<li data-value="<,70" >
+												<a href="javascript:;">70%以下</a>
+											</li>
+											<li data-value="<,90" >
+												<a href="javascript:;">90%以下</a>
+											</li>
+											<li data-value=">=,90" >
+												<a href="javascript:;">90%以上</a>
+											</li>
+									
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list6 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>标的类型</p>
+										<ul id="bd" >
+											<li data-value="1" >
+												<a href="javascript:;">资产</a>
+											</li>
+											<li data-value="2" >
+												<a href="javascript:;">股权</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list7 fl shijian_biaoshi">
+								<div class="select_box screen">
+									<div class="selectBoxes">
+										<p>事件标识</p>
+										<ul id="sjbs" style="display: none;">
+											<li>
+												<a href="javascript:;" data-type="1">
+													<div class="data-checkbox">
+														<input type="checkbox" />
+														<label class="checkbox"></label>
+														<label class="checkboxWord">收购</label>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" data-type="2">
+													<div class="data-checkbox">
+														<input type="checkbox" />
+														<label class="checkbox"></label>
+														<label class="checkboxWord">对外投资</label>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" data-type="3">
+													<div class="data-checkbox">
+														<input type="checkbox" />
+														<label class="checkbox"></label>
+														<label class="checkboxWord">吸收合并</label>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" data-type="4">
+													<div class="data-checkbox">
+														<input type="checkbox" />
+														<label class="checkbox"></label>
+														<label class="checkboxWord">发行股份购买资产</label>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:;" data-type="5">
+													<div class="data-checkbox">
+														<input type="checkbox" />
+														<label class="checkbox"></label>
+														<label class="checkboxWord">重大资产重组</label>
+													</div>
+												</a>
+											</li>
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="list list8 fl">
+								<div class="select_box screen">
+									<div class="selectBox">
+										<p>公告时间</p>
+										<ul id="ggsj" >
+											<li data-value="近一周" >
+												<a href="javascript:;">近一周</a>
+											</li>
+											<li data-value="近一月" >
+												<a href="javascript:;">近一月</a>
+											</li>
+											<li data-value="近三月" >
+												<a href="javascript:;">近三月</a>
+											</li>
+											<li data-value="近六月" >
+												<a href="javascript:;">近六月</a>
+											</li>
+											<li data-value="近一年" >
+												<a href="javascript:;">近一年</a>
+											</li>
+											<li data-value="2016年" >
+												<a href="javascript:;">2016年</a>
+											</li>
+											<li data-value="2015年" >
+												<a href="javascript:;">2015年</a>
+											</li>
+											<li data-value="2014年" >
+												<a href="javascript:;">2014年</a>
+											</li>
+											<li data-value="2013年" >
+												<a href="javascript:;">2013年</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+				
+							<div class="clr"></div>
+						</div>
+						<div class="yixuan_tiaojian" style="display: none;" >
+							<span><em></em>清除检索条件</span>
+							<div class="fl tj_selected">
+<!-- 								<a href="javascript:;">北京<i></i></a> -->
+<!-- 								<a href="javascript:;">电子设备<i></i></a> -->
+<!-- 								<a href="javascript:;">2017年3月<i></i></a> -->
+<!-- 								<a href="javascript:;">30万元<i></i></a> -->
+<!-- 								<a href="javascript:;">做市<i></i></a> -->
+								<div id="selectedDiv" class="clr"></div>
+							</div>
+							<div class="clr"></div>
+						</div>	
+						<!--筛选条件 end-->
+						<div class="types_total">
+							<span class="fl selection_totals">共<em class="shuzi" id="total" >0</em>条结果</span>
+							<span class="pay fl" id="outData">导出数据</span>
+							<div class="clr"></div>
+						</div>
+						<div class="company_information">
+							<table>
+								<thead class="sanban_paixu">
+									<tr>
+										<th class="nsd_qx"><input type="checkbox" class="gs_qx"/></th>
+										<th><span data-value="announcement_time" class="down">时间</span></th>
+										<th>公司</th>
+										<th>事件标识</th>
+										<th>标的</th>
+										<th>标的类型</th>
+										<th class="inve_gqzb">股权占比/交易对手</th>
+										<!--<th>交易对手</th>-->
+										<th><span data-value="transaction_amount" >交易金额(万元)</span></th>
+									</tr>
+								</thead>
+								<tbody class="gs_dx" id="mergerBody">
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>2017-2-15</td>
+										<td class="company_info company_types">
+											
+											<div class="compamy_msg fl">
+												<!--当公司是创的时候i的类是chuang，是基的时候i的类是ji-->
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+											<div class="clr"></div>
+											<br />
+									
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+										</td>
+										<td>收购</td>
+										<td>湖北鑫创物联科技有限公司</td>
+										<td>股权</td>
+										<td class="inve_gqzb">
+											<div class="inve_jdt">
+												<div class="jdt_zt">
+													<i style="width: 30%"></i>
+												</div>
+												<em>30%</em>
+											</div>
+
+										</td>
+										<td>中国国际金融股份有限公司</td>
+										<td class="shuzi">14100.00</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>2017-2-15</td>
+										<td class="company_info company_types">
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+											<div class="clr"></div>
+											<br />
+									
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+										</td>
+										<td>收购</td>
+										<td>湖北鑫创物联科技有限公司</td>
+										<td>股权</td>
+										<td class="inve_gqzb">
+											<div class="inve_jdt">
+												<div class="jdt_zt">
+													<i style="width: 30%"></i>
+												</div>
+												<em>30%</em>
+											</div>
+
+										</td>
+										<td>中国国际金融股份有限公司</td>
+										<td class="shuzi">14100.00</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>2017-2-15</td>
+										<td class="company_info company_types">
+											
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+											<div class="clr"></div>
+											<br />
+											
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+										</td>
+										<td>收购</td>
+										<td>湖北鑫创物联科技有限公司</td>
+										<td>股权</td>
+										<td class="inve_gqzb">
+											<div class="inve_jdt">
+												<div class="jdt_zt">
+													<i style="width: 30%"></i>
+												</div>
+												<em>30%</em>
+											</div>
+
+										</td>
+										<td>中国国际金融股份有限公司</td>
+										<td class="shuzi">14100.00</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" /></td>
+										<td>2017-2-15</td>
+										<td class="company_info company_types">
+										
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+											<div class="clr"></div>
+											<br />
+											
+											<div class="compamy_msg fl">
+												<a href="#" class="shuzi"><i class="chuang">创</i>雷钰股份(834928)</a>
+												<span>汽车交通>汽车后服务,北京</span>
+											</div>
+										</td>
+										<td>收购</td>
+										<td>湖北鑫创物联科技有限公司</td>
+										<td>股权</td>
+										<td class="inve_gqzb">
+											<div class="inve_jdt">
+												<div class="jdt_zt">
+													<i style="width: 30%"></i>
+												</div>
+												<em>30%</em>
+											</div>
+
+										</td>
+										<td>中国国际金融股份有限公司</td>
+										<td class="shuzi">14100.00</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<div class="pages" id="page"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			</div>
+			<!--main  end-->
+			<table id="outTable" style="display: none;" >
+				<thead>
+					<tr>
+						<th><span >时间</span></th>
+						<th>公司</th>
+						<th>事件标识</th>
+						<th>标的</th>
+						<th>标的类型</th>
+						<th>股权占比/交易对手</th>
+						<!--<th>交易对手</th>-->
+						<th><span>交易金额(万元)</span></th>
+					</tr>
+				</thead>
+				<tbody id="outBody" >
+				
+				</tbody>
+			</table>
+		</div>
+		<!--主体 end-->
+
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<!-- 分页开始 -->
+	<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+	<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+	<!-- 分页结束 -->
+	<!-- 是否登录，关注，对比 -->
+	<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+	<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/investmentMerger.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</html>

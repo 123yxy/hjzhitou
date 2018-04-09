@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>关注领域</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bindAccount.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css">
+
+    <style>
+        .myFocus-foot-tips {
+            margin-bottom: .5rem;
+            text-align: center;
+            font-size: .85rem;
+        }
+
+        .myFocus-foot-tips>i {
+            color: #f4363d;
+        }
+
+        .hd {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo">
+                    <img src="/saasBeta/yanbao/images/logo.png">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 indexTop-user"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="row userMain">
+            <div class="col-lg3 col-md-3 col-sm-3">
+                <div class="user-layer userCenter-photo">
+                    <img id="headimg" width="160" height="160" src="images/userCenter-photo.jpg">
+                    <div class="userCenter-name"></div>
+                </div>
+                <div class="user-layer userMenu">
+                    <ul>
+                        <li>
+                            <a class="userCenter" href="userCenter.html">
+                                <em></em>基本资料</a>
+                        </li>
+                        <li class="active">
+                            <a class="userFocus">
+                                <em></em>关注领域</a>
+                        </li>
+                        <li>
+                            <a class="userAccount" href="userAccount.html">
+                                <em></em>社交账号</a>
+                        </li>
+                        <li>
+                            <a class="userChangePW" href="userChangePW.html">
+                                <em></em>修改密码</a>
+                        </li>
+                        <li>
+                            <a class="lishiyanbao" href="historicalResearchReport.html">
+                                <em></em>历史研报</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg9 col-md-9 col-sm-9">
+                <div class="user-layer userData">
+                    <div class="user-title">
+                        <h2>关注领域</h2>
+                        <button id="edit1" class="button-blue">编辑</button>
+                    </div>
+                    <div class="userFocus-group">
+                        <style>
+                            .myFocus-foot-tips {
+                                margin-bottom: .5rem;
+                                text-align: center;
+                                font-size: .85rem;
+                            }
+
+                            .myFocus-foot-tips>i {
+                                color: #f4363d;
+                            }
+
+                            .hd {
+                                display: none;
+                            }
+                        </style>
+                        <!-- <ul class="userFocus-checkbox"> -->
+                        <!-- <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li>
+                            <li><input type="checkbox"><label>文化娱乐</label></li> -->
+                        <!-- </ul> -->
+                        <div class="hy-list">
+                            <!-- <span class="on">文化娱乐</span> -->
+                            <!-- <span>广告营销</span>
+                            <span>文化娱乐</span>
+                            <span>广告营销</span>
+                            <span>文化娱乐</span>
+                            <span>广告营销</span>
+                            <span>文化娱乐</span>
+                            <span>广告营销</span> -->
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="myFocus-foot-tips hd">
+                            <i>*</i> 至少选择3个关注领域</div>
+                        <div class="userFocus-save">
+                            <button id="save1" class="button-blue" style="display:none;">保存</button>
+                        </div>
+                        <script>
+                            //logo链接
+                            // $(".indexTop-user").html(sethead());
+                            // $(".userHead-logo").html(logourl());
+                            // getuserinfo();
+                            // userinfo();
+                            $(document).ready(function () {
+
+                                var focusarea, a;
+
+
+                                // var _checkProp = [];
+                                var div = $("<div>");
+                                var getchecked = {
+                                    len: 0,
+                                    checkdata: [],
+                                    _clen: function (a) {
+                                        if (a)
+                                            return this.len++;
+                                        else
+                                            return this.len--;
+                                    },
+                                    _cdata: function (e, is) {
+                                        if (is) {
+                                            this.checkdata.push(e);
+                                            this._clen(1);
+                                            return this.checkdata;
+                                        }
+
+                                        else {
+                                            $.each(this.checkdata, function (k, v) {
+                                            	
+                                                if (v === e) {
+                                                    this.checkdata.splice(k, 1);
+                                                    this._clen();
+//                                                  return this.checkdata;
+                                                    return false;
+                                                }
+                                            }.bind(this))
+                                        }
+
+                                    }
+                                }
+                                focusarea = localStorage.focusarea ? localStorage.focusarea.split(",") : "";
+                                //console.log(focusarea)
+                                $.each(focusarea, function (k1, v1) {
+                                    // _checkProp.push(k1);
+                                    // getchecked._clen(1);
+                                    getchecked._cdata(v1, 1);
+                                    // $("#save").addClass("btnBlue");
+                                    // var $_s = $("<input type=\"checkbox\" id=" + k + " ><label for=" + k + ">" + v + "</label>");
+                                    // $.each(data.retData, function (k, v) {
+                                    var span = $("<span>");
+                                    span.text(v1);
+                                    div.append(span);
+                                    // })
+                                    span.addClass("on");
+                                    if (div.html())
+                                        $(".hy-list").html(div.html());
+                                    // div.append($_s);
+                                })
+                                function edit() {
+                                    // alert(122222222222)
+                                    $("#save1").removeAttr("style");
+                                    $(".myFocus-foot-tips").removeClass("hd");
+                                    UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.findNotionCon, {}, true, function (_data) {
+                                        // WF_ajax.findNotionCon(function (_data) {
+                                        if (_data.retCode === "0000") {
+                                            // var focusarea = decodeURI(UTIL.getUrlPara("focusArea")).split(",");
+                                            //    [a,b,c] = _data.retData;
+                                            // var focusarea = localStorage.focusarea ? localStorage.focusarea.split(",") : "";
+                                            // var div = $("<div>");
+                                            // var _checkProp = [];
+                                            var fr = focusarea, div = $("<div>");
+                                            var iscolection = 0, vold = "";
+                                            focusarea ? (
+                                                $.each(_data.retData, function (k, v) {
+
+                                                    // var $_s = $("<input type=\"checkbox\" id=" + k + " ><label for=" + k + ">" + v + "</label>");
+
+                                                    // span.text(v);
+                                                    var span = $("<span>");
+                                                    var frl = fr.length;
+                                                    // iscolection = 0;
+                                                    if (iscolection === -1) {
+                                                        vold = v;
+                                                        iscolection = 0;
+                                                    }
+                                                    if (iscolection === frl) {
+                                                        var span = $("<span>");
+                                                        span.text(vold);
+                                                        div.append(span);
+                                                        iscolection = 0;
+                                                    }
+                                                    $.each(fr, function (k1, v1) {
+                                                        vold = v;
+                                                        if (v === v1) {
+                                                            // $_s.eq(0).trigger();
+                                                            // $_s.eq(0).prop("checked",true);
+
+                                                            // $_s.eq(1).css({ "background": "#1985e2", "color": "#fff" });
+                                                            // _checkProp.push(k);
+                                                            // checklen._clen(1);
+                                                            // checklen._cdata(v1, 1);
+                                                            // $("#save").addClass("btnBlue");
+                                                            fr.splice(k1, 1);
+                                                            if (fr.length === 0) {
+                                                                iscolection = -1;
+                                                                return false;
+                                                            }
+                                                            iscolection = 0;
+                                                            return false;
+                                                        }
+                                                        iscolection += 1;
+                                                        // else {
+                                                        //     var span = $("<span>");
+                                                        //     span.text(v);
+                                                        //     div.append(span);
+
+                                                        // }
+                                                        // return false;
+                                                    })
+                                                    if (!fr.length) {
+                                                        vold = v;
+                                                        // span.text(v);
+                                                        // div.append(span);
+                                                    }
+
+
+                                                })) : $.each(_data.retData, function (k, v) {
+                                                    // var $_s = $("<input type=\"checkbox\" id=" + k + " ><label for=" + k + ">" + v + "</label>");
+                                                    var span = $("<span>");
+                                                    span.text(v);
+                                                    div.append(span);
+                                                })
+                                            // $(".myFocus-check").on("input[type=checkbox]","click",function () {
+                                            //     // alert(this.innerText);
+                                            //     radioChange(this, checkState);
+                                            //     // checkState();
+                                            // })
+                                            div ? ($(".hy-list").append(div.html())) : "";
+                                        }
+                                    })
+                                }
+                                $("#edit1").on("click", function () {
+                                    $(this).css("display", "none");
+                                    edit();
+                                    $(".hy-list").delegate("span", "click", function () {
+                                        if ($(this).hasClass("on")) {
+                                            $(this).removeClass("on");
+                                            getchecked._cdata(this.innerText);
+                                        } else {
+                                            $(this).addClass("on");
+
+                                            getchecked._cdata(this.innerText, 1);
+                                        }
+                                    });
+                                })
+
+                                $("#save1").on("click", function () {
+                                    (getchecked.len > 2) ? UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.updateSignature, { field: "focusArea", value: getchecked.checkdata.join(',') }, true, function (_data) {
+                                        // _data.retCode === "0000"? mui.toast('公司未填写', { duration: 'long', type: 'div' }):"";
+                                        (_data.retCode === "0000") ? (localStorage.setItem('focusarea', getchecked.checkdata.join(',')), uc_callback("./userFocus.html", ".userFocus-group", 1), $(".myFocus-foot-tips").addClass("hd")) : $.zmAlert(data.retMsg);//mui.toast('关注失败', { duration: 'long', type: 'div' })
+
+                                    }) : $.zmAlert("关注行业需最少关注三个");
+                                })
+
+
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+
+</body>
+
+</html>

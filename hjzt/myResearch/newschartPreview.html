@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-图表预览</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_zh.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--主体 star-->
+		<div class="yulan_titles">	
+			<div class="fl">
+				<a href="/myResearch/researchChart.html" target="_blank">我的研究></a>
+<!-- 				<a href="/myResearch/indexLibrary.html">个股指标></a> -->
+				<a href="javascript:;" class="com_now">图表预览</a>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+		<div class="right_main tubiao_fenxi">
+			<div class="bianjitit_box">
+					<div class="bianji_newtitle">
+						<span class="nedtitle" id="nedtitle">天阳科技净利润分析</span>
+						<div class="fr tubiao_btn">
+						<span>编辑</span>
+						<em id="outBtn">导出</em>
+						</div>
+					</div>
+				</div>
+			<!--main  star-->
+			<div class="main_box">
+				
+				<div class="pdfContent fl" id="pdfContent">
+				<!--折线图-->
+				<div class="yulan_tubiao" id="yulan_tu">
+					
+				</div>
+				<div class="information information2">
+					<table id="outTable" >
+						<thead>
+							<tr id="dateTr" >
+<!-- 								<th>指标名称</th> -->
+<!-- 								<th>2017—05</th> -->
+<!-- 								<th>2017—05</th> -->
+<!-- 								<th>2017—05</th> -->
+<!-- 								<th>2017—05</th> -->
+<!-- 								<th>2017—05</th> -->
+							</tr>
+						</thead>
+						<tbody id="msgTbody" >
+							<tr>
+<!-- 								<td>净利润</td> -->
+<!-- 								<td>1662.03</td> -->
+<!-- 								<td>1662.03</td> -->
+<!-- 								<td>1662.03</td> -->
+<!-- 								<td>1662.03</td> -->
+<!-- 								<td>1662.03</td> -->
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--<div class="ylcont_btn" style="margin-top: 50px;">
+					<a href="/myResearch/researchChart.html">确定</a>
+				</div>-->
+			</div>
+			<div class="chartPreview_r fr">
+				<div class="chart_gg_gl">
+				<div class="chart_p_title">
+					<span>相关个股</span>
+					<p>(<i>*</i><em>最多可关联50家企业)</em></p>
+				</div>
+				<div class="chart_sec_box">
+					<div class="chart_seach">
+						<input type="text" name="" id="inpVal" placeholder="输入股票代码简称,新增关联" />
+					</div>
+					<!--无个股样式star-->
+					<div class="chart_zanwugegu" style="display: none">
+						<img src="/saasBeta/images/wugegu.png" width="296" height="209"/>
+					</div>
+					<!--无个股样式end-->
+					
+					<div class="chart_seach_result" style="display: none" >
+						<div class="chart_result_num">
+							<p>已关联<em id="glTotal" >0</em>家</p>
+						</div>
+						<div class="chart_result_list">
+							<!-- <div class="chart_info">
+								<div class="chart_gp fl">
+									<h2>天阳科技</h2>
+									<span>398792</span>
+								</div>
+								<div class="chart_gp_newsprice fl">
+									<span class="red">15.3</span>
+									<p>最新价</p>
+								</div>
+								<div class="chart_gp_zdf fl">
+									<span class="red">15.3</span>
+									<p>涨跌幅</p>
+								</div>
+								<div class="chart_caozuo fr">
+									<i></i>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="chart_info">
+								<div class="chart_gp fl">
+									<h2>天阳科技</h2>
+									<span>398792</span>
+								</div>
+								<div class="chart_gp_newsprice fl">
+									<span class="green"> 15.3</span>
+									<p>最新价</p>
+								</div>
+								<div class="chart_gp_zdf fl">
+									<span class="green">15.3</span>
+									<p>涨跌幅</p>
+								</div>
+								<div class="chart_caozuo fr">
+									<i></i>
+								</div>
+								<div class="clr"></div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				</div>
+				<div class="chart_beizhu">
+					<div class="chart_bei_title">
+						<span>备注</span>
+					</div>
+					<div class="chart_beizhu_info">
+						<p id="chartMS" ></p>
+					</div>
+				</div>
+			</div>
+			<div class="clr"></div>
+			</div>
+			
+			
+		</div>
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>	
+		<script src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+		
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<!-- 导出PDF -->
+		<script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/jspdf.debug.js"></script>
+        <script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/html2canvas.js"></script>
+		<!-- 导出PDF -->
+		<!-- 是否登录，关注，对比 -->
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<script src="/saasBeta/js/echarts-all-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/newMyResearch/chartPreview.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>汇金智投</title>
+    <link rel="stylesheet" href="../../saasBeta/css/base.css">
+    <script src="../../saasBeta/js/jquery.min.js"></script>
+    <script src="../../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../saasBeta/js/common.js"></script>
+</head>
+<body>
+    <iframe src="" id="myiframe" scrolling="no" frameborder="0" style="width:100%;margin-bottom:40px;"></iframe>
+    <script>
+         function getName(name){
+             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+             var r = encodeURI(window.location.search).substr(1).match(reg);
+             var context = "";
+             if (r != null) {
+                 context = r[2];
+                 reg = null;
+                 r = null;
+                 return context == null || context == "" || context == "undefined" ? "" : context;}}
+
+        var a=getName("txt");
+         var i=a.indexOf(".");
+         console.log(i);
+         a=a.slice(7,i);
+         console.log(a);
+        var urlStr = window.location.href; 
+        if(urlStr.indexOf("=")>-1)
+        {
+            urlStr = urlStr.substring(urlStr.indexOf("=")+1,urlStr.length);
+            console.log(urlStr+"   test")
+        }
+        $("#myiframe").attr("src",urlStr);
+        function changeFrameHeight(){
+            if(a=="gonggao"){
+                $("#myiframe").css("margin-top","58px");
+                setTimeout(function(){
+                    $("#myiframe").css("height",document.documentElement.clientHeight-40)
+                },500);
+            }else{
+                $("#myiframe").css({"margin-top":"0","height":document.documentElement.clientHeight-40})
+            }
+        }
+        window.onload=function(){
+            changeFrameHeight();
+        };
+        window.onresize=function(){
+            changeFrameHeight();
+        }
+    </script>
+</body>
+</html>

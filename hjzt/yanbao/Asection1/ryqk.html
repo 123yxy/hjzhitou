@@ -1,0 +1,109 @@
+
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+	.reyuan-table .table tr td, .reyuan-table .table tr th { position:relative;width:auto!important;}
+	.chakan-tc { z-index:9; }
+	.container { padding:0; }
+	#resumeCotent{font-size: 14px;color: #333333;line-height: 24px;}
+</style>
+		<div class="yuce-fx">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+									<span>一、公司概况</span>
+								</div>
+								<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+									<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+								</div>
+							</div>
+							</div>
+							<div class="contents">
+								<div class="section">
+									<h2>1.5人员情况</h2>
+									<div class="kaik-content djg">
+										<h3>1.5.1董监高情况</h3>
+										<div class="reyuan-table dongjiangao">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="zbdqbj">姓名</th>
+														<th>职务</th>
+														<th>性别</th>
+														<th>年龄</th>
+														<th>学历</th>
+														<th>任期</th>
+														<th class="shuzi">持股数(万股)</th>
+														<th>简历</th>
+													</tr>
+												</thead>
+												<tbody id="djgUL" >
+													<tr>
+														<!--<td>何英</td>
+														<td>监事会主席</td>
+														<td>男</td>
+														<td>45</td>
+														<td>本科</td>
+														<td>2017-10-15至2017-08-12</td>
+														<td>5213.10</td>
+														<td class="zhuanli-ck-tc">
+															<span class="chakan">查看</span>
+														</td>-->
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="kaik-content ygqk">
+										<h3>1.5.2人员情况</h3>
+										<div class="col-lg-6 col-xs-6 col-md-6 col-sm-6"  id="dataList1">
+											<div class="echarts-tb" id="educational"></div>
+											
+										</div>
+										<div class="col-lg-6 col-xs-12 col-md-6 col-sm-6"  id="dataList2">
+											
+											<div class="comparis" id="xlDBMsg" ></div>
+										</div>
+										<div class="clearfix"></div>
+									</div>	
+								</div>
+							</div>
+							
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+			</div>
+		</div>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+		    $(".contents").height(windowHeight - 290);
+		    
+		    //加载高管信息
+			AfindNewDigData();
+			
+			
+			//加载员工信息
+			AfindStaffData();
+			
+				// 查看董监高
+			$("#djgUL").on("click",".chakan",function(){
+				$(".marsk").show();
+				$("#resume").show();
+				var content=$(this).attr("data-id");
+				var name=$(this).attr("data-name");
+				$("#resumeName").html(name+"-简历");
+				$("#resumeCotent").html(content);
+			})
+			
+				
+		})
+	</script>

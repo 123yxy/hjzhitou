@@ -1,0 +1,336 @@
+body,html{
+    height:100%;
+}
+.hide{
+    display: none;
+}
+.main{
+    height:100%;
+    background: #fff;
+}
+.dis-left{
+    width:10.4%;
+    background:#F3F6F9;
+    padding-top:20px;
+    height:200%;
+    position: fixed;
+}
+.dis-left>ul{
+    width:100%;
+}
+.dis-left>ul>li{
+    height:42px;
+    width:100%;
+    text-align: center;
+    line-height: 42px;
+    cursor: pointer;
+    position:relative;
+    padding-left:5%;
+    box-sizing: border-box;
+}
+.dis-left>ul>li.active{
+    background:#1885E2;
+    color:#fff;
+}
+.dis-left b{
+    display:inline-block;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat;
+    margin-right:10px;
+    position:absolute;
+    top:14px;
+    left:15%
+}
+.cloud-disk>b{
+    width:20px;
+    height:14px;
+    background-position:-270px -30px;
+}
+.cloud-disk>b.active{
+    background-position:-240px -30px;
+}
+.report>b{
+    width:14px;
+    height:16px;
+    background-position: -31px -90px;
+}
+.report>b.active{
+    background-position: -1px -90px;
+}
+.chart>b{
+    width:18px;
+    height:14px;
+    background-position:-271px -61px ;
+}
+.chart>b.active{
+    background-position: -241px -61px;
+}
+.dis-right{
+    padding: 30px 0 0 160px;
+    width: 66.5%;
+    margin-left:10%;
+}
+.right-title{
+    width:100%;
+    /*padding-bottom:20px;*/
+    box-sizing: border-box;
+    border-bottom:1px solid #E4E4E4;
+    height:42px;
+    margin-bottom:20px;
+}
+.right-title>div:first-child{
+    width:65px;
+    /*height:40px;*/
+    line-height:40px;
+    border-bottom:2px solid #1885E2;
+    font-weight: bold;
+    font-size: 16px;
+    line-height:16px;
+    color:#333;
+    padding-bottom: 14px;
+    padding-top: 10px;
+}
+.right-title>div:nth-child(2)>button{
+    width: 100px;
+    height: 32px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.tab-box thead{
+    background: #519bdb;
+    color:#fff;
+    font-weight: normal;
+}
+.tab-box tr{
+    height:30px;
+    text-align: center;
+}
+.tab-box th:first-child{
+    width:30%;
+    overflow: hidden;
+}
+ .tab-box table,tr{
+    width:100%
+}
+.tab-box td>b,.tab-box td>i{
+    display: inline-block;
+    width:13px;
+    height:13px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat -150px -30px;
+    cursor: pointer;
+}
+.tab-box td>i{
+    width:14px;
+    height:14px;
+    background-position:-90px -90px;
+    margin-right:12px;
+}
+.tab-box td>i:hover{
+    background-position:-60px -90px;
+}
+.tab-box td>b:hover{
+    background-position:-120px -30px;
+}
+.tab-box tbody>tr:nth-child(even){
+   background:#F5f7f9;
+}
+
+.dis-chart{
+    position:relative;
+}
+/*我的云盘*/
+.disk-box>table,tr{
+    width:100%
+}
+.disk-box tr{
+    height:36px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.disk-box tr>td:first-child{
+    text-align: left;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 36px;
+    line-height: 36px;
+    max-width: 400px;
+    font-size: 14px;
+    color:#444444;
+}
+.disk-box tr>td:first-child>b{
+    display: inline-block;
+    width:12px;
+    height:14px;
+    /*background:url("../../../saasBeta/images/Image/disk-blue.png");*/
+    margin:0 8px 0 30px;
+}
+.disk-box tr>td:first-child>b img{
+    width:12px;
+    height: 14px;
+    margin-top:2px;
+}
+.disk-box tr>td:last-child{
+    text-align: right;
+    line-height: 36px;
+    font-size:14px;
+    color: #777777;
+    padding-right: 15px;
+}
+.disk-box tr>td:last-child>b{
+    display: inline-block;
+    width:13px;
+    height:13px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat -150px -30px;
+    margin:0 0 0 15px;
+    cursor: pointer;
+}
+.disk-box tr>td:last-child>b:hover{
+    background-position: -120px -30px;
+}
+.disk-box tr:nth-child(odd){
+    background:#f5f7f9;
+}
+.disk-box tr:nth-child(even){
+    background:#fff;
+}
+.dis-chart>.right-title>div>b{
+    display: inline-block;
+    margin:0 10px 0 20px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat;
+}
+.dis-chart>.right-title>div>b:first-child{
+    width:14px;
+    height:14px;
+    background-position:0 -60px;
+}
+.dis-chart>.right-title>div>b:nth-child(3){
+    width: 12px;
+    height:12px;
+    background-position:-180px -30px;
+}
+.dis-chart>.right-title button{
+    width:120px;
+    margin-left:20px;
+}
+.dis-chart>.right-title span{
+    color:#1885E2;
+}
+.chart-search{
+    width:100%;
+    height:40px;
+    border:1px solid #E4E4E4;
+    background:#F3F6F9;
+}
+.select{
+    width:130px;
+    height:40px;
+    line-height:40px;
+    border-right:1px solid #E4E4E4;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.select>div>span{
+    display: inline-block;
+    width:11px;
+    height:6px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat -90px -30px;
+    margin-left:10px;
+}
+.select>div>span.active{
+    background:url("../../../saasBeta/images/Image/select-icon-top.png")
+}
+.search-input{
+    width:220px;
+    height:25px;
+    margin-top:8px;
+    padding-left:42px;
+    position:relative;
+    border-left:1px solid #E4E4E4;
+    cursor:pointer;
+}
+.search-input>b{
+    display: inline-block;
+    width:17px;
+    height:17px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat -30px -30px;
+    position:absolute;
+    top:4px;
+    left:12px;
+}
+.search-input>input{
+    border:none;
+    height:25px;
+    background:#F3F6F9;
+    width: 200px;
+}
+.chart-box{
+    width:100%;
+    margin-top:30px;
+}
+.chart-box>div.chart-item{
+    float: left;
+    width:49%;
+    height:310px;
+    border:1px solid #E4E4E4;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom:20px;
+}
+.chart-box>div.chart-item:hover{
+    box-shadow: 0 0 8px #C3DAEE;
+}
+.chart-box>div.chart-item:nth-child(even){
+    margin-left:2%;
+}
+.item-title{
+    width:100%;
+    height:36px;
+    line-height:36px;
+    background: #E2EFFA;
+}
+.item-left{
+    margin-left:20px;
+    font-size: 14px;
+    color:#363636;
+}
+.item-right{
+     margin-right:20px;
+    color:#1E7BCD;
+}
+.item-right>span:nth-child(2){
+    margin-right:10px;
+    margin-left:10px;
+}
+.chart-search .select .s-content{
+    border-radius: 0;
+}
+/**上传文件按钮**/
+.fileinput-button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 100px;
+	text-align: center;
+	line-height: 33px;
+}	
+.fileinput-button input{
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	opacity: 0;
+	-ms-filter: 'alpha(opacity=0)';
+	font-size: 500px;
+}
+.file_special{
+	height: 33px;
+    color: #FFFFFF;
+    background: #1985E2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

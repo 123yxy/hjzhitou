@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>注册</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+        <link rel="stylesheet" href="/saasBeta/yanbao/css/loginReg.css">
+    </head>
+    <body>
+        <div class="cotainer">
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12 logHead">
+                </div>
+            </div>
+            <div class="row logReg-main">
+                <div class="col-lg12 col-md-12 col-sm-12">
+                    <div class="titTab">
+                        <span class="active">注册</span>
+                        <span><a href="login.html">登录</a></span>
+                    </div>
+                    <form id="regForm">
+                        <ul>
+                            <li class="logReg-code"><input placeholder="手机号" type="text" id="phoneNumLo" name="phoneNumLo" autocomplete="off"><span></span><!--<span class="tips-error ">手机号不能为空</span>--><input id="valicode" type="button" class="check-code" value="发送验证码"></li>
+                            <li><input placeholder="验证码" type="text" id="verification_Code" name="verification_Code"></li>
+                            <li><input placeholder="密码" type="password" id="passwordLo" name="passwordLo" autocomplete="off"><span></span></li>
+                            <input type="password" style="display: none;" name="passwordLo">
+                            <li><input placeholder="确认密码" type="password" id="passwordLol" name="passwordLol" ><span></span></li>
+                        </ul>
+                        <div class="loginReg-btn"><button id="reg" >注 册</button></div>
+                        <div class="reg-agreement checkbox-group"><input type="checkbox" id="agreement" name="agreement" checked><label></label><label for="agreement">点击注册代表您同意圣康汇金<a href="userAgreement.html">用户协议</a></label></div>
+                        <div class="ewm">
+                            <p>关注我们</p>
+                            <p class="saoma-img"><img src="/saasBeta/yanbao/images/ewm.jpg"></p>
+                        	<p>使用微信扫一扫，访问研料服务号</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+                </div>
+            </div>
+        </div>
+        <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+        <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+        <!-- <script src="/saasBeta/yanbao/js/plugin/jquery-ui.min.js"></script> -->
+        <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+        <script src="/saasBeta/yanbao/js/common/util.js"></script>
+        <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+        <!-- <script src="/saasBeta/yanbao/js/bus/login.js"></script> -->
+        <script src="/saasBeta/yanbao/js/bus/reg.js"></script>
+    </body>
+</html>

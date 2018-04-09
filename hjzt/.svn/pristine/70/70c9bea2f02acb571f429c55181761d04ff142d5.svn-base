@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<!--<script type="text/javascript" src="/saasBeta/js/common.js"></script>-->
+		<script type="text/javascript">
+		
+/**
+ * ajax封装
+ * 使用$.axs(url, data, async,function(data){
+               alert(data.data);
+           });
+ * @param url 发送请求的地址 /a/b.do
+ * @param data 发送到服务器的数据，数组存储，如：{a:a,b:b} 或者 null
+ * @param async 异步true 同步false
+ * @param successfn 成功回调函数 
+ */
+//$.axs = function(url, data, async, successfn) {
+//	//data = (data==null || data=="" || typeof(data)=="undefined")? {"date": new Date().getTime()} : data;
+//	var backUrl = window.location.href;
+//	$.ajax({
+//		type: "post",
+//		async: async,
+//		data: data,
+//		url: url,
+//		dataType: "json",
+//		timeout : 10000, //超时时间设置，单位毫秒
+//		success: function(d) {
+////			if(d.retCode == "3018") {
+////				dropOut(d.retData);
+////			} else {
+////				successfn(d);
+////			}
+//			successfn(d);
+//			$(".loadingBox").hide();
+//		},
+//		error: function(e) {
+//			$(".loadingBox").hide();
+//			//弹框
+////			errorAlert(data.retCode, data.retMsg);
+//		}
+//	});
+//};
+// 
+
+//function findArea(){
+//	$.axs("/betaStock/common/findWorkBookByPid.do",null,true,function(data){
+//		if(data.retCode=="0000"){
+//			var result = data.retData;
+//			if(result==null){
+//				return false;
+//			}
+//			var htm='';
+//			for (var i = 0; i < result.length; i++) {
+//				var obj=result[i];
+//				htm+='<tr>';
+//				htm+='<td>'+obj.nameCn+'</td><td>'+obj.id+'</td>';
+//				htm+='</tr>';
+//			}
+//			$(".rz_diqu_types").html(htm);
+//		}else{
+//			//errorAlert(data.retCode, data.retMsg);
+//		}
+//	});
+//}
+
+$(document).ready(function(){
+$("#test").load("/threeLibrary/stockQuotes.html");
+$("#test2").load("/businessDetails/newTBindex.html");
+})
+
+		</script>
+	</head>
+	<style type="text/css">
+		#test{ width: 500px; height: 500px; margin: 0 auto;}
+	</style>
+	<body>
+		<div id="test"></div>
+		<div id="test2"></div>
+		<table border="" cellspacing="" cellpadding="" style="float: left; width: 500px;">
+			<thead>
+			<tr>
+				<th>姓名</th>
+				<th>电话</th>
+			</tr>
+			</thead>
+			<tbody class="rz_diqu_types">
+			</tbody>
+		</table>
+		
+		
+		<table border="" cellspacing="" cellpadding=""style="float: left; width: 500px;">
+			<thead>
+			<tr>
+				<th>包含市的字段</th>
+				<th>对应信息</th>
+			</tr>
+			</thead>
+			<tbody class="baohan">
+			</tbody>
+		</table>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		findArea()	
+		})
+
+function findArea(){
+	$.ajax({
+	type:"post",
+	async:false,
+	data:{"uname":"13341179210","pwd":"123456"},
+	url:"http://localhost/med/api/login",
+	dataType:"json",
+	timeout:10000,
+	success:function(data){
+		console.log(data.data)
+	if(data.retCode=="0000"){
+			var result = data.retData;
+			if(result==null){
+				return false;
+			}
+			var htm='';
+			for (var i = 0; i < result.length; i++) {
+				var obj=result[i];
+				htm+='<tr>';
+				htm+='<td>'+obj.nameCn+'</td><td>'+obj.id+'</td>';
+				htm+='</tr>';
+			}
+			$(".rz_diqu_types").html(htm);
+		}else{
+			//errorAlert(data.retCode, data.retMsg);
+		}	
+	}})
+}
+findtext();
+function findtext(){
+	$.ajax({
+		type:"post",
+		async:false,
+		data:null,
+		url:"/betaStock/common/findWorkBookByPid.do",
+		dataTyle:"json",
+		timeout:10000,
+		success:function(data){
+			if(data.retCode=="0000"){
+				var result = data.retData;
+				if(result==null){
+					return false;
+				}
+				var html ="";
+				for(var i = 0;i<result.length;i++){
+					var o=result[i];
+					if(o.nameCn.indexOf("辽")>-1){
+					html+='<tr>';
+					html+='<td>'+o.nameCn+'</td><td>'+o.id+'</td>';
+					html+='</tr>';	
+					}
+					
+				}
+				$(".baohan").html(html);
+			}
+		}
+		
+	});
+}
+		</script>
+	</body>
+</html>

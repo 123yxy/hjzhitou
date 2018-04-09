@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>我的研究-指标库-个股指标</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/library.css"/>
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/jquery.tinyscrollbar.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/cufon.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/myResearch/website.js"></script>
+
+		
+	</head>
+	<body>
+		<!--主体 star-->
+		<div class="yulan_titles">	
+			<div class="fl">
+				<a href="/myResearch/researchReport.html">我的研究></a>
+				<a href="javascript:;" class="com_now">指标库</a>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="right_main library">
+			<!--main  star-->
+			<div class="main">
+				<div class="library_tab">
+					<ul>
+						<li onclick="javascript:window.location.href='indexLibrary.html'">三板统计</li>
+						<li  onclick="javascript:window.location.href='stockIndex.html'">个股指标</li>
+						<li class="on" onclick="javascript:window.location.href='rankings.html'">排行榜</li>
+						<div class="clr"></div>
+					</ul>
+				</div>
+				<div class="library_change">
+					<div class="change_yx">
+						<span>已选指标:</span>
+						<div class="chenge_list" id="chenge_list">
+							<!--<a href="javascript:;">持有无限股份 <i></i></a>
+							<a href="javascript:;">持有无限股份<i></i></a>
+							<a href="javascript:;">持有无限股份<i></i></a>
+							<a href="javascript:;">持有无限股份<i></i></a>-->
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="change_dblist">
+						<div class="change_xlist" style="display: block;">
+							<div id="scrollbar1">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+						 <div class="overview">
+							<div class="library_seach seach1">
+								<input type="text" name="" placeholder="请输入关键字" id="filterName01"/>
+							</div>
+							<div class="library_ul">
+								<!--<div class="libraryseachnone">
+									<span>搜索无数据</span>
+								</div>-->
+								<ul data-value="dataOne" class="jq11">
+									
+								</ul>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+						</div>	
+						<div class="change_xlist">
+						<div id="scrollbar2">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+						 <div class="overview">
+							<div class="library_seach seach2">
+								<input type="text" name="" id="filterName02" />
+							</div>
+							<div class="library_ul">
+								<ul data-value="dataTwo" class="jq22">
+									<li class="on">市场规模统计</li>
+									<li>行业规模统计</li>
+									<li>地域规模统计</li>
+								</ul>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+						</div>	
+						<div class="change_xlist">
+							<div id="scrollbar3">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+						 <div class="overview">
+							<div class="library_seach">
+								<input type="text" name="" id="filterName03" value="" />
+							</div>
+							<div class="library_ul">
+								<ul data-value="dataThree" class="jq33">
+									<li class="on">互联网</li>
+									<li>新金融</li>
+									<li>制造业</li>
+									<li>传媒</li>
+									<li>轻工业</li>
+									<li>生物科技</li>
+									<li>水利</li>
+								</ul>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+						</div>	
+						<div class="change_xlist">
+							<div id="scrollbar4">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+						 <div class="overview">
+							<div class="library_seach">
+								<input type="text" name="" id="filterName04" value="" />
+							</div>
+							<div class="library_ul">
+								<ul data-value="dataFour" class="jq44">
+									<li class="on">市场规模</li>
+									<li>挂牌统计</li>
+									<li>交易统计</li>
+									<li>融资统计</li>
+									<li>指数统计</li>
+									<li>中介机构</li>
+								</ul>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+						</div>	
+						<div class="change_xlist">
+							<div id="scrollbar5">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+						 <div class="overview">
+							<div class="library_seach">
+								<input type="text" name="" id="filterName05" value="" />
+							</div>
+							<div class="library_ul library_check">
+								<ul data-value="dataFive" class="jq55">
+									<li class="on">
+										<div class="data-checkbox">
+										<input type="checkbox" />
+										<label class="checkbox"></label>
+										<label class="checkboxWord">持有无限售股份</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox">
+										<input type="checkbox" />
+										<label class="checkbox"></label>
+										<label class="checkboxWord">持有有限售股份</label>
+										</div>
+									</li>
+									<li>
+										<div class="data-checkbox">
+										<input type="checkbox" />
+										<label class="checkbox"></label>
+										<label class="checkboxWord">总持股数</label>
+										</div>
+									</li>
+								</ul>
+							</div>
+						
+						</div>
+						</div>
+						</div>
+						</div>	
+						<div class="clr"></div>
+						<div class="library_btn">
+						<a id="createCharts" href="javascript:;">生成图表</a>
+					</div>
+					</div>
+					
+				</div>			
+				
+				
+			</div>
+			
+		</div>
+		<!--主体 end-->
+		
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/myResearch/rankings.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 自动补全 -->
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+
+</html>

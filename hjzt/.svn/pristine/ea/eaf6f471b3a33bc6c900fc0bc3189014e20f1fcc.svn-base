@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+<head>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<title>企业地图-交易</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/companyMap.css" />
+<script src="/saasBeta/js/jquery.min.js"></script>	
+<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/saasBeta/js/jquery.validate.min.js"></script>
+<script src="/saasBeta/js/left.js" type="text/javascript"></script>
+<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+<script type="text/javascript" src="/saasBeta/js/common.js" ></script>
+
+<!--echarts地图-->
+<script src="/saasBeta/js/echarts.min.js"></script>
+<script type="text/javascript" src="/saasBeta/js/china.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="/saasBeta/js/map/companyTransaction.js"></script>
+<script src="/saasBeta/js/operationCenter.js"></script>
+</head>
+
+<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+
+	<!--侧导航 end-->
+	<!--主体 star-->
+	<div class="right_main">
+         
+		<!--main  star-->
+		<div class="main">
+			<div class="main_box">
+			<div class="map_title">
+			<span class="fl">企业地图</span>
+			<div class="map_nav fl">
+				<ul>
+					<li class="hover"><i name="showTime">天</i>
+					<ul>
+						<li name="time" data-value="D">今天</li>
+						<li name="time" data-value="LD">昨天</li>
+					</ul>
+					</li>
+					<li><i name="showTime">月</i>
+						<ul>
+						<li name="time" data-value="LM">近一月</li>
+						<li name="time" data-value="L2M">近两月</li>
+						<li name="time" data-value="L3M">近三月</li>
+						</ul>
+					</li>
+					<li><i name="showTime">年</i>
+						<ul>
+						<li name="time" data-value="LY">近一年</li>
+						<li name="time" data-value="L2Y">近两年</li>
+						<li name="time" data-value="L3Y">近三年</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="clr"></div>
+			</div>
+			<div class="clr"></div>
+			<div class="company_map">
+				<div class="company_map_left fl">
+				<div class="map_box" >
+			
+			<div id="map">
+			</div>
+            </div>
+					
+				</div>	
+				<div class="company_map_right fr">
+					<div class="map_rt">
+						<div class="r_select">
+							<span class="fl">全部行业</span>
+							<div class="r_industry_sele">
+								<div class="r_indu_title">
+									<p><input type="checkbox" id="checkAll"/>全部行业</p>
+									<b>已选择<em id="che_yx">(0)</em></b>
+								</div>
+								<div id="tradeList" class="r_indu_box">
+<!-- 									<div class="r_indu_list"> -->
+<!-- 										<i>A</i> -->
+<!-- 										<ul> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 										</ul> -->
+<!-- 										<div class="clr"></div> -->
+<!-- 									</div> -->
+<!-- 									<div class="r_indu_list"> -->
+<!-- 										<i>B</i> -->
+<!-- 										<ul> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 										</ul> -->
+<!-- 										<div class="clr"></div> -->
+<!-- 									</div> -->
+<!-- 									<div class="r_indu_list"> -->
+<!-- 										<i>C</i> -->
+<!-- 										<ul> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 											<li><em>白色家电</em><input type="checkbox" class="choo"/></li> -->
+<!-- 										</ul> -->
+<!-- 										<div class="clr"></div> -->
+<!-- 									</div> -->
+								</div>
+								<div class="r_indu_btn">
+									<a href="javascript:;" class="true" onclick="slideUp('1',this);">确定</a><a onclick="slideUp('2',this);" href="javascript:;" class="qx_bt">取消</a>
+									<div class="clr"></div>
+								</div>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="map_r_box">
+						<a href="companyMap.html"  >公司</a><a href="companyQuotation.html" >行情</a><a href="companyTransaction.html"class="on">交易</a>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+					<div class="map_t_box">
+					<div class="gongs_jy map_title_wz">
+						<table width="100%" border="1">
+						<thead>
+							<tr>
+									<th scope="col">排名</th>
+									<th scope="col" class="gs jy_qy"><span>区域</span></th>
+									<th scope="col" class="zxj jy_jyl"><span>交易量</span></th>
+							</tr>
+		
+						</thead>
+						</table>
+					</div>
+					<div class="map_r_info gongs_jy">
+						
+						<table width="100%" border="1">
+						<thead>
+							<tr>
+									<th scope="col">排名</th>
+									<th scope="col" class="gs jy_qy"><span>区域</span></th>
+									<th scope="col" class="zxj jy_jyl"><span>交易量</span></th>
+									
+							</tr>
+		
+						</thead>
+						<tbody id="mtList">
+<!-- 							<tr> -->
+<!-- 									<td>1</td> -->
+<!-- 									<td><span>北京</span></td> -->
+<!-- 									<td><i style="width: 84.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>2</td> -->
+<!-- 									<td><span>上海</span></td> -->
+<!-- 									<td><i style="width: 70.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>3</td> -->
+<!-- 									<td><span>深圳</span></td> -->
+<!-- 									<td><i style="width: 60.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>4</td> -->
+<!-- 									<td><span>河北</span></td> -->
+<!-- 									<td><i style="width: 54.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>5</td> -->
+<!-- 									<td><span>山西</span></td> -->
+<!-- 									<td><i style="width: 44.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>6</td> -->
+<!-- 									<td><span>陕西</span></td> -->
+<!-- 									<td><i style="width: 34.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>7</td> -->
+<!-- 									<td><span>河南</span></td> -->
+<!-- 									<td><i style="width: 4.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>8</td> -->
+<!-- 									<td><span>广东</span></td> -->
+<!-- 									<td><i style="width: 3.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>9</td> -->
+<!-- 									<td><span>北京</span></td> -->
+<!-- 									<td><i style="width: 2.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 									<td>10</td> -->
+<!-- 									<td><span>北京</span></td> -->
+<!-- 									<td><i style="width: 1.41%;"></i></td> -->
+									
+<!-- 							</tr> -->
+						</tbody>
+						<tr>
+							<td colspan="3"><a href="javascript:;" id="msg" onclick="loadPage(this);">点击查看更多</a></td>
+						</tr>
+</table>
+
+						
+					</div>
+					</div>
+				</div>
+				<div class="clr"></div>
+				</div>
+				
+			</div>
+			</div>
+		</div>
+		<!--main  end-->
+	
+
+	<!--主体 end-->
+	
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">   
+    <meta name="renderer" content="webkit" />
+    <meta name="Kyewords" content="智能研报,研料,投研有料,圣康汇金" />
+    <title>研料</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/jfMagnify.css?ver=2.0.2">
+    <!-- <link rel="stylesheet" href="/saasBeta/yanbao/css/nui.css"> -->
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css?ver=2.0.2" />
+     <link type="text/css" rel="stylesheet" href="/saasBeta/yanbao/css/carousel.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/index.css?ver=2.0.2">
+    
+    <style>
+        /*.caroursel{margin:150px auto;}*/
+        .indexTop-main .infor-name {
+            padding-top: 0;
+        }
+        .indexTop-user{float: right;max-width: 30%;}
+        .member-service{float: right;margin-top: 3px;margin-right: 20px;}
+		.member-service a{color: #d2e5f5;font-size: 14px;text-decoration: none;}
+		.member-service a:hover{color: #fff;}
+        
+    </style>
+</head>
+
+<body>
+    <div class="indexTop">
+        <div class="container">
+            <!-- 登录条 -->
+            <div class="row indexTop-main">
+                <div class="col-lg-6 col-md-6 col-sm-6 userHead-logo">
+                	<!--<img src="/saasBeta/yanbao/images/newLogo.png">-->
+                	
+                </div>
+                 <div class="indexTop-user"></div>
+                <!--<div class="member-service"><a href="memberRecord.html">会员服务</a></div>-->
+                <div class="clearfix"></div>
+            </div>
+            <div class="align-middle">i
+                <!-- 搜索 -->
+                <div class="row indexTop-form">
+                	<div class="col-lg-12 col-md-12 col-sm-12 indexTop-bg"></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 indexTop-input">
+                    	<!--<div class="top-yanbao">
+                    		<span class="top-img"></span>
+                    	</div>-->
+                    	
+                        <div class="index-search">
+                        	<div class="qiehuan" id="tableList">
+                               <span class="on">新三板</span>
+                               <span> A 股  </span>
+                               <div class="clearfix"></div>
+                          </div>
+                        	<div class="index-searches" id="old">
+                        		<em class="sy-fdj"></em>
+                        		<input type="text" placeholder="输入股票名称/代码" id="searchInp">
+                        		<ul class="index-his-search" style="display: none;" id="sbHis">
+                        			<!--<li><span>历史搜索</span><b class="clear-icon"></b></li>
+                        			<li><span>4545</span></li>
+                        			<li><span>4545</span></li>
+                        			<li><span>4545</span></li>-->
+                        		</ul>
+                        	</div>
+							<div class="index-searches" id="new" style="display: none;">
+                        		<em class="sy-fdj"></em>
+                        		<input type="text" placeholder="输入股票名称/代码" id="newSearchInp">
+                        		<ul class="index-his-search" style="display: none;" id="Ahis">
+                        			<!--<li><span>历史搜索</span><b class="clear-icon"></b></li>
+                        			<li><span>4545</span></li>
+                        			<li><span>4545</span></li>
+                        			<li><span>4545</span></li>-->
+                        		</ul>
+                        	</div>
+                        	<div class="hot-link new-links">
+	                        	<div class="rs">热搜</div>
+	                        	<div class="hot-links">
+	                        		<!--<span>1212</span>
+	                        		<span>eret</span>-->
+	                        	</div>
+	                        	<div class="clearfix"></div>
+	                        </div> 
+                        </div>
+                 
+                        
+                        <!--<div class="hot-searches"><span class="rs-name1 on">热门研报</span><em class="shuxian" style="display: none;"> | </em><span class="rs-name2" data-type="notClick" style="display: none;">最近浏览</span></div>-->
+                    </div>
+                    
+                </div>
+                <!-- swiper -->
+                <!--<div class="swiper-layout" id="hotYb">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" id="hotData">
+                            <div class="swiper-slide"><a href="">
+                            <div class="cover-logo"><img src="/saasBeta/yanbao/images/logo-loginReg2.png" draggable="false"><img src="/saasBeta/yanbao/images/cover-slogan.png" alt=""></div>
+                            <div class="cover-title"><span>启明星辰（123133）</span>智能研报</div>
+                            <div class="cover-link"><span>查看报告</span></div>
+                            </a></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                
+                <div class="swiper-layout" id="hisYb" style="display: none;">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" id="hisData"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>-->
+            </div>
+        </div>
+        <div class="indexBg"><img src="/saasBeta/yanbao/images/indexTop-banner.jpg"></div>
+        <div class="indexCanvas">
+            <canvas class="canvas"></canvas>
+        </div>
+        <!--<div class="to-next-page">
+        	<img src="/saasBeta/yanbao/images/to-nextpage.png" />
+        </div>-->
+    </div>
+    <!-- <div class="container indexHot">
+        <h2>热 搜</h2>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="indexDataHtml">
+
+            </div>
+            Add Pagination
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div> -->
+    <div class="homeswp">
+        <div class="swpTop">
+            <div class="container">
+                <div class="row">
+                    <div class="swpLeft">
+                        <div class="xsbImg"></div>
+                        <div class="xsbText">
+                            <p>新三版智能研报包括公司的工商信息、挂牌信息、行情、股权关系、投融、财务、经营、主营业务分析、行业分析、财务预测、风险分析等20多个维度数据内容。</p>
+                        </div>
+                    </div>
+                    <div class="oldSwiper">
+                    	<div class="swiper-contents">
+		                    <div class="swiper-container">
+								<div class="swiper-wrapper" id="hotData">
+									<!--<div class="swiper-slide">
+										<div class="newYb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="newYb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="newYb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>-->
+									<!--id="indexDataHtml"-->
+			
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+                   	</div>
+                   	<div class="clearfix"></div>
+                </div>
+            </div>    
+        </div>
+        <div class="swpBtm">
+            <div class="container">
+                <div class="row">
+                    <div class="swpLeft">
+                    	<div class="swiper-contents">
+	                       <div class="swiper-container">
+								<div class="swiper-wrapper" id="AhotData">
+									<!--<div class="swiper-slide">
+										<div class="newYb sbyb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<p class="index-dq"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="newYb sbyb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="newYb sbyb">
+											<div class="indexTitle-top"><h3>中科软(430002)</h3></div>
+											<p class="bg-yb"><img src="/saasBeta/yanbao/images/oldSwiper.png" alt="" /></p>
+											<p class="index-hy"><span>软件开发</span></p>
+											<div class="open-read">打开阅读</div>
+										</div>
+									</div>-->
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+                    </div>
+                    <div class="swpRig">
+                        <div class="znImg"></div>
+                        <div class="znText">
+                            <p>A股智能研报包括公司的公司信息、股权结构、行情、大宗交易、人员情况、重大事件、风险信息、公司财务分析、机构评级等多维度的分析。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index-bg">
+    	<div class="bg-wrap">
+    		<div class="bg-1 bg"></div>
+    		<div class="bg-2 bg"></div>
+    	</div>
+	    <div class="index-cpjs">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-12 col-md-12 col-sm-12 index-list">
+	                    <h2>产品功能介绍</h2>
+	                    <ul>
+	                        <li><em class="qmgc"></em>
+	                            <h3>全面洞察</h3>快速理清上万家公司，<br>涵盖工商／财务／股权等</li>
+	                        <li><em class="sjjz"></em>
+	                            <h3>数据精准</h3>智能筛除“垃圾”数据，<br>动态展示精准信息</li>
+	                        <li><em class="yjhq"></em>
+	                            <h3>一键获取</h3>PC端／手机端一键查阅，<br>随时收藏分享，协作更方便</li>
+	                        <li><em class="mfsy"></em>
+	                            <h3>免费使用</h3>免费查看公司研报，<br>更多高级功能敬请期待</li>
+	                    </ul>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-lg-12 col-md-12 col-sm-12">
+	                <div class="yk-tx tx-group">
+	                    <h4>游客特享</h4>
+	                    <div class="tx"><span class="tx01"></span>热搜企业智能研报免费查</div>
+	                </div>
+	                <div class="hy-tx tx-group">
+	                    <h4>会员特享</h4>
+	                    <div class="tx-link"><a href="reg.html">升级会员</a></div>
+	                    <div class="clear">
+	                        <div class="tx"><span class="tx02"></span>智能研报高级内容查看</div>
+	                        <div class="tx"><span class="tx03"></span>每天10家企业报告下载</div>
+	                        <div class="tx"><span class="tx04"></span>投研平台试用名额</div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+    <div class="bg-blue footerMenu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <dl>
+                        <dt>帮助</dt>
+                        <dd><a href="guide.html#produce">产品介绍</a></dd>
+                        <dd><a href="guide.html#use">使用方法</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>相关服务</dt>
+                        <dd>微信应用<img src="/saasBeta/yanbao/images/ewm.jpg"></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>service@159jh.com</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-deepGray copyright">京ICP备11029652号</div>
+    
+    <script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/jquery-ui.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/swiper-3.4.2.min.js"></script>
+    <!-- <script src="/saasBeta/yanbao/js/plugin/nui.js"></script> -->
+    <!--<script src="/saasBeta/yanbao/js/jquery.jfMagnify.min.js"></script>-->
+    <script src="/saasBeta/yanbao/js/bus/banner.js"></script>
+    <script src="/saasBeta/yanbao/js/common/ver.js"></script>
+    <!-- 数据交互js -->
+    <!-- <script src="/saasBeta/yanbao/js/common/ajax.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js?ver=2.0.2"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js?ver=2.0.2"></script> -->
+    <!-- 业务js -->
+    <!-- <script src="/saasBeta/yanbao/js/bus/index.js?ver=2.0.2"></script> -->
+    <script>
+        ver(3);
+        //获取推荐数据
+
+//	  var swiper = new Swiper('.swiper-container', {
+//	  		  pagination: '.swiper-pagination',
+//		      effect: 'coverflow',
+//		      grabCursor: true,
+//		      centeredSlides: true,
+//		      slidesPerView: "auto",
+//		      grabCursor: true,
+//		      autoplayDisableOnInteraction:true,
+//		      autoplay : 2000,
+//			  speed:500,
+//			  loop: true,
+//			  observer: true,//修改swiper自己或子元素时，自动初始化swiper
+//			  observeParents: true,//修改swiper的父元素时，自动初始化swiper
+////		      loopedSlides :5,
+//		      coverflowEffect: {
+//		        rotate: 0,
+//				stretch: 120,
+//				depth: 150,
+//				modifier: 1,
+//				slideShadows: true
+//		      }
+//	    });
+
+	
+	
+	
+	
+        $(function () {
+            // $(".swiper-slide").mouseenter(function () {
+            //     var zoomDiv = $(this).find(".zoomDiv")
+            //     $(zoomDiv).show();
+            //     $(zoomDiv).text($(this).find('.cover-title').children('span').text())
+            // });
+            // $(".swiper-slide").mouseleave(function () {
+            //     var zoomDiv = $(this).find(".zoomDiv")
+            //     $(zoomDiv).hide();
+            // });
+            $(".swiper-slide").each(function () {
+                if ($(this).hasClass('hot')) {
+                    $(this).append('<div class="icon-hot"></div>')
+                }
+            })
+			 getuserinfo();
+//          UTIL.axs(UTIL.CONFIG.wwwhost + UTIL.CONFIG.findAppUser, {}, true, function (_data) {
+//              if (_data.retCode === "0000") {
+//                  logFoot();
+//                  var _sex = _data.retData.sex === "1" ? "男" : "女";
+//                  // localStorage.setItem('UU', _data.retData.UU);
+//                  localStorage.setItem('phone', _data.retData.mobile);//与登陆接口返回不同 phone
+//                  localStorage.setItem('userId', _data.retData.userId);
+//                  localStorage.setItem('signature', _data.retData.signature);
+//                  localStorage.setItem('qqName', _data.retData.qqname);//与登陆接口返回不同 qqName
+//                  // localStorage.setItem('weChatName', _data.retData.weChatName);//接口无返回
+//                  localStorage.setItem('weiBoName',_data.retData.weiboname);//与登陆接口返回不同 weiBoName
+//                  localStorage.setItem('headImg', _data.retData.thumb ? _data.retData.thumb : '');
+//                  localStorage.setItem('userName', _data.retData.userName ? _data.retData.userName : '');
+//                  localStorage.setItem('nickName', _data.retData.nickName ? _data.retData.nickName : '');
+//                  localStorage.setItem('sex', _sex);
+//                  localStorage.setItem('wechatNumber', _data.retData.wechatNumber ? _data.retData.wechatNumber : '');
+//                  localStorage.setItem('company', _data.retData.company ? _data.retData.company : '');
+//                  localStorage.setItem('position', _data.retData.position ? _data.retData.position : '');
+//                  localStorage.setItem('region', _data.retData.region ? _data.retData.region : '');
+//                  localStorage.setItem('focusarea', _data.retData.focusarea ? _data.retData.focusarea : '');
+//                  // $("#myfocusdata").attr("href", "myFocus.html?focusArea=" + focusarea);
+//                  //console.log(password)
+//                  getuserinfo();
+//              }
+//          });
+            if (localStorage["userName"] || localStorage["headImg"] || localStorage["phone"])
+                $(".tx-link").html("");
+
+
+       })
+
+        $("#tableList").on("click","span",function(){
+        	$(this).addClass('on').siblings().removeClass('on');
+        	var text=$(this).text();
+        	if(text=="新三板"){
+        		$("#old").show();
+        		$("#new").hide();
+        		$(".new-links").show();
+        		localStorage.setItem("input","old");
+        	}else if(text==" A 股  "){
+        		$("#old").hide();
+        		$("#new").show();
+        		$(".new-links").hide();
+        		localStorage.setItem("input","new");
+        	}
+        })
+       
+    </script>
+    
+</body>
+
+</html>

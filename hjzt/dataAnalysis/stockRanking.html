@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8">
+<title>股票排行</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+<link rel="stylesheet" type="text/css" href="/saasBeta/css/wxl-new-styles.css" />
+<!-- 自动补全样式 -->
+<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+
+<!--新模型的改版js-->
+<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+<script src="/saasBeta/js/jquery.min.js"></script>
+<script type="text/javascript" src="/saasBeta/js/echarts.min.js"></script>
+<!-- 自动补全 -->
+<script src="/saasBeta/js/jquery-ui.min.js"></script>
+<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+
+	
+
+</head>
+
+<body>
+	<!--header  star-->
+	<!--侧导航 star-->
+
+	<!--侧导航 end-->
+	<!--主体 star-->
+	<div class="right_main new_r_main">
+		<!--main  star-->
+		<div class="r_content">
+			<div class="content_main">
+				<div class="top">
+					<span><i></i>股票排行</span>
+				</div>
+				<div class="clr"></div>
+				<div class="left_content">
+					<div class="list_top" id="serach_left" >
+						<p>行业分类</p>
+						<input type="text" placeholder="请输入行业名称" id="inputTradeName"/>
+						<i></i>
+					</div>
+					<div class="list_content">
+						<div class="work_list" id="workBookList">
+							<ul>
+								<!--<li><a href="#">白色家电</a></li>
+								<li><a href="#">半导体及元件</a></li>
+								<li><a href="#">保险及其他</a></li>
+								<li><a href="#">包装印刷</a></li>
+								<li><a href="#">采掘服务</a></li>
+								<li><a href="#">传媒</a></li>
+								<li><a href="#">电力</a></li>
+								<li><a href="#">电子设备</a></li>
+								<li><a href="#">房地产开发</a></li>
+								<li><a href="#">纺织制造</a></li>
+								<li><a href="#">采掘服务</a></li>
+								<li><a href="#">传媒</a></li>
+								<li><a href="#">电力</a></li>
+								<li><a href="#">电子设备</a></li>
+								<li><a href="#">房地产开发</a></li>
+								<li><a href="#">纺织制造</a></li>
+								<li><a href="#">采掘服务</a></li>
+								<li><a href="#">传媒</a></li>
+								<li><a href="#">电力</a></li>
+								<li><a href="#">电子设备</a></li>
+								<li><a href="#">房地产开发</a></li>
+								<li><a href="#">纺织制造</a></li>-->
+							</ul>
+						</div>	
+						<p id="moreTrade">点击加载更多...</p>
+					</div>
+				</div>
+				<div class="right_content">
+					<div class="right_top" id="right_top">
+						<ul>
+							<li>公司数量: <span id="companiesNum"></span>家</li>
+							<li>做市转让:<span id="marketMakingTransfer"></span>家</li>
+							<div class="clr"></div>
+						</ul>
+						<ul>
+							<li>涨跌幅:<span id="priceChangeRatio"></span></li>
+							<li style="font-size: 14px;">涨:<span id="upNum"></span>家</li>
+							<li>跌:<span id="downNum"></span>家</li>
+							<li >领涨:<span id="upStockName" style="cursor: pointer;"></span></li>
+							<li style="font-size: 14px;">领跌:<span id="downStockName" style="cursor: pointer;"></span></li>
+							<div class="clr"></div>
+						</ul>
+						<ul>
+							<li>总市值: <span id="totalValue"></span>万元</li>
+							<li>成交量: <span id="tradingVolume"></span>万股</li>
+							<div class="clr"></div>
+						</ul>
+						<ul>
+							<li>成交额: <span id="transactionVolume"></span>万元</li>
+							<div class="clr"></div>
+						</ul>
+							<div class="clr"></div>
+					</div>
+					<div class="industry"  id="dataTime">
+						<p>行业地位</p>
+						<a href="javascript:void(0);">2016</a>
+						<a href="javascript:void(0);">2015</a>
+						<a href="javascript:void(0);">2014</a>
+						<a href="javascript:void(0);" style="display: none">2013</a>
+						<a href="javascript:void(0);" style="display: none">2012</a>
+						<a href="javascript:void(0);">全部</a>
+					</div>
+					<div class="industry_top">
+						<div class="hy_search">
+							<i class="hy_icon"></i>
+							<!--<i class="hy_colse" id="hy_colse"></i>-->
+							<input type="text" placeholder="输入股票代码或公司简称，按回车确认" id="inputStockCode" class="inputStockCode"/>
+						</div>
+						<div class="list" id="list">
+						<div class="select_box gree stock_ranking">
+							<div class="selectBox">
+							<p>请选择指标</p>
+							<ul id="indicatorName">
+								 <!--<li>每股收益</li>
+								<li>每股净资产</li>
+								<li>每股现金流</li>
+								<li>净利润</li>
+								<li>营业收入</li>
+								<li>总资产</li>
+								<li>净资产收益率</li>
+								<li>股东权益比率</li>
+								<li>销售毛利率</li>
+								<li>总股本</li>
+								<li>涨跌幅</li> -->
+							</ul>
+							</div>
+						</div>
+				
+							
+						</div>
+						<span class="go_up"><i></i><b>升序</b></span>
+					</div>
+					<div id="stockRanking" class="stock_rank"></div>
+					<!--<div class="contrast">
+						<div class="contrast_left nkt">
+							<span>对比分析</span>
+						</div>
+						<div class="contrast_right nkt">
+							<!-- <span>中新科技  (345789) <i>X</i></span>
+							<span>中新科技  (345789) <i>X</i></span>
+							<span>中新科技  (345789) <i>X</i></span> -->
+							<!--<a href="javascript:void(0);" id="contrastList_a">开始<br>对比</a>
+							<div class="contra_yc nkt">
+								<span>隐藏</span>
+							</div>
+						</div>
+	
+					</div>-->
+				</div>
+				
+				<div class="clr"></div>
+			</div>
+			<!-- <div class="tooltips">
+				<p>佳晓股份&nbsp;&nbsp;&nbsp;&nbsp;(830791)</p>
+				<p>涨跌幅&nbsp;5.67%</p>
+				<p>每股收益:&nbsp;0.27</p>
+				<p><a href="#">加入自选</a><a href="#">加入对比</a></p>
+				<div class="tip"></div>
+			</div> -->
+		</div>
+		<!--main  end-->
+	</div>
+
+	<!--主体 end-->
+
+		
+</body>
+	<script src="/saasBeta/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+	<script type="text/javascript" src="/saasBeta/js/stockRanking.js"></script>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<link rel="stylesheet" href="../../saasBeta/css/base.css">
+		<link rel="stylesheet" href="../../saasBeta/css/personalCenter/personalCenter.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/wl_searchlist.css" />
+		<!--上传头像样式文件-->
+		<link href="/saasBeta/upload/cropper_1.css" rel="stylesheet">
+		<script src="../../saasBeta/js/jquery.min.js"></script>
+		<script src="../saasBeta/js/index/header.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../saasBeta/js/common.js"></script>
+		<script src="../../saasBeta/yanbao/js/plugin/md5.min.js"></script>
+		<script src="../../saasBeta/js/personalCenter/personalCenter.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/personalCenter/personalAlbum.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<!--alert插件-->
+		<link href="/saasBeta/js/industry/css/xcConfirm_psn.css" rel="stylesheet">
+		<link rel="stylesheet" href="/saasBeta/js/keep/css/bcConfirm.css">
+   		<script src="/saasBeta/js/keep/js/bcConfirm.js"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="per-left fl">
+				<ul>
+					<li class="personal active" name="right-person" data="1"><b class="active"></b>个人中心</li>
+					<li class="collect" name="right-collect" data="2"><b class=""></b>我的收藏</li>
+					<li class="password" name="right-password" data="3"><b class=""></b>修改密码</li>
+					<li class="blog" name="right-blog"><b class="" data="4"></b>操作日志</li>
+				</ul>
+			</div>
+			<div class="right fr">
+				<div class="right-person fl 1">
+					<div class="tou">
+						<div>头像</div>
+						<div>
+							<a><img src="../../saasBeta/images/Image/per-tou.jpg" class="tou"></a>
+							<span>选择一张个人正面照作为头像，让其他成员更容易认识你。</span>
+							<button class="button_special fr reset-tou">修改头像</button>
+						</div>
+					</div>
+					<div class="message">
+						<div>基本信息</div>
+						<div class="moren">
+							<ul class="fl">
+								<li class="user-name">用户名：</li>
+								<li class="tel">联系电话：</li>
+								<li class="email">邮箱地址：</li>
+							</ul>
+							<ul class="fl">
+								<li class="dq">所在地区：</li>
+								<li class="zw">公司职务：</li>
+								<li class="company">所在企业：</li>
+							</ul>
+							<button class="button_special fr bj-btn">编辑资料</button>
+						</div>
+						<div class="bianji1 hide">
+							<ul class="fl">
+								<li class="user-name1"><label>用户名：</label><input type="text"></li>
+								<li class="tel1"><label for="">联系电话：</label><input type="text" readonly></li>
+								<li class="email1"><label for="">邮箱地址：</label><input type="text"></li>
+							</ul>
+							<ul class="fl">
+								<li class="dq1"><label for="">所在地区：</label><input type="text"></li>
+								<li class="zw1"><label for="">公司职务：</label><input type="text"></li>
+								<li class="company1"><label for="">所在企业：</label><input type="text"></li>
+							</ul>
+							<button class="button_com fr quxiao">取消</button>
+							<button class="button_special fr save">保存</button>
+						</div>
+					</div>
+					<div class="message login" style="display:none;">
+						<div>第三方登录</div>
+						<div>
+							<ul class="fl">
+								<li class="wx">微信：未绑定</li>
+								<li class="wb">微博：未绑定</li>
+								<li class="qq">QQ：未绑定</li>
+							</ul>
+							<div class="fr">
+								<button class="button_com">重新绑定</button><br>
+								<button class="button_special">立即绑定</button><br>
+								<button class="button_com">重新绑定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="right-collect hide 2">
+					<ul class="clearfix" style="border-bottom:1px solid #E4E4E4">
+						<li class="active" name="company">公司</li>
+						<li name="album">专辑</li>
+						<li name="agency">中介</li>
+						<li name="invest">投资人</li>
+						<li name="industry">行业</li>
+					</ul>
+					<div>
+						<div id="company" class="">
+							<!-- <div class="col-box clearfix">
+                        <ul class="fl">
+                            <li>大地生物（833662）</li>
+                            <li>汽车交通>汽车后服务</li>
+                            <li>向以银行为主的金融机构提供IT解决方案、咨询</li>
+                        </ul>
+                        <button class="button_com fr">取消收藏</button>
+                    </div> -->
+						</div>
+						<div id="album" class="hide">
+							<ul class="specialData" id="specialData">
+
+								<li class="clearfix">
+									<div class="fl c_logo">
+										<a href="#">
+											<img src="../../saasBeta/images/gs_logo.png" alt="" />
+										</a>
+									</div>
+									<div class="fl company_profile">
+										<a href="#">天星资本新淡斑投资事件（264）</a>
+										<span>天星资本在新三板频繁出手，活跃在新三板公司的大股东名单中，看天星的投资动向，以及底层...</span>
+									</div>
+									<button class="button_com fr">取消关注</button>
+								</li>
+							</ul>
+						</div>
+						<div id="agency" class="hide">
+							<ul id="institutionsData">
+								<li class="clearfix">
+									<div class="fl zj_logo clearfix">
+										<span class="fl">
+										<img src="../../saasBeta/images/gs_2.png" alt="" />
+									</span>
+										<div class="fl jigou_types">
+											<a href="#">广州证券</a>
+											<span>广州>主办券商</span>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="fl zj_gpshu">
+										<span>挂牌公司数</span>
+										<em class="shuzi">13</em>
+									</div>
+									<div class="fl zj_faxing">
+										<span>推荐定向发行</span>
+										<div class="cishu">
+											<span>成功：<em>155</em>次</span>
+											<span>失败：<em>1</em>次</span>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<div class="fl c_service">
+										<span>最新服务的公司</span>
+										<div class="t_service clearfix">
+											<em>2016-9-12</em>
+											<span>瑞达生物(832948)</span>
+											<b>定增</b>
+											<div class="clr"></div>
+										</div>
+									</div>
+									<button class="fr button_com">取消关注</button>
+									<p class="line"></p>
+								</li>
+							</ul>
+						</div>
+						<!--<div id="invest" class="hide">-->
+						<!--<div class="col-box clearfix">-->
+						<!--投资人-->
+						<!--</div>-->
+						<!--</div>-->
+
+						<div id="invest" class="hide">
+							<ul id="investorData">
+								<li class="clearfix">
+									<div class="fl zj_logo clearfix">
+										<span class="fl">
+							   <img src="../images/Image/per-tou.jpg" alt="" />
+							</span>
+										<div class="fl jigou_types">
+											<a href=" ">广州证券</a>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="fl zj_gpshu">
+										<span>投资时间总数</span>
+										<em class="shuzi">1</em>
+									</div>
+									<div class="fl zj_faxing">
+										<span>投资总金额</span>
+										<div class="cishu">
+											<span>30.00万</span>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+									<div class="fl c_service">
+										<span>最新投资事件</span>
+										<div class="t_service">
+											<em>2016-9-12</em>
+											<span>智新电子(837212)</span>
+											<i>30.00万</i>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+									<button class="fr button_com">取消关注</button>
+									<p class="line"></p>
+								</li>
+							</ul>
+						</div>
+
+						<div id="industry" class="hide hyConfirm">
+							<div class="popBox">
+								<div class="txtBox clear" id="hylist">
+									<!--<span class="industry" title="农、林、牧、渔业" hover-url="http://picweb.159jh.com/saas/icon/A.png" gray-url="http://picweb.159jh.com/saas/gray_icon/A.png"><img src="http://picweb.159jh.com/saas/gray_icon/A.png">
+										<span class="indust_text" data-id="12064" style="left: 0px;">农、林、牧、渔业</span>
+									</span>-->
+								</div>
+								<div class="ttBoxa"><span class="tta">来研料汇金的目的</span></div>
+								<div class="txtBoxa clear" id="mdlist">
+									<!--<span class="objective" data-id="4360" data-code="找投资">找投资</span>-->
+								</div>
+								<div class="btnArea">
+									<a class="sgBtn ok click" id="savehymd">确定</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="right-password hide 3">
+					<div class="pwd-title">
+						<p>修改密码</p>
+					</div>
+					<div class="form">
+						<div class="old-box">
+							<label>当前密码</label>
+							<input type="password" class="input old-pwd">
+							<div class="false-box">
+								<!--<b class="pwd-false"></b><span>密码不正确</span>-->
+							</div>
+							<b class="pwd-true hide2"></b>
+						</div>
+						<div class="new-box">
+							<label>新密码</label>
+							<input type="password" class="input new-pwd">
+							<div class="false-box"></div>
+							<b class="pwd-true hide2"></b>
+						</div>
+						<div class="sure-box">
+							<label>重复新密码</label>
+							<input type="password" class="input sure-pwd">
+							<div class="false-box"></div>
+							<b class="pwd-true hide2"></b>
+						</div>
+						<button class="button_special save-pwd" id="savePawss">保存</button>
+					</div>
+				</div>
+
+				<div class="right-blog hide 4">
+					<div class="blog-title">
+						<p>操作日志</p>
+					</div>
+					<div id="myLog">
+						<!-- <div class="blog-box clear">
+							<span class="fl">编辑《天阳科技智能研报》</span>
+							<span class="fr">2017-11-11 11:11:11</span>
+						</div> -->
+
+					</div>
+					<div class="list_more">
+						<span id="userLog">加载更多</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/saasBeta/upload/cropbox.js"></script>
+		<div class="tou-box">
+			<div class="uptouxia">
+				<div class="up_colse" id="btnZoomOut">
+					<span></span>
+				</div>
+				<div class="up_touxiang_title">
+					<span>修改头像</span>
+				</div>
+				<div class="container">
+					<div class="imageBox">
+						<div class="thumbBox"></div>
+						<div class="spinner" style="display: none"></div>
+						<div class="zhezhao">
+							<div class="fk1">
+								<p class="top-icon"></p>
+								<p class="bottom-icon"></p>
+							</div>
+							<div class="fk2">
+								<p class="left-icon"></p>
+								<p class="right-icon"></p>
+							</div>
+						</div>
+					</div>
+					<div class="cropped">
+						<img src="../../saasBeta/images/Image/small-tou.png" align="absmiddle" style="width:120px;margin-top:0px;" />
+						<div>头像预览</div>
+					</div>
+				</div>
+				<div class="action">
+					<div class="new-contentarea">
+						<a href="javascript:void(0)" class="upload-img">
+							<label for="upload-file">重新上传</label>
+							<div>（<span class="xing">*</span>支持jpg、png格式，文件大小200k以内）</div>
+						</a>
+						<input type="file" class="" name="upload-file" id="upload-file" />
+					</div>
+
+				</div>
+				<div class="up_tx_btn">
+					<div class="up_tx_true fl">
+						<input type="button" class="Btnsty_peyton" id="btnCrop" value="保存">
+					</div>
+					<div class="up_tx_qux fl">
+						<a href="javascript:;" id="quxiao_btn">取消</a>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/saasBeta/upload/uptouxiang_1.js"></script>
+	</body>
+
+</html>

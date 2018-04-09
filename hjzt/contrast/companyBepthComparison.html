@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>公司对比| 汇金智投：投融资大数据服务云平台</title>
+		<meta name="keywords" content="新三板，SaaS投研，金融分析工具，大数据，大数据分析，金融大数据，新三板创新层，新三板基础层，做市指数，协议成交指数查询，
+新三板挂牌，新三板市场，新三板行情，新三板研究，新三板股票，新三板交易，新三板定增，新三板券商，新三板做市，新三板协议">
+		<meta name="description" content="汇金智投以“数字科学，创造财富”为主旨，围绕金融数据价值挖掘、数据推动决策、数据提升运营效率搭建业务运营体系，为用户提供以资源精准匹配为基础的应用服务。">
+
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/contrastCss/newComparison.css" />
+
+
+		<!--新模型的改版js-->
+		<!--<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>-->
+
+		<!--验证登录表单-->
+		<!-- 自动补全样式 -->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<!--<script type="text/javascript" src="/saasBeta/js/swiper.animate1.0.2.min.js"></script>-->
+		<script type="text/javascript" src="/saasBeta/js/jquery.validate.min.js"></script>
+		
+		<script src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+
+		<!--<script src="/saasBeta/js/newfooter.js"></script>-->
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/echarts.min.js"></script>
+		<script src="https://cdn.bootcss.com/Swiper/3.4.1/js/swiper.js"></script>
+	
+	</head>
+
+	<body>
+		<div class="company_center">
+			<!--新的对比的输入框-->
+			<!-- <div class="gongg_title">
+				<div class="comparis_newserach">
+					<i class="new_search_icon"></i>
+					<div class="yixuan_gs">
+						<span>天阳科技（<em>768965</em>）;</span>
+						<div class="deleted_select" style="display: none;">
+							<span class="sc_tips">删除</span>
+						</div>
+					</div>
+					<div class="yixuan_gs">
+						<span>天阳科技（<em>768965</em>）;</span>
+						<div class="deleted_select" style="display: none;">
+							<span class="sc_tips">删除</span>
+						</div>
+					</div>
+					<div class="yixuan_gs">
+						<span>天阳科技（<em>768965</em>）;</span>
+						<div class="deleted_select" style="display: none;">
+							<span class="sc_tips">删除</span>
+						</div>
+					</div>
+					<div class="news_search fl">
+						<input type="text" class="js_search" id="newSearchers"/>
+					</div>
+					
+					<div class="clr"></div>
+				</div>
+			</div> -->
+			<!--新的对比的输入框-->
+			
+			
+			<div class="comparison_nav">
+				<b>对比工具></b>
+				<span>公司对比</span>
+			</div>
+			<!-- <div class="gongg_title">
+				<div class="public_header">
+					<span>天阳科技（<em>768965</em>）<i></i></span>
+					<span>天阳科技（<em>768965</em>）<i></i></span>
+					<span>天阳科技（<em>768965</em>）<i></i></span>
+					<span>天阳科技（<em>768965</em>）<i></i></span>
+					<input type="text" id="searchCode" class="duibi_search" placeholder="请输入公司名称和股票代码"></input>
+					<div class="clr"></div>
+				</div>
+			</div> -->
+			<div class="gongg_title">
+				<div class="comparis_newserach">
+					<i class="new_search_icon"></i>
+					<!--<div class="yixuan_gs">
+						<span>天阳科技（<em>768965</em>）</span>
+						<i class="xuanze_shanchu"></i>
+						<div class="deleted_select" style="display: none;">
+							<span class="sc_tips">删除</span>
+						</div>
+					</div> -->
+					<div class="news_search fl">
+						<input type="text" class="js_search" id="newSearchers"/>
+					</div>
+					
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="company_comparis_ct">
+				<div class="duibi_top">
+					<span>公司对比</span>
+					<div class="r_dui fr">
+						<a href="/contrast/comprehensive.html" class="shenru">深度对比</a>
+						<!-- <a href="javascript:viod(0)" class="daochu">导出数据</a> -->
+					</div>
+				</div>
+				<div class="db_contents">
+					<div class="jichu_infor">
+						<div class="com_titles">
+							<h2>基础信息对比</h2>
+						</div>
+						<div class="jc_infor">
+							<div class="f_bg companies_inform">
+								<div class="t_left">
+									<div class="left_top">
+										<table>
+											<tr>
+												<th>公司简称</th>
+											</tr>
+										</table>
+									</div>
+									<div class="cl_freeze">
+										<table id="zbmcTable">
+											<!-- <tr>
+												<td>
+													<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+												</td>
+											</tr> -->
+										</table>
+									</div>
+								</div>
+								<div class="t_r com_r_company">
+									<table>
+										<thead id="dataTHead">
+											<tr>
+												<th>成立时间</th>
+												<th>上市时间<b>（挂牌时间）</b></th>
+												<th>所属板块</th>
+												<th>所属行业</th>
+												<th>注册地</th>
+												<th>注册资本<b>（万元）</b></th>
+												<th>总股本<b>（万股）</b></th>
+												<th>法人</th>
+												<th>从业人数</th>
+												<th>管理人数</th>
+												<th>律师事务所</th>
+												<th>会计事务所</th>
+											</tr>
+										</thead>
+
+										<tbody id="dataTbody">
+											<!-- <tr>
+												<td>2017-08-12</td>
+												<td>2008-02-56</td>
+												<td>新三板</td>
+												<td>北京</td>
+												<td>2819,36</td>
+												<td>9.36</td>
+												<td>李梅</td>
+												<td>23</td>
+												<td>20</td>
+												<td>证卷管理</td>
+												<td>证卷管理</td>
+											</tr> -->
+										</tbody>
+									</table>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</div>
+					<!--可视化分析-->
+					<div class="jichu_infor keshi_num">
+						<div class="com_titles">
+							<h2>可视化分析</h2>
+						</div>
+						<div class="comparis_company_types">
+							<!--公司规模对比-->
+							<div class="fl company_size_comparison l_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">公司规模对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outScaleData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="1" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="1" ></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="companySizeHead">
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r com_r_company">
+											<table>
+												<thead>
+													<tr>
+														<th>从业人员</th>
+														<th>营业收入<b>（万元）</b></th>
+														<th>资产总额<b>（万元）</b></th>
+													</tr>
+												</thead>
+												<tbody name="companySizeTBody" >
+													<!-- <tr>
+														<td>23</td>
+														<td>2819,36</td>
+														<td>2819,36</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux1"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="companySizeUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<!--融资信息对比-->
+							<div class="fl company_size_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">融资信息对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outFinancingData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="2" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="2"></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="financingHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r rongz_infor">
+											<table>
+												<thead>
+													<tr>
+														<th>融资方式</th>
+														<th>时间</th>
+														<th>募集资金</th>
+														<th>发行价</th>
+														<th>发行数量</th>
+														<th>发行对象</th>
+													</tr>
+												</thead>
+												<tbody name="financingBody" >
+													<!-- <tr>
+														<td>定增</td>
+														<td>2017-02-17</td>
+														<td>56</td>
+														<td><span class="gs_tzf">天阳科技</span></td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux2"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="financingUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<!--经营信息对比-->
+							<div class="fl company_size_comparison l_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">经营信息对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outProductData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="3" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="3"></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content jingying_information">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="productHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r com_r_company">
+											<table>
+												<thead>
+													<tr>
+														<th>产品构成</th>
+														<th>金额</th>
+														<th>比例占比</th>														
+													</tr>
+												</thead>
+												<tbody name="productBody" >
+													<!-- <tr>														
+														<td>金融、林业</td>
+														<td>500,88</td>
+														<td>20</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux3"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="productUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<!--公司市值对比-->
+							<div class="fl company_size_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">公司市值对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outMarketData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="4" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="4"></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="marketHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r com_r_company">
+											<table>
+												<thead>
+													<tr>
+														<th>市盈率</th>
+														<th>市净率</th>
+														<th>总市值（亿）</th>
+														<th>流通市值（亿）</th>														
+													</tr>
+												</thead>
+												<tbody name="marketBody" >
+													<!-- <tr>														
+														<td>0</td>
+														<td>20</td>
+														<td>56</td>
+														<td>20</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux4"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="marketUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<!--核心数据对比-->
+							<div class="fl company_size_comparison l_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">核心数据对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outCoreDataData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="5" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="5"></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="coreHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r rongz_infor">
+											<table>
+												<thead>
+													<tr>
+														<th>营业收入（万元）</th>
+														<th>净利润（万元）</th>
+														<th>净资产（万元）</th>
+														<th>总资产报酬率（ROA）%</th>
+														<th>净资产收益率（ROE）%</th>
+														<th>资产负债率%</th>
+													</tr>
+												</thead>
+												<tbody name="coreBody" >
+													<!-- <tr>
+														<td>560,56</td>
+														<td>560,56</td>
+														<td>560,56</td>
+														<td>2.00</td>
+														<td>0.03</td>
+														<td>600</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux5"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="coreUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<!--风险信息对比-->
+							<div class="fl company_size_comparison">
+								<div class="comparison_tiltes">
+									<span class="comparison_name">风险信息对比</span>
+									<div class="fr comparison_icon">
+<!-- 										<em title="加入我的研究"></em> -->
+										<div class="duibi_daochu">
+											<i class="daochu_icon"></i>
+											<ul class="daochu_xiala" style="display: none;">
+												<li name="outExcel" data-interface="outRiskData" >
+													<a href="javascript:void(0);">导出EXCEL</a>
+												</li>
+												<li name="outPic" data-num="6" >
+													<a href="javascript:void(0);">导出图片</a>
+												</li>
+											</ul>
+										</div>
+										<b title="全屏" data-num="6"></b>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_types">
+									<span class="comparison_tub on">图表</span>
+									<span class="comparison_shuj">数据</span>
+									<div class="clr"></div>
+								</div>
+								<div class="comparison_content">
+									<!--表格的数据-->
+									<div class="f_bg comparison_information" style="display: none;">
+										<div class="t_left">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="riskHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r">
+											<table>
+												<thead>
+													<tr>
+														<th>经营异常</th>
+														<th>行政处罚</th>
+														<th>严重违纪</th>
+													</tr>
+												</thead>
+												<tbody class="yichang_tc_type" name="riskBody" >
+													<!-- <tr>
+														<td><span class="yichang_jy">1</span></td>
+														<td><span class="chufa">5</span></td>
+														<td><span class="weiji">0</span></td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="guimo_duibi" id="duibi_tux6"></div>
+								</div>
+								<div class="comparison_times">
+									<span>更新时间：<em id="riskUpdateTime" >--</em></span>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--全屏显示的图表-->
+			<!--轮播图的弹窗-->
+			<div class="backbj1" style="display: none;"></div>
+			<!--查看投资方的背景框-->
+			<div class="backbj" style="display: none;"></div>
+				<div class="swiper swiper-container swiper-no-swiping"  style="display: none;">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>公司规模对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb1"></div>
+								<!--表格数据-->
+								<div class="slide_shuj">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="companySizeHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>从业人员</th>
+														<th>营业收入<b>（万元）</b></th>
+														<th>资产总额<b>（万元）</b></th>
+													</tr>
+												</thead>
+												<tbody name="companySizeTBody" >
+													<!-- <tr>
+														<td>23</td>
+														<td>2819,36</td>
+														<td>2819,36</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--融资信息对比-->
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>融资信息对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb2"></div>
+								<!--表格数据-->
+								<div class="slide_shuj">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="financingHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>融资方式</th>
+														<th>时间</th>
+														<th>募集资金（百万）</th>
+														<th>发行价（元）</th>
+														<th>发行数量（万股）</th>
+														<th>发行对象</th>
+													</tr>
+												</thead>
+												<tbody name="financingBody" >
+													<!-- <tr>
+														<td>2017-02-17</td>
+														<td>0</td>
+														<td>20</td>
+														<td>20</td>
+														<td>天阳科技</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>经营信息对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb3"></div>
+								<!--表格数据-->
+								<div class="slide_shuj jingying_quanping">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="productHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>产品构成</th>
+														<th>金额（万元）</th>
+														<th>比例占比</th>														
+													</tr>
+												</thead>
+												<tbody name="productBody" >
+													<!-- <tr>														
+														<td>金融、林业</td>
+														<td>500,88</td>
+														<td>20</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--公司市值对比-->
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>公司市值对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb4"></div>
+								<!--表格数据-->
+								<div class="slide_shuj">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="marketHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>市盈率</th>
+														<th>市净率</th>
+														<th>总市值（亿）</th>
+														<th>流通市值（亿）</th>														
+													</tr>
+												</thead>
+												<tbody name="marketBody" >
+													<!-- <tr>														
+														<td>0</td>
+														<td>20</td>
+														<td>56</td>
+														<td>20</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--核心数据对比-->
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>核心数据对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb5"></div>
+								<!--表格数据-->
+								<div class="slide_shuj">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="coreHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>营业收入（万元）</th>
+														<th>净利润（万元）</th>
+														<th>净资产（万元）</th>
+														<th>总资产报酬率（ROA）%</th>
+														<th>净资产收益率（ROE）%</th>
+														<th>资产负债率%</th>
+													</tr>
+												</thead>
+												<tbody name="coreBody" >
+													<!-- <tr>
+														<td>560,56</td>
+														<td>560,56</td>
+														<td>560,56</td>
+														<td>2.00</td>
+														<td>0.03</td>
+														<td>600</td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--风险信息对比-->
+						<div class="swiper-slide">
+							<div class="slide_guimo">
+								<div class="slide_titles">
+									<span>风险信息对比</span>
+									<i></i>
+								</div>
+								<div class="slide_tb1" id="slide_tb6"></div>
+								<!--表格数据-->
+								<div class="slide_shuj">
+									<div class="f_bg comparison_information">
+										<div class="t_left guimo_xinx">
+											<div class="left_top">
+												<table>
+													<tr>
+														<th>公司简称</th>
+													</tr>
+												</table>
+											</div>
+											<div class="cl_freeze">
+												<table name="riskHead" >
+													<!-- <tr>
+														<td>
+															<a href="javascript:viod(0);">天阳科技（<em>830002</em>）</a>
+														</td>
+													</tr> -->
+												</table>
+											</div>
+										</div>
+										<div class="t_r guimo_r">
+											<table>
+												<thead>
+													<tr>
+														<th>经营异常</th>
+														<th>行政处罚</th>
+														<th>严重违纪</th>
+													</tr>
+												</thead>
+												<tbody class="yichang_tc_type" name="riskBody" >
+													<!-- <tr>
+														<td>
+															<span>1</span>															
+														</td>
+														<td><span>5</span></td>
+														<td><span>0</span></td>
+													</tr> -->
+												</tbody>
+											</table>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				<!--</div>-->
+			</div>
+		<!--点击融资信息对比中的投资方弹窗-->	
+		<div class="ck_touzifang" style="display: none;">
+			<div class="gs_fx_infor">
+				<span id="tzrTCHead">--<em>（--）</em></span>
+				<i></i>
+			</div>
+			<div class="fenx_content">
+				<div class="fenx_inform information">
+					<table>
+						<thead>
+							<tr>
+								<th>认购数量（万股）</th>
+								<th>认购价（元/股）</th>
+								<th>认购总额（万元）</th>
+								<th>发行对象</th>
+							</tr>
+						</thead>
+						<tbody id="investorBody" >
+							<!-- <tr>
+								<td>30.00</td>
+								<td>17</td>
+								<td>510.00</td>
+								<td>滁州中安创投资基金合伙企业（有限公司）</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+				<div class="pages" id="pages pagination"></div>
+			</div>
+		</div>
+			
+		<!--查看风险信息的详细信息经营异常-->
+		<div class="fengxin_tc1" style="display: none;">
+			<div class="gs_fx_infor">
+				<span id="jyTitle" >---经营异常</span>
+				<i></i>
+			</div>
+			<div class="fenx_content">
+				<div class="yichang_wushuju" style="display: none">
+					<div class="wushuju_img"></div>
+					<p>暂无数据</p>
+				</div>
+				<ul id="ycBody" >
+					<!-- <li class="yichang_list">
+						<i class="list_yuandian"></i>
+						<ul>
+							<li>
+								<span>列入日期：<em class="lieru_times">2017-07-09</em></span>
+							</li>
+							<li>
+								<span>列入原因：<em>在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报年年度报告</em></span>
+							</li>
+							<li>
+								<span>决定机关：<em>朝阳区工商局</em></span>
+							</li>
+						</ul>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<!--查看风险信息的详细信息行政处罚-->
+		<div class="fengxin_tc2" style="display: none;">
+			<div class="gs_fx_infor">
+				<span id="xzTitle" >---行政处罚</span>
+				<i></i>
+			</div>
+			<div class="fenx_content">
+				<div class="yichang_wushuju" style="display: none">
+					<div class="wushuju_img"></div>
+					<p>暂无数据</p>
+				</div>
+				<ul id="xzBody" >
+					<!-- <li class="yichang_list">
+						<i class="list_yuandian"></i>
+						<ul>
+							<li>
+								<span>决定书文号：<em class="lieru_times">朝阳区工商局</em></span>
+							</li>
+							<li>
+								<span>类型：<em>朝阳区工商局</em></span>
+							</li>
+							<li>
+								<span>处罚内容：<em>朝阳区工商局</em></span>
+							</li>
+							<li>
+								<span>决定日期：<em class="lieru_times">2017-07-09</em></span>
+							</li>
+							<li>
+								<span>决定机关：<em>朝阳区工商局</em></span>
+							</li>
+							<li>
+								<span>列入原因：<em>在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报年年度报告</em></span>
+							</li>
+							<li>
+								<span>法人：<em>朝阳区工商局</em></span>
+							</li>
+							<li>
+								<span>法备注：<em>朝阳区工商局</em></span>
+							</li>
+						</ul>
+					</li> -->
+					
+				</ul>
+			</div>
+		</div>
+		<!--查看风险信息的详细信息行政处罚-->
+		<div class="fengxin_tc3" style="display: none;">
+			<div class="gs_fx_infor">
+				<span id="wjTitle" >---严重违纪</span>
+				<i></i>
+			</div>
+			<div class="fenx_content">
+				<div class="yichang_wushuju" style="display: none" >
+					<div class="wushuju_img"></div>
+					<p>暂无数据</p>
+				</div>
+				<ul id="wjBody" >
+					<!-- <li class="yichang_list">
+						<i class="list_yuandian"></i>
+						<ul>
+							<li>
+								<span>列入日期：<em class="lieru_times">2017-07-09</em></span>
+							</li>
+							<li>
+								<span>列入原因：<em>在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报送2016年年度报告在2017年6月30日前未按规定报年年度报告</em></span>
+							</li>
+							<li>
+								<span>决定机关：<em>朝阳区工商局</em></span>
+							</li>
+						</ul>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+//		var swiper = new Swiper('.swiper-container', {
+//	        pagination: '.swiper-pagination',
+//	        paginationClickable: true,
+//	        loop:true,
+////	        initialSlide:1,
+//	        prevButton:'.swiper-button-prev',
+//			nextButton:'.swiper-button-next'
+//	    });
+	</script>
+	<script type="text/javascript" src="/saasBeta/js/contrast/companyBepthComparison.js"></script>
+
+</html>

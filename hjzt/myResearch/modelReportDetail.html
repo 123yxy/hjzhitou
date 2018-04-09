@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>模型报告名称</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_project.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" href="/saasBeta/css/wxl-new-style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css">
+		<!-- 自动补全样式 -->
+		<link href="/saasBeta/css/jquery-ui.min.css" rel="stylesheet">
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<!-- 导出PDF -->
+		<script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/jspdf.debug.js"></script>
+        <script type="text/javascript" src="/saasBeta/js/util/htmlToPdf/html2canvas.js"></script>
+		<!-- 导出PDF -->
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script src="/saasBeta/js/common.js"></script>
+
+		 <script src="/saasBeta/js/enterpriseReport/modelReportDetailIndicatorExplain.js" type="text/javascript" charset="utf-8"></script> 
+		<script src="/saasBeta/js/enterpriseReport/modelReportDetail.js"></script>
+		
+	</head>
+
+	<body>
+		<!--确定的弹窗按钮-->
+		<div class="popup" style="display: none;" ></div>
+		<div class="sure" style="display: none;">
+			<div class="sure_pic">
+				<img src="/saasBeta/images/baocun.png" alt="">
+			</div>
+			<div class="sure_content">
+				<span class="baocun">已保存到</span>
+				<span class="sure_to">我的云盘-我的图表中</span>
+			</div>
+			<span class="sure_button">确  定</span>
+		</div>
+		<div class="baocun_tc" style="display: none">
+			<div class="mox_bc">
+				<span>保存报告</span>
+			</div>
+			<div class="baocun_sousuo">
+				<input type="text" id="baocunTitle" placeholder="请输入研究主题（最多50字）" maxlength="50"/>
+			</div>
+			<div class="gl_gupiao">
+				<div class="data-checkbox on">
+					<input type="checkbox"/>
+					<label class="checkbox"></label>
+					<label class="checkboxWord" id="guanliStock">关联股票</label>
+				</div>
+			</div>
+			<div class="baocun_btn" >
+				<span class="baoc" id="addModel">保存</span>
+				<span class="qux" id="noAddModel">取消</span>
+				<div class="clr"></div>
+			</div>
+		</div>
+		
+		<!--主体 star-->
+		<div class="right_main new_r_main">
+			<!--main  star-->
+			<div class="moxing_nav">
+				<div class="fl moxing_yindao">
+					<a href="/myResearch/researchReport.html">我的研究></a>
+					<!-- <a href="javascript:;">模型报告></a> -->
+					<a href="javascript:;" class="now">模型报告</a>
+				</div>
+				<div class="fr gongju">
+					<div class="mx_jisuan">
+						<span>模型计算器</span>
+					</div>
+					<span class="mx_baocun">保存</span>
+					<span class="daochu">导出</span>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="main new_main model_detail">
+				<div class="model_left detai_l fl" style="height: 0px;">
+					<ul class="tree treemenu" id="treeTop">
+						<!-- <li id="tree_1" class="tree-empty">
+								<a href="javascript:void(0);" name="title_7">1 成长能力</a><span class="toggler"></span></li>
+							<li id="tree_2" class="tree-empty">
+								<a href="javascript:void(0);" name="title_1">2 偿债能力</a><span class="toggler"></span></li>
+							<li id="tree_3" class="tree-empty">
+								<a href="javascript:void(0);" name="title_9">3 杜邦分析</a><span class="toggler"></span></li>
+							<li id="tree_4" class="tree-empty">
+								<a href="javascript:void(0);" name="title_2">4 营运能力</a><span class="toggler"></span></li>
+							<li id="tree_5" class="tree-empty">
+								<a href="javascript:void(0);" name="title_3">5 负债比率</a><span class="toggler"></span></li> -->
+					</ul>
+				</div>
+				<div class="model_right fr"  id="pdfContent">
+					<div class="model_name"><span class="model_mc" id="modelTile"></span><span class="company_name" id="modelStockShow"></span></div>
+					<div class="model_anisys">
+						<div class="clr"></div>
+					</div>
+					<!--main  end-->
+
+					<!--footer  star-->
+					<!--<div class="footer"></div>-->
+					<!--footer  end-->
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>
+		<!--主体 end-->
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/treemenu.js"></script>
+
+		<script src="/saasBeta/js/operationCenter.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(document.body).css("background", "#fafafa");
+			})
+		</script>
+		<div class="jiabeijing"></div>
+		<div class="jiabeijing3"></div>
+	</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-公司公告</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css" />
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+
+		<!-- 自动补全样式 -->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+	</head>
+
+	<body>
+
+		<!--主体 star-->
+		<div class="right_main new_r_main">
+
+			<!--main  star-->
+			<!--<div class="main new_main new_TBmain">
+				<div class="edit_box">-->
+			<div class="new_boar_main new_styles fl">
+				<div class="new_nav_postion">
+					<a href="/security/myPreferredStock.html">证券管理</a> >
+					<a id="stockNameShow" href="javascript:;">--</a>
+				</div>
+				<div class="boar_l nav_left new_boar_li">
+					<ul>
+						<!--<li><span></span><a href="#">首页概览</a></li>
+								<li><span></span><a href="#">企业资料</a></li>
+								<li><span></span><a href="#">董事会高管</a></li>
+								<li class="hover"><span></span><a href="#">公司公告</a></li>
+								<li><span></span><a href="#">股本股东</a></li>
+								<li><span></span><a href="#">财务数据</a></li>
+								<li><span></span><a href="#">行业分析</a></li>
+								<li><span></span><a href="#">发行分配</a></li>
+								<!-- <li><span></span><a href="#">舆情监测</a></li> -->
+						<div class="clr"></div>
+					</ul>
+				</div>
+			</div>
+			<div class="boar_r new_r_styles fl">
+				<div class="clr"></div>
+				<div class="main_r_center bfff gonggao_gg">
+					<div class="yjy_title newm_10"><i class="gonggao_new"></i><span class="fl">公告</span>
+						<div class="clr"></div>
+					</div>
+					<div class="gonggao_list">
+						<div class="notice_nav">
+							<div class="gg_types fl">
+								<span class="fl gg_leix">类型</span>
+								<div class="list gg_xiala fl">
+									<div class="select_box screen">
+										<div class="selectBox">
+											<p id="ggtype" data-value="">全部</p>
+											<ul id="lexing">
+												<li data-value="">
+													<a href="javascript:void(0);">全部</a>
+												</li>
+												<li data-value="1">
+													<a href="javascript:void(0);">公开转让说明书</a>
+												</li>
+												<li data-value="2">
+													<a href="javascript:void(0);">半年报</a>
+												</li>
+												<li data-value="3">
+													<a href="javascript:void(0);">年报</a>
+												</li>
+												<li data-value="4">
+													<a href="javascript:void(0);">股票发行</a>
+												</li>
+												<li data-value="5">
+													<a href="javascript:void(0);">重大资产重组</a>
+												</li>
+												<li data-value="6">
+													<a href="javascript:void(0);">收购</a>
+												</li>
+												<li data-value="7">
+													<a href="javascript:void(0);">对外投资</a>
+												</li>
+												<li data-value="8">
+													<a href="javascript:void(0);">分红派息</a>
+												</li>
+												<li data-value="9">
+													<a href="javascript:void(0);">股东变动</a>
+												</li>
+												<li data-value="10">
+													<a href="javascript:void(0);">股票解禁</a>
+												</li>
+												<li data-value="11">
+													<a href="javascript:void(0);">股权质押</a>
+												</li>
+												<li data-value="12">
+													<a href="javascript:void(0);">股权激励</a>
+												</li>
+												<li data-value="13">
+													<a href="javascript:void(0);">募集资金管理</a>
+												</li>
+												<li data-value="14">
+													<a href="javascript:void(0);">董事会</a>
+												</li>
+												<li data-value="15">
+													<a href="javascript:void(0);">监事会</a>
+												</li>
+												<li data-value="16">
+													<a href="javascript:void(0);">股东大会公告</a>
+												</li>
+												<li data-value="17">
+													<a href="javascript:void(0);">其他</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="notice_select fl">
+								<span class="fl gg_leix">时间</span>
+								<div class="selectBox fl">
+									<p id="timeF" data-value="">全部</p>
+									<ul id="otherTime">
+										<li data-type="" data-value="">
+											<a href="javascript:void(0);">全部</a>
+										</li>
+										<li data-type="1" data-value="operatingProfit">
+											<a href="javascript:void(0);">一天内</a>
+										</li>
+										<li data-type="2" data-value="operatingIncome">
+											<a href="javascript:void(0);">一周内</a>
+										</li>
+										<li data-type="3" data-value="operatingProfitRatio">
+											<a href="javascript:void(0);">一个月内</a>
+										</li>
+										<li data-type="4" data-value="sellingAndlaborCash">
+											<a href="javascript:void(0);">一年内</a>
+										</li>
+										<li data-type="5" data-value="diy">
+											<a href="javascript:void(0);">自定义时间段</a>
+										</li>
+
+									</ul>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<!--<div class="notice_tab fl">-->
+							<div class="notice_time fl">
+								<em>时间范围</em><input type="text" id="startTime" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="">
+								<em class="hengg">—</em><input type="text" id="endTime" data-am-datepicker="{format: 'yyyy-mm-dd'}" readonly="readonly" value="">
+								<a href="javascript:void(0);" id="serchByTime">筛选</a>
+							</div>
+
+							<div class="time_xz_l fl">
+								<input type="text" id="title" value="" placeholder="输入标题搜索">
+								<a href="javascript:void(0);" id="titleId">搜索</a>
+							</div>
+							<!--<div class="classnotice_r fr" style="margin-right: 10px;">
+												<a href="javascript:;">标题搜索</a>
+											</div>-->
+							<!--<div class="clr"></div>-->
+							<!--</div>-->
+							<div class="clr"></div>
+							<!--<div class="notic_time_xz">
+			 <div class="time_xz_l fl"><input type="text" id="title" value=""><a href="javascript:void(0);" id="titleId">筛选</a></div>
+			 <div class="classnotime_r fr">
+			 <a href="#">时间检索</a>
+			 </div>
+			 <div class="clr"></div>
+			 </div>-->
+
+						</div>
+						<div class="tb_info_dbox">
+							<div class="notice_info" id="divTop">
+								<div class="notice_info_box" id="list">
+									<!-- 							<div class="noticv_list">
+													<h2>2016-9-10</h2>
+													<ul>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+													</ul>
+													<div class="clr"></div>
+												</div>
+												<div class="noticv_list">
+													<h2>2016-9-10</h2>
+													<ul>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>【公开转让说明书】</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+														<li>
+															<span>[公开转让说明书]</span>
+															<a href="#">过去30天成交量波幅=过去30天最高成交量-过去30天最低成交量</a>
+															<div class="clr"></div>
+														</li>
+													</ul>
+													<div class="clr"></div>
+												</div>
+												<div class="clr"></div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clr"></div>
+				<!--对比弹层 star-->
+				<!--<div class="contrast">
+			 <div class="contrast_left">
+			 <span>对比分析</span>
+			 </div>
+			<div class="contrast_right" >-->
+				<!-- 		<span>中新科技  (345789) <i>X</i></span> -->
+				<!--<a href="javascript:;" id="contrastList_a">开始<br>对比</a>
+			<div class="contra_yc">
+			<span>隐藏</span>
+			</div>
+			</div>
+			
+			 </div>-->
+				<!--对比弹层 end-->
+			</div>
+			<div class="clr"></div>
+			<!--</div>-->
+			<!--<div class="clr"></div>
+				</div>-->
+			<!--<div class="clr"></div>
+			</div>-->
+			<!--main  end-->
+			<!--footer  star-->
+
+			<!--footer  end-->
+		</div>
+		<!--主体 end-->
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<!-- 自动补全 -->
+
+		<script src="/saasBeta/js/echarts.min.js"></script>
+		<!--<script src="/saasBeta/js/businessDetails/headRealTimeQuotes.js"></script>-->
+		<script src="/saasBeta/js/businessDetails/TBnotice.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/businessDetails/GPleft.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+
+	</body>
+
+</html>

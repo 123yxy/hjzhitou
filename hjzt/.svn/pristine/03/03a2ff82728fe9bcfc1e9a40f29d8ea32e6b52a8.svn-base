@@ -1,0 +1,158 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+<link rel="stylesheet" href="/saasBeta/yanbao/css/Agu.css" />
+<style>
+	.container {
+		padding: 0;
+	}
+	.table-danwei{text-align: right;font-size: 14px;color: #888;}
+	#businessTBody p{margin-bottom: 0;line-height: 30px;}
+	.tab-list{position: relative;}
+	.data-list{position: absolute;top: 0;right: 0;width: 120px;height: 30px;border:1px solid #e4e4e4;box-sizing: border-box;}
+	.data-list p{width: 100%;line-height: 30px;font-size: 14px;color: #444;padding-left: 14px;box-sizing: border-box;position: relative;cursor: pointer;}
+	.data-list p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 10px;right: 10px;background: url(../images/zyyw.png)0 0 no-repeat;}
+	.data-list p:hover:after{background: url(../images/zyyw.png)-13px 0 no-repeat;}
+	.data-list p.on:after{transform: rotate(180deg);}
+	.data-list ul{width: 100%;position: absolute;top:28px;left: 0;border:1px solid #e4e4e4;background-color: #fff;z-index: 5;}
+	.data-list ul li{font-size: 14px;color: #555;line-height: 24px;padding-left: 14px;box-sizing: border-box;}
+	.data-list ul li:hover,.data-list ul li.on:hover{color: #fff;background-color: #1985e2;cursor: pointer;}
+	.data-list ul li.on{color: #1985e2;}
+</style>
+<div class="company-business">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>三、公司业务分析</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section zycpzyyw">
+						<h2>3.1主要产品和服务</h2>
+						<div class="yewu-contents">
+							<h3>3.1.1主要产品和服务</h3>
+							<p id="mainbusiness"></p>
+							
+							<h3>3.1.2主营业务收入<div class="noPay"></div></h3>
+							<div class="tab-list">
+								<!--<span class="on">列表</span>
+								<span>图表</span>-->
+								<!--<div class="data-list" id="data-list">要加时间
+									<p id="nowData">2017</p>
+									<ul id="timeList" style="display: none;">
+										<li>2017</li>
+										<li>2016</li>
+										<li>2015</li>
+									</ul>
+								</div>-->
+							</div>
+							<div class="AguTable zyye-bg">
+								<div class="table-danwei">单位：万元</div>
+								<table class="table">
+									<thead id="ywsrbt">
+										<!--<tr>
+											<th>项目</th>
+											<th>2015年</th>
+											<th>2016年</th>
+											<th>变化</th>
+											<th>增长率</th> 
+										</tr>-->
+									</thead>
+									<tbody id="businessTBody"></tbody>
+								</table>
+							</div>
+							<div class="zhongd-sj zyyw" style="display:none;">
+								<!--<div class="echarts-tb" style="width:50%;float:left;"id="zycpzyyw_chart_pre"></div>
+								<div class="echarts-tb" style="width:50%;float:left;" id="zycpzyyw_chart_curr">
+									<!-- <span>重大事件：152件</span>(定增事件:6,对外投资:12,收购:0) -->
+								<!--</div>
+								
+								<div class="clearfix"></div>-->
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- <script src="/saasBeta/yanbao/js/bus/section02.js"></script> -->
+<!-- <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../js/echarts-all-3.js"></script>
+<script src="../js/common/util.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/commonJs.js"></script>
+<script src="../js/bus/section02.js"></script> -->
+<script type="text/javascript">
+//判断是否登录，没登录直接跳到登录页面
+			UTIL.Anologin('zyywfx');
+// var isPayFor=localStorage.getItem("payFor");
+// 	$(function () {	
+		//判断用户是否付费了
+		// var isPay;
+		// AfindNewYW2("0");
+// 		payOrNot();
+// 		if(payOrNot()==true){//已付费
+// 			$(".noPay").hide();
+// 			isPay="1";
+// 			AfindNewYW2(isPay);
+// 		}else if(payOrNot()==false || payOrNot()==undefined){//未付款
+// 			$("#data-list").hide();
+// 			isPay="0";
+// 			AfindNewYW2(isPay);
+// 		}
+
+// 		var windowHeight = $(window).height()
+// 		$(".yuce-fx .container").height(windowHeight - 195);
+		
+		
+// 		$(".tab-list span").on("click",function(){
+// 			if($(this).text()=="图表"){
+// 				$("#data-list").hide();
+// 			}else{
+// 				if(payOrNot()==true){//已付费
+// 					$("#data-list").show();
+// 					isPay="1";
+// 					AfindNewYW2(isPay);
+// 				}else if(payOrNot()==false || payOrNot()==undefined){//未付款
+// 					$("#data-list").hide();
+// 					isPay="0";
+// 					AfindNewYW2(isPay);
+// 				}
+// 			}
+// 		})
+		
+// //		qieHuan();
+// 		AclickTC();
+// 		//MainBusiness();
+	
+		
+		
+// 		$(document).on("click",function(e){
+// 			var e = e || event;
+// 			var elem = e.target || e.srcElement;
+// 			while (elem) { //循环判断至跟节点，防止点击的是div子元素
+//                 if (elem.id && elem.id=='data-list') {
+//                     return;
+//                 }
+//                 elem = elem.parentNode;
+//            	}
+// 			$("#timeList").slideUp();
+// 			e.stopPropagation();
+// 			e.cancelBubble = true;
+// 		})
+	// })
+
+	ZhuYaoChanPinFuWu();//主要产品服务
+	ZhuYingYeWuShouRu();//主营业务收入
+</script>

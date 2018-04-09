@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section01.css" />
+<style>
+	.trzfx-table .table tr td { padding:0 5px;}
+	.rzms{font-size: 14px;color: #333;padding:6px 20px;box-sizing: border-box;background-color: #f2f2f2;margin-top: 10px;}
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>一、公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+							</div>
+						</div> 
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section">
+						<h2>1.10投融资情况</h2>
+						<div class="kaik-content">
+							<h3>1.10.1融资情况</h3>
+							<div class="reyuan-table">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="trzLeft">融资方式</th>
+											<th>时间</th>
+											<th class="shuzi">募集资金(万元)</th>
+											<th class="shuzi">发行价(元)</th>
+											<th class="shuzi">发行数量(万股)</th>
+											<th class="shuzi">发行对象(个)</th>
+										</tr>
+									</thead>
+									<tbody id="issueList">
+										<!-- <tr>
+													<td>重大资产重组</td>
+													<td class="shuzi">2016-12-20</td>
+													<td>2035</td>
+													<td>5623</td>
+													<td>第六届懂事会第九次决议公告</td>
+													<td class="zhuanli-ck-tc">
+														<span class="chakan">查看</span>
+														<div class="chakan-tc gg-tc">
+																<em class="jianli_sj"></em>
+																<div class="reyuan-table">
+																	<table class="table">
+																		<thead>
+																			<tr>
+																				<th>发行对象</th>
+																				<th>认购数量(万股)</th>
+																				<th>认购金额(万元)</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td>中金证劵</td>
+																				<td class="shuzi">5732</td>
+																				<td class="shuzi">45</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</div>
+													</td>
+												</tr> -->
+									</tbody>
+								</table>
+							</div>
+							<div class="rzms"></div>
+						</div>
+						<div class="kaik-content">
+							<h3>1.10.2对外投资</h3>
+							<div class="reyuan-table trzfx-table">
+								<table class="table" id="tzPaiXu">
+									<thead>
+										<tr>
+											<th>被投资企业名称</th>
+											<th>被投资法人</th>
+											<th class="shuzi"><span>注册资本(万元)</span></th>
+											<th><span>投资数额(万元)<em class="down"></em></span></th>
+											<th><span>投资占比(%)<em></em></span></th>
+											<th class="shijian"><span>注册时间<em></em></span></th>
+											<th>状态</th>
+										</tr>
+									</thead>
+									<tbody id="outboundInvestment">
+										<!--<tr>
+											<td>重大资产重组</td>
+											<td>从成武</td>
+											<td class="shuzi">5732</td>
+											<td class="shuzi">45</td>
+											<td class="shuzi">10.26</td>
+											<td class="shuzi">2017-01-17</td>
+											<td>续存</td>
+										</tr>-->
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- 企业基本信息js-凡国庆 -->
+<!-- <script src="/saasBeta/yanbao/js/section1-8.js"></script> -->
+<!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script> -->
+<script>
+	sectionOne8();
+	findOutboundInvestment();
+	deepLook();
+	$(function(){
+		payOrNot();
+		if(payOrNot()==true){//已付费
+			//查询文案
+			findIssueListInfo();
+		}else if(payOrNot()==false){//未付费
+			$(".rzms").html("<div class='noPay noContent'>付费可以查看更多的数据</div>");
+		}
+		
+		
+	    var windowHeight = $(window).height()
+	    $(".yuce-fx .container").height(windowHeight-195);
+	    $(".contents").height(windowHeight - 290);
+	   //点击排序 
+	    clickPaiXu();
+	})
+</script>

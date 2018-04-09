@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="qunee.css">
+</head>
+<body>
+
+<div id="graph_panel" class="q-panel">
+            <div role="toolbar" class="q-toolbar">
+                <div>
+                    <div id="toolbar"></div>
+                </div>
+            </div>
+            <div class="q-content">
+                <div  id="canvas"/>
+                
+            </div>
+        </div>
+		
+<!--插件公共资源-->
+<script src="jquery-1.11.1.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="qunee-min-checked.js"></script>
+<script src="common.js"></script>
+<script src="graph.js"></script>
+<script src="demo2.js"></script>
+<!--当前页JS-->
+<script src="main.js"></script>
+<script src="analytics.js"></script>
+</body>
+</html>

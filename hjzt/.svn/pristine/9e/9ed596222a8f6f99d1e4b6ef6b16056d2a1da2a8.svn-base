@@ -1,0 +1,971 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>企业报告-报告详情</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="http://beta.159jh.com/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="http://beta.159jh.com/saasBeta/css/main_project.css" />
+		<link rel="stylesheet" type="text/css" href="http://beta.159jh.com/saasBeta/css/new_zh.css"/>
+		<script src="http://beta.159jh.com/saasBeta/js/jquery.min.js"></script>
+		<script src="http://beta.159jh.com/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://beta.159jh.com/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="http://beta.159jh.com/saasBeta/js/header2.js"></script>
+		<script src="http://beta.159jh.com/saasBeta/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://beta.159jh.com/saasBeta/js/util/dateUtil.js"></script>
+	</head>
+
+	<body>
+
+<!--主体 star-->
+<div class="enter_details">
+	<div class="detai_l fl">
+		<ul class="tree">
+			<li ><a href="javascript:;" name="a">1.基本信息</a>
+				<ul>
+					<li><a href="javascript:;" class="active" name="location">1.1基本情况</a></li>
+					<li><a href="javascript:;" name="location">1.2股本结构</a></li>
+					<li><a href="javascript:;" name="location">1.3股东情况</a></li>
+					<li><a href="javascript:;" name="location">1.4人员情况</a></li>
+					<li><a href="javascript:;" name="location">1.5信用情况</a></li>
+
+				</ul>
+			</li>
+			<li ><a href="javascript:;" name="a">2.历史沿革</a></li>
+			<li ><a href="javascript:;" name="a">3.公司业务</a>
+				<ul>
+					<li><a href="javascript:;" name="location">3.1主营业务</a></li>
+					<li><a href="javascript:;" name="location">3.2主要产品</a></li>
+					<li><a href="javascript:;" name="location">3.3主要客户</a></li>
+					<li><a href="javascript:;" name="location">3.4主要供应商</a></li>
+				</ul>
+			</li>
+			<li ><a href="javascript:;" name="a">4.行业分析</a>
+				<ul>
+					<li><a href="javascript:;" name="location">4.1行业概况</a></li>
+					<li><a href="javascript:;" name="location">4.2公司地位</a></li>
+					<li><a href="javascript:;" name="location">4.3三板排名</a></li>
+				</ul>
+			</li>
+			<li ><a href="javascript:;" name="a">5.财务分析</a>
+				<ul>
+					<li><a href="javascript:;" name="location">5.1盈利能力</a></li>
+					<li><a href="javascript:;" name="location">5.2偿债能力</a></li>
+					<li><a href="javascript:;" name="location">5.3营运情况</a></li>
+					<li><a href="javascript:;" name="location">5.4成长情况</a></li>
+					<li><a href="javascript:;" name="location">5.5财务报表</a></li>
+					<li><a href="javascript:;" name="location">5.6主要附注表</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="detai_r fr">
+		<div class="detai_top">
+			<div class="deta_l fl">
+				<h1>世纪瑞尔</h1>
+				<span>430001</span>
+			</div>
+			<div class="deta_r fl">
+				<h2>北京世纪瑞尔技术股份有限公司</h2>
+				<p><i>-</i> <i>-</i> <i>电话：-</i></p>
+			</div>
+			<div class="clr"></div>
+		</div>
+		<div class="detai_dbox">
+		<!--基本信息star-->
+			<div class="det_box">
+			<div class="detai_title">
+				<span>1.基本信息</span>
+			</div>
+			<div class="clr"></div>
+			 <div class="detai_small_title">
+			 	<span>1.1基本情况</span>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="detai_table">
+			 	<table width="100%" border="1">
+					<tr>
+							<th scope="row">公司中文全称</th>
+							<td>北京世纪瑞尔技术股份有限公司</td>
+					</tr>
+					<tr>
+							<th scope="row">英文名称及缩写</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">证券简称</th>
+							<td>世纪瑞尔</td>
+					</tr>
+					<tr>
+							<th scope="row">证券代码</th>
+							<td>430001</td>
+					</tr>
+					<tr>
+							<th scope="row">注册地址</th>
+							<td>北京市海淀区创业路8号3号楼6层3-9</td>
+					</tr>
+					<tr>
+							<th scope="row">办公地址</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">主办券商</th>
+							<td></td>
+					</tr>
+					<tr>
+							<th scope="row">会计师事务所</th>
+							<td></td>
+					</tr>
+					<tr>
+							<th scope="row">董事会秘书</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">电话</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">传真</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">电子邮箱</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">公司网址</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">联系地址及<br>邮政编码</th>
+							<td>- 邮政编码:-</td>
+					</tr>
+					<tr>
+							<th scope="row">股票公开转让场所</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">股份公司成立时间</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">挂牌时间</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">行业</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">主要产品与服务项目</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">普通股股票转让方式</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">普通股总股本(股)</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">无限售条件的股份数量(股)</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">控股股东及持股比例</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">实际控制人际持股比例</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">截至报告期末的股东人数</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">截至报告末的员工人数</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">是否拥有高新技术企业资格</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">公司拥有的重要经营资质</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">公司拥有的专利数量</th>
+							<td>-</td>
+					</tr>
+					<tr>
+							<th scope="row">公司拥有的"发明专利"数量</th>
+							<td>-</td>
+					</tr>
+				</table>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="detai_small_title">
+			 	<span>1.2股本结构</span>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="detai_gbjg_tb">
+			 	<div class="gbjg_tb_l fl">
+			 		<span>期初</span>
+			 		<div class="gbjg_tb_zt" id="gbjg_tb_qc">
+			 			
+			 		</div>
+			 	</div>
+			 	<div class="gbjg_tb_l fl">
+			 		<span>期末</span>
+			 		<div class="gbjg_tb_zt" id="gbjg_tb_qm">
+			 			
+			 		</div>
+			 	</div>
+			 	<div class="clr"></div>
+			 	
+			 </div>
+			 <div class="clr"></div>
+			 <div class="gbjg_tb_table">
+			 	---
+			 	<!--  <table width="100%" border="1">
+		<tr>
+				<td colspan="2" rowspan="2" align="center" valign="middle">股份性质</td>
+				<td colspan="2" align="center" valign="middle">初期</td>
+				<td width="24%" rowspan="2" align="center" valign="middle">本期变动</td>
+				<td colspan="2" align="center" valign="middle">期末</td>
+		</tr>
+		<tr>
+				<td width="13%" align="center" valign="middle">数量</td>
+				<td width="13%" align="center" valign="middle">比例</td>
+				<td width="13%" align="center" valign="middle">数量</td>
+				<td width="13%" align="center" valign="middle">比例</td>
+		</tr>
+		<tr>
+				<td width="4%" rowspan="4"align="center" valign="middle">无限售条件股份</td>
+				<td width="21%">无限售固定总数</td>
+				<td align="center" valign="middle">1,735,00,500</td>
+				<td align="center" valign="middle">55.50%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">1,735,00,500</td>
+				<td align="center" valign="middle">55.50%</td>
+		</tr>
+		<tr>
+				<td>其中:控股固定,实际控制人</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+		</tr>
+		<tr>
+				<td>董事、监事、高管</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+		</tr>
+		<tr>
+				<td>核心员工</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+		</tr>
+		<tr>
+				<td rowspan="4" width="4%">有限售条件股份</td>
+				<td>有限售股份总数</td>
+				<td align="center" valign="middle">1,391,173,020</td>
+				<td align="center" valign="middle">44.50%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">1,391,173,020</td>
+				<td align="center" valign="middle">44.50%</td>
+		</tr>
+		<tr>
+				<td>其中:控股固定,实际控制人</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">-</td>
+		</tr>
+		<tr>
+				<td>董事、监事、高管</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+		</tr>
+		<tr>
+				<td>核心员工</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">0.00%</td>
+		</tr>
+		<tr>
+				<td colspan="2">总股本</td>
+				<td align="center" valign="middle">3,126,174,520</td>
+				<td align="center" valign="middle">-</td>
+				<td align="center" valign="middle">0</td>
+				<td align="center" valign="middle">3,126,174,520</td>
+				<td align="center" valign="middle">-</td>
+		</tr>
+		<tr>
+				<td colspan="2">普通股股东人数</td>
+				<td colspan="5" align="center" valign="middle">4285</td>
+		</tr>
+</table>  -->
+			 </div>
+			  <div class="clr"></div>
+			 <div class="detai_small_title">
+			 	<span>1.3股东情况</span>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="put_qshi">
+			 	<span>普通股前十名股东情况</span>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="detai_gbjg_tb">
+			 	<div class="gbjg_tb_l fl">
+			 		<span>期初持股比例</span>
+			 		<div class="gbjg_tb_zt" id="gbjg_tb_qccg">
+			 			
+			 		</div>
+			 	</div>
+			 	<div class="gbjg_tb_l fl">
+			 		<span>期末持股比例</span>
+			 		<div class="gbjg_tb_zt" id="gbjg_tb_qmcg">
+			 			
+			 		</div>
+			 	</div>
+			 	<div class="clr"></div>
+			 	
+			 </div>
+			 	<div class="clr"></div>
+			 	<div class="gdqingk_table">
+			 		<table width="100%" border="1">
+			 			<thead>
+						<tr>
+								<th scope="col">序号</th>
+								<th scope="col">股东名称</th>
+								<th scope="col">期初持股数</th>
+								<th scope="col">持股变动</th>
+								<th scope="col">期末持股数</th>
+								<th scope="col">期末持股比例</th>
+								<th scope="col">期末持有限售股份数量</th>
+								<th scope="col">期末持无限售股份数量</th>
+						</tr>
+						</thead>
+						<tbody>
+							<!--  <tr>
+									<td>1</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>2</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>3</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>4</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>5</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>6</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>7</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>8</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>9</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>
+							<tr>
+									<td>10</td>
+									<td>昆山中联综合开发有限公司</td>
+									<td>493,874,336</td>
+									<td>0</td>
+									<td>493,874,336</td>
+									<td>15.80%</td>
+									<td>493,874,336</td>
+									<td>0</td>
+							</tr>  -->
+							<tr>
+									<td colspan="2">合计</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-%</td>
+									<td>-</td>
+									<td>-</td>
+							</tr>
+							<tr>
+									<td colspan="8">前十名股东间相互关系说明:<br/>
+										---
+									</td>
+									
+							</tr>
+						</tbody>
+</table>
+			 	</div>
+			 	<div class="clr"></div>
+			 	<div class="kg_gd_qk">
+			 		<div class="kg_gd_title">
+			 			<span>控股股东情况</span>
+			 		</div>
+			 		<div class="kg_gd_info">
+			 			---
+			 			
+			 		</div>
+
+			 	</div>
+			 	<div class="clr"></div>
+			 	<div class="kg_gd_qk">
+			 		<div class="kg_gd_title">
+			 			<span>实际控制人情况</span>
+			 		</div>
+			 		<div class="kg_gd_info">
+			 			---
+			 		</div>
+
+			 	</div>
+			 	<div class="clr"></div>
+			 <div class="detai_small_title">
+			 	<span>1.4人员情况</span>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="ry_qk_title">
+			 	<span>员工数量</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">&nbsp;</th>
+								<th scope="col">期初员工数量</th>
+								<th scope="col">期末员工数量</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>核心员工</td>
+								<td>-</td>
+								<td>-</td>
+						</tr>
+						<tr>
+								<td>核心技术人员</td>
+								<td>3</td>
+								<td>13</td>
+						</tr>
+						<tr>
+								<td>截止报告期末的员工人数</td>
+								<td>10</td>
+								<td>78</td>
+						</tr>  -->
+						---
+					</tbody>
+</table>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="ry_qk_title">
+			 	<span>董监高情况</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">姓名</th>
+								<th scope="col">职务</th>
+								<th scope="col">性别</th>
+								<th scope="col">年龄</th>
+								<th scope="col">学历</th>
+								<th scope="col">任期</th>
+								<th scope="col">是否在公司领取薪酬</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>柯鹏</td>
+								<td>董事、董事长</td>
+								<td>女</td>
+								<td>30</td>
+								<td>本科</td>
+								<td>2015年9月15日至2016年10月10日</td>
+								<td>是</td>
+								
+						</tr>
+						<tr>
+								<td>柯鹏</td>
+								<td>董事、董事长</td>
+								<td>女</td>
+								<td>30</td>
+								<td>本科</td>
+								<td>2015年9月15日至2016年10月10日</td>
+								<td>是</td>
+								
+						</tr>
+						<tr>
+								<td>柯鹏</td>
+								<td>董事、董事长</td>
+								<td>女</td>
+								<td>30</td>
+								<td>本科</td>
+								<td>2015年9月15日至2016年10月10日</td>
+								<td>是</td>
+								
+						</tr>
+						<tr>
+								<td colspan="6">董事会人数:</td>
+								<td>5</td>
+								
+						</tr>
+						<tr>
+								<td colspan="6">监事会人数:</td>
+								<td>5</td>
+								
+						</tr>
+						<tr>
+								<td colspan="6">高级管理人员人数:</td>
+								<td>5</td>
+								
+						</tr>  -->
+						---
+					</tbody>
+</table>
+			 </div>
+			 <div class="clr"></div>
+			 <div class="detai_small_title">
+			 	<span>1.5信用情况</span>
+			 </div>
+			 <div class="clr"></div>
+			  <div class="ry_qk_title">
+			 	<span>重大诉讼、仲裁事项</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">重大诉讼、仲裁事项</th>
+								<th scope="col">涉及金额</th>
+								<th scope="col">占期末净资产比例%</th>
+								<th scope="col">是否结案</th>
+								<th scope="col">临时公告披露时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>14.06%</td>
+								<td>是</td>
+								<td>2015-9-15、2016-10-10、2016-10-10</td>
+								
+						</tr>  -->
+						<tr>
+							<td>合计</td>
+							<td>-</td>
+							<td>-%</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+</table>
+			 </div>
+			  <div class="clr"></div>
+			  <div class="ry_qk_title">
+			 	<span>公司发生的对外担保事项</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">担保对象</th>
+								<th scope="col">担保金额</th>
+								<th scope="col">担保期限</th>
+								<th scope="col">担保类型(保证、抵押、质押)</th>
+								<th scope="col">责任类型(一般或者连带)</th>
+								<th scope="col">是否履行必要的决策程序</th>
+								<th scope="col">是否关联担保</th>
+								
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>
+						<tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								<td>2016-9-7</td>
+								<td>保证</td>
+								<td>连带</td>
+								<td>是</td>
+								<td>否</td>
+								
+						</tr>  -->
+						<tr>
+							<td>总计</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+			</table>
+			 </div>
+			 <div class="clr"></div>
+			  <div class="ry_qk_title">
+			 	<span>对外担保分类汇总</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">项目汇总</th>
+								<th scope="col">余额</th>
+								
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>龙庭时代商住楼项目诉讼</td>
+								<td>74444</td>
+								
+						</tr>  -->
+					</tbody>
+</table>
+			 </div>
+			 <div class="clr"></div>
+			  <div class="ry_qk_title">
+			 	<span>被查封、扣押、冻结或者被抵押、质押的资产情况</span>
+			 </div>
+			 <div class="ry_qk_table">
+			 	<table width="100%" border="1">
+			 		<thead>
+						<tr>
+								<th scope="col">资产</th>
+								<th scope="col">权利受限类型</th>
+								<th scope="col">账面价值</th>
+								<th scope="col">占总资产的比例</th>
+								<th scope="col">发生原因</th>
+								
+						</tr>
+					</thead>
+					<tbody>
+						<!--  <tr>
+								<td>房产</td>
+								<td>抵押</td>
+								<td>988888</td>
+								<td>3.75%</td>
+								<td>银行借款</td>
+						</tr>
+						<tr>
+								<td>房产</td>
+								<td>抵押</td>
+								<td>988888</td>
+								<td>3.75%</td>
+								<td>银行借款</td>
+						</tr>  -->
+						<tr>
+							<td>累计值</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+</table>
+			 </div>
+			</div>
+		<!--基本信息end-->
+		<!--历史沿革star-->
+		<div class="det_box">
+		<div class="detai_title">
+				<span>2.历史沿革</span>
+		</div>
+		<div class="clr"></div>	
+			<div class="deta_p_info">
+				
+			</div>
+		</div>
+		<!--历史沿革end-->
+		<!--公司业务star-->
+		<div class="det_box"  >
+		<div class="detai_title">
+				<span>3.公司业务</span>
+		</div>
+		</div>
+		<!--公司业务end-->
+		<!--行业分析star-->
+		<div class="det_box">
+			<div class="detai_title">
+				<span>4.行业分析</span>
+			</div>
+		 <div class="clr"></div>
+		 <div class="detai_small_title">
+		 	<span>4.1行业概况</span>
+		 </div>
+		 <div class="clr"></div>
+		  <div class="deta_p_info">
+		  	暂无行业概念
+		 </div>
+		  <div class="clr"></div>
+		 <div class="detai_small_title">
+		 	<span>4.2公司地位</span>
+		 </div>
+		   <div class="clr"></div>
+		   <div class="deta_p_info">
+		   	暂无数据
+		   </div>
+		    <div class="clr"></div>
+			 <div class="detai_small_title">	
+			 	<span>4.3三板排名</span>
+			 </div>
+		    <div class="clr"></div>
+		     <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2016年行业排名-营业收入</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_zxyysr_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+			 <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2015年行业排名-营业收入</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_scyysr_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+			 <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2016年行业排名-每股收益</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_zxmgsy_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+			 <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2015年行业排名-每股收益</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_scmgsy_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+			 <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2016年行业排名-销售毛利率</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_zxxsmll_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+			 <!--图表区star  此处图表有多个的话直接复制粘贴就可以-->
+			 <div class="ggxq_three_tb">
+			 	<div class="tb_title">
+			 		<span>2015年行业排名-销售毛利率</span>
+			 	</div>
+			 	
+			 	<div class="ggxq_three_tb_info" id="ggxq_three_scxsmll_info"></div>
+			 	
+			 </div>
+			 <!--图表区end-->
+		</div>
+		<!--行业分析end-->
+		<!--财务分析star-->
+		<div class="det_box">
+			<div class="detai_title">
+				<span>5.财务分析</span>
+			</div>
+		</div>
+		<!--财务分析end-->
+		
+		</div>
+	</div>
+	<div class="clr"></div>
+</div>
+<!--主体 end-->
+<script src="http://beta.159jh.com/saasBeta/js/echarts.min.js"></script>
+<script type="text/javascript" src="http://beta.159jh.com/saasBeta/js/treemenu.js"></script>
+<script src="http://reports.159jh.com/reports/report_430001.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

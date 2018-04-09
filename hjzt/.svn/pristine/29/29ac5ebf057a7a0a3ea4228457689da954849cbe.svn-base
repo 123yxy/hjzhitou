@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>完善个人信息</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+	</head>
+	<body>
+		<div class="wanshan_xinx">
+			<div class="wanshan_titles"><span>完善个人信息</span></div>
+			<form id="perfectMsgForm">
+				<ul>
+					<li>
+						<span>姓名</span>
+						<input type="text" id = "userName" name = "userName" />
+						<div class="clr"></div>
+					</li>
+					<li>
+						<span>性别</span>
+						<input type="text" id="sex" name="sex" />
+						<div class="clr"></div>
+					</li>
+					<li>
+						<span>公司</span>
+						<input type="text" id="companyName" name="companyName" />
+						<div class="clr"></div>
+					</li>
+					<li>
+						<span>职位</span>
+						<input type="text" id="position" name="position" />
+						<div class="clr"></div>
+					</li>
+					<li>
+						<span>邮箱</span>
+						<input type="text" id="email" name="email" />
+						<div class="clr"></div>
+					</li>
+					<li class="xinxi_qued">
+						<button type="button" id="determine" >确定</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+		
+		
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/personalCenter/personalInfor.js"></script>	
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</body>
+</html>

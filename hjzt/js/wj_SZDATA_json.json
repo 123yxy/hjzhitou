@@ -1,0 +1,16 @@
+[
+    { "dateTime":"05-08", "newPrice":10.61,"tradingVolume":15.60},
+    { "dateTime":"05-09", "newPrice":25.61,"tradingVolume":16.60},
+    { "dateTime":"05-10", "newPrice":35.61,"tradingVolume":26.60},
+    { "dateTime":"05-11", "newPrice":45.61,"tradingVolume":30.60},
+    { "dateTime":"05-12", "newPrice":55.61,"tradingVolume":40.60},
+    { "dateTime":"05-13", "newPrice":15.61,"tradingVolume":50.60},
+    { "dateTime":"05-14", "newPrice":25.61,"tradingVolume":10.60},
+    { "dateTime":"05-09", "newPrice":25.61,"tradingVolume":50.60},
+    { "dateTime":"05-10", "newPrice":35.61,"tradingVolume":40.60},
+    { "dateTime":"05-11", "newPrice":45.61,"tradingVolume":30.60},
+    { "dateTime":"05-12", "newPrice":55.61,"tradingVolume":20.60},
+    { "dateTime":"05-13", "newPrice":15.61,"tradingVolume":10.60},
+    { "dateTime":"05-14", "newPrice":25.61,"tradingVolume":10.60}
+
+]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>登录</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/loginReg.css">
+</head>
+
+<body>
+    <div class="cotainer">
+        <div class="row">
+            <div class="col-lg12 col-md-12 col-sm-12 logHead">
+            </div>
+        </div>
+        <div class="row logReg-main">
+            <div class="col-lg12 col-md-12 col-sm-12">
+                <div class="titTab">
+                    <span><a href="reg.html">注册</a></span>
+                    <span class="active">登录</span>
+                </div>
+                <form id="loginForm">
+                    <ul>
+                        <li><input placeholder="手机号" type="text" id="phoneNumLo" name="phoneNumLo" autocomplete="off"><span></span></li>
+                        <input type="password" style="display: none;" name="passwordLo">
+                        <li><input placeholder="密码" type="password" id="passwordLo" name="passwordLo" autocomplete="off"><span></span><!--<span class="icon-success"></span>--></li>
+                      
+                    </ul>
+                    <div class="login-tools checkbox-group">密码仅支持数字、字母、字符,长度6-16位</div>
+                    <div class="login-tools checkbox-group"><input id="checkboxLo" type="checkbox" checked><label></label><label for="rememberPW">记住密码</label><a href="findPW.html">忘记密码？</a></div>
+                    <div class="loginReg-btn"><button type="button" id="login">登 录</button></div>
+                    <div class="login-others">
+                        <div class="login-others-tit"><span>社交账号登录</span></div>
+                        <div class="login-others-links">
+                            <a class="weixin" href=""></a>
+                            <a class="qq" href=""></a>
+                            <a class="weibo" href=""></a>
+                        </div>
+                    </div>
+                    <div class="ewm">
+                        <p>关注我们</p>
+                        <p class="saoma-img"><img src="/saasBeta/yanbao/images/ewm.jpg"></p>
+                        <p>使用微信扫一扫，访问投研有料服务号</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg12 col-md-12 col-sm-12 logFoot">
+            </div>
+        </div>
+    </div>
+    <script src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/md5.min.js"></script>
+    <!-- <script src="/saasBeta/yanbao/js/plugin/jquery-ui.min.js"></script> -->
+    <script src="/saasBeta/yanbao/js/plugin/jquery.validate.min.js"></script>
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script src="/saasBeta/yanbao/js/common/commonJs.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/login.js"></script>
+</body>
+
+</html>

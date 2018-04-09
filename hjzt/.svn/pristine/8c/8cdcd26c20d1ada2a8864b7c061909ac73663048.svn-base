@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>多维选股-行情-协议排行</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/wxl-new-style.css" />
+		<script src="/saasBeta/js/jquery.min.js"></script>	
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/js/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/echarts/3.2.0/echarts.min.js"></script>
+		<!-- 分页 -->
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockAgreementRanking.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/overViewCount.js"></script>
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main">
+				<div class="l_main">
+					
+					<div class="clr"></div>
+					<div class="m_left">
+						<div class="overview" id="changeType_0a">
+							<a href="javascript:;" data-value="0" class="on">涨幅榜</a>
+							<a href="javascript:;" data-value="1">跌幅榜</a>
+							<a href="javascript:;" data-value="2">成交排行</a>								
+							<div class="hr"></div>
+						</div>
+						<div class="stock_rank" id="stockRank_0a"></div>
+						<div class="information" id="upList_0a">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌额</th>
+										<th>涨跌幅</th>
+										<th>今开</th>
+										<th>最高</th>
+										<th>最低</th>										
+										<th>成交量(万股)</th>
+										<th>成交金额(万元)</th>
+										<th>市盈率</th>
+									</tr>
+								</thead>
+								<tbody id="marketRankinList_0a">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- <tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi lvse">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi lvse">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+							
+						</div>
+						<div id="page_0a" class="pages pagination " style="display: none"></div>
+						<!--成交排行-->
+						<div class="information" id="dealList_0a" style="display: none;">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌幅</th>
+										<th>成交金额(万元)</th>
+									</tr>
+								</thead>
+								<tbody id="paihang_0a">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- <tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi red">7</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi lvse">3.3</td>					
+										<td class="shuzi lvse">55.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi lvse">2.78</td>					
+										<td class="shuzi">0.00%</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi lvse">2.27</td>					
+										<td class="shuzi lvse">-55.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi lvse">209</td>					
+										<td class="shuzi lvse">-15.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+						</div>
+						<div class="clr"></div>
+						<div id="page_1_0a" class="pages pagination " style="display: none"></div>
+					</div>
+				</div>
+				<div class="r_main">
+					<div class="market">
+						<p>
+							<span>市场概况</span>
+							<span id="time1">2016-11-11</span>
+						</p>
+						<div class="m_market">
+							<div><img src="/saasBeta/images/guapaishu.jpg"></div>
+							<div class="public">
+								<p>总挂牌(家)</p>
+								<p><span id="totalGp">9485</span></p>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="m_market">
+							<div><img src="/saasBeta/images/chengjiaohu,jpg.gif"></div>
+							<div class="public">
+								<p>成交股数(百万)</p>
+								<p><span id="czGs">7902.55</span></p>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="m_market">
+							<div><img src="/saasBeta/images/chengjiaoer.jpg"></div>
+							<div class="public">
+								<p>成交金额(亿)</p>
+								<p><span id="czJe">6.06</span></p>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="number">
+						<p>
+							<span>指数</span>
+							<span id="time2">2016-11-11</span>
+						</p>
+						<div class="m_number">
+							<div class="up">
+								<p id="zhishu_1">1186.37</p>
+							</div>
+							<div class="up_number">
+								<p id="cf_zhishu">3.00%</p>
+								<p>三版成分指数</p>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="m_number">
+							<div class="down">
+								<p id="zhishu_2">1186.37</p>
+							</div>
+							<div class="down_number">
+								<p id="zs_zhishu">3.00%</p>
+								<p>三版做市指数</p>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="transacte">
+						<p>
+							<span>交易提示</span>
+							<span id="time3">2016-11-11</span>
+						</p>
+						<div class="m_transacte">
+							<div>
+								<p id="xggp">29支</p>
+								<p>新股挂牌</p>
+							</div>
+							<div>
+								<p id="xfgp">20支</p>
+								<p>新发股份挂牌</p>
+							</div>
+							<div>
+								<p id="zrbg">1支</p>
+								<p>转让方式变更</p>
+							</div>
+							<div>
+								<p id="cqcx">6支</p>
+								<p>除权除息</p>
+							</div>
+							<div>
+								<p id="ztzr">439支</p>
+								<p>暂停转让</p>
+							</div>
+							<div>
+								<p id="hfzr">3支</p>
+								<p>恢复转让</p>
+							</div>
+						</div>
+					</div>
+					<div class="clr"></div> 
+				</div>
+				<div class="clr"></div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</html>

@@ -1,0 +1,250 @@
+		<link rel="stylesheet" href="/saasBeta/yanbao/css/section04.css" />
+		
+		<div class="yuce-fx">
+			<div class="container">
+				<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+					<div class="public">
+							<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>四、盈利预测</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>
+							<div class="contents">
+								<div class="section" id="yc-sdck">
+									<h2>4.1盈利预测表</h2>
+									<div class="caiwu-table ylyc-table" id="ylyc">
+										<table class="table">
+											<thead>
+												<tr>
+													<th id="yuceStockCode">--</th>
+													<th class="shuzi">2016A</th>
+													<th class="shuzi">2017E</th>
+													<th class="shuzi">2018E</th>
+													<th class="shuzi">2019E</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr id="yuce_f2QZYYSR">
+													<td>营业收入(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f2QZYYCB">
+													<td>营业成本(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f2CWFY">
+													<td>财务费用(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f2LRZE">
+													<td>利润总额(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f2JSDSFY">
+													<td>所得税费用(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f2JLR">
+													<td>净利润(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_MeiGuShouYi">
+													<td>EPS(元/股)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_XiShuiQianLiRun">
+													<td>EBIT(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1LDZCHJ">
+													<td>流动资产(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1HBZJ">
+													<td>货币资金(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1YSZK">
+													<td>应收账款(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1CH">
+													<td>存货(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1GDZC">
+													<td>固定资产(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1ZCZJ">
+													<td>资产总计(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1LDFZHJ">
+													<td>流动负债(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1YFZK">
+													<td>应付账款(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1FZHJ">
+													<td>负债合计(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_GB">
+													<td>股本(万股)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f1SYZQYHJ">
+													<td>所有者权益(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_ZongZiChanShouYiLv">
+													<td>ROA(%)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_JingZiChanShouYiLv">
+													<td>ROE(%)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_LiuDongBiLv">
+													<td>流动比率</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_LiXiBaoZhangBeiShu">
+													<td>利息保障倍数</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_f3JYHDCSDXJLLJE">
+													<td>经营现金流净额(万元)</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+												<tr id="yuce_ShiYingLv">
+													<td>PE</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+													<td class="shuzi">--</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>	
+									<div class="yuce-tips"><em>*</em>声明：预测表根据过去历史数据推演得出，并不代表结论，预测结果仅供参考</div>
+								</div>
+							</div>
+					</div>
+					<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+				</div>
+			</div>
+		</div>
+	<!-- </body> -->
+	<!-- 公共js -->
+	<!-- <script src="../js/jquery.min.js"></script> -->
+	<!-- 数据交互js -->
+	<!-- <script src="../js/common/ajax.js"></script>
+	<script src="../js/common/util.js"></script>
+	<script src="../js/slideList.js"></script> -->
+	<!-- 业务js -->
+	<!-- <script src="/saasBeta/yanbao/js/bus/section04.js"></script> -->
+	<script>
+		//判断是否登录
+		UTIL.nologin('ylyc_data');
+		//盈利预测
+		findProfitForecastData();
+		$(function(){
+			payOrNot();
+			deepLook();
+			if(payOrNot()==true){//已付费
+				
+			}else if(payOrNot()==false || payOrNot()==undefined){//未付款
+				$("#ylyc").hide();
+				var div='<div class="noPay">深度内容，开通查看权限</div>';
+				$("#yc-sdck").append(div);
+			}
+			
+		    var windowHeight = $(window).height()
+		    $(".yuce-fx .container").height(windowHeight-195);
+		    $(".contents").height(windowHeight - 290)
+		})
+	</script>
+<!-- </html> -->

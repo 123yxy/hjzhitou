@@ -1,0 +1,327 @@
+/*公告部分*/
+.hide{
+    display:none;
+}
+body{
+    background:#F3F6F9;
+}
+.notice{
+    width:100%;
+    /*background:#fff;*/
+    /*padding:20px 0;*/
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+    background:#fff;
+    /*padding:20px 20px;*/
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-top:188px;
+    margin-bottom: 88px!important;
+    /*padding-bottom: 10px;*/
+}
+.title-box{
+    width:100%;
+    background:#fff;
+    margin-bottom:20px;
+    padding-bottom:7px;
+    position: fixed;
+    top:58px;
+    z-index: 10;
+    height:130px;
+    box-sizing: border-box;
+    border-bottom: 19px solid #F3F6F9;
+}
+.select-box{
+    width:1200px;
+    /*height:48px;*/
+    /*margin:0 auto;*/
+    margin:20px auto;
+    margin-bottom: 19px;
+    /*box-sizing: border-box;*/
+    /*margin-top:7px;*/
+    /*margin-bottom: 8px;*/
+}
+.select-box>ul>li{
+    /*width:130px;*/
+    /*height:40px;*/
+    /*border-right:1px solid #E4E4E4;*/
+    color:#333;
+    float: left;
+    font-size:14px;
+    line-height: 15px;
+    /*text-align: center;*/
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+}
+.select-box li>div>span{
+    display: inline-block;
+    width:11px;
+    height:6px;
+    background:url('../../../saasBeta/images/Image/pic.png') no-repeat -90px -30px;
+    margin-left: 14px;
+    margin-right: 38px;
+}
+.select-box li>div>span.close{
+	width:12px;
+	height:12px;
+	background:url('../../../saasBeta/images/Image/close_date.png')
+}
+.select-box li>div>span.close:hover{
+	width:12px;
+	height:12px;
+	background:url('../../../saasBeta/images/Image/close_date_active.png')
+}
+.select-box li>div>span.active{
+    background:url("../../../saasBeta/images/Image/select-icon-top.png")
+}
+.selected{
+    width:100%;
+    height:50px;
+    padding:12px;
+    box-sizing: border-box;
+    border:1px solid #E4E4E4;
+    border-top:0;
+}
+.sel-content .item{
+    display: inline-block;
+    border-radius: 3px;
+    height:24px;
+    border:1px solid #1E7BCD;
+    color:#1E7BCD;
+    line-height: 24px;
+    padding-left:8px;
+    margin-right:10px;
+}
+.sel-content .item>b{
+    display: inline-block;
+    width:25px;
+    height:25px;
+    text-align: center;
+    cursor: pointer ;
+}
+.sel-content .item>b:hover{
+    background:#1885E2;
+    color:#fff;
+}
+.search{
+    height:24px;
+    line-height:24px;
+    position: relative;
+}
+.search span{
+    display: inline-block;
+    color:#4098E6;
+    border-right:1px solid #E4E4E4;
+    padding-right:10px;
+    cursor: pointer;
+}
+.search input{
+    border:0;
+    padding-left:40px;
+}
+.search b{
+    display: inline-block;
+    width:17px;
+    height:17px;
+    background:url("../../../saasBeta/images/Image/pic.png") no-repeat -30px -30px;
+    position:absolute;
+    top:10px;
+    left:82px;
+    cursor: pointer;
+}
+.notice-title{
+        /* width: 100%; */
+    height: 14px;
+    /* margin-top: 10px; */
+    line-height: 14px;
+    border-bottom: 1px solid #dce2e8;
+    padding-bottom: 8px;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*margin-bottom: 6px;*/
+
+  
+}
+.big-t{
+    font-size:16px;
+    color:#363636;
+    font-weight: bold;
+    margin-right:20px;
+}
+.big-t>span{
+    color:#F54B51;
+}
+.num{
+    color:#f4343c!important;
+}
+.not-left{
+    color:#333333;
+    font-size:14px;
+}
+.not-left>span{
+    color:#777777;
+}
+.not-right>span{
+    margin-right:20px;
+    cursor: pointer;
+}
+.not-right>span>b{
+    display: inline-block;
+    width:6px;
+    height:12px;
+    margin-left:10px;
+}
+.not-right>span>b.active{
+    background:url("../../../saasBeta/images/Image/top-b-icon.png");
+}
+.notice-content{
+    margin:0 20px;
+    margin-bottom: 20px;
+}
+.con-item{ border-bottom:1px dashed #E4E4E4;
+    padding:14px 0 14px 0;
+    display: block;
+    cursor: pointer;
+}
+/*.con-item>a{*/
+    /*display: inline-block;*/
+/*}*/
+.con-item>p{
+    font-size:15px;
+    font-weight: bold;
+    color:#1985e2;
+    line-height: 15px;
+    /*margin-bottom:10px;*/
+}
+
+.con-item>span{
+    font-size:12px;
+    color: #888;
+}
+.con-item>div{
+    margin-top:10px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    line-height:14px;
+}
+.con-item>div>span {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 20px;
+    color:#777;
+}
+.con-item>div:last-child{
+    font-size:14px;
+    color:#333;
+}
+
+.btn{
+    width: 100%;
+    text-align: center;
+    padding-bottom:20px;
+}
+.add-more{
+    width:260px;
+    height:32px;
+    background:#EBF0F4;
+    color:#6a849c;
+    border: none;
+    cursor: pointer;
+    font-size:14px;
+    line-height:32px;
+}
+
+
+
+.not-nav{
+    width:1200px;
+
+    margin:0 auto;
+    border-bottom:1px solid #dce2e8;
+    box-sizing: border-box;
+}
+.not-nav>div:first-child{
+    font-size:16px;
+    font-weight: bold;
+    color:#333333;
+    width:35px;
+    padding: 20px 0 14px 0;
+    border-bottom:2px solid #1985E2;
+}
+.not-nav>div.sou{
+     font-size:16px;
+    font-weight: bold;
+    color:#333333;
+    width:35px;
+    padding: 20px 0 14px 0!important;
+    border-bottom:2px solid #1885E2;
+}
+.not-nav>div:last-child{
+    padding-top:14px;
+    position: relative;
+}
+.not-nav>div:last-child>input{
+    width:320px;
+    height:32px;
+    padding-left:40px;
+    box-sizing: border-box;
+    font-size:12px!important;
+    color:#777;
+    line-height: 32px;
+    border:1px solid #e4e4e4!important;
+}
+.not-nav>div:last-child>b{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url(../../../saasBeta/images/Image/pic.png) no-repeat -30px -30px;
+    position: absolute;
+    left: 14px;
+    top: 22px;
+    cursor: pointer;
+}
+.gg{
+    width:34px!important;
+}
+
+
+.select-box>span,.select-box>div{
+    line-height: 14px;
+    color: #666;   
+    font-size: 14px;
+    margin-right:20px;
+}
+.select-box>div>.time{
+    color:#1E7BCD;
+    cursor: pointer;
+}
+.select-box div.fr>b{
+    display: inline-block;
+    width:6px;
+    height:13px;
+    margin-left:10px;
+    background:url("../../../saasBeta/images/Image/top-b-icon.png");
+}
+.select-box div.fr>b.active{
+    background:url("../../../saasBeta/images/Image/pic.png") -60px -61px;
+}
+.date{
+    position:absolute;top:0;left:0;
+}
+
+.s-content .one-list{
+    position:relative;
+}
+.two-list{
+    width:1000px;
+    height: 300px;
+    position:absolute;
+    top:0;
+    left:200px;
+    border:1px solid #000;
+}

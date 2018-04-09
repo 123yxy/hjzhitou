@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>股票资料-新闻</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/amazeui.datetimepicker.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" href="/saasBeta/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_style.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/new_zh.css" />
+		<link rel="stylesheet" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/newTBcommon.css" />
+		<link rel="stylesheet" href="/saasBeta/css/linshi.css" />
+
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<!-- 自动补全样式 -->
+		<script src="/saasBeta/js/jquery.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js"></script>
+		<script src="http://cdn.amazeui.org/amazeui/2.7.0/js/amazeui.min.js" type="text/javascript"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+
+	<body>
+		<!--主体 star-->
+		<div class="right_main new_r_main">
+			<!--main  star-->
+			<!--<div class="main new_main new_TBmain">-->
+				<!--<div class="edit_box">-->
+					<div class="new_boar_main new_styles fl">
+						<div class="new_nav_postion">
+							<a href="/security/myPreferredStock.html">证券管理</a> >
+							<a id="stockNameShow" href="javascript:;">--</a>
+						</div>
+						<div class="boar_l nav_left new_boar_li">
+							<ul>
+								<!--<li><span></span><a href="#">首页概览</a></li>
+								<li><span></span><a href="#">企业资料</a></li>
+								<li><span></span><a href="#">董事会高管</a></li>
+								<li class="hover"><span></span><a href="#">公司公告</a></li>
+								<li><span></span><a href="#">股本股东</a></li>
+								<li><span></span><a href="#">财务数据</a></li>
+								<li><span></span><a href="#">行业分析</a></li>
+								<li><span></span><a href="#">发行分配</a></li>
+								<!-- <li><span></span><a href="#">舆情监测</a></li> -->
+								<div class="clr"></div>
+							</ul>
+						</div>
+					</div>	
+						<div class="boar_r new_r_styles fl">
+							<div class="main_r_center bfff">
+								<div class="yjy_title newm_10"><i class="xinwen_new"></i><span class="fl">新闻</span>
+									<div class="clr"></div>
+								</div>
+								<div class="clr"></div>
+								<div class="news_llist">
+									<ul id="newsList">
+
+										<!--<li>
+							<a href="javascript:;">1两会再谈创新，铭慧等中国企业如何破局？</a>
+							<span>03-14</span><em>证券之星</em>
+							<p><i>【摘要】</i>面对世界经济的复杂形势和全球性问题，习近平在讲话中点明“人类生活在共同的家园，拥有共同的命运”，提出要“打造甘苦与共、命运相连的发展共同体”。本次论坛又签署了32个双边、多边合作文件...</p>
+							
+						</li>
+						<li>
+							<a href="javascript:;">1两会再谈创新，铭慧等中国企业如何破局？</a>
+							<span>03-14</span><em>证券之星</em>
+							<p><i>【摘要】</i>面对世界经济的复杂形势和全球性问题，习近平在讲话中点明“人类生活在共同的家园，拥有共同的命运”，提出要“打造甘苦与共、命运相连的发展共同体”。本次论坛又签署了32个双边、多边合作文件...</p>
+						</li>
+						<li>
+							<a href="javascript:;">两会再谈创新，铭慧等中国企业如何破局？</a>
+							<span>03-14</span><em>证券之星</em>
+							<p><i>【摘要】</i>面对世界经济的复杂形势和全球性问题，习近平在讲话中点明“人类生活在共同的家园，拥有共同的命运”，提出要“打造甘苦与共、命运相连的发展共同体”。本次论坛又签署了32个双边、多边合作文件...</p>
+						</li>
+						<li>
+							<a href="javascript:;">两会再谈创新，铭慧等中国企业如何破局？</a>
+							<span>03-14</span><em>证券之星</em>
+							<p><i>【摘要】</i>面对世界经济的复杂形势和全球性问题，习近平在讲话中点明“人类生活在共同的家园，拥有共同的命运”，提出要“打造甘苦与共、命运相连的发展共同体”。本次论坛又签署了32个双边、多边合作文件...</p>
+						</li>-->
+									</ul>
+								</div>
+
+							</div>
+							<!--<div class="addmore">
+						<a href="javascript:;" id="loadMore"></a>
+					</div>-->
+							<div class="clr"></div>
+
+						</div>
+						<div class="clr"></div>
+					<!--</div>
+					<div class="clr"></div>-->
+				<!--</div>
+				<div class="clr"></div>-->
+			<!--</div>-->
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<script src="/saasBeta/js/businessDetails/newsList.js"></script>
+		<script src="/saasBeta/js/businessDetails/GPleft.js"></script>
+	</body>
+
+</html>

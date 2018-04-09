@@ -1,0 +1,1042 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html>
+<!--<![endif]-->
+
+<head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable = no" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/common.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/user.css" />
+    <link rel="stylesheet" href="/saasBeta/yanbao/css/cover.css" />
+    <title>研料</title>
+    <!--新加的会员服务的样式-->
+    <style type="text/css">
+    	.indexTop-user{float: right;max-width: 33%;}
+        .member-service{float: right;margin-top: 5px;padding-top: 10px;margin-right: 20px;}
+		.member-service a{color: #d2e5f5;font-size: 14px;}
+		.member-service a:hover{color: #fff;}
+    </style>
+</head>
+
+<body>
+    <div class="marsk" style="display: none;"></div>
+     <!-- 投资领域的弹窗 -->
+    <div class="zhuanli-tc" style="display: none;" id="tzlyTc">
+        <b class="tc-close"></b>
+        <h2>主要投资领域</h2>
+        <p></p>
+    </div>
+    <!--专利的弹窗-->
+    <div class="zhuanli-tc" style="display: none;" id="patentnumTc">
+        <b class="tc-close"></b>
+        <h2>国家知识产权信息(专利)</h2>
+        <div class="reyuan-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>专利名称</th>
+                        <th>申请公布</th>
+                        <th>申请号</th>
+                        <th>申请公布号</th>
+                        <th class="shuzi">详情</th>
+                    </tr>
+                </thead>
+                <tbody id="patentnumListT">
+ 
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--著作权的弹窗-->
+    <div class="zhuanli-tc" style="display: none;" id="copyrightnumTc">
+        <b class="tc-close"></b>
+        <h2>国家知识产权信息(软件著作权)</h2>
+        <div class="reyuan-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>软件全称</th>
+                        <th>批准日期</th>
+                        <th>登记号</th>
+                        <th>版本号</th>
+                        <th>详情</th>
+                    </tr>
+                </thead>
+                <tbody id="copyrightnumList">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <div class="qxheader"></div> -->
+    <div class="userHead">
+        <div class="cotainer">
+            <div class="row indexTop-main">
+                <div class="col-lg-2 col-md-2 col-sm-2 userHead-logo">
+                    <img src="/saasBeta/yanbao/images/logo.png">
+                </div>
+                <!--<div class="col-lg-4 col-md-4 col-sm-4 indexTop-user"></div>-->
+                <div class="indexTop-user"></div>
+                <!--<div class="member-service"><a href="memberRecord.html">会员服务</a></div>-->
+                <div class="col-lg-5 col-md-5 col-sm-5 top-search">
+                	<em class="sy-fdj"></em>
+                	<input type="text" placeholder="输入股票名称/代码" class="top-searched" id="topSearch" />
+                	<ul class="his-search" style="display: none;">
+                		<!--<li><span></span><b class="clear-icon"></b></li>-->
+                	</ul>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="flipbook-viewport" style="margin-top:32px;">
+        <div class="container">
+            <div class="flipbook">
+                <div class="cover">
+                    <div class="companies-name"><span>--</span>智能研报</div>
+                    <div class="cover-logo"><img src="/saasBeta/yanbao/images/logo-loginReg2.png" width="117" height="40" draggable="false" /><img src="/saasBeta/yanbao/images/cover-slogan.png" height="41" width="172" alt=""></div>
+                    <!--添加的收费付费的标识-->
+                    <div class="free">
+                    	<span class="free-read">免费阅读</span>
+                    	<span class="pay-for">深度阅读</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="content-tips">
+                <p>本报告内容通过对公开披露信息进行机器处理生成，对这些信息的准确性及完整性不作任何保证，不保证该信息未经任何更新，相关信息并未经过本网站证实，不对您构成任何投资建议，据此操作，风险自担。</p>
+            </div> -->
+            
+            <div class="content-tips">
+                <p style="color: rgba(255,255,255,.6);">本报告内容通过对公开披露信息进行机器处理生成，对这些信息的准确性及完整性不作任何保证，不保证该信息未经任何更新，相关信息并未经过本网站证实，不对您构成任何投资建议，据此操作，风险自担。</p>
+            </div>
+            <!-- 左侧翻页 -->
+            <div class="pages-tools">
+                <span class="firstPage">首页</span>
+                <span class="lastPage">末页</span>
+            </div>
+            <!-- 右侧工具栏 -->
+            <ul class="cover-tools" id="muList">
+                <li class="slide-ml"><span>目录</span>
+                    <div id="catalogue"></div>
+                </li>
+                 <li class="slide-share"><span>分享</span>
+                    <div id="share">
+                        <div class="ewm-text">扫一扫分享</div>
+                        <div id="text">
+                            <div class="ewm-logo">
+                                <img src="/saasBeta/yanbao/images/logo2.jpg" class="logo-center" alt="" id="ewm-img" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--<li>下载</li>-->
+                <!--<li class="buyer">付费版</li>-->
+            </ul>
+            <div class="previousPage"></div>
+            <div class="nextPage"></div>
+        </div>
+        <!-- <div class="cover-ewm">
+            <span id="text">
+                <div class="ewm-logo">
+                    <img src="/saasBeta/yanbao/images/logo2.jpg" class="logo-center" alt="" id="ewm-img" />
+                </div>
+            </span>
+
+            <p>扫一扫分享</p>
+        </div> -->
+        <!-- <div id="catalogue"></div> -->
+        <!--<div class="previousPage"></div>
+        <div class="nextPage"></div>-->
+    </div>
+
+    
+	<!--查看做市商家数-->
+	<div class="zhuanli-tc" style="display: none;" id="marketNum">
+        <b class="tc-close"></b>
+        <h2>做市商</h2>
+        <div class="reyuan-table wj-commonTable zuoshishang">
+        	<table class="table">
+        		<thead>
+        			<tr>
+        				<th>机构名称</th>
+        				<th>库存股（万股）</th>
+	        			<th>做市起始日</th>
+	        			<th>是否首批做市商</th>
+	        			<th>是否主办券商</th>
+	        		</tr>
+        		</thead>
+        		<tbody id="marketList">
+        			<!--<tr>
+        				<td>2323</td>
+        				<td>2323</td>
+        				<td>2323</td>
+        			</tr>-->
+        		</tbody>
+        	</table>
+        </div>
+	</div>	
+	<!--查看对标公司的情况-->
+	<div class="zhuanli-tc" style="display: none;" id="benchMarke">
+        <b class="tc-close"></b>
+        <h2>对标公司</h2>
+        <div class="duibiao-company">
+            <ul id="dbList">
+            	<!--<li>
+            		<span>上海金拱门食品有限公司</span>
+            	</li>
+            	<li>
+            		<span>上海金拱门食品有限公司</span>
+            	</li>
+            	<li>
+            		<span>上海金拱门食品有限公司</span>
+            	</li>-->
+            </ul>
+        </div>
+    </div>
+    <!--财务数据的对标数据-->
+	<div class="zhuanli-tc" style="display: none;" id="BenchmarkingData">
+        <b class="tc-close"></b>
+        <h2 id="zhibName"></h2>
+        <div class="caiwu-table wj-commonTable zhibiao-shuj">
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>公司名称</th>
+          			<th>数值</th>
+          		</tr>
+          	</thead>
+          	<tbody id="BenchmarkingList">
+          		<!--<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>17.98</td>
+          		</tr>-->
+          	</tbody>
+          </table>
+        </div>
+    </div>
+     <!--并购及重大事件的查看详情-->
+	<div class="zhuanli-tc" style="display: none;" id="MajorEventsAndMergers">
+        <b class="tc-close"></b>
+        <h2>并购及重大资产重组-详情</h2>
+        <div class="caiwu-table">
+        	<p class="bg-bt">标的方</p>	
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>公司名称</th>
+          			<th>与披露者方的关系</th>
+          			<th>标的类型</th>
+          		</tr>
+          	</thead>
+          	<tbody id="bdData">
+          		<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="caiwu-table">
+        	<p class="bg-bt">买方</p>	
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>公司名称</th>
+          			<th>企业性质</th>
+          			<th>与披露方的关系</th>
+          			<th>受让后持股数量(万股)</th>
+          			<th>受让后持股比例(%)</th>
+          		</tr>
+          	</thead>
+          	<tbody id="buyData">
+          		<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+        <div class="caiwu-table">
+        	<p class="bg-bt">卖方</p>	
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>公司名称</th>
+          			<th>企业性质</th>
+          			<th>交易金额(万元)</th>
+          			<th>持股转让数量(万股)</th>
+          			<th>受让后持股比例(%)</th>
+          		</tr>
+          	</thead>
+          	<tbody id="shellData">
+          		<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          		</tr>
+          		<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          			<td>17.98</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </div>
+    </div>
+    
+    <!--查看主营业务的柱状图-->
+    <div class="zhuanli-tc" style="display: none;" id="mainBusniess">
+        <b class="tc-close"></b>
+        <h2 id="hisName"></h2>
+        <div class="db-list" id="MainBusiness" style="height: 400px;width: 100%;">
+            
+        </div>
+    </div>
+    
+    <!--重大事件的弹窗查看-->
+	<div class="zhuanli-tc" style="display: none;" id="MajorEvents">
+        <b class="tc-close"></b>
+        <h2 id="EventName"></h2>
+        <div class="caiwu-table tc-height zdsj-tc">
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>类型</th>
+          			<th>时间</th>
+          			<th>公告名称</th>
+          			<th>公告详情 </th>
+          		</tr>
+          	</thead>
+          	<tbody id="MajorEventsList">
+          		<!--<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>2016-01-07</td>
+          			<td>上海金拱门食品有限公司</td>
+          			<td><span>查看</span></td>
+          		</tr>-->
+          	</tbody>
+          </table>
+          <div class="pagination" id="zdsjXQ"></div>
+        </div>
+    </div>
+   <!--A股的查看简历-->
+	<div class="zhuanli-tc" style="display: none;" id="resume">
+        <b class="tc-close"></b>
+        <h2 id="resumeName"></h2>
+        <div id="resumeCotent">
+          
+        </div>
+    </div>
+    <!--解禁股东明细-->
+	<div class="zhuanli-tc" style="display: none;" id="jjgdMX">
+        <b class="tc-close"></b>
+        <h2>解禁股东明细</h2>
+        <div class="caiwu-table">
+          <table class="table">
+          	<thead>
+          		<tr>
+          			<th>解禁股东</th>
+          			<th>本次解禁股份数量（万股）</th>
+          			<th>剩余有限售股份数量（万股）</th>
+          		</tr>
+          	</thead>
+          	<tbody id="jjgdList">
+          		<!--<tr>
+          			<td>上海金拱门食品有限公司</td>
+          			<td>2016-01-07</td>
+          			<td>上海金拱门食品有限公司</td>
+          		</tr>-->
+          	</tbody>
+          </table>
+        </div>
+    </div>
+    <!--融资情况-->
+    <div class="zhuanli-tc faxing-tc" style="display: none;">
+        <b class="tc-close"></b>
+        <h2>发行对象</h2>
+        <div class="reyuan-table wj-commonTable fx-tc">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>发行对象</th>
+                        <th>认购数量(万股)</th>
+                        <th>认购金额(万元)</th>
+                    </tr>
+                </thead>
+                <tbody id="faxingNum">
+                    <!--<tr>
+                        <td>2015-01-14</td>
+                        <td>111118665667887675</td>
+                        <td>注销</td>                        
+                    </tr>
+                    <tr>
+                        <td>2015-01-14</td>
+                        <td>111118665667887675</td>
+                        <td>注销</td>                    
+                    </tr>-->
+                </tbody>
+            </table>
+            <!--<div class="wj-commonTips"><i>* </i>备注：所报材料真实合法，一切责任由当事人自负</div>-->
+        </div>
+    </div>
+    <!--cover页的支付页面-->
+    <div class="payment-page" style="display: none;" id="payment-page">
+    	<div class="top-name"><span><!--中科软（430002）智能研报--></span><em></em></div>
+    	<div class="pay-list">
+    		<ul id="payForList">
+    			<li><span>股权结构：</span>梳理股权变化历史，找出背后的逻辑规律。</li>
+    			<li><span>股东关系：</span>挖掘股东间关联关系，了解公司背景。</li>
+    			<li><span>股本变动：</span>发现增持减持线索，探究公司价值变化。</li>
+    			<li><span>人员分析：</span>构建员工结构模型，直观展现公司优劣势。</li>
+    			<li><span>历史沿革：</span>高度凝练公司大事记，快速知晓公司历史。</li>
+    			<li><span>债务结构：</span>揭示负债信息（包括有息负债），洞悉商业风险。</li>
+    			<li><span>主营业务分析：</span>对比任意连续两年数据，寻找发展轨迹，发现异常情况。 </li>
+    			<li><span>上下游分析：</span>分析上下游订单，检测企业生存及抗风险能力。 </li>
+    			<li><span>行业指标：</span>从行业到企业，洞察全面实时信息变化。 </li>
+    			<li><span>深度财务分析：</span>针对不同行业，采用差异化财务分析模型。</li>
+    			<li><span>盈利预测：</span>详细展示模型逻辑，提供未来合理预期。</li>
+    		</ul>
+    		<div class="pay-tips">
+    			<div class="fl xieyi-xz">
+	    			<div class="data-select">
+	    				<input type="checkbox" class="checkbox-select"/>
+	    				<label class="checkbox-label on"></label>
+	    				<label class="checkboxData">服务协议</label>
+	    			</div>
+	    		</div>	
+    			<div class="fr gm-xq">
+    				<span class="common-problem">常见问题</span>
+    				<span class="paies">购买说明</span>
+    			</div>
+    			<div class="clearfix"></div>
+    		</div>
+    		<div class="tijiao">
+    			<div class="fl zhifu">
+    				<p class="jiner"><span>原价10.00元</span>，<span>促销价9.00元</span></p>
+    				<p class="shiji-jiner">实际支付：<span class="money">9.00</span>元</p>
+    			</div>
+    			<div class="fr dingdan">提交订单</div>
+    			<div class="clearfix"></div>
+    		</div>
+    	</div>
+    </div>
+    <!--订单详情页-->
+    <div class="payment-page oreders" style="display: none;" id="orderDetails">
+    	<div class="dd-top"><span>待付款</span><em></em></div>
+    	<div class="order-details">
+    		<div class="dingdan-list">
+    			<table class="table">
+    				<thead>
+    					<tr>
+    						<th>商品</th>
+    						<th>下单时间</th>
+    						<th>订单编号</th>
+    						<th>订单金额</th>
+    						<th>优惠信息</th>
+    					</tr>
+    				</thead>
+    				<tbody id="orderList">
+    					<!--<tr>
+    						<td>中科软（430002）深度智能研报</td>
+    						<td>2014-05-02 15：22：20</td>
+    						<td>20140611152136411314</td>
+    						<td>298</td>
+    						<td>8折</td>
+    					</tr>-->
+    				</tbody>
+    			</table>
+    		</div>
+    	</div>
+    	<div class="zhifu-jiner">
+    	<div class="zf-ze"><span class="xuzhifu">需付款：<i>￥240</i></span><span class="zhifu-now">立即支付</span></div>
+    	</div>
+    </div>
+    <!--支付成功的页面-->
+    <div class="pay-sucess" style="display: none;" id="pay-sucess">
+    	<div class="pay-top">
+<!--    		<span>支付成功</span>-->
+    		<em></em>
+    	</div>
+    	<div class="pay-content">
+    		<div class="pay-icon fl">
+    			<span></span>
+    		</div>
+    		<div class="zhifu-cg fl">
+    			<p class="zfcg">支付成功！</p>
+    			<p class="ddh"><span class="ddxx">订单号：1151229111982693</span><span>支付金额：<em class="zfje">￥389</em></span></p>
+    			<p class="ddxq">订单详情</p>
+    			<div class="zf-shure">确定</div>
+    		</div>
+    		<div class="clearfix"></div>
+    	</div>
+    </div>
+    <!--支付的二维码-->
+    <div class="zf-ewm" style="display: none;" id="zf-ewm">
+    	<em class="zf-close"></em>
+    	<div class="zhifu-ewm">
+    		<div class="payFor" id="code"></div>
+    		<p>使用微信扫描二维码</p>
+    		<!--<p>请使用当前登录的微信扫码支付</p>-->
+    	</div>
+    </div>
+
+	<!--常见问题-->
+	<div class="common-problems" style="display: none;" id="cmmomProblem">
+		<div class="problem-top"><span>常见问题</span><em></em></div>
+		<div class="problem-content">
+			<p class="title-list">产品介绍</p>
+			<p>我们的产品主要为新三板投资人提供数据服务，为投资人在投资决策、分析研究、商务合作等场景下提供企业智能研报。</p>
+			<p class="title-list">产品提供哪些公司智能研报？</p>
+			<p>目前，产品提供全国中小企业股份转让系统（新三板）挂牌公司智能研报。</p>
+			<p class="title-list">智能研报包含哪些数据内容？</p>
+			<p>智能研报包括公司的工商信息、挂牌信息、行情、股权关系、投融、财务、经营、主营业务分析、行业分析、财务预测、风险分析等20多个维度数据内容。</p>
+			<p class="title-list">产品是免费还是收费？</p>
+			<p>我们的产品目前分为免费版和付费版。</p>
+			<p class="title-list">未注册用户与已注册用户区别？</p>
+			<p>未注册用户可查看热门研报，注册后查看免费版的研报内容。</p>
+			<p class="title-list">注册用户功能使用上有什么限制吗？</p>
+			<p>目前用户查询公司研报每天有次数限制，每个账号每天可查看20份。</p>
+			<p class="title-list">是否支持报告下载？</p>
+			<p>目前产品还不支持报告下载，下期产品会有相关功能上线，敬请期待。</p>
+			<p class="title-list">数据来源是？</p>
+			<p>全国中小企业股份转让系统、全网数据、人工采集及处理数据。同时每天进行公司动态数据更新。</p>
+
+		</div>
+	</div>
+
+	<!--购买说明-->
+	<div class="common-problems" style="display: none;" id="payFor">
+		<div class="problem-top"><span>购买说明</span><em></em></div>
+		<div class="problem-content">
+			<p>为了减少交易纠纷和误会，请购买您需要的研报，购买您需要付费板块，并填写正确的年限，交易完成后请保持电话畅通，我们将会以短信形式告知您。</p>
+			<div class="goumai-sm">
+				<p class="sm-title">（1）发票说明：</p>
+				<p>在研料累计消费满300元，本公司可提供正规的“增值税专用发票”，下单后请将开票资料传真到本公司或者邮箱。</p>
+				<p>传真号：010—3625111</p>
+				<p>邮箱：shengkanghuijin@159jh.com</p>
+				<p class="sm-title">（2）付款须知：</p>
+				<p>请在支付页面点击“支付”按钮，进入支付页面。本公司支付方式为微信支付，支付前请确定金额正确。</p>
+				<p class="sm-title">（3）售后服务：</p>
+				<p>售后热线：010—3625111</p>
+				<p>一年内有效，服务期内有任何问题均可联系我们，专业售后团队保障您的权益。</p>
+			</div>
+		</div>
+	</div>
+    
+    <script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/jquery-ui.min.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/bootstrap.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/echarts-all-3.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/lib/modernizr.2.5.3.min.js"></script>
+    <!--生成二维码的插件-->
+    <script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.qrcode.min.js"></script>
+    <!--修改滚动条的样式-->
+    <script type="text/javascript" src="/saasBeta/yanbao/js/lib/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/plugin/qunee-min-checked.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/plugin/common.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/plugin/main.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/plugin/analytics.js"></script>
+    <script src="/saasBeta/yanbao/js/plugin/jqPaginator.js"></script>  
+     <!--顶部搜索框-->
+	<!--<script type="text/javascript" src="/saasBeta/yanbao/js/common/commonJs.js"></script>-->
+    <script src="/saasBeta/yanbao/js/plugin/jqPaginator.js"></script>  
+
+
+    <!-- <script type="text/javascript" src="/saasBeta/yanbao/js/version.js"></script> -->
+    <!--<script src="/saasBeta/yanbao/js/slideList.js"></script>-->
+    <!-- 
+    <script src="/saasBeta/yanbao/js/common/util.js"></script>
+    <script type="text/javascript" src="/saasBeta/yanbao/js/common/ajax.js"></script>
+    <script src="/saasBeta/yanbao/js/catalogue.js"></script> -->
+    <!-- 企业基本信息js-凡国庆 -->
+    <!-- <script src="/saasBeta/yanbao/js/bus/section01.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/section02.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/section03.js"></script>
+    <script src="/saasBeta/yanbao/js/bus/section04.js"></script> -->
+    <script  src="/saasBeta/yanbao/js/common/ver.js"></script>
+    <script type="text/javascript">
+        // document.write("<s" + "cript type='text/javascript' src='js/section02.js?v=" + UTIL.S4() + "'></s" + "cript>");
+        
+        // UTIL.metacache(1);
+        ver(1)//20171027 shiqi
+        // document.write("<s" + "cript type='text/javascript' src='js/bus/section02_UDStream.js?v=" + UTIL.S4() + "'></s" + "cript>");
+    </script>
+
+
+    <script type="text/javascript">
+    
+        var crStockCode = UTIL.getPara("stockCode");
+        if (crStockCode != undefined && crStockCode != null && crStockCode != "") {
+            WF_ajax.canRead(false, { stockCode: crStockCode, phone: UTIL.getPara("phone") })
+        }
+//         $(function () {
+//             var windowHeight = $(window).height()
+//             $(".container").height(windowHeight - 195);
+//             $(".contents").height(windowHeight - 290)
+//         })
+		//判断目前公司是否是
+		if(isXSBCompany(crStockCode)){
+			$(".free").show();
+		}else{
+			$(".free").hide();
+		}
+        yepnope({
+            test: Modernizr.csstransforms,
+            yep: ['/saasBeta/yanbao/js/lib/turn.js'],
+            nope: ['/saasBeta/yanbao/js/lib/turn.html4.min.js'],
+            both: ['/saasBeta/yanbao/css/basic.css'],
+
+            complete: function () {
+
+                _initflipd(loadApp)
+            }
+
+        });
+        //添加未注册/登录头 获取用户登录信息
+
+        $(".companies-name span").text(decodeURI(UTIL.getPara("stockName")) + "(" + UTIL.getPara("stockCode") + ")");
+
+
+
+
+
+        var divNum = [], sectiondata;
+        // userHead();
+        // catalogue();
+        // $(".userHead-out").html(sethead());
+        // $("#uc").css("margin-right", "10px");
+
+        //logo链接
+        // $(".userHead-logo").html(logourl());
+        // getuserinfo();
+        //logo链接
+        $(".indexTop-user").html(sethead());
+        $(".userHead-logo").html(logourl());
+        getuserinfo();
+        function _initflipd(_callback) {
+            UTIL.getsection(function (_data) {
+            	//console.log(_data)
+                for (var i = 0; i < _data.length; i++) {
+                    var showData = _data[i].showData;
+                    var zjLevel = _data[i].zjLevel//新增zjlevel判断 pc端显示二级标题目录 需shouData及zjlevel 20171019 shiqi
+                    if (zjLevel === 2) {
+                        var turnDiv = '<div></div>';
+                        $(".flipbook").append(turnDiv);
+                        divNum.push(_data[i])//所有的二级标题
+                    }
+                };
+                sectiondata = _data;
+                var pageCount = $(".flipbook").children('div').length;
+                $(".pageCount").text(pageCount);
+                catalogue(sectiondata);
+                var windowHeight = $(window).height()
+                $(".slide-scroll").height(windowHeight - 260);
+                _callback();
+            });
+        };
+
+        $("#catalogue").on("click", "li", function () {
+            //      	alert(0)
+            var catalogueIndex = parseInt($(this).attr("index"));
+            localStorage.setItem("catalogueIndex",catalogueIndex);
+            //console.log(catalogueIndex+"a323")
+            var levelcode = divNum[catalogueIndex].levelcode;
+            var zj = levelcode.split('-')[0];
+            UTIL.searchsection._d = [];
+            UTIL.searchsection.dosearch(sectiondata, levelcode);//20170926 shiqi 遍历当前节点下的所有子节点,只查找一级
+            var section = "section";
+			
+            $.ajax({
+                // url: 'section' + zj + '/section' + divNum[catalogueIndex].levelcode + '.html',
+                url: section + zj + '/' + divNum[catalogueIndex].code + '.html',//shiqi 20170919
+                type: 'get',
+                async: false,
+                dataType: 'html',
+                success: function (data) {
+                    //console.log(".p"+(catalogueIndex+2));
+                    $(".flipbook").find(".p" + (catalogueIndex + 2)).eq(0).html(data);
+                    $(".flipbook").turn('page', catalogueIndex + 2);
+                    $(".currentPage").text(catalogueIndex + 2);
+                  	//页面显示股票简称
+                    $(".action-logo").html(decodeURI(UTIL.getPara("stockName")) + "(" + decodeURI(UTIL.getPara("stockCode")) + ")");
+                    showCatalogue();
+                }
+            });
+
+            $("#catalogue").hide();
+            $(".slide-ml").removeClass("active")
+        })
+		//点击免费阅读
+		$(".free-read").on("click",function(){
+			$(".nextPage").click();
+		})
+		
+        /**
+         * turn.js
+         */
+        function loadApp() {
+            $('.flipbook').turn({
+                width: 1156,
+                // height:500,
+                // width:900,
+                elevation: 50,
+                gradients: true,
+                autoCenter: true,
+                display: "single",
+                elevation: 50
+
+            });
+        };
+        // 隐藏工具条
+        function hideTools(){
+            $(".cover-tools").hide();
+        }
+        function nextPage() {
+            var pageCount = $(".flipbook").turn("pages");//总页数
+            var currentPage = $(".flipbook").turn("page");//当前页
+            localStorage.setItem("catalogueIndex",currentPage);   
+            var url=window.location.href;
+            var zj = divNum[currentPage - 1].levelcode.split('-')[0];//divNum为二级标题的内容
+            UTIL.searchsection._d = [];
+            UTIL.searchsection.dosearch(sectiondata, divNum[currentPage - 1].levelcode);//20170926 shiqi 遍历当前节点下的所有子节点,只查找一级
+            // console.log(divNum[currentPage - 1].levelcode)
+            var section = "section";
+			
+            
+            try {
+                $.ajax({
+                    //url: 'section' + zj + '/section' + divNum[currentPage - 1].levelcode + '.html',
+                    url: section + zj + '/' + divNum[currentPage - 1].code + '.html',//shiqi 20170919
+                    type: 'get',
+                    async: false,
+                    // data: { lc: divNum[currentPage - 1].levelcode },
+                    dataType: 'html',
+                    success: function (data) {
+                        //console.log(".p"+currentPage);
+                        $(".flipbook").find(".p" + (currentPage + 1)).eq(0).html(data);
+                        if (currentPage <= pageCount) {
+                            $(".flipbook").turn('page', currentPage + 1);
+                            $(".currentPage").text(currentPage + 1);
+                          	//页面显示股票简称
+                   			 $(".action-logo").html(decodeURI(UTIL.getPara("stockName")) + "(" + decodeURI(UTIL.getPara("stockCode")) + ")");
+                        } else {
+                        }
+
+                    }
+                })
+            } catch (e) {
+                if (currentPage <= pageCount) {
+                    $(".flipbook").turn('page', currentPage + 1);
+                    $(".currentPage").text(currentPage + 1);
+                } else {
+                }
+            }
+            //console.log(currentPage)
+        };
+        function lastNextPage() {
+            var pageCount = $(".flipbook").turn("pages");//总页数
+            var currentPage = $(".flipbook").turn("page");//当前页
+            localStorage.setItem("catalogueIndex",currentPage);
+           
+            // console.log(currentPage)
+            if (currentPage == pageCount) {
+                return
+            }
+            //console.log(currentPage+":"+pageCount)
+            var zj = divNum[pageCount - 2].levelcode.split('-')[0];
+            UTIL.searchsection._d = [];
+            UTIL.searchsection.dosearch(sectiondata, divNum[pageCount - 2].levelcode);//20170926 shiqi 遍历当前节点下的所有子节点,只查找一级
+            var section = "section";
+			
+            try {
+                $.ajax({
+                    //url: 'section' + zj + '/section' + divNum[pageCount - 2].levelcode + '.html',
+                    url: section + zj + '/' + divNum[pageCount - 2].code + '.html',//shiqi 20170919
+                    type: 'get',
+                    async: false,
+                    dataType: 'html',
+                    success: function (data) {
+                        $(".flipbook").find(".p" + pageCount).eq(0).html(data);
+
+                        $(".flipbook").turn('page', pageCount);
+                        $(".currentPage").text(pageCount);
+
+                        //页面显示股票简称
+                   		$(".action-logo").html(decodeURI(UTIL.getPara("stockName")) + "(" + decodeURI(UTIL.getPara("stockCode")) + ")");
+                    }	
+                })
+            } catch (e) {
+                // if (currentPage <= pageCount) {
+                //     $(".flipbook").turn('page', currentPage + 1);
+                //     $(".currentPage").text(currentPage + 1);
+                // } else {
+                // }
+            }
+        };
+        function prePage() {
+            var pageCount = $(".flipbook").turn("pages");//总页数
+            var currentPage = $(".flipbook").turn("page");//当前页
+            localStorage.setItem("catalogueIndex",currentPage);
+            
+            // hideTools();
+            // console.log(divNum)
+            //console.log(currentPage)
+            if (currentPage < 3) {
+                $(".flipbook").turn('page', 1);
+                $(".currentPage").text(1);
+
+            } else {
+                var zj = divNum[currentPage - 3].levelcode.split('-')[0];
+                UTIL.searchsection._d = [];
+                UTIL.searchsection.dosearch(sectiondata, divNum[currentPage - 3].levelcode);//20170926 shiqi 遍历当前节点下的所有子节点,只查找一级
+                var section = "section";
+				
+                try {
+                    $.ajax({
+                        // url: 'section' + zj + '/section' + divNum[currentPage - 3].levelcode + '.html',
+                        url: section + zj + '/' + divNum[currentPage - 3].code + '.html',//shiqi 20170919
+                        type: 'get',
+                        async: false,
+                        dataType: 'html',
+                        success: function (data) {
+                            //console.log(".p"+currentPage);
+                            $(".flipbook").find(".p" + (currentPage - 1)).eq(0).html(data);
+                            if (currentPage >= 1) {
+                                $(".flipbook").turn('page', currentPage - 1);
+                                $(".currentPage").text(currentPage - 1);
+                              	//页面显示股票简称
+                   				 $(".action-logo").html(decodeURI(UTIL.getPara("stockName")) + "(" + decodeURI(UTIL.getPara("stockCode")) + ")");
+                            } else {
+                            }
+
+                        }
+                    })
+                } catch (e) {
+                    if (currentPage <= pageCount) {
+                        $(".flipbook").turn('page', currentPage - 1);
+                        $(".currentPage").text(currentPage - 1);
+                    } else {
+                    }
+                }
+            }
+        };
+        function showCatalogue() {
+            var currentPage = $(".flipbook").turn("page");//当前页
+            if (currentPage !== 1) {
+                $("#catalogue").show()
+            } else {
+                $("#catalogue").hide()
+            }
+        }
+        
+        
+        
+        $(document).keydown(function (e) {
+
+            var previous = 37, next = 39, esc = 27;
+
+            switch (e.keyCode) {
+                case previous:
+
+                    // left arrow
+                    prePage();
+                    showCatalogue();
+                    e.preventDefault();
+                    $(".currentPage").text($(".flipbook").turn("page"));
+                    $("#catalogue").hide();
+                    $(".slide-ml").removeClass("active");
+                    $(".cover-tools").show();
+                    if($(".flipbook").turn("page")==1){
+                        hideTools();
+                    }
+                    break;
+                case next:
+                    //right arrow
+                    nextPage();
+                    showCatalogue();
+                    // $('.flipbook').turn('next');
+
+                    e.preventDefault();
+                    $(".currentPage").text($(".flipbook").turn("page"));
+                    $("#catalogue").hide();
+                    $(".slide-ml").removeClass("active")
+                    $(".cover-tools").show();
+                    break;
+                // case esc:
+
+                //     $('.magazine-viewport').zoom('zoomOut');    
+                //     e.preventDefault();
+
+                // break;
+            };
+        });
+        // 第一页
+        $(".firstPage").on("click", function () {
+            $(".flipbook").turn('page', 1);
+            $(".currentPage").text(1);
+            $("#catalogue").hide();
+            $(".slide-ml").removeClass("active")
+            showCatalogue();
+            //$(".cover-tools").hide()
+        });
+        //上一页
+        $(".previousPage").on("click", function () {
+            prePage();
+            showCatalogue();
+            $("#catalogue").hide();
+            $(".slide-ml").removeClass("active");
+//          if($(".flipbook").turn("page")==1){
+//              hideTools();
+//          }
+        });
+        // 下一页
+        $(".nextPage").on("click", function () {
+            nextPage();
+            showCatalogue();
+            $("#catalogue").hide();
+            $(".slide-ml").removeClass("active");
+            $(".cover-tools").show()
+        });
+        // 最后一页
+        $(".lastPage").on("click", function () {
+            var pageCount = $(".flipbook").turn("pages");//总页数
+            lastNextPage();
+            showCatalogue();
+            $(".currentPage").text(pageCount);
+            $("#catalogue").hide();
+            $(".slide-ml").removeClass("active")
+        });
+
+        //返回到目录页
+        // $(".return").on("click", function () {
+        //     $(".flipbook").turn('page', 1);
+        //     $(".currentPage").text($(".flipbook").turn("page"));
+        // });
+        // function userHead() {
+        //     var userHead = '<div class="cotainer">' +
+        //         '<div class="col-lg6 col-md-6 col-sm-6 userHead-logo"><a href="index.html"><img src="/saasBeta/yanbao/images/logo.png"></a></div>' +
+        //         '<div class="col-lg6 col-md-6 col-sm-6 userHead-out">' +
+        //         '<div class="infor-name">' +
+        //         '<em>' +
+        //         '<img src="' + getuserinfo().headimg + '" alt="头像" />' +
+        //         '</em>' +
+        //         '<span>' + getuserinfo().username + '</span>' +
+        //         '</div>' +
+        //         '</div>' +
+        //         '</div>';
+
+        //     $(".qxheader").append(userHead)
+
+        // };
+        // function getuserinfo() {
+        //     var userinfo = {}
+        //     if (localStorage["headImg"] && localStorage["headImg"] !== "null")
+        //         userinfo.headimg = localStorage["headImg"]
+        //     if (localStorage["userName"] && localStorage["userName"] !== "null")
+        //         userinfo.username = localStorage["userName"];
+        //     return userinfo;
+        // }
+
+
+        $(function () {
+            var windowHeight = $(window).height()
+            $(".flipbook").height(windowHeight -130);
+            $(".page-wrapper").height(windowHeight - 130);
+            $(".slide-scroll").height(windowHeight - 260);
+            $(window).resize(function () {
+                var windowHeight2 = $(window).height();
+                //console.log(windowHeight2)
+                $(".flipbook").height(windowHeight2 - 130);
+                $(".page-wrapper").height(windowHeight2 - 130);
+                $(".slide-scroll").height(windowHeight2 - 260);
+            })
+			 $(".cover-tools").on("click","li",function(){
+                $(this).siblings().children("div").hide();
+                $(this).siblings().removeClass("active");
+            })
+
+            // 分享
+            $(".slide-share span").on("click", function () {
+                $("#share").toggle();
+                $(this).parent().toggleClass("active");
+            });
+
+            //js动态生成二维码
+            var elText = document.getElementById("text");
+            var url = window.location.href;
+            var realUrl = url.replace(".com", ".com/wei/znyb_phone");
+            // var img=$("#ewm-img")[0];
+            $("#text").qrcode({
+                render: "canvas", // 渲染方式有table方式和canvas方式
+                text: realUrl,
+                width: 106,
+                height: 106,
+                colorDark: '#000000',
+                colorLight: '#ffffff',
+                //	correctLevel : H,
+                src: 'images/logo2.png'
+            })
+
+            userPhoto();
+			payOrNot();
+            
+
+            //function makeCode () {      
+            //  var elText = document.getElementById("text");
+            //  var url=window.location.href;
+            //  var realUrl=url.replace("znyb_pc","znyb_phone");
+            //  qrcode.makeCode(realUrl);
+            //}
+            //
+            //makeCode();
+
+            //			//修改滚动条的样式
+            //			$(".slide-scroll").niceScroll({
+            //				cursorcolor:"#36b8f4",
+            //				autohidemode:false,
+            //				cursorwidth: "6px", // 滚动条的宽度，单位：便素
+            //				cursorborderradius: "5px"// 滚动条圆角（像素）
+            //			});
+            //			$(".contents").niceScroll({
+            //				cursorcolor:"#36b8f4",
+            //				autohidemode:false,
+            //				cursorwidth: "6px", // 滚动条的宽度，单位：便素
+            //				cursorborderradius: "5px"// 滚动条圆角（像素）
+            //			});
+
+
+        })
+
+
+
+        //获取url中 的index地址，回跳到当前 章节 
+        if (UTIL.getParaNoLocalStorage("index") != null && UTIL.getParaNoLocalStorage("index") != "undefined" && UTIL.getParaNoLocalStorage("index") != "") {
+            //console.log(UTIL.getParaNoLocalStorage("index"));
+            //登录回跳 
+            setTimeout(function () { $("#catalogue").find("li").eq(parseInt(UTIL.getParaNoLocalStorage("index"))).click() }, 1000)
+
+        }
+        
+//      测试
+    </script>
+
+</body>
+
+</html>

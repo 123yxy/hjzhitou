@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no,email=no,adress=no" />
+		<title>市场概况</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+
+		
+		<!-- 页面css -->
+		<link rel="stylesheet" href="/saasBeta/css/Touyan.css" />
+		<!--<script src="/saasBeta/js/jquery.min.js"></script>-->	
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="/saasBeta/js/jquery-3.1.1.min.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/echarts/3.2.0/echarts.min.js"></script>
+		<!-- 分页开始 -->
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+		<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页结束 -->
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+		
+		
+		
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main">
+			<div class="main">
+			
+				<div class="clr"></div>
+				<div class="l_main l_main_none nL_main AguList">
+				</div>
+				<div class="clr"></div>
+			
+				<div class="content">
+			<!--<div class="classiFL">
+				<div class="fllb">
+					<ul>
+						<li>
+							<div >
+								<img src="/saasBeta/images/shichang2.png"/>
+								<p><a href="scgk.html">市场概况</a></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="/saasBeta/images/zhishu2.png"/>
+								<p><a href="bkjk.html">版块监控</a></p>
+							</div>
+						</li>
+						<li>
+							<div >
+								<img src="/saasBeta/images/guapai2.jpg"/>
+								<p><a href="xgzx.html">新股中心</a></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="/saasBeta/images/zuoshi2.png"/>
+								<p><a href="tzrl.html">投资日历</a></p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="/saasBeta/images/xieyi2.png"/>
+								<p><a href="rz.html">融资</a></p>
+							</div>
+						</li>
+						<div class="clr"></div>
+					</ul>
+				</div>
+			</div>-->
+			<div class="menu">
+				<h2>主要指数</h2>
+				<div class="bdnr">
+					<div class="biaoTou scgkli">
+						<ul>
+							<li>代码</li>
+							<li>名称</li>
+							<li>昨收</li>
+							<li>跌涨额（元）</li>
+							<li>跌涨幅（%）</li>
+							<li>成交额</li>
+						</ul>
+					</div>
+					<div class="lis">
+						<ul>
+							<li>a</li>
+							<li>b</li>
+							<li>c</li>
+							<li>d</li>
+							<li>e</li>
+							<li>f</li>
+						</ul>
+						<ul>
+							<li>a</li>
+							<li>b</li>
+							<li>c</li>
+							<li>d</li>
+							<li>e</li>
+							<li>f</li>
+						</ul>
+						<ul>
+							<li>a</li>
+							<li>b</li>
+							<li>c</li>
+							<li>d</li>
+							<li>e</li>
+							<li>f</li>
+						</ul>
+						<ul>
+							<li>a</li>
+							<li>b</li>
+							<li>c</li>
+							<li>d</li>
+							<li>e</li>
+							<li>f</li>
+						</ul>
+						
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<!--main  end-->
+		</div>
+			</div>
+		</div>
+		
+		<!--主体 end-->
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+
+	<!-- 页面js -->
+	
+	<script type="text/javascript" src="/saasBeta/xym/js/jquery.jedate.js"></script>
+	<script type="text/javascript" src="/saasBeta/xym/js/Touyan.js"></script>
+</html>

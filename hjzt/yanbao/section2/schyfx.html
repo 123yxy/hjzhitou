@@ -1,0 +1,180 @@
+<link rel="stylesheet" href="/saasBeta/yanbao/css/section02.css" />
+<style>
+	.container {
+		padding: 0;
+	}
+</style>
+<div class="company-business">
+	<div class="container schyfx">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<!--<div class="top-tiltes">
+								<div class="top-line">
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+										<span>二、公司业务</span>
+									</div>
+									<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+										<div class="action-logo">
+											<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+										</div>
+									</div>
+								</div>	
+							</div>-->
+				<div class="contents">
+					<div class="section hy-content">
+						<h2>2.6所处行业分析</h2>
+						<div class="yewu-contents">
+							<h3>2.6.1行业简介</h3>
+							<p id="industryRemark"></p>
+						</div>
+
+						<div class="hy-charts" id="IndustryAnalysis">
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+	</div>
+</div>
+<!-- <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../js/echarts-all-3.js"></script>
+<script src="../js/common/util.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/commonJs.js"></script>
+<script src="../js/bus/section02.js"></script> -->
+
+<script type="text/javascript">
+var isPayFor=localStorage.getItem("payFor");
+
+	var width = $(".yewu-contents").width();
+	$(".suochu-hy").css("width", width);
+
+
+	var acStockCode = UTIL.getPara("stockCode");
+	$(function () {
+		payOrNot();
+		deepLook();
+		
+		var windowHeight = $(window).height()
+		$(".yuce-fx .container").height(windowHeight - 195);
+		$(".contents").height(windowHeight - 290)
+	})
+	//取优劣势
+	init(function (_callback) {
+		UTIL.axs(UTIL.CONFIG.findSwot, { stockCode:acStockCode }, true, function (_data) {
+			//console.log(_data)
+			if (_data.retCode == '0000') {
+				if (_data.retData != null && _data.retData != "" && _data.retData != undefined) {
+					var retData = _data.retData;
+					for (i = 0; i < retData.length; i++) {
+						var h4Main = $("<h4>");
+						var pMain = $("<p>");
+						$(".schyfx").find($(".kaik-content")).eq(2).append(pMain);
+						var _render = retData[i].swotDesc;
+						var _renderTitle = retData[i].swotTitle;
+						if (retData[i].swotDesc === "") {
+							pMain.append("<div class=\"noDatas\">无</div>");
+							// pMain.before(h4Main);
+							return true;
+						}
+						else if (retData[i].swotTitle === "优势" || retData[i].swotTitle === "劣势") {
+							_renderTitle = "";
+						}
+						// console.log($(".schyfx").html())
+						pMain.before(h4Main);
+						pMain.append(_render);
+						h4Main.append(_renderTitle);
+					}
+				}
+				else {
+					var div = '<div class="noDatas">无</div>';
+					$(".schyfx").find(".kaik-content").eq(2).append(div)
+				}
+				// if(_data.retData!=null&&_data.retData!=""&&_data.retData!=undefined){
+				// 	var retData = _data.retData;
+				// 	for (i = 0; i < retData.length; i++) {
+				// 		var h4Main = $("<h4>");
+				// 		var pMain = $("<p>");
+				// 		$(".schyfx").find(".kaik-content").eq(2).append(pMain);
+				// 		// console.log($(".schyfx").html())
+				// 		pMain.before(h4Main);
+				// 		var _render = _data.retData[i].swotDesc;
+				// 		var _renderTitle = _data.retData[i].swotTitle;
+				// 		pMain.append(_render);
+				// 		h4Main.append(_renderTitle);
+				// 	}
+				// } else{
+				// 	var div='<div class="noDatas">暂无数据</div>';
+				// 	$(".schyfx").find(".kaik-content").eq(2).append(div)
+				// }
+			}
+		});
+		findIndustryAnalysis();
+		industryRemark();
+		
+	});
+	function init(_callback) {
+		// var a = [
+
+		// 	{ showData: "true", code: "gsxx", name: "公司信息", zjLevel: 2, levelcode: "1-1" },
+
+		// 	{ showData: "false", code: "jianjie", name: "简介", zjLevel: 3, levelcode: "1-1-1" },
+
+		// 	{ showData: "false", code: "gsxxT", name: "工商信息", zjLevel: 3, levelcode: "1-1-2" },
+
+		// 	{ showData: "false", code: "gaikuang", name: "概况", zjLevel: 1, levelcode: "1" }
+		// ]
+		// UTIL.searchsection._d
+		var section = $("<section>"), head1;
+		$.each(UTIL.searchsection._d, function (k, v) {
+			if (v.zjLevel === 1) {
+				// $(".contents").eq(0).prev().remove();
+				$(".top-line").remove();
+				var Arabia_To_SimplifiedChinese = UTIL.Arabia_To_SimplifiedChinese(v.levelcode);//20170926 shiqi 转阿拉伯 
+				var head = UTIL.oplugins._head({ text: Arabia_To_SimplifiedChinese + "、" + v.name, logo: "images/section-logo.png" });
+				$(head).insertBefore(".contents");
+				return true;
+			}
+			else if (v.zjLevel === 2) {
+				head1 = UTIL.oplugins._head1level(v.levelcode.replace("-", ".") + "" + v.name);
+				// if ($(".section").children().length)
+				section.prepend(head1);
+				// else
+				// section.append(head1);
+				return true;
+			}
+			// alert(v.zjLevel)
+			var divcontent = $("<div>");
+			divcontent.addClass("kaik-content");
+//		
+			var head1level = UTIL.oplugins._head2level(v.levelcode.replace("-", ".").replace("-", ".") + "" + v.name);
+			divcontent.append(head1level);
+			section.append(divcontent);
+			
+		})
+		if (section.html()) {
+			// alert(section.html())
+			$(".schyfx .section").html(section.html());
+			$(".schyfx .kaik-content").eq(0).append("<p id= \"industryRemark\"></p>");
+			$(".schyfx .kaik-content").eq(1).append("<div class=\"hy-charts\" id=\"IndustryAnalysis\"></div>");
+			if(payOrNot()==true){//已付费
+				$(".noPay").hide();
+				
+			}else if(payOrNot()==false || payOrNot()==undefined){//未付款
+				$(".schyfx .kaik-content").eq(1).find("div").eq(0).hide();
+				var div="<div class='noPay noContent'>深度内容，开通查看权限</div>";
+				$(".schyfx .kaik-content").eq(1).append(div);
+			}
+		}
+		_callback();
+		// 历史沿革
+		// var _timeline = UTIL.oplugins._timeline;
+		// $(".contents").append(_timeline);
+		
+		
+		
+	};
+</script>

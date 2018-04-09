@@ -1,0 +1,293 @@
+
+<link rel="stylesheet" href="/saasBeta/yanbao/css/Agu.css" />
+<style type="text/css">
+	.sdgd-sj{position: relative;}
+	.select-time{position: absolute;width: 150px;top: -3px;right: 0;border: 1px solid #e4e4e4;}
+	.select-time p{width: 100%;height: 26px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;line-height: 26px;}
+	.cw-reportDate{width: 100%;position: absolute;top: 26px;left: 0;border:1px solid #e4e4e4;z-index: 5;background-color: #fff;}
+	.cw-reportDate li{width: 100%;line-height: 24px;cursor: pointer;font-size: 14px;padding-left: 14px;box-sizing: border-box;}
+	.cw-reportDate li:hover{color: #fff;background-color: #1985e2;}
+	.cw-reportDate li.on{color: #fff;background-color: #1985e2;}
+	.select-time p:after{display: block;content:"";width: 12px;height: 10px;position: absolute;top: 8px;right: 10px;background: url(images/zyyw.png)0 0 no-repeat;cursor: pointer;}
+	.select-time p:hover:after{background: url(images/zyyw.png)-13px 0 no-repeat;}
+	.xsddd{width:200px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+	.AguTable .table #eventListGG tr td:nth-child(2){width:200px!important;}
+	/*.AguTable .table tr th:nth-child(1){width:0%}*/
+	
+	.AguTable .table tr th:nth-last-child(1){padding-right:20px; box-sizing: border-box;}
+	#zdSJ{min-width: 758px;}
+	select {
+  /*统一边框*/
+  border: solid 1px #000;
+  /*将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*替换选择框的最右侧显示小箭头图片*/
+  /*//background: url("http://****.png") no-repeat scroll right center transparent;*/
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+
+</style>
+<div class="yuce-fx">
+	<div class="container">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+			<div class="public">
+				<div class="top-tiltes">
+					<div class="top-line">
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+							<span>公司概况</span>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+							<div class="action-logo">
+								<!--<img src="/saasBeta/yanbao/images/section-logo.png" alt="" />-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents">
+					<div class="section">
+						<h2>1.2股权结构</h2>
+						<div class="kaik-content sdgd-sj">
+							<h3>1.2.1十大股东</h3>
+							<div class="select-time" id="sdgd">
+								<p class="cw-selectedTime" id="sdgdp"></p>
+									<ul id="xzsdgd" class="cw-reportDate" style="display: none;">
+										<!--<li>2015-56-78</li>-->
+									</ul>
+								<!--<select id="xzsdgd">
+  									<option>2017</option>
+  									<option>2016</option>
+  									<option>2015</option>
+  									<option>2014</option>
+								</select>-->
+							</div>
+							<div class="gudong-num">
+								<div class="AguTable">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="zbdqbj">名次</th>
+												<th>股东名称</th>
+												<th>股东性质</th>
+												<th>股份类型</th>
+												<th class="shuzi">持股数（万股）</th>
+												<th class="shuzi">占总股本比例（%）</th>
+												<th class="shuzi">增减情况（股）</th>
+											</tr>
+										</thead>
+										<tbody id="eventListGG">
+											 <!--<tr>
+												<td>重大资产重组</td>
+												<td class="shuzi">2016-12-20</td>
+												<td>第六届懂事会第九次决议公告</td>
+												<td>123</td>
+												<td>456</td>
+												<td>798</td>
+												<td><span class="chakan">查看</span></td>
+											</tr> -->
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="kaik-content sdgd-sj">
+							<h3>1.2.2十大流通股东</h3>
+							<div class="select-time" id="sdgdlt">
+								<p class="cw-selectedTime" id="sdltgdp"></p>
+									<ul id="sdltgd" class="cw-reportDate" style="display: none;">
+										<!--<li>2015-56-78</li>-->
+									</ul>
+								<!--<select id="sdltgd">
+  									<option>2017</option>
+  									<option>2016</option>
+  									<option>2015</option>
+  									<option>2014</option>
+								</select>-->
+							</div>
+							<div class="gudong-num">
+									<div class="AguTable">
+										<table class="table">
+											<thead>
+												<tr>
+													<th class="zbdqbj">名次</th>
+													<th>股东名称</th>
+													<th>股东性质</th>
+													<th>股份类型</th>
+													<th class="shuzi">持股数（万股）</th>
+													<th class="shuzi">占总流通股本持股比例（%）</th>
+													<th class="shuzi">增减情况（股）</th>
+												</tr>
+											</thead>
+											<tbody id="ltlist">
+												
+												
+											</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+						
+						
+						<!--<div class="kaik-content">
+							<h3>1.3.2控股股东</h3>
+							<div class="percen-infor" id="shareholder_2">
+								 
+							</div>
+						</div>
+						<div class="kaik-content">
+							<h3>1.3.3实际控制人基本情况</h3>
+							<div class="percen-infor" id="actualcontroller_2">
+							 
+							</div>
+						</div>-->
+					</div>
+					<div class="section" style="padding-right:0;">
+						<div class="kaik-content sdgd-sj">
+							<h3>1.2.3股东人数变化</h3>
+							<div class="bdtab" id="zwxs">
+								<div id="zwyc1" class="zbbt AguTable">
+									<table class="table">
+										<thead>
+											<tr>
+												<th style="text-align: left;padding-left: 20px;box-sizing: border-box;">项目</th>
+											</tr>
+										</thead>
+										<tbody>
+													<td >股东户数(户)</td>
+													<td class="ghbs">股东户数较上期变化(%)</td>
+													<td>户均流通股(万股)</td>
+													<td class="ghbs">户均流通股较上期变化(%)</td>
+													<td>股价(元)</td>
+													<td class="ghbs">户均持股金额(万元)</td>
+													<td>前十大股东持股合计(%)</td>
+													<td class="ghbs">前十大流通股东持股合计(%)</td>
+										</tbody>
+									</table>
+								</div>
+								<div id="zwyc2" class="gudong-num nrhd" style="float:left;">
+										<div class="AguTable nrhdz" id="zdSJ" style:'min-width:758px'>
+											<table class="table">
+												<thead  >
+													<tr id='ltTh'>
+														<!--<th>项目</th>-->
+														<!--<th>2017-11-15</th>
+														<th>2017-10-31</th>
+														<th>2017-10-15</th>
+														<th>2017-09-30</th>
+														<th>2017-09-15</th>
+														<th>2017-08-31</th>
+														<th>2017-08-15</th>
+														<th>2017-07-31</th>
+														<th>2017-07-14</th>
+														<th>2017-06-30</th>-->
+													</tr>
+												</thead>
+												<tbody id="ltRs">
+													<!--<td>项目</td>
+													<td>2017-11-15</td>
+													<td>2017-10-31</td>
+													<td>2017-10-15</td>
+													<td>2017-09-30</td>
+													<td>2017-09-15</td>
+													<td>2017-08-31</td>
+													<td>2017-08-15</td>
+													<td>2017-07-31</td>
+													<td>2017-07-14</td>
+													<td>2017-06-30</td>-->
+												</tbody>
+											</table>
+										
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+		</div>
+		</div>
+	</div>
+</div>
+<!-- 企业基本信息js-凡国庆 -->
+
+<!--<script src='../js/bus/section01.js'></script>
+<script src='../js/common/util.js'></script>
+<script src='../js/lib/jquery.min.js'></script>
+<script src="../js/bus/banner.js"></script>
+<script src="../js/common/ver.js"></script>-->
+<script>
+	AsectionOne3();
+	shiDaLiuTongGuDong();
+	shiDaGuDong();
+	gengXinshijian();
+	gengXinshijianLt();
+	$(function(){
+		//findshareholders(null);
+	    var windowHeight = $(window).height()
+	    $(".yuce-fx .container").height(windowHeight-195);
+    	$(".contents").height(windowHeight - 290);
+    	//用户是否是付费的状态
+		$("#timeList").on("click","li",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var date=$(this).text();
+			$("#reportData").html(date).removeClass("on");
+			$("#timeList").slideUp();
+			//findshareholders(date);
+		})
+		//十大股东选取时间
+		$("#xzsdgd").on("click","li",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var reportPeriod=$(this).text();
+			$("#sdgdp").html(reportPeriod);
+			$(this).parent().slideUp();
+			shiDaGuDong(reportPeriod);
+		})
+		$("#sdgdp").on("click",function(){
+			if($("#xzsdgd").css("display")=="block"){
+				$("#xzsdgd").slideUp()
+			}else{
+				$("#xzsdgd").slideDown()
+			}
+		})
+
+		//十大股东流通选取时间
+		$("#sdltgd").on("click","li",function(){
+			$(this).addClass("on").siblings().removeClass("on");
+			var reportPeriod=$(this).text();
+			$("#sdltgdp").html(reportPeriod);
+			$(this).parent().slideUp();
+			shiDaLiuTongGuDong(reportPeriod);
+		})
+		$("#sdltgdp").on("click",function(){
+			if($("#sdltgd").css("display")=="block"){
+				$("#sdltgd").slideUp()
+			}else{
+				$("#sdltgd").slideDown()
+			}
+		})
+	})
+	$(document).on("click",function(e){
+			var e=e || window.event;
+			var elem=e.target || e.srcElement;
+			var target = $("#sdgd");
+			while(elem!=null && elem.id!="sdgd"){
+				elem = elem.parentElement;
+				if(elem != target[0]){
+					$("#xzsdgd").slideUp();
+				}
+			}
+		})
+	$(document).on("click",function(e){
+			var e=e || window.event;
+			var elem=e.target || e.srcElement;
+			var target = $("#sdgdlt");
+			while(elem!=null && elem.id!="sdgdlt"){
+				elem = elem.parentElement;
+				if(elem != target[0]){
+					$("#sdltgd").slideUp();
+				}
+			}
+		})
+</script>

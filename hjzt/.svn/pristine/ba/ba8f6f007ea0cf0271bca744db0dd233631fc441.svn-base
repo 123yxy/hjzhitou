@@ -1,0 +1,398 @@
+	<!doctype html>
+<html>
+
+	<head>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8">
+		<title>资讯数据-三板市场-行情</title>
+		<link rel="stylesheet" href="/saasBeta/css/font-awesome.min.css" />
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css">
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/main_test.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/wxl-new-style.css" />
+		<script src="/saasBeta/js/jquery.min.js"></script>	
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<script src="/saasBeta/newjs/left.js" type="text/javascript"></script>
+		<script type="text/javascript" src="/saasBeta/js/header.js"></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/echarts/3.2.0/echarts.min.js"></script>
+		<!-- 分页 -->
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.parser.js" ></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.linkbutton.js" ></script>
+			<script type="text/javascript" src="/saasBeta/js/pages/jquery.pagination.js"></script>
+		<!-- 分页 -->
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockExponential.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockMarketRanking.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/stockAgreementRanking.js"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/threeLibrary/new_right.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/overViewCount.js"></script>
+
+	</head>
+
+	<body>
+		<!--header  star-->
+		<!--侧导航 star-->
+
+		<!--侧导航 end-->
+		<!--主体 star-->
+		<div class="right_main">
+			<!--main  star-->
+			<div class="main">
+				<div class="l_main l_main_none sb-t-main">
+					<div class="clr"></div>
+					<div class="m_left">
+						<div class="overview" id="exponential">
+							<a href="javascript:;" class="on" data-value="899002">三板做市指数</a>
+							<a href="javascript:;" data-value="899001">三板成分指数</a>
+							<p class="list_date" id="newHQDate">日期 <span id="newHQDate">--</span></p>
+							<div class="clr"></div>
+							<div class="hr"></div>
+						</div>
+						
+						<div class="clr"></div>
+						<div class="board">
+							<div class="l_board">
+								<ul id="overViewInde">
+									<li>
+										<p id="zs_zz"></p>
+										<p>最新</p>	
+									</li>
+									<li>
+										<p id="kp_zz"></p>
+										<p>开盘</p>
+									</li>
+									<li>
+										<p id="zg_zz"></p>
+										<p>最高</p>
+									</li>
+									<li>
+										<p id="zd_zz"></p>
+										<p>最低</p>
+									</li>
+									<li>
+										<p id="zde_zz"></p>
+										<p>涨跌额</p>
+									</li>
+									<li>
+										<p id="zdf_zz"></p>
+										<p>涨跌幅</p>
+									</li>
+									<li title="成交量(百万股)">
+										<p id="zjl_zz"></p>
+										<p>成交量(百万)</p>
+									</li>
+									<li title="成交额(百万元)">
+										<p id="zje_zz"></p>
+										<p>成交额(百万)</p>
+									</li>
+								</ul>
+							</div>
+							<div class="r_board" id="boardChart"></div>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="hq-shaixuan">
+							<div class="fl gglb">个股列表</div>
+							<div class="fr">
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="hqhy">行业</p>
+										<ul id="hQhy">
+											<li>行业</li>
+										</ul>
+									</div>
+								</div>
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="hqdq">地区</p>
+										<ul id="hQdq">
+											<!--<li>行业</li>-->
+										</ul>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="information">
+							<table> 
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价格(元/股)</th>
+										<th>成交量(万股)</th>
+										<th>成交额(万元)</th>
+										<th>涨跌幅</th>
+										<th>市值(亿元)</th>
+										<th>市盈率(LTM)</th>
+										<th>市销率(LTM)</th>
+										<th>收入(百万元)</th>
+										<th>利润(百万元)</th>										
+									</tr>
+								</thead>
+								<tbody id="marketOverview">
+									<!-- <tr>
+										<td>北京时代(430003)</td>
+										<td class="shuzi">8068</td>
+										<td class="shuzi">42</td>
+										<td class="shuzi">4829.77</td>
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+										<td class="shuzi">83.72</td>
+										<td class="shuzi">83.72</td>										
+									</tr>-->
+								</tbody>
+							</table>
+						</div>
+						<div class="stockQuotesPages" style="border-bottom: 1px solid #f3f3f3;">
+						<div id="pages" class="pages pagination " style="display: none"></div>
+					<div class="clr"></div>
+						</div>
+					<div class="clr"></div>
+					<div class="newzsxy">
+						<div class="newzsxy_title">
+							<ul>
+								<li class="on">做市排行</li>
+								<li >协议排行</li>
+								<div class="hr"></div>
+								<div class="clr"></div>
+							</ul>
+							
+						</div>
+						<div class="newzsxy_box">
+							<div class="newzsxy_list">
+							<div class="overview newoverview" id="changeType01">
+							<a href="javascript:;" data-value="0" class="on">涨幅榜</a>
+							<a href="javascript:;" data-value="1">跌幅榜</a>
+							<a href="javascript:;" data-value="2">成交排行</a>							
+						</div>
+						<div class="stock_rank" id="stockRank01"></div>
+						<div class="clr"></div>
+						<!--<div class="hq-shaixuan">
+							<div class="fl gglb">个股列表</div>
+							<div class="fr">
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="zshy">行业</p>
+										<ul id="zShy">
+											<li>行业</li>
+										</ul>
+									</div>
+								</div>
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="zsdq">地区</p>
+										<ul id="zSdq">
+											<li>行业</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>-->
+						<div class="information nsinformation" id="upList01">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌额</th>
+										<th>涨跌幅</th>
+										<th>今开</th>
+										<th>最高</th>
+										<th>最低</th>										
+										<th>成交量(万股)</th>
+										<th>成交金额(万元)</th>
+										<th>市盈率</th>
+									</tr>
+								</thead>
+								<tbody id="marketRankinList01">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- 
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi lvse">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!-- <div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+							
+						</div>
+						<div class="stockQuotesPages" style="padding-bottom: 0;">
+						<div id="page_001" class="pages pagination " style="display: none; padding-right: 0;"></div>
+							<div class="clr"></div>
+						</div>
+
+						<div class="information" id="dealList01" style="display: none;">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌幅</th>
+										<th>成交金额(万元)</th>
+									</tr>
+								</thead>
+								<tbody id="paihang01">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- <tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi red">7</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr>
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi lvse">209</td>					
+										<td class="shuzi lvse">-15.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+						</div>
+						<div class="clr"></div>
+						<div id="page_101" class="pages pagination " style="display: none"></div>
+							</div>
+							<div class="newzsxy_list">
+							<div class="overview newoverview" id="changeType_0a">
+							<a href="javascript:;" data-value="0" class="on">涨幅榜</a>
+							<a href="javascript:;" data-value="1">跌幅榜</a>
+							<a href="javascript:;" data-value="2">成交排行</a>								
+						</div>
+						<div class="stock_rank" id="stockRank_0a"></div>
+						<div class="clr"></div>
+						<!--<div class="hq-shaixuan">
+							<div class="fl gglb">个股列表</div>
+							<div class="fr">
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="xyhy">行业</p>
+										<ul id="xYhy">
+											<li>行业</li>
+										</ul>
+									</div>
+								</div>
+								<div class="select_box screen fl">
+									<div class="selectBox">
+										<p id="xydq">地区</p>
+										<ul id="xYdq">
+											<li>行业</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>-->
+						<div class="information" id="upList_0a">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌额</th>
+										<th>涨跌幅</th>
+										<th>今开</th>
+										<th>最高</th>
+										<th>最低</th>										
+										<th>成交量(万股)</th>
+										<th>成交金额(万元)</th>
+										<th>市盈率</th>
+									</tr>
+								</thead>
+								<tbody id="marketRankinList_0a">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- 
+									<tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi red">18.44</td>					
+										<td class="shuzi lvse">55.22%</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+							
+						</div>
+						<div id="page_0a" class="pages pagination " style="display: none"></div>
+						<!--成交排行-->
+						<div class="information" id="dealList_0a" style="display: none;">
+							<table>
+								<thead>
+									<tr>
+										<th>股票名称</th>
+										<th>最新价</th>
+										<th>涨跌幅</th>
+										<th>成交金额(万元)</th>
+									</tr>
+								</thead>
+								<tbody id="paihang_0a">
+									<!--类red是红色，类lvse是绿色-->
+									<!-- <tr>
+										<td class="shuzi"><a href="#">八达股份 </a><a href="#">83936</a></td>
+										<td class="shuzi red">7</td>					
+										<td class="shuzi red">55.22%</td>
+										<td class="shuzi">18.44</td>
+									</tr> -->
+								</tbody>
+							</table>
+							<!--<div class="pages">
+								<span>首页</span>
+								<span>上一页</span>
+								<span>下一页</span>
+							</div> -->
+						</div>
+						<div class="clr"></div>
+						<div id="page_1_0a" class="pages pagination " style="display: none"></div>	
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+					</div>
+					
+				</div>
+			<div class="clr"></div>
+			</div>
+			<!--main  end-->
+		</div>
+		<!--主体 end-->
+		
+		<!--柱状图的tips-->
+		<!--<div class="multi_tip">
+			<p>10-25疑似挂牌家数 <span>1345</span></p>
+			<div class="tip_tips"></div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+	<script src="/saasBeta/js/operationCenter.js"></script>
+</html>

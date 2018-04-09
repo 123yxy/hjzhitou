@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>个人中心-专辑| 汇金智投：投融资大数据服务云平台</title>
+		<meta name="keywords" content="新三板，SaaS投研，金融分析工具，大数据，大数据分析，金融大数据，新三板创新层，新三板基础层，做市指数，协议成交指数查询，
+新三板挂牌，新三板市场，新三板行情，新三板研究，新三板股票，新三板交易，新三板定增，新三板券商，新三板做市，新三板协议">
+		<meta name="description" content="汇金智投以“数字科学，创造财富”为主旨，围绕金融数据价值挖掘、数据推动决策、数据提升运营效率搭建业务运营体系，为用户提供以资源精准匹配为基础的应用服务。">
+		
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/newcss/new_g_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/zhuzhan_style.css" />
+		<link rel="stylesheet" type="text/css" href="/saasBeta/personalCss/new_g_style.css" />
+		
+		<!--新模型的改版js-->
+		<script src="/saasBeta/newjs/easyuijs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/newjs/easyuijs/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/saasBeta/newjs/financeEasyUI/easyloader.js"></script>
+		<!-- 弹框样式 -->
+		<!--<link rel="stylesheet" type="text/css" href="/saasBeta/css/zmAlert.css">-->
+		<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/header2.js"></script>
+		<script type="text/javascript" src="/saasBeta/js/common.js"></script>
+		<script src="/saasBeta/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/saasBeta/js/jquery.validate.min.js"></script>
+		<!-- 是否登录，关注，对比 -->
+		<script type="text/javascript" src="/saasBeta/newjs/utils.js"></script>
+		<!-- 验证用户是否登录 -->
+		<!--<script src="/www/js/toLogin.js"></script>-->
+		<script type="text/javascript" src="/saasBeta/js/personalCenter/personalAlbum.js"></script>
+		<script src="/saasBeta/js/operationCenter.js"></script>
+	</head>
+
+	<body>
+		<div class="newline"></div>
+		<div class="geren_zhuanji">
+			<div class="solo_album">
+				<div class="fl personal_tx">
+					<div class="tx_infor"><img alt="" src="/saasBeta/images/tx.png" id="businessCardUrl" ></div>
+					<a href="/personalCenter/personalInformation.html">个人设置</a>
+				</div>
+				<div class="fl p_information">
+					<div class="personal_name">
+						<span class="p_name" id="userName" >--</span>
+						<!--<span class="shimrz" id="authentication" >--</span>-->
+						<div class="clr"></div>
+					</div>
+					<div class="personal_zl">
+						<i id="sex" >--</i>
+						<em id="region" >--</em>
+						<span id="position" >--</span>
+						<div class="clr"></div>
+					</div>
+					<ul>
+						<li>
+							<span>行业偏好：</span>
+							<span id="focusArea" >--</span>
+							<div class="clr"></div>
+						</li>
+						<li>
+							<span>使用汇金智投目的：</span>
+							<span id="purpose" >--</span>
+							<div class="clr"></div>
+						</li>
+						<li>
+							<span>个性签名：</span>
+							<span id="signature" >--</span>
+							<div class="clr"></div>
+						</li>
+					</ul>
+					<!--微信、微博-->
+					<!--<div class="p_icon">
+						<i id="weiXin" ></i>
+						<em id="weiBo" ></em>
+						<div class="clr"></div>
+					</div>-->
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="attention">
+				<div class="gz_personal" >
+					<span class="fl">关注(<em class="shuzi" id="totalNum">0</em>)</span>
+ 					<!--<a href="#" class="fr">开通会员跟踪</a>--> 
+					<div class="clr"></div>
+				</div>
+				<div class="gz_types">
+					<div class="top">
+						<span class="on"><i>公司</i>  ( <em id="companyDataNum">0</em> )</span>
+						<span> <i>专辑</i> ( <em id="specialDataNum">0</em> )</span>
+						<span> <i>中介</i> ( <em id="institutionsDataNum">0</em> )</span>
+						<span> <i>投资人</i>( <em id="investorDataNum">0</em> )</span>
+						<div class="clr"></div>
+					</div>
+					<div class="public_types gongsi">
+						<ul id="companyData">
+							 <!--<li>
+								<div class="fl c_logo">
+									<a href="#">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</a>
+								</div>
+								<div class="fl company_content">
+									<a href="#">大地生物(833662)</a>
+									<span><em>汽车交通>汽车后服务</em><i>北京</i></span>
+									<p>向以银行为主的金融机构提供IT解决方案、咨询、专业测试和运维服务</p>
+								</div>
+								<div class="fl leixing">
+									<span>TAG: <em>IT技术</em></span>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<div class="fl c_logo">
+									<a href="#">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</a>
+								</div>
+								<div class="fl company_content">
+									<a href="#">大地生物(833662)</a>
+									<span><em>汽车交通>汽车后服务</em><i>北京</i></span>
+									<p>向以银行为主的金融机构提供IT解决方案、咨询、专业测试和运维服务</p>
+								</div>
+								<div class="fl leixing">
+									<span>TAG: <em>IT技术</em></span>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li> -->
+						</ul>
+					</div>
+					<div class="public_types zhuanji" style="display: none;">
+						<ul id="specialData">
+							 <li>
+								<div class="fl c_logo">
+									<a href="#">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</a>
+								</div>
+								<div class="fl company_profile">
+									<a href="#">天星资本新淡斑投资事件（264）</a>
+									<span>天星资本在新三板频繁出手，活跃在新三板公司的大股东名单中，看天星的投资动向，以及底层...</span>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li>
+							<li>
+								<div class="fl c_logo">
+									<a href="#">
+										<img src="/saasBeta/images/gs_logo.png" alt="" />
+									</a>
+								</div>
+								<div class="fl company_profile">
+									<a href="#">天星资本新淡斑投资事件（264）</a>
+									<span>天星资本在新三板频繁出手，活跃在新三板公司的大股东名单中，看天星的投资动向，以及底层...</span>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li> 
+						</ul>
+					</div>
+					<div class="public_types zhongjie" style="display: none;">
+						<ul id="institutionsData">
+							 <li>
+								<div class="fl zj_logo">
+									<span>
+										<img src="/saasBeta/images/gs_2.png" alt="" />
+									</span>
+									<div class="fl jigou_types">
+										<a href="#">广州证券</a>
+										<span>广州>主办券商</span>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fl zj_gpshu">
+									<span>挂牌公司数</span>
+									<em class="shuzi">13</em>
+								</div>
+								<div class="fl zj_faxing">
+									<span>推荐定向发行</span>
+									<div class="cishu">
+										<span>成功：<em>155</em>次</span>
+										<span>失败：<em>1</em>次</span>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="fl c_service">
+									<span>最新服务的公司</span>
+									<div class="t_service">
+										<em>2016-9-12</em>
+										<span>瑞达生物(832948)</span>
+										<i>定增</i>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li> 
+						</ul>
+					</div>
+					<div class="public_types touzr" style="display:none;">
+						<ul id="investorData">
+							 <li>
+								<div class="fl p_investor">
+									<span>
+										<img src="/saasBeta/images/tzr_icon.png" alt="" />
+									</span>
+									<div class="fl intrduce">
+										<span>共青城海棠投资管理合伙企业（有限合伙）</span>
+										<p>共青城海棠投资管理合伙企业（有限合伙）
+										成立于2016年5月20日，统一社会信用代码为932115524455554</p>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="fl total">
+									<span>投资事件总数</span>
+									<i class="shuzi">13</i>
+								</div>
+								<div class="fl total">
+									<span>投资总金额</span>
+									<i class="shuzi">5500万</i>
+								</div>
+								<div class="fl tz_shijian">
+									<span>最新投资事件</span>
+									<div class="com_infor">
+										<i>2016-9-12</i>
+										<span>雷钰股份（834928）</span>
+										<em>1500万</em>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="fr qxgz">
+									<span>取消关注</span>
+								</div>
+								<div class="clr"></div>
+							</li> 
+						</ul>
+					</div>
+					<div class="no_content">
+						<div class="no_icon">
+						<!-- i的类名分别是对应的标题的拼音时显示对应的图片 -->
+							<i class="gongsi_icon"></i>
+							<span><em>没有更多的公司</em><a href="/threeLibrary/company.html" id="goto">GO</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

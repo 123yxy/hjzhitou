@@ -1,0 +1,964 @@
+var gkStockCode = getUrlParam("stockcode");
+var type = getUrlParam("type");
+var content = getUrlParam("content");
+var tj = getUrlParam("tj");
+$(document).ready(function(){
+	
+//	$("#stockNameShow").text(stockName+'('+stockCode+')');
+//	findHeadMsgByCode();
+	
+	if(gkStockCode != null && gkStockCode != "" && type != null  && (type == 1 || type == 2 || type == 3)){
+		companyGK();
+	}else{
+		blockDiv.content_gsgk = false;
+		$(".gjj_gsgk").parent().hide();
+		$("#changeValue").change();
+	}
+	
+//点击发布时间
+	$(".paixu_types").on("mouseover",function(){
+//		alert(0)
+		$(this).find(".fabu_fangshi").addClass("on");
+		$(this).find(".fabu_fangshi").next().stop().slideDown();
+	})
+	$(".paixu_types").on("mouseout",function(){
+		$(this).find(".fabu_fangshi").removeClass("on");
+		$(this).find(".fabu_fangshi").next().stop().slideUp();
+	})
+	
+//	点击公司信息详情
+$("#tc_gsxq").on("click",function(){
+	$(".n_gsjbx,.backbj").show();
+	$("body,html").css("overflow","hidden");
+	
+});
+//点击显示股本股东中的详情
+$("#tc_gbgd").on("click",function(){
+	$(".n_ten_dbox,.backbj").show();
+	$("body,html").css("overflow","hidden");
+	
+});
+//点击显示高管的详情
+$("#tc_gaoguan").on("click",function(){
+	$(".n_gsgguan_dbox,.backbj").show();
+	$("body,html").css("overflow","hidden");
+	
+});
+//点击显示经营情况的详情
+$("#tc_jyqk").on("click",function(){
+	$(".n_jyqk_dbox,.backbj").show();
+	$("body,html").css("overflow","hidden");
+});
+//点击显示团队的详情
+$("#tc_tuandui").on("click",function(){
+	$(".n_teamdbox,.backbj").show();
+	$(".n_teamdbox").css("opacity",1);
+	$("body,html").css("overflow","hidden");
+});
+//点击显示发行情况的详情
+$("#tc_fxqk").on("click",function(){
+	$(".n_fxqkd_dbox,.backbj").show();
+	$("body,html").css("overflow","hidden");
+});
+
+//点击显示公司大事的详情
+$("#tc_gsds").on("click",function(){
+	$(".n_big_dbox,.backbj").show();
+	$("body,html").css("overflow","hidden");
+});
+//关闭概况页面中的弹窗
+$(".n_gs_close span").on("click",function(){
+	$(this).parent().parent().hide();
+	$(".backbj").hide();
+	$("body,html").css("overflow","auto");
+});
+
+//	关闭高管信息弹层
+$("#n_g_t_tc_colse").on("click",function(){
+	$(".n_gg_tc_tc").removeClass("on");
+});
+
+//	关闭发行对象弹层
+$("#n_fxdx_t_tc_colse").on("click",function(){
+	$(".n_fxqk_tc_tc").removeClass("on");
+});
+
+
+$(".backbj").on("click",function(){
+	$(".n_gs_close span").click();
+})
+
+});
+
+/**
+ * 公司概况
+ */
+function companyGK(){
+	
+	findCompanyOverview();
+	
+	findCompanySurvey();
+	
+	findHolder();
+	
+	findDignitary();
+	
+	findTeam();
+	
+	findPlacement();
+	
+	findCompanyEvents(1,10);
+	
+	findOperatingConditions();
+}
+
+/**
+ * 查询公司概览
+ */
+$(".gjj_gsgk_box ul").hide();
+function findCompanyOverview(){
+$(".gjj_gsgk_box ul").hide();
+//正在加载添加及显示star
+var logding='<div class="loadingBox2" style="display: none;"><div class="loading-3"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>加载中</span></div>';
+$(".gjj_gsgk_box").prepend(logding);
+$(".gjj_gsgk_box").find(".loadingBox2").show();
+//正在加载添加及显示end
+	$.axs("/betaInvest/enterpriseData/findCompanyOverview.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+//			console.log(data.retData);
+			if(data.retData != null){
+//				隐藏正在加载的样式
+				$(".gjj_gsgk_box").find(".loadingBox2").hide();
+				$(".gjj_gsgk_box ul").show();
+				$("#companyMsg").text((data.retData.companyMsg == undefined ? "--" : (data.retData.companyMsg.length > 85 ? (data.retData.companyMsg.substring(0,85)+'...') : data.retData.companyMsg)));
+				$("#equityShareholders").text((data.retData.equityShareholders == undefined ? "--" : (data.retData.equityShareholders.length > 85 ? (data.retData.equityShareholders.substring(0,85)+'...') : data.retData.equityShareholders)));
+				$("#director").text((data.retData.director == undefined ? "--" : (data.retData.director.length > 85 ? (data.retData.director.substring(0,85)+'...') : data.retData.director)));
+				$("#operation").text((data.retData.operation == undefined ? "--" : (data.retData.operation.length > 85 ? (data.retData.operation.substring(0,85)+'...') : data.retData.operation)));
+				$("#industry").text((data.retData.industry == undefined ? "--" : (data.retData.industry.length > 85 ? (data.retData.industry.substring(0,85)+'...') : data.retData.industry)));
+				$("#team").text((data.retData.team == undefined ? "--" : (data.retData.team.length > 85 ? (data.retData.team.substring(0,85)+'...') : data.retData.team)));
+				$("#issuance").text((data.retData.issuance == undefined ? "--" : (data.retData.issuance.length > 85 ? (data.retData.issuance.substring(0,85)+'...') : data.retData.issuance)));
+				$("#event").text((data.retData.event == undefined ? "--" : (data.retData.event.length > 85 ? (data.retData.event.substring(0,85)+'...') : data.retData.event)));
+				$("#gkUpdateTime").text("更新时间:" + (data.retData.updateTime == undefined ? "--" : data.retData.updateTime));
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 查询公司基本信息
+ */
+function findCompanySurvey(){
+	$.axs("/betaInvest/enterpriseData/findCompanySurvey.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+			if(data.retData != null){
+				$("#stockNameShow").click(function(){
+					window.open("/businessDetails/newTBindex.html?stockCode=" + data.retData.stockCode + "&stockName=" + data.retData.companyForShort);
+				})
+				//跳转到行业分析
+				$("#gkIndustry").click(function(){
+					window.open("/dataAnalysis/stockRankings.html?stockCode=" + data.retData.stockCode + "&stockName=" + data.retData.companyForShort);
+				})
+				$("#stockNameShow").text(((data.retData.companyForShort == null || data.retData.companyForShort == "") ? "--" : data.retData.companyForShort)+'('+((data.retData.stockCode == null || data.retData.stockCode == "") ? "--" : data.retData.stockCode)+')');
+				$("#enterpriseUpTime").text("更新时间:"+((data.retData.updateTime == null || data.retData.updateTime == "") ? "--" : data.retData.updateTime));
+				$("#companyForShort").text((data.retData.companyForShort == null || data.retData.companyForShort == "") ? "--" : data.retData.companyForShort);
+				$("#legalPerson").text((data.retData.legalPerson == null || data.retData.legalPerson == "") ? "--" : data.retData.legalPerson);
+				$("#registrationDate").text((data.retData.registrationDate == null || data.retData.registrationDate == "") ? "--" : data.retData.registrationDate);
+				$("#registeredCapital").text((data.retData.registeredCapital == null || data.retData.registeredCapital == "") ? "--" : ((parseFloat(data.retData.registeredCapital)/10000).toFixed(2)));
+				$("#stockDate").text((data.retData.stockDate == null || data.retData.stockDate == "") ? "--" : data.retData.stockDate);
+				$("#sponsoredBroker").text((data.retData.sponsoredBroker == null || data.retData.sponsoredBroker == "") ? "--" : data.retData.sponsoredBroker);
+				$("#dealType").text((data.retData.dealType == null || data.retData.dealType == "") ? "--" : data.retData.dealType);
+				$("#generalCapital").text((data.retData.generalCapital == null || data.retData.generalCapital == "") ? "--" : (data.retData.generalCapital/10000.00).toFixed(2));
+				var jianjie=data.retData.actualController;
+				if(data.retData.actualController==null||data.retData.actualController==""||data.retData.actualController==undefined){
+					data.retData.actualController="--";
+					jianjie='--';
+				}else{
+					if((data.retData.actualController).length>19){
+						data.retData.actualController=(data.retData.actualController).substring(0,18)+"...";
+					}
+				}
+				$("#actualController").text(data.retData.actualController);
+				$("#actualController").attr("title",jianjie);
+				$("#secretary").text((data.retData.secretary == null || data.retData.secretary == "") ? "--" : data.retData.secretary);
+				$("#industryName").text((data.retData.industryName == null || data.retData.industryName == "") ? "--" : data.retData.industryName);
+				$("#state").text((data.retData.state == null || data.retData.state == "") ? "--" : data.retData.state);
+				
+				
+				
+				$("#phone").text((data.retData.phone == null || data.retData.phone == "") ? "--" : ((data.retData.phone).length>34 ? ((data.retData.phone).substring(0,34)+"...") : data.retData.phone));
+				$("#phone").attr("title",(data.retData.phone == null || data.retData.phone == "") ? "--" : data.retData.phone);
+				$("#fax").text((data.retData.fax == null || data.retData.fax == "") ? "--" : data.retData.fax);
+				$("#companyUrl").text((data.retData.companyUrl == null || data.retData.companyUrl == "") ? "--" : data.retData.companyUrl);
+				var dizhi=data.retData.businessAddress;
+				if(data.retData.businessAddress==null||data.retData.businessAddress==""||data.retData.businessAddress==undefined){
+					data.retData.businessAddress="--";
+					dizhi='--';
+				}else{
+					if((data.retData.businessAddress).length>19){
+						data.retData.businessAddress=(data.retData.businessAddress).substring(0,18)+"...";
+					}
+				}
+				$("#businessAddress").text(data.retData.businessAddress);
+				$("#businessAddress").attr("title",dizhi);
+				$("#enterpriseIntroduction").text((data.retData.enterpriseIntroduction == null || data.retData.enterpriseIntroduction == "") ? "--" : data.retData.enterpriseIntroduction);
+				$("#businessModel").text((data.retData.businessModel == null || data.retData.businessModel == "") ? "--" : data.retData.businessModel);
+				
+				if(data.retData.opId != null){
+					$(".news_boar_duibi").attr("data-opId",data.retData.opId);
+					$(".news_boar_duibi").addClass("on");
+				}
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 查询公司股东信息
+ */
+function findHolder(){
+	$.axs("/betaInvest/topTenShareholder/findHolderForSurvey.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+			//console.log(data.retData);
+			if(data.retData != null && data.retData.length > 0){
+				var holderHtml = "";
+				$(data.retData).each(function(index, item){
+					if(index == 0){
+						$("#holderUpTime").text("更新时间:" + ((item.updateTime == null || item.updateTime == "") ? "--" : item.updateTime));
+					}
+					holderHtml += "<tr>";
+					holderHtml += "<td class='shuzi'>"+(index + 1)+"</td>";
+					holderHtml += "<td>"+((item.investor == null || item.investor == "") ? "--" : item.investor)+"</td>";
+					holderHtml += "<td class='shuzi'>"+((item.holdCount == null || (item.holdCount == "" && item.holdCount != 0)) ? "--" : (item.holdCount/10000).toFixed(2))+"</td>";
+					holderHtml += "<td class='shuzi'>"+((item.numberRestrictedShares == null || (item.numberRestrictedShares == "" && item.numberRestrictedShares != 0)) ? "--" : (item.numberRestrictedShares/10000).toFixed(2))+"</td>";
+					holderHtml += "<td class='shuzi'>"+((item.noneRestrictedShares == null || (item.noneRestrictedShares == "" && item.noneRestrictedShares != 0)) ? "--" : (item.noneRestrictedShares/10000).toFixed(2))+"</td>";
+					holderHtml += "<td class='shuzi'>"+((item.proportion == null || (item.proportion == "" && item.proportion != 0)) ? "--" : item.proportion)+"%</td>";
+					if(item.shareChange==null || item.shareChange=="" || item.shareChange==undefined){
+						holderHtml += "<td>--</td>";
+					}else{
+						if(item.shareChange=="新进" || item.shareChange=="退出"){
+							holderHtml += "<td class='xinjin'>"+item.shareChange+"</td>";	
+						}else{
+							//判断涨幅
+							if(item.shareChange<0){
+								holderHtml += "<td class='down shuzi'>"+item.shareChange+"%</td>";
+							}else if(item.shareChange>0){
+								holderHtml += "<td class='up shuzi'>"+item.shareChange+"%</td>";
+							}else{
+								holderHtml += "<td>"+item.shareChange+"</td>";
+							}
+							
+						}
+					}
+
+					holderHtml += "</tr>";
+				})
+				$("#tenHolder").html(holderHtml);
+			}else{
+				$("#tenHolder").html("<tr><td colspan='7' >暂无数据</td></tr>");
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 查询公司高管信息
+ */
+function findDignitary(){
+	$.axs("/betaInvest/dignitary/findDignForSurvey.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+//			console.log(data.retData);
+			if(data.retData != null && data.retData.length > 0){
+				//console.log(data.retData);
+				var dignitaryHtml = "";
+				$(data.retData).each(function(index, item){
+					if(index == 0){
+						$("#dignUpTime").text("更新时间:" + ((item.updateTime == null || item.updateTime == "") ? "--" : item.updateTime));
+					}
+					//console.log(item.sharesNumber)
+					dignitaryHtml += "<tr>"
+									+"<td class='gsgg_xuhao'>"+(index + 1)+"</td>"
+									+"<td class='gsgg_xm'>"+((item.dignitaryName == null || item.dignitaryName == "") ? "--" : item.dignitaryName)+"</td>"
+									+"<td class='gsgg_zw'>"+((item.position == null || item.position == "") ? "--" : item.position)+"</td>"
+									+"<td class='gsgg_sj'>"+((item.servingTime == null || item.servingTime == "") ? "--" : item.servingTime)+"</td>"
+									+"<td class='gsgg_cg'>"+((item.sharesNumber == null || (item.sharesNumber == "" && item.sharesNumber != 0)) ? "--" : (item.sharesNumber/10000).toFixed(2))+"</td>";
+					dignitaryHtml += "<td class='gsgg_cgbh'>"+((item.numberVariation == null || item.numberVariation == "") ? "--" : item.numberVariation)+"</td>"
+									+"<td class='gsgg_jl'><a href='javascript:;' onclick='showDignitary(\""+item.dignitaryName+"\",\""+item.sex+"\",\""+item.bornDate+"\",\""+item.nationality+"\",\""+item.livingPlace+"\",\""+item.workExperience+"\",\""+item.edExperience+"\")' >查看</a></td>"
+									+"</tr>";
+				})
+				$("#dignitaryTbody").html(dignitaryHtml);
+			}else{
+				$("#dignitaryTbody").html("<tr><td colspan='7' >暂无数据</td></tr>");
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 显示单个高管的信息
+ * @param value
+ */
+function showDignitary(name,sex,bornDate,nationality,livingPlace,workExperience,edExperience){
+	$(".n_gg_tc_tc").addClass("on");
+	$("#dignitaryName").text((name == "null" || name == "") ? "--" : name);
+	$("#sex").text((sex == "null" || sex == "") ? "--" : sex);
+	$("#bornDate").text((bornDate == "null" || bornDate == "") ? "--" : bornDate);
+	$("#nationality").text((nationality == "null" || nationality == "") ? "--" : nationality);
+	$("#livingPlace").text((livingPlace == "null" || livingPlace == "") ? "--" : livingPlace);
+	
+	var edJl = "";
+
+	if(edExperience.indexOf(";") > -1){
+		var splitED = edExperience.split(";");
+		$(splitED).each(function(){
+			edJl += "<li><p>"+this+"。</p><div class='clr'></div></li>";
+		})
+	}else{
+		edJl = "<li><p>暂无</p><div class='clr'></div></li>";
+	}
+	$(".n_gg_jyjlul").children().html(edJl);
+	
+	var workJl = "";
+	if(workExperience.indexOf(";") > -1){
+		var splitWork = workExperience.split(";");
+		$(splitWork).each(function(){
+			workJl += "<li><p>"+this+"。</p></li>";
+		})
+	}else{
+		workJl = "<li><p>暂无</p></li>";
+	}
+	$(".n_gg_zyjlul").children().html(workJl);
+}
+
+//经营信息对比
+function myChartXz(data){
+	var myChart1 = echarts.init(document.getElementById('ygzzjiegou'));
+	option = {
+	    tooltip : {
+	        trigger: 'item',
+	        formatter: function(params){
+	        	return	'<div class="shizhi_tips">'+
+						'<span class="shizhi_time">'+params.seriesName+'</span>'+
+						'<div class="types_one">'+
+							'<span class="zong_shizhi">'+params.name+'：</span>'+
+							'<span class="shuju2">'+params.value+'('+params.percent+'%)</span>'+
+							'<div class="clr"></div>'+
+						'</div>'+
+					'</div>';
+	        }
+	    },
+	    
+	    color:["rgba(98,166,242,.9)","rgba(98,166,242,.7)","rgba(98,166,242,.6)","rgba(98,166,242,.5)","rgba(98,166,242,.4)"],
+	    series : [
+	        {
+	            name: '员工组织结构',
+	            type: 'pie',
+	            radius : '55%',
+   				label:{
+	            	normal:{
+	            		show:true,
+	            		formatter:function(params){
+	            			return params.name+'\n('+params.value+')';
+	            		},
+	            		textStyle:{
+	            			color:'#333',
+	            			fontSize:14
+	            		}
+	            	}
+	            },
+	            center: ['50%', '50%'],
+	            data:data/*[
+	                {value:335, name:'财务人员'},
+	                {value:310, name:'行政管理人员'},
+	                {value:234, name:'生产人员'},
+	                {value:135, name:'销售人员'},
+	                {value:1548, name:'技术人员'}
+//	            ]*/
+//	            itemStyle: {
+//	                emphasis: {
+//	                    shadowBlur: 10,
+//	                    shadowOffsetX: 0,
+//	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+//	                }
+//	            }
+	        }
+	    ]
+	};
+	 myChart1.setOption(option);
+	 window.onresize = myChart1.resize;
+}
+
+//绘制员工教育组织图
+function myChartJy(data){
+	//console.log(data)
+	var myChart2 = echarts.init(document.getElementById('ygjyjiegou'));
+	option = {
+	    tooltip : {
+	        trigger: 'item',
+	        show:true,
+	        formatter:function(params){
+        	return	'<div class="shizhi_tips">'+
+						'<span class="shizhi_time">'+params.seriesName+'</span>'+
+						'<div class="types_one">'+
+							'<span class="zong_shizhi">'+params.name+'：</span>'+
+							'<span class="shuju2">'+params.value+'('+params.percent+'%)</span>'+
+							'<div class="clr"></div>'+
+						'</div>'+
+					'</div>';	
+	        }
+	    },
+	    color:["rgba(98,166,242,.9)","rgba(98,166,242,.7)","rgba(98,166,242,.6)","rgba(98,166,242,.5)","rgba(98,166,242,.4)"],
+	    series : [
+	        {
+	            name: '员工教育结构',
+	            type: 'pie',
+	            radius : '55%',
+	            center: ['50%', '50%'],
+	            label:{
+	            	normal:{
+	            		show:true,
+	            		formatter:function(params){
+	            			return params.name+'\n('+params.value+')';
+	            		},
+	            		textStyle:{
+	            			color:'#333',
+	            			fontSize:14
+	            		}
+	            	}
+	            },
+	            data:data/*[
+	                {value:335, name:'专科'},
+	                {value:310, name:'专科以下'},
+	                {value:234, name:'博士'},
+	                {value:135, name:'硕士'},
+	                {value:1548, name:'本科'}
+	            ]*/
+//	            itemStyle: {
+//	                emphasis: {
+//	                    shadowBlur: 10,
+//	                    shadowOffsetX: 0,
+//	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+//	                }
+//	            }
+	        }
+	    ]
+	};
+
+	 myChart2.setOption(option);
+	 window.onresize = myChart2.resize;
+}
+
+//绘制员工变动图
+function myChartBd(data,nameData){
+	var dateData = [];
+	var time = "";
+	var totalData = [];
+	 var totalNumVal = 0;
+	$(data).each(function(index,item){
+		if(time != this.reportPeriod){
+			if(time != ''){
+				if(totalNumVal == 0){
+					totalData.push(null);
+				}else{
+					totalData.push(totalNumVal);
+				}
+				totalNumVal = 0;
+			}
+			time = this.reportPeriod;
+			dateData.push(time);
+			
+			totalNumVal = totalNumVal + parseInt(this.number);
+		}else{
+			totalNumVal = totalNumVal + parseInt(this.number);
+			if(index == (data.length - 1)){
+				if(totalNumVal == 0){
+					totalData.push(null);
+				}else{
+					totalData.push(totalNumVal);
+				}
+				totalNumVal = 0;
+			}
+		}
+	})
+	var myChart=echarts.init(document.getElementById("fxqk_bod_echar_info"));
+	
+	 option = {
+		tooltip : {
+			trigger: 'axis',
+			// axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+			// 	type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			// }
+		},
+		color:["rgba(98,166,242,.3)","rgba(98,166,242,.4)","rgba(98,166,242,.5)","rgba(98,166,242,.6)","rgba(98,166,242,.7)","rgba(98,166,242,.8)","rgba(98,166,242,.9)","rgba(98,166,242,1.0)"],
+		grid: {
+			left: '3%',
+			right: '4%',
+			bottom: '3%',
+			containLabel: true
+		},
+		yAxis:  [
+			{
+//			type:'直接访问',
+			type: 'value'
+			
+		},
+		{
+//			type:'直接访问',
+			type: 'value'
+			
+		}
+		],
+		
+		xAxis: {
+			type: 'category',
+			data: dateData/*['2015年度期初','2015年度期末','2016年半年度']*/
+		},
+		series: [
+			/*{
+				name: '技术人员',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight',
+						formatter:function(params){
+							
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: [320, 302, 301]
+			},
+			{
+				name: '销售人员',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight',
+						formatter:function(params){
+							
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: [120, 132, 101]
+			},
+			{
+				name: '生产人员',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight',
+						formatter:function(params){
+							
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: [220, 182, 191]
+			},
+			{
+				name: '行政管理人员',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight',
+						formatter:function(params){
+							
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: [150, 212, 201]
+			},
+			{
+				name: '员工',
+				type: 'line',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'top',
+						formatter:function(params){
+							console.log(params);
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: [150, 320, 1320]
+			},*/
+		]
+	};
+	 
+	 $(nameData).each(function(){
+		 var time = "";
+		 var valData = [];
+		 var numVal = 0;
+		 var name = this.typeName;
+			$(data).each(function(index,item){
+				if(time != this.reportPeriod){
+					if(time != ""){
+						if(numVal == 0){
+							valData.push(null);
+						}else{
+							valData.push(numVal);
+						}
+						numVal = 0;
+					}
+					time = this.reportPeriod;
+					
+					if(name == this.categoryName){
+						numVal = numVal + parseInt(this.number);
+					}
+				}else{
+					if(name == this.categoryName){
+						numVal = numVal + parseInt(this.number);
+					}
+					if(index == (data.length - 1)){
+						if(numVal == 0){
+							valData.push(null);
+						}else{
+							valData.push(numVal);
+						}
+						numVal = 0;
+					}
+				}
+			})
+			
+		 var serData = {
+					name: name,
+					type: 'bar',
+					stack: '总量',
+					barMaxWidth:100,
+					label: {
+						normal: {
+							show: true,
+							position: 'insideRight',
+							formatter:function(params){
+								//console.log(params);
+								return params.seriesName+":"+params.data;
+							},
+							textStyle:{
+								color:"#666"
+							}
+						}
+					},
+					data: valData/*[150, 320, 1320]*/
+				};
+		 
+		 option.series.push(serData);
+	 })
+
+	 var serData = {
+				name: '员工人数',
+				type: 'line',
+				stack: '总量',
+				yAxisIndex:1,
+				symbol:'circle',
+				label: {
+					normal: {
+						show: true,
+						position: 'top',
+						formatter:function(params){
+							//console.log(params);
+							return params.seriesName+":"+params.data;
+						}
+					}
+				},
+				data: totalData/*[150, 320, 1320]*/
+			};
+	 option.series.push(serData);
+	 // 使用刚指定的配置项和数据显示图表。
+	
+	 myChart.setOption(option);
+	 window.onresize = myChart.resize;
+}
+
+/**
+ * 查询团队信息
+ */
+function findTeam(){
+	var wnResult = [];
+	$.axs("/betaInvest/staffSituation/findStaffForSurvey.do",{stockCode:gkStockCode},false,function(data){
+		if(data.retCode=="0000"){
+//			console.log(data.retData);
+			if(data.retData.wnList != null){
+				wnResult = data.retData.wnList;
+				var currentWnData = [];
+				$(data.retData.wnList).each(function(){
+					if(this.isCurrent == '1'){
+						var cwd = {value:this.number , name:this.categoryName};
+						currentWnData.push(cwd);
+					}
+				})
+				//绘制工作性质分类图
+				myChartXz(currentWnData);
+			}
+			if(data.retData.deuList != null){
+				var currentEduData = [];
+				$(data.retData.deuList).each(function(){
+					if(this.isCurrent == '1'){
+						var ced = {value:this.number , name:this.categoryName};
+						currentEduData.push(ced);
+					}
+				})
+				//绘制教育分类图
+				myChartJy(currentEduData);
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+	
+	$.axs("/betaInvest/staffSituation/findTypeName.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+			//console.log(data.retData);
+			if(data.retData != null && data.retData != ""){
+				myChartBd(wnResult,data.retData);
+			}
+//			员工
+			$(".n_teamdbox").hide();
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+
+
+}
+
+/**
+ * 查询发行情况
+ */
+function findPlacement(){
+	$.axs("/betaInvest/private/findPlacementForSurvey.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+//			console.log(data.retData);
+			if(data.retData != null && data.retData.length > 0){
+				var fxHtml = "";
+				
+				$(data.retData).each(function(index,item){
+					if(index == 0){
+						$("#fxUpTime").text("更新时间:"+((this.updateTime) == null ? "--" : (this.updateTime)));
+					}
+					fxHtml += "<tr>"
+									+"<td>"+(this.dateTime == null ? "--" : this.dateTime)+"</td>"
+									+"<td>"+(this.newPrice == null ? "--" : (this.newPrice).toFixed(2))+"</td>"
+									+"<td>"+(this.privatePrice == null ? "--" : (this.privatePrice).toFixed(2))+"</td>"
+									+"<td>"+(this.premiumRate == null ? "--" : (this.premiumRate).toFixed(2))+"</td>"
+									+"<td>"+(this.financingRatio == null ? "--" : (this.financingRatio).toFixed(2))+"</td>"
+									+"<td>"+(this.raisePrice == null ? "--" : (this.raisePrice).toFixed(2))+"</td>"
+									+"<td>"+(this.privateNum == null ? "--" : (this.privateNum).toFixed(2))+"</td>";
+					
+					var schedule = "";
+					if(this.schedule == 1){
+						schedule = "董事会通过";
+					}else if(this.schedule == 2){
+						schedule = "股东大会通过";
+					}else if(this.schedule == 3){
+						schedule = "停止实施";
+					}else if(this.schedule == 4){
+						schedule = "股东大会未通过";
+					}else if(this.schedule == 5){
+						schedule = "证监会核准";
+					}else if(this.schedule == 6){
+						schedule = "实施中";
+					}else if(this.schedule == 7){
+						schedule = "发行失败";
+					}else if(this.schedule == 8){
+						schedule = "已完成定向增发";
+					}
+					//console.log(this.purchaser.length)
+					fxHtml += "<td>"+schedule+"</td>"
+							+"<td>"+((this.schedule != 8 || this.purchaser == null || this.purchaser == "" || this.purchaser.length <=2) ? "--" : "<a href='javascript:;' onclick='showFx("+this.purchaser+")'>查看</a>")+"</td>"
+							+"</tr>";
+				})
+				$("#fxTbody").html(fxHtml);
+			}else{
+				$("#fxTbody").html("<tr><td colspan='9' >暂无数据</td></tr>");
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 显示发行对象信息
+ * @param data
+ */
+function showFx(data){
+	$(".n_fxqk_tc_tc").addClass("on");	
+	var fxDxHtml = "";
+	$(data).each(function(index,item){
+		fxDxHtml += "<tr>"
+					+"<td class='fax_xuhao'>"+(index + 1)+"</td>"
+					+"<td>"+this.ORGNAME+"</td>"
+					+"<td>"+this.ORGTYPE+"</td>"
+					+"<td>"+(this.F005N_STK236==null?"--":(Number(this.F005N_STK236)).toFixed(2))+"</td>"
+					+"<td>"+(this.F001N_STK236==null?"--":(Number(this.F001N_STK236)).toFixed(2))+"</td>"
+					+"<td>"+(this.F005N_STK236*this.F001N_STK236).toFixed(2)+"</td>"
+					+"</tr>";
+	})
+	$("#fxdxTbody").html(fxDxHtml);
+}
+
+/**
+ * 查询公司大事
+ */
+function findCompanyEvents(pageNum,pageSize){
+	if(pageNum==null){
+		pageNum=1;
+	}
+	if(pageSize==null){
+		pageSize=10;
+	}
+	if(pageNum==1){
+		$("#page").remove();
+		$(".n_big_table").after('<div id="page" class="pages pagination " style="display: none;"></div>')
+	}
+	$.axs("/betaInvest/companyEvent/findEventForSurvey.do",{pageNum:pageNum,pageSize:pageSize,stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+			if(data.retData.eventForSurvey != null && data.retData.eventForSurvey != ""){
+				var eventHtml = "";
+				$(data.retData.eventForSurvey).each(function(){
+					eventHtml += "<tr>"
+								+"<td class='n_big_time'>"+this.announcementDate+"</td>"
+								+"<td class='n_big_type'>"+this.eventType+"</td>";
+					var showAnnouncementName = this.announcementName;
+//					if((this.announcementName).length > 17){
+//						showAnnouncementName = (this.announcementName).substring(0,17) + "...";
+//					}
+					eventHtml += "<td title="+this.announcementName+"><a href='javascript:;' onclick='downloadPdf(\""+encodeURIComponent(this.announcementUrl)+"\")'>"+showAnnouncementName+"</a></td></tr>";
+				})
+				$("#eventTbody").html(eventHtml);
+				if((data.retData.total)<=pageSize){
+					$('#page').hide();
+				}else{
+					$('#page').show();
+				}
+				//分页
+				
+				$('#page').pagination({
+					total: data.retData.total,
+					pageSize: pageSize,
+					current: pageNum,
+//					layout:['list','sep','first','prev','links','next','last','sep','refresh'],
+					layout: ['first', 'prev', 'links','next'],
+					links:0,
+					displayMsg:"",
+					showPageList:false,
+					onSelectPage: function(pageNumber, size) {
+						findCompanyEvents(pageNumber,size);
+					}
+				});
+				//修改分页文字
+				setPageText2('page');
+			}else{
+				$("#eventTbody").html("<tr><td colspan='3'>暂无数据</td></tr>");
+				$('#page').hide();
+			}
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+
+/**
+ * 查询经营情况
+ */
+function findOperatingConditions(){
+	$.axs("/betaInvest/operatingConditions/findOperatingConditions.do",{stockCode:gkStockCode},true,function(data){
+		if(data.retCode=="0000"){
+
+//			console.log("经营情况：" + data.retData.oc);
+
+			var result=data.retData;
+			//主营业务
+			var oMBList = result.mb;
+			//主要客户
+			var oMCList = result.oc;
+			//主营业务
+			if(oMBList.length!=0&&oMBList!=null){
+				
+				$("#opUpTime").text("更新时间:" + (oMBList[0].updateTime == null ? "--" : oMBList[0].updateTime));
+				var time ="";
+				var project ="";
+				var trNum = 1;
+				var projectNum = 1;
+				var isSameProject = false;
+				var isSameTime = false;
+				var temp = false;
+				$.each(oMBList,function(index,item){
+					isSameProject = (item.mainbusinesssituation == project);
+					isSameTime = (item.time == time);
+					if(!isSameTime){
+						time =item.time;
+						$("#mainBusinessHead").append('<th colspan="2" class="jiny_nd" scope="col">'+(time == null ? "--" : time)+'</td>')
+						$("#mainBusinessCenter").append('<th class="jiny_jine">金额（万元）</th><th class="jine_zb">比例(%)</th>')
+					}
+					if(!isSameProject){
+						if(index == 0){
+							$("#mainBusinessTBody").append('<tr id='+trNum+'><td class="jiny_mc">'+item.mainbusinesssituation+'</td>');
+							trNum++;
+						}
+						if(!isSameTime){
+							if(index != 0){
+								temp = true;
+							}
+							projectNum = 1;
+							$("#"+projectNum).append('<td>'+(item.amountmoney==null?"--":(item.amountmoney/10000.00).toFixed(2))+'</td><td>'+item.proportion.toFixed(2)+'%</td></tr>');
+							projectNum++;
+						}else{
+							if(temp){
+								$("#"+projectNum).append('<td>'+(item.amountmoney==null?"--":(item.amountmoney/10000.00).toFixed(2))+'</td><td>'+item.proportion.toFixed(2)+'%</td></tr>');
+								projectNum++;
+							}else{
+								$("#mainBusinessTBody").append('<tr id='+trNum+'><td class="jiny_mc">'+item.mainbusinesssituation+'</td>'
+										+'<td>'+(item.amountmoney==null?"--":(item.amountmoney/10000.00).toFixed(2))+'</td>'
+										+'<td>'+item.proportion.toFixed(2)+'%</td>'
+										+'</tr>');
+								trNum++;
+							}
+						}
+					}
+				});
+			}else{
+				$("#mainBusinessTBody").append("<tr><td>暂无数据</td></tr>");
+			}
+			
+			//主要客户	
+			if(oMCList!=null&&oMCList.length!=0){
+				$("#opUpTime").text("更新时间:" + (oMCList[0].updateTime == null ? "--" : oMCList[0].updateTime));
+				var ocHtml = "";
+				$.each(oMCList,function(){
+					ocHtml += "<tr>"
+							+"<td class='jiny_mc'>"+this.customerName+"</td>"
+							+"<td>"+(this.salesAmount==null?"--":((this.salesAmount)/10000.00).toFixed(2))+"</td>"
+							+"<td>"+(this.operatingIncome==null?"--":((this.operatingIncome)/10000.00).toFixed(2))+"</td>"
+							+"</tr>";
+				});
+				$("#ocTbody").html(ocHtml);
+			}else{
+				$("#ocTbody").html("<tr><td colspan='3' >暂无数据</td></tr>");
+			}
+			
+		}else{
+			errorAlert(data.retCode, data.retMsg);
+		}
+	});
+}
+

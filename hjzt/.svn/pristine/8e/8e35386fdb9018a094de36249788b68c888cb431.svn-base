@@ -1,0 +1,60 @@
+/*����*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content: "";}
+abbr,acronym{border:0;}
+body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,arial,'Hiragino Sans GB',����,sans-serif;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+
+/*������ʽ*/
+.poster-main{position: relative;width: 500px;height: 270px}
+.poster-main a,.poster-main img{display:block;}
+.poster-main .poster-list{width: 500px;height: 270px;position: absolute;top:50px;left:65px;}
+.poster-main .poster-list .poster-item{position: absolute;left: 0px;top: 0px}
+.poster-main .poster-btn{position: absolute;height: 100%;width:100px;top: 0px;z-index: 10;opacity: 0.5;}
+.poster-main .poster-prev-btn{ left: 0px; background: url("../images/btn_l.png") no-repeat center center;position: absolute;top:50px;left:20px; }
+.poster-main .poster-next-btn{right: 0px;background: url("../images/btn_r.png") no-repeat center center;position: absolute;top:50px;right:-110px;}
+.lbbt{position: absolute;top:23px;width:100%;}
+.lbbt h3{font-size: 20px;text-align: center;font-weight: 900;}
+.lbxtb{width:100%;height:50px;position: absolute;top:84px;}
+.lbxtbzb{width: 124px;height: 20px;margin:0 auto;}
+.lbxtbzb img{float: left;margin-top:2px;}
+.lbxtbzb p{float: left;margin-left: 9px;font-size: 14px;min-width: 65px;}
+.lbxtbyb{width: 82px;height: 20px;margin:0 auto;}
+.lbxtbyb img{float: left;margin-top:2px;height: 17px;}
+.lbxtbyb p{float: left;margin-left: 13px;font-size: 14px;}
+.lban{width:165px;height:36px;position: absolute;bottom:23px;left:106px;border-radius: 30px;background-color: #fff;}
+.lban p{font-size: 16px;text-align: center;cursor:pointer;line-height: 36px;}
+.znbt img{float:left;margin:auto 0;margin-top:12px;}
+.znbt p{float:left;font-size: 16px;font-weight: 900;padding:0 15px;}
+.znbt{width: 250px;height: 16px;margin:0 auto;margin-top:3px;}
+
+
+/*#xsblb .im{background-image: url('../images/xsbbj.png');width:100% ;height:100%;}*/
+
+
+.oldSwiper{width: 50%;float: left;padding-top: 40px;box-sizing: border-box;}
+.newYb{width: 100%;padding-top: 18px;box-sizing: border-box;background: url(../images/xsbbj.png)center no-repeat;position: relative;height: 100%;}
+.newYb.sbyb{background: url(../images/Agubj.png)center no-repeat;}
+.indexTitle-top h3{width: 100%;height: 28px;font-size: 21px;color: #4f4f4f;text-align: center;line-height: 28px;}
+.bg-yb{width: 100%;height: 24px;margin-top: 4px;}
+.bg-yb img{display: block;width: 100%;height: 100%;}
+.index-hy,.index-dq{height: 23px;line-height: 23px;text-align: center;margin-top: 10px;}
+/*.index-hy em{display: inline-block;width: 23px;height: 23px;background: url(../images/wjj.png)center no-repeat;}*/
+.index-hy span,.index-dq span{display: inline-block;font-size: 14px;color: #828282;height: 23px;line-height: 23px;position: relative;padding-left: 24px;box-sizing: border-box;}
+.index-hy span:after,.index-dq span:after{display: block;width: 23px;height: 23px;content: "";position: absolute;top: -1px;left:-4px;}
+.index-hy span:after{background: url(../images/wjj.png)center no-repeat;}
+.index-dq span:after{background: url(../images/wz.png)center no-repeat;}
+.open-read{width: 160px;height: 39px;background-color: #fff;border-radius: 20px;color: #333;font-size: 16px;text-align: center;line-height: 39px;position: absolute;bottom: 22px;left: 50%;margin-left: -80px;cursor: pointer;}
+.swiper-contents{width: 400px;height: 310px;margin: 0 auto;}
+
+.swiper-slide{width: 75%;height: 260px;transition: all 0.3s;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0;}
+.swiper-pagination-bullet{width: 12px;height: 12px;border-radius: 50%;border: 1px solid #8bbbea;background: transparent;opacity: 1;}
+.swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: #8bbbea;}

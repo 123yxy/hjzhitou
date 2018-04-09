@@ -1,0 +1,192 @@
+<!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="../css/user.css"> -->
+<!-- <link rel="stylesheet" href="../css/section02.css" /> -->
+<style>
+    .container {
+        padding: 0;
+    }
+</style>
+<div class="yuce-fx">
+    <div class="container fl" style="width:100%;">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 yuce-bg">
+            <div class="public">
+                <div class="top-tiltes">
+                    <div class="top-line">
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 section-name">
+                            <span>附录</span>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6 scetion-logo">
+                            <div class="action-logo">
+                                <img src="/saasBeta/yanbao/images/section-logo.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="section">
+                        <div class="tab-list1 list-name">
+                            <span class="on">全部公告</span>
+                            <span class="">年报</span>
+                            <span class="">半年报</span>
+                            <span class="">公开转让说明书</span>
+                        </div>
+                        <ul class="gsxx-list1 gp-infor">
+                            <!-- <li>
+                                <em>挂牌时间</em>
+                                <span id="stockdate">2016-04-08</span>
+                                <div class="clearfix"></div>
+                            </li> -->
+
+
+                            <div class="clearfix"></div>
+                        </ul>
+                        <div class="gigantic pagination">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="shuming col-lg-12 col-md-12 col-xs-12 col-sm-12">ty.159jh.com/znty</div> -->
+        </div>
+    </div>
+</div>
+<!-- <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+<script src="../js/echarts-all-3.js"></script>
+<script src="../js/common/util.js"></script>
+<script src="../js/common/ajax.js"></script>
+<script src="../js/common/commonJs.js"></script>
+<script src="../js/bus/section02.js"></script>
+<script src="../js/plugin/jqPaginator.js"></script> -->
+<script type="text/javascript">
+	//判断是否登录
+	UTIL.nologin('fulu');
+	
+    var width = $(".contents").width();
+    $(".suochu-hy").css("width", width);
+
+
+    var acStockCode = UTIL.getPara("stockCode");
+    // var userid = localStorage["userId"];
+    $(function () {
+        var windowHeight = $(window).height()
+        $(".yuce-fx .container").height(windowHeight - 195);
+        $(".contents").height(windowHeight - 290)
+    })
+    init();
+    // init(getdata(UTIL.CONFIG.findCompanyAnnouncement, rerender, {
+    //     stockCode: acStockCode,
+    //     pageNum: 1,
+    //     pageSize: 10,
+    //     type: 0
+    // }));
+    function init(_callback) {
+        var total = 1;
+        var visiblePages = 10;
+
+        // _callback();
+        //获取接口
+        var getdata = function (url, _callback, param, _isinit) {
+            UTIL.axs(UTIL.CONFIG.wwwhost + url, param, true, function (_data) {
+                if (_data.retCode === "0000") {
+                    var renderdata = _data.retData;
+                    _isinit = "" || _isinit
+                    _callback(renderdata, _isinit);
+                }
+                else
+                    _callback("");
+            })
+        }
+        //数据渲染
+        var rerender = function (_data, _isinit) {
+            if (!_data.list.length) {
+                $(".fl .gsxx-list1").html(UTIL.oplugins._nodata());
+                $(".pagination").hide();
+                return;
+            }
+            total = _data.pageTotal;
+
+            var div = $("<div>");
+            // _researchreport.total = _data.pageTotal;
+            // var _this = this;
+            $.each(_data.list, function (k, v) {
+                var li = $("<li>");
+                // _researchreport._obj.push({
+                //     id: v.id
+                // })
+                li.append("<em><a href=http://gonggao.159jh.com/gonggao/" + v.pathUrl + " target=_blank>" + v.announcementName + "</a></em>")
+                    .append("<span class='spanimg'></span>")
+                    .append("<span>" + v.announcementTime + "</span>")
+                // .append("<td><a class='lookat' href=javascript:void(0)>查看</a></td>");
+
+                div.append(li);
+            })
+            $(".fl ul").html(div.html());
+            // _researchreport.delegateEvent();
+            //首次加载分页
+            if (!_isinit) {
+                initpagination(total, visiblePages, 1, 1);
+            }
+        }
+        //切换
+        $(".fl .tab-list1").on("click", function (event) {
+            if (event.target.tagName === "SPAN") {
+                if (event.target.className === "") {
+                    $(event.target).addClass("on").siblings().removeClass("on");
+                    $(".pagination").show();
+                    var type = 0;
+                    if ($(event.target).index() === 1)
+                        type = 3;
+                    else if ($(event.target).index() === 2)
+                        type = 2;
+                    else if ($(event.target).index() === 3)
+                        type = 1;
+                    var param = {
+                        stockCode: acStockCode,
+                        pageNum: 1,
+                        pageSize: 10,
+                        type: type
+                    }, url = UTIL.CONFIG.findCompanyAnnouncement;
+                    getdata(url, rerender, param);
+                }
+            }
+        })
+        getdata(UTIL.CONFIG.findCompanyAnnouncement, rerender, {
+            stockCode: acStockCode,
+            pageNum: 1,
+            pageSize: 10,
+            type: 0
+        })
+
+        /**
+ * 功能：分页
+ * 作者：shiqi
+ * 时间：20171027
+ */
+        var initpagination = function (total, visiblePages, currentpage, noprocess) {
+            var noprocess = "" || noprocess;
+            $('.pagination').jqPaginator({
+                // link_string: '/?page={page_number}',
+                totalPages: total,
+                visiblePages: visiblePages,
+                currentPage: currentpage,
+                first: '<li class="prev"> <a href="#" class="first" data-action="first">«</a> </li>',
+                prev: '<li class="prev"> <a href="#" class="previous" data-action="previous">‹</a> </li>',
+                next: '<li class="next"><a href="javascript:;"class="next" data-action="next">›</a></li>',
+                last: '<li class="next"><a href="javascript:;" class="last" data-action="last">»</a></li>',
+                page: '<li class="page"><a href="javascript:;">{{page}}</a> </li>',
+                onPageChange: function (num, type) {
+                    if (noprocess) {
+                        noprocess = "";
+                        return;
+                    }
+                    getdata(UTIL.CONFIG.findCompanyAnnouncement, rerender, {
+                        stockCode: acStockCode,
+                        pageNum: num,
+                        pageSize: 1
+                    }, 1)
+                }
+            });
+        }
+    };
+</script>
